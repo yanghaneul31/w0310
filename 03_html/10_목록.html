@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<!--
+     ul 자식은 li만 사용
+     ol 자식은 li만 사용
+     dl의 자식은 dt,dd,만 사용 
+-->
+
+<body>
+    <!-- shifr+alt+f: 자동 들여쓰기 -->
+    <h1>목록</h1>
+    <!-- alt+위아래방향키: 선택한 영역의 위치 -->
+
+    <!-- 순서 없는 목록 -->
+    <h2>음료 메뉴</h2>
+    <ul>
+        <!--
+            <h2>커피메뉴 </h2> -> (x)
+            <p>아래는 우리 회사에서 판매되는 커피 목록입니다.</p> -> (x)    
+         -->
+        <li>커피
+            <p>아래는 우리 회사에서 판매되는 커피 목록입니다.</p>
+        </li>    
+        <li>아이스 아메리카노</li>
+        <li>카페모카</li>
+        <li>카라멜 마끼아또</li>
+    </ul>
+
+    <h2>커피 판매 순위</h2>
+    <li>우유</li>
+    <li>코카콜라</li>
+   
+    <!-- 순서 있는 목록 -->
+    <ol>
+        <li>아이스 아메리카노</li>
+        <li>카페모카</li>
+        <li>카라멜 마끼아또</li>
+    </ol>
+
+    <!-- 한 줄 삭제: ctrl+x -->
+
+    <!-- 
+         정의 목록 (description list)-> dl 
+         설명 항목 (description term)-> dt   
+         설명 항목의 설명 (description description)->dd  
+    -->
+
+
+    <h3>약어 정의</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+        <dt>css</dt>
+        <dd>Cascading Style Sheet의 약자로 웹페이지의
+            <b>레이아웃과 서식</b> 등을 지정하는 디자인 언어이다.
+        </dd>
+
+    </dl>
+
+</body>
+
+
+</html>
