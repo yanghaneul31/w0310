@@ -8,14 +8,25 @@
 <body>
     <h1>링크(link, 연결)</h1>
     <!--  anchor (앵커, 돛)
-          <a href=""></a>
+          <a href="링크대상" target="타깃">콘텐츠(텍스트,이미지,비디오)</a>
+          href는 필수 속성
+            URL -> http://~, http://~
+            파일 -> 경로/파일명(./,../)
+            메일 -> mailto:~
+            전화번호 -> tel:~
+
+            프로토콜(protocal,통신규약)
+            http,https,mailto,tel,FTP,SMTP,POP3,IMAP...
 
           href(hyper reference)
          한 문서에서 다른 문서로 연결하는 참조를 의미
+         
+
          target는 선택 속성
-         target="_blank" -> 새 창으로 열린다.
-         target="_top" -> 최상위(root루트) 페이지로 열린다.
-         target="_parent" -> 부모 페이지로 열린다.
+        "_blank" -> 새 창으로 열린다.
+        "_self" -> 기본값으로 현재창으로 열린다.
+        "_top" -> 최상위(root루트) 페이지로 열린다.
+        "_parent" -> 부모 페이지로 열린다.
     -->
     <a href="이동">버튼</a>
     
@@ -24,5 +35,17 @@
     
     <a href="hrrps://gooogle.com" target="_blank">구글</a>
     <!-- 구글은 새 창으로 뜬다. -> 타 사이트 -->
-</body>
+
+    <!-- 이메일 -->
+     <a href="mailto:sally6368@naver.com">이메일</a>
+    <!-- 전화번호 -->
+     <a href="tel:010-0000-0000">010-0000-0000</a>
+     <!-- 파일 -->
+     <a href="./../70_pf/just쇼핑몰/쇼핑몰이미지/gallery1.jpg">갤러리 이미지</a>
+     <a href="../70_pf/pizzahut/pizzahut Swot.pdf">pdf 파일</a>
+
+     <h2>이미지에 링크 걸기</h2>
+     <a href="https://naver.com">네이버</a>
+        <img src="./naver.png" alt="네이버 로고"
+    </body>
 </html>
