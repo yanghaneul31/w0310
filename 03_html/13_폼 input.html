@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+  <h1>폼</h1>
+  
+   
+   <!-- alt+위/아래 방향키 -->
+   입력상자<input type="text"> <br>
+
+   <!--여러 줄 입력 상자: 글쓰기  -->
+    글쓰기<textarea name="user_write" ></textarea> <br>
+    <!-- 
+      rows: 줄(행,가로) 수
+      cols: 칸(열, column,세로) 수 
+      width: 가로크기
+      height: 세로 크기
+      resize : none; -> 크기 수정 없음 -> 수정 못함
+    -->
+    회칙<textarea name="" id="" rows="5" cols="30" readonly style ="width:300px; height: 150px; resize:none;">회칙을 여기에 기록한다.</textarea> <br>
+
+  검색<input type="search">  <br>
+  전화번호<input type="tel">  <br>
+  주소
+  <!--  select의 value는 서버로 전송될 값이다. -->
+   <select>
+    <option value="">서울특별시</option>   
+    <option value="">경기도</option>   
+    <option value="">충청도</option>   
+    <option value="">강원도</option>   
+    <option value="">전라도</option>   
+    <option value="">경상도</option>   
+    
+  </select>
+  이메일<input type="email">  <br>
+  웹주소<input type="url"> <br>
+
+  비밀번호<input type="password"> <br>
+   
+  
+  
+  <!--  alt+클릭: 다중 커서 
+        ctrl+alt+아래방향키  
+  -->
+   <h2>경험 항목에 모두 선택</h2>     
+  <!--여러 개 중에 여러 개를 선택 가능  -->
+  <input type="checkbox" name="chkgroup">네모1
+  <input type="checkbox" name="chkgroup">네모2
+  <input type="checkbox" name="chkgroup">네모3 <br>
+     
+     <!--
+         name속성으로 그룹핑한다.
+          named의 속성값은 임의 지정(단,의미있게)  
+     --> 
+          <!-- 여러 개 중에 하나 선택 가능 -->
+  <input type="radio" name="radiogroup">동의함
+  <input type="radio" name="radiogroup">동의하지 않음 <br>
+  
+    
+  <!--
+       버튼은 용도에 맞게 사용해야 한다.
+       전송- 로그인, 회원가입 시 확인
+   -->
+  <input type="submit" value="전송"> 
+  <input type="reset" value="취소"> 
+  <input type="button" value="버튼">  <br>
+
+  <!--  shift+alt+아래방향키 -->
+  <button type="submit">전송</button>
+  <button type="reset">취소</button>
+  <button type="button">버튼</button>
+  
+
+
+</body>
+</html>
