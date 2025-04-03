@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>멀티미디어</h1>
+    <!-- 
+        이미지: png(투명배경),gif(애니메이션),jpg
+        비디오:mp4,wedm,ogv(ogg)
+        오디오:mp3,wav,ogg
+    -->    
+        <!-- 
+            무료 이미지 및 동영상 다운로드
+            1. 언스플래쉬: 이미지
+            2. 픽셀즈: 이미지와 비디오
+            3. 픽사베이: 이미지와비디오
+    
+    
+        -->
+    <img src="./../70_pf/just쇼핑몰/시작하기-양하늘.jpg" alt="이미지의 설명글" width="400">
+    <!-- 
+        비디오와 오디오 속성
+        1. autoplay: 자동 실행
+        2.muted: 무음
+        3.controls: 제어바(실행, 정지)
+        4.loop: 무한 반복
+    -->
+    <video src="./../70_pf/244839_tiny.mp4" autoplay muted width="400"></video>
+    <video src="./../70_pf/244839_tiny.mp4" autoplay muted loop width="400"></video>
+    <video src="./../3065047-hd_1920_1080_30fps.mp4" controls loop width="400"></video>
+<!-- 
+           파일 변환 프로그램
+           mpr<->webm<->ogv    
+-->
+           <!--
+ 풀스크린 비디오 ex)경남아나스빌,대우건설
+ -->
+    <video  autoplay muted loop width="400"> 
+        <source src="./../70_pf/main_movie_new_250212.mp4" type="video/mp4">
+    </video>
+        <source src="./../70_pf/main_movie_new_250212.mp4" type="video/webm">
+    </video>
+        <source src="./../70_pf/main_movie_new_250212.mp4" type="video/ogg">
+    </video>
+
+    <!-- 
+        비디오 자료 수집2-비디오 링크 걸기
+        1. 유튜브
+        2. 비메오
+        3. 네이버
+    -->
+
+    <iframe  src="https://www.youtube.com/embed/86gToHFkbiU"  style="border:none;" ></iframe>    
+    <iframe src="https://www.youtube.com/embed/86gToHFkbiU"  style=" width:400px; height:225px; border:none;" ></iframe>  
+    
+    <!-- 비메오 -->
+    <iframe src="https://player.vimeo.com/video/153760150?badge=0&amp;autopause=0&"></iframe>
+
+    <!-- 네이버 티비 -->
+    <iframe src='https://tv.naver.com/embed/5699949?autoPlay=true' loading="lazy" frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='544' HEIGHT='306' allow='autoplay' allowfullscreen></iframe>
+
+    <!-- 유튜브 오디오 -->
+     <audio src="./../70_pf/A Starry Message - Dan _Lebo_ Lebowitz, Tone Seeker.mp3" controls autoplay></audio>
+     <audio src="./../70_pf/A Starry Message - Dan _Lebo_ Lebowitz, Tone Seeker.mp3" autoplay></audio>
+  <!-- 배경 음악 -->
+   <auto src="./../"
+</body>
+</html>
