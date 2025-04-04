@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <!-- style태그는 head사이에 기록한다. body 사이에 쓰면 안됨! -->
+    <style>
+        /* 내부 스타일: <style>태그 안에 기록하는 방식 */
+        /* 선택자 {속성: 값 값 값;} */
+        /* 본문(body)에 있는 td태그에 테두리를 선 두께 1px, 선 종류 solid(실선), 선 색은 검정으로 지정한다. */
+        td {border:1px solid black;}
+    </style>
+</head>
+<body>
+<h1>표(table,테이블)</h1> 
+ <!--<table border="4" <-이렇게 사용하면 안됨!  -->
+<table style="border:1px solid black;"> 
+    <tr><td>1행1열의 표</td></tr>
+    <h2>1행2열</h2>
+    <table>
+        <!-- tr은 행(row), td는 셀 <-열(column) -->
+         <tr>
+            <td>1행2열</td>
+            <td>1행2열</td>
+         </tr>
+    </table>
+    <h2>1행2열</h2>
+    <table style="border:1px solid black; border-collapse:collapse;">
+        <!-- tr은 행(row), td는 셀 <-열(column) -->
+         <tr>
+            <td>1행2열</td>
+            <td>1행2열</td>
+         </tr>
+    </table>
+
+    <h2>2행1열</h2>
+    <!-- table태그안에는 자식으로 하나 이상의 tr 속성을 가지고 있어야 한다. -->
+     <!-- tr은 자식으로 하나 이상의 td가 있어야 한다. -->
+      <!-- 인라인 스타일: HTML의 style속성으로 기록하는 방식 -->
+    <table>
+       <tr><td>1행1열</td></tr> 
+       <tr><td>2행1열</td></tr> 
+    </table>
+
+    <h2>2행2열</h2>
+    <table>
+        <tr><td>1행1열</td><td>1행2열</td></tr>
+        <tr><td>2행1열</td><td>2행2열</td></tr>
+    </table>
+
+</table>  
+</body>
+</html>
