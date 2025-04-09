@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-기본세로유형</title>
+    <style>
+        /* shift+alt+f: 들여쓰기 */
+        /* 
+         선택자 { 
+            속성: 값; 
+            속성: 값; 
+            속성: 값; 
+            ...}
+
+            선택자의 종류
+            1.태그(요소,타입) 선택자
+            2. .클래스 선택자
+        */
+        div {
+        
+            height: 350px; /* h350 */
+            background-color: #ccc;
+        }
+        .wrap{
+            display: flex;  /* df */
+           
+        }
+        .header {
+            width: 100px; /* w600 */
+           background: #ccc;
+        }
+        .right_contents {
+            width: 500px; /* w600 */
+            background: #ebadad;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- shift+alt+아래방향키 -->
+     <!-- ctrl+alt+아래방향키 -->
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">오른쪽 컨텐츠</div>
+    </div>
+</body>
+
+</html>
