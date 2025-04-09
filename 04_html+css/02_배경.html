@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- style태그는 head태그 사이에 쓴다. -->
+    <link rel="stylesheet" href="01_CSS정의방법.css">
+    <style>
+        /* 
+            [CSS의 형식]
+            선택자 {속성: 값; 속성: 값; ...}
+            selector {property: value;}
+        */
+        /* 본문(body)에 있는 p태그의 글자색을 빨강으로 지정하라! */
+        p {color: red;}
+    </style>
+</head>
+<body>
+    <h1>스타일 지정 방식</h1>
+    <p>외부 스타일 방식은 html의 link태그로 *.css(스타일 파일)을 연결하고, *.css 파일 안에 기록하는 방식이다.</p>
+    <p>내부 스타일 방식은 html의 style태그 안에 기록하는 방식이다.</p>
+    <p style="color: blue;" title="풍선도움말, 스크린팁">인라인 스타일방식은 html의 style속성에 값으로 기록하는 방식이다.</p>
+</body>
+</html>

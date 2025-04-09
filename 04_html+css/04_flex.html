@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- en: 영문 페이지, ko: 한글 페이지,zh: 중국, ja: 일본 -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+         vendor prefix
+         -webkit- 크롬
+         사파리
+         -ms- 엣지(이전엔 인터넷 익스플로러(IE))
+         -moz-파이어폭스
+         -o-오페라
+         
+         
+        */
+        /* 
+         선택자 {
+            속성: 값;
+            속성: 값;
+            속성: 값;
+            ...
+            }
+        */
+        /* 
+          부모 요소에 지정
+          display: flex;
+          flew- direction -방향
+          justify- content -align(정렬,맞춤)
+          align- items -정렬 (세로)
+          align-content-정렬
+
+          속기 속성
+          flex-flow: direction wrap;
+          
+          
+          자식 요소에 지정
+          개별 속성
+          align-self-정렬
+          flex-grow(늘리는 것)-성장
+          flex-shrink(줄이는 것)-수축
+          flex-basis-초기 가로 크기
+          order- 자식 요소 순서
+
+          속기 속성
+          flex: 1;
+          
+
+        */
+        /*부모 */
+        .flexbox{
+            display: flex;  /* df */
+            /*  display: -wedit- flex;
+            display: -ms-flexbox */
+           flex-direction:  row; /* 기본값이 row */
+           flex-wrap: nowrap ; /* flw */
+            height: 200px; /* h200 */ 
+            background: #ccc; /* bg*/
+        }
+        /* 자식 */
+        .flexbox > div{
+            /* 속기 속성 */
+            flex: 1; 
+            flex: 1 1 0;
+            flex:0 0 100px;
+
+            /* 개별 속성 */
+            flex-grow: 1;/* flg */
+            flex-shrink: 1;/* fls */
+            flex-basis: 0; /* flb */
+
+           /* -webkit-flex: 1; 
+            -ms-flex: 1;*/
+            background: darkcyan;
+            margin: 10px; /* m10 */
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sit, eligendi eos perferendis accusamus, aspernatur consequatur cum commodi porro in atque et deserunt itaque, qui error eaque earum vel? Veritatis?</div>
+    </div>
+</body>
+</html>
