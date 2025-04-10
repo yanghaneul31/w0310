@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML+CSS</title>
+  <style>
+    /* 
+      선택자의 종류
+      1.기본선택자
+      2.결합자(compinator) 선택자
+      3.의사클래스(슈도,유사,Pseudo-class) 선택자
+      4. 의사요소(슈도,유사,Pseudo-elements) 선택자
+      5. 속성(Attribute) 선택자
+      */
+
+    /* 
+      기본 선택자
+        1. type(요소) 선택자 - 태그 이름을 선택자로 이용!
+        2. class -.이름,  여러 번
+        3. id - #이름, 1번만
+        4. 그룹 - ,(콤마)
+        5. 전체 - * (별표)
+      */
+    /*본문의 p태그를 선택하여 글자색을 빨강색으로 지정한다.  */
+    p {
+      color: red;
+    }
+
+    /* 
+        id와 class의 이름규칙
+        1. 첫 글자는 숫자 x
+        2. 영문의 대소문자를 구별한다. 
+        3. 특수문자는 _와 - 사용가능
+        */
+    
+    
+   /* *는 전체-> html 포함 안의 모든 태그 ( head태그와 head안의 태그는 제외) 
+      -> html, body, h1, h2, p
+   */
+
+   html {border:5px solid lightblue;}
+   body{border:5px solid lightblue;}
+   h1 {border:5px solid lightblue;}
+   h2 {border:5px solid lightblue;}
+   p {border:5px solid lightblue;}
+   
+   /* 
+    *{선언부}
+    선택자 * {선언부}-> 일반적으로 이렇게 사용한다.
+   선택자를 쓰고 뒤에 *를 쓴다.
+    */
+    /* 결합자 선택기 - 공백 * */
+    /* 요소 전체 */
+    body * {border:5px solid lightblue;}
+
+    html,body,h1,h2,p,b{border:5px solid lightblue;}
+
+  </style>
+</head>
+
+<body>
+  <h1>선택자</h1>
+  <h2>요소(타입,태그) 선택자</h2>
+  <p>Lorem ipsum <b>dolor</b>sit amet.</p>
+  
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+         선택자 {선언부}
+         선택자 {선언; 선언; 선언; ...}
+         선택자 {속성: 속성값; 속성: 속성값;...}
+
+         h1{color: red; background: yellow;}
+         h1{
+         color: red; 
+         background: yellow;
+         background: blue;
+         }
+         속성의 순서는
+         -서로 다른 속성간에는 순서가 없다.
+         -같은 속성의 경우 아래에 기록한 것이 적용된다.
+         */
+        /* shifr+alt+f */
+        /* 코드의 가동성이 높다. */
+        body {
+            margin: 0;
+        }
+
+        p {
+            width: 50%;
+            color: red;
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<!-- 
+   블랙레벨요소의 가로 크기는 100%
+   %는 상대적 단위로,
+   부모 가로 크기를 기준으로 100%이다.
+-->
+<h1>CSS의 기본 형식</h1>
+<p>블록레벨요소의 가로 크기는 부모 크기의 100%이다.</p>
+<p>%단위는 상태적 단위(기준이 필요)이다.</p>
+</html>
