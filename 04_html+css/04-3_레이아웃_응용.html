@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용1</title>
+    <style>
+        
+
+        .wrap {
+            display: flex;
+            /* 자식 요소를 가로 배치 */
+
+        }
+
+        .header {
+            width: 100px;
+            /* w600 */
+            background: #ccc;
+        }
+
+        .right_contents {
+            width: 500px;
+            /* w600 */
+            
+        }
+        .slide {
+            height: 200px; background: #ebadad;
+        }
+        .contents {
+            height: 100px; background: #a3cce0;
+        }
+        .footer {
+            height: 50px;background: #b2e0a3
+        }
+    </style>
+</head>
+
+<body>
+    <!-- shift+alt+아래방향키 -->
+    <!-- ctrl+alt+아래방향키 -->
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">슬라이드</div>
+            <div class="contents">콘텐츠</div>
+            <div class="footer">푸터</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
