@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST쇼핑몰</title>
+    <style>
+        /* 전체 */
+        *{
+            margin:0;
+        }
+        body {
+            background: #fff;
+        }
+          
+        /* 가로 중앙 배치 - width를 지정한 후 margin: 0 auto;를 지정한다. */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            /* 부모요소에 display: flex;를 적용하면 자식 요소가 가로 배치된다. */
+            display: flex;
+            height: 100px;
+        }
+        /* 로고 */
+        .logo{
+            width:200px;
+         background:#eee;
+        }
+        /* 내비게이션 */
+        nav {
+            width:1000px;
+            background: #ddd;
+        }
+            
+        .slide {
+            background: #ccc;
+            height: 300px;
+        }
+
+        /* 콘텐츠 */
+        .contents {
+            display: flex;
+            height: 200px;
+        }
+        .notice{
+            width:400px;
+            background: #bbb;
+        }
+        
+        .banner {
+            width: 400px;
+            background: #aaa;
+        }
+       
+        .shortcut {
+            width: 400px;
+            background: #999;
+        }
+           
+        /* 푸터 */
+        footer {
+            display:flex;
+            height: 100px;
+        }
+       
+        .blogo {
+            width: 200px;
+            background: #888;
+        }
+        .copy {
+            width: 800px;
+            background: #777;
+        }
+        .sns {
+            width:200px;
+            background: #555;
+        }
+            
+
+    </style>
+</head>
+
+
+<body>
+    <div class="wrap">
+        <header>
+            <!-- 로고 -->
+            <h1 class="logo">로고</h1>
+            <!-- 내비게이션 -->
+            <nav>내비게이션</nav>
+        </header>
+        <!-- div.slide -->
+        <div class="slide ">슬라이드</div>
+
+        <div class="contents ">
+        <!-- 공지사항 -->
+        <div class="notice">공지사항</div>
+        <!-- 배너 -->
+        <div class="banner">배너</div>
+        <!-- 바로가기 -->
+        <div class="shortcut">바로가기</div>
+       </div>
+
+        <footer>
+            <!-- 하단로고 -->
+            <div class="blogo">하단로고</div>
+            <!-- 주소 및 저작권 -->
+            <div class="copy">주소 및 저작권</div>
+            <!-- SNS -->
+            <div class="sns">SNS</div>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
+        
+
+        
+
