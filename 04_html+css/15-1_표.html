@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+      table{width:100%;/* w100% */
+      border-collapse:collapse;/* bdcl */
+      }
+      td,th {border:1px solid #000;/* bd */}
+      /* 클래스 선택자 */
+      .c1{background: #e7bbbb;}
+      .c2{background: #adcbe7;}
+
+    </style>
+</head>
+<body>
+    <!-- 
+        <table>    표 정의
+        <tr>       table row(행) 정의  
+        <td>       table data -> 행 안의 셀(cell)
+
+        <th scope="row/col">        table header -> 셀 제목
+
+        <caption>   표의 제목
+         웹 접근성을 위해 caption 태그로 표의 제목을 기록한다.
+        <col>       column(열) 정의
+        <colproup>  열 그룹핑
+         
+         표를 영역을 제목, 본문 ,요약 부분으로 세분화하여 그룹핑할 때 주로 데이터가 많은 큰 표를 만들때 사용된다.
+        <thead>     제목 영역
+        <tbody>     본문 영역
+        <tfoot>     요약 영역               
+     -->
+    
+   <h1>표</h1>
+   <table> <!-- 표 시작 -->
+      <caption>2025년 웹 디자인과 과목별 점수</caption>
+      <colgroup>
+         <col class="c1">
+         <col class="c2">
+      </colgroup>
+    <!-- tr의 자식은 td와 th만 사용한다. -->
+     <thead>
+             <tr><!-- 1행 시작 -->
+                <th>교과목</th> <!-- 1행1열 -->
+                <th>점수</th> <!-- 1행2열 -->
+             </tr><!-- 1행 끝 -->
+     </thead>
+   
+  
+             <tbody>
+                <tr><!-- 2행 시작 -->
+                   <th>HTML</th> <!-- 2행1열 -->
+                   <td>93</td> <!-- 2행2열 -->
+                </tr><!-- 2행 끝 -->
+                <tr><!-- 3행 시작 -->
+                   <th>CSS</th> <!-- 3행1열 -->
+                   <td>92</td> <!-- 3행2열 -->
+                </tr><!-- 3행 끝 -->
+             </tbody>
+
+  
+             <tfoot>
+                <tr><!-- 4행 시작 -->
+                   <th>평균</th> <!-- 4행1열 -->
+                   <td>92.5</td> <!-- 4행2열 -->
+                </tr><!-- 4행 끝 -->
+             </tfoot>
+
+   </table> <!-- 표 끝 -->
+</body>
+</html>

@@ -26,7 +26,7 @@
          -->
         <li>커피
             <p>아래는 우리 회사에서 판매되는 커피 목록입니다.</p>
-        </li>    
+        </li>
         <li>아이스 아메리카노</li>
         <li>카페모카</li>
         <li>카라멜 마끼아또</li>
@@ -35,7 +35,7 @@
     <h2>커피 판매 순위</h2>
     <li>우유</li>
     <li>코카콜라</li>
-   
+
     <!-- 순서 있는 목록 -->
     <ol>
         <li>아이스 아메리카노</li>
@@ -49,17 +49,39 @@
          정의 목록 (description list)-> dl 
          설명 항목 (description term)-> dt   
          설명 항목의 설명 (description description)->dd  
+         dl안에 자식으로 dt와 dd를 사용하는데
+         dt를 먼저 쓰고 dd를 나중에 쓴다.
     -->
 
 
-    <h3>약어 정의</h3>
+    <h3>설명 목록</h3>
+    <!-- div로 그룹핑 
+          -> dt와 dd를 한 세트로 그룹핑한다. 
+    -->
     <dl>
+        <div>
+            <dt>HTML</dt>
+            <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>>
+        </div>
+        <div>
+            <dt>css</dt>
+            <dd>Cascading Style Sheet의 약자로 웹페이지의
+                <b>레이아웃과 서식</b> 등을 지정하는 디자인 언어이다.
+            </dd>
+        </div>
+
+    </dl>
+    <!-- div로 그룹핑 안함 -->
+    <dl>
+
         <dt>HTML</dt>
-        <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>
+        <dd>Hyper Text Markup Language의 약자로 웹페이지의 <i>구조와 내용</i>을 정의하는 언어이다.</dd>>
+
         <dt>css</dt>
         <dd>Cascading Style Sheet의 약자로 웹페이지의
             <b>레이아웃과 서식</b> 등을 지정하는 디자인 언어이다.
         </dd>
+
 
     </dl>
 

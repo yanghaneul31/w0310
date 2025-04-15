@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 내비게이션</title>
+</head>
+
+<body>
+    <!-- Emmet(에밋)은 HTML, XML, XSL 등의 문서를 편집할 때 사용하는 플러그인으로, 코드 작성 시간을 단축시켜주는 기능을 제공합니다. 원래는 젠코딩(Zen Coding)이라는 이름으로 불렸습니다. 
+         >         Child(자식)
+        *         Multipulcation(형제 개수)
+        #속성값     ID attributes(아이디 속성)
+        .속성값    CLASS attributes (클래스 속성)
+     [속성=값]    속성
+     {콘텐츠}     콘텐츠
+         $         Item numdering(자동 순번) 1,2,3...
+        +         Sibling(형제)
+ -->
+    <h1>2depth 내비게이션</h1>
+    <h2>에밋 사용</h2>
+    <!-- ul>li*3>a[href=#]{메인메뉴$} -->
+  <!-- ul>li*3>a{메인메뉴$}+ul>li*3>a[href=#]{서브메뉴$} -->
+  <!-- nav#gnb>ul.main>li*3>a{메인메뉴$}+ul>li*3>a[href=#]{서브메뉴$} -->
+   <!-- ctrl+spcaeber -> tab
+   또는
+   마지막 문자를 삭제 후 다시 기록 -> tab 
+   -->
+   <nav id="gnb">
+    <ul class="main">
+        <li>
+            <a href="">메인메뉴1</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴2</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">메인메뉴3</a>
+            <ul>
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </ul>
+        </li>
+    </ul>
+   </nav>
+        <li><a href="#">메뉴소개</a>
+            <!-- 서브 메뉴 -->
+            <ul>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">코드</a></li>
+                <li><a href="#">상품</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">매장</a>
+            <!-- 서브 메뉴 -->
+            <ul>
+                <li><a href="#">매장찾기</a></li>
+        </li>
+    </ul>
+    <!-- 메인 메뉴 ul의 끝 -->
+
+
+
+</body>
+
+</html>
