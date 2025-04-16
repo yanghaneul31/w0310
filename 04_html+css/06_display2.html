@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /*
+        모든 요소 width와 height 기본값은 auto이다.
+        display:화면에 표시되는 방식
+        1.block
+        width는 부모 width 크기의 100%
+        height는 콘텐츠 크기
+        width와 height 사용자 지정o
+        margin은 상하좌우 모두 적용
+
+        2.inline
+        width와 height 모두 콘텐츠 크기
+        width와 height 사용자 지정x
+        margin은 좌우만 적용
+
+        3.inline-block
+        인라인이면서 블록 속성을 가진다.
+        width는 부모 width 크기의 100%
+        height는 콘텐츠 크기
+        width와 height 사용자 지정o
+        margin은 상하좌우 모두 적용
+
+        4.none:없음
+    
+        */
+        div,
+        span {
+            border: 1px solid #000;
+        }
+
+        .div1 {
+            display: block;
+            width: 200px;
+        }
+
+        .div2 {
+            display: inline;
+            /* width: 200px;->적용x */
+        }
+
+        .div3 {
+            display: inline-block;
+            width: 200px;
+        }
+
+        .div4 {
+            display: none;
+        }
+
+        .span1 {
+            display: block;
+        }
+
+        .span2 {
+            display: inline;
+        }
+
+        .span3 {
+            display: inline-block;
+        }
+
+        .span4 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 요소(Element)
+        1.블랙 레벨 요소: div,...
+        줄바꿈o
+        2.인라인 요소: span,...
+        줄바꿈x 
+        -->
+    <!-- div는 display:block -->
+    <div class="div1">div1박스</div>
+    <div class="div2">div2박스</div>
+    <div class="div3">div3박스</div>
+    <div class="div4">div4박스</div>
+    <!-- span는 span:inline -->
+    <span class="span1">span1박스</span>
+    <span class="span2">span2박스</span>
+    <span class="span3">span3박스</span>
+    <span class="span4">span4박스</span>
+</body>
+
+</html>

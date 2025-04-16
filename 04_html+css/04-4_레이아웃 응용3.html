@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃-응용3</title>
+    <style>
+        div,
+        header {
+            background: #f0dddd;
+        }
+
+        .container {
+            background: transparent;
+            display: flex;
+        }
+
+        .wrap {
+            width: 1000px;
+            background: transparent;
+        }
+
+        .slide {
+
+            height: 400px;
+        }
+
+
+        .banner {
+            width: 1000px;
+            height: 200px;
+            margin: 4px 0;
+        }
+
+        .contents {
+            height: 250px;
+            background: transparent;
+            display: flex;
+        }
+
+        .notice {
+            width: 496px;
+            margin-right: 4px;
+        }
+
+        .gallery {
+            width: 500px;
+        }
+
+        .header {
+            width: 200px;
+            margin-right: 4px;
+            display: flex;
+        }
+
+        /* display:flex;는 부모 요소(플렉스 컨테이너)에 적용한다.
+        그러면 자식은 플렉스 아이템이 된다. */
+        .footer {
+            height: 100px;
+            display: flex;
+            margin-top: 4px;
+        }
+
+        .copy {
+            width: 796px;
+            margin: 0 4px;
+        }
+
+        .blogo,
+        .SNS {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">헤더</header>
+        <div class="wrap">
+            <div class="slide"></div>
+            <div class="banner"></div>
+            <div class="contents">
+                <div class="notice">1</div>
+                <div class="gallery">2</div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="blogo"></div>
+        <div class="copy"></div>
+        <div class="SNS"></div>
+    </footer>
+</body>
+
+</html>
