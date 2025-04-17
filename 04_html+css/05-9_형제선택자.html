@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 태그(타입,요소) */
+
+        /* 클래스 선택자 */
+        .p5 {
+            color: brown;
+        }
+
+        /* 하위 선택자->선택자를 ~ 으로 구분
+        선택자~선택자
+        형 ~ 제
+        예) 첫째 자식 ~ 셋째 자식 (x)
+        예) 둘째 자식 ~ 셋째 자식 (o)
+        예) 첫째 자식 ~ 둘째 자식 (o)
+        -> 제는 형의 바로 아래있는 동생
+         */
+         /* h1 바로 아래 p동생 모두를 선택하여 */
+        h1+p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="abox">
+        <h1>p는 div의 첫 번째 자식이다.</h1>
+        <p>h1의 첫 번째 동생</p>
+        <p>h2의 두 번째 동생</p>
+        <ul><!-- h1의 세 번째 동생 -->
+            <li>
+                <p>p는 첫 번째 li의 자식, div의 손자이다.</p>
+            </li>
+            <li>
+                <p>p는 두 번째 li의 자식, div의 손자이다.</p>
+            </li>
+        </ul>
+    </div>
+
+    <p>p는 body의 자식이다.</p>
+</body>
+
+</html>

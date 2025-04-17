@@ -8,20 +8,30 @@
 <body>
     <form action="#" method="method">
         <fieldset>
+            <!-- 검색,로그인,회원가입 등 -->
             <legend>type 속성</legend>
             <p>아이디: <input type="text"></p>
             <p>비밀번호: <input type="password"></p>
+            <!-- 사용자에게 노출할 필요가 없는 데이터를 저장할 때 사용함 -->
+             <input type="hidden"> <br>
+
             <p>검색: <input type="search"></p>
             <p>이메일: <input type="email"></p>
             <p>전화번호: <input type="tel"></p>
             <p>컬러선택: <input type="color"></p>
             <p>수량: <input type="number" min="1" max="10" value="1"></p>
             <p>만족도: <input type="range" min="1" max="10" value="1"></p>
+            <!-- checkbox와 radio의 value는 서버로 전송할 데이터 값이다. -->
             <p>예 <input type="radio" name="receive" checked="checked">아니오<input type="radio" name="receive"></p>
             <p>html<input type="checkbox" checked="checked"> css<input type="checkbox"></p>
+
+            <!-- 전송:가입하기,로그인,... -->
             <p><input type="submit" value="전송"></p>
+            <!-- 초기화:취소,로그아웃 -->
             <p><input type="reset" value="취소"></p>
+            <!-- 전송과 초기화가 아닌 경우:애니메이션,... -->
             <p><input type="button" value="확인"></p>
+            <!-- 버튼을 이미지로 디자인하여 사용하고 싶을 때 -->
             <p><input type="image" src="images/bt.png" alt="검색"></p>
             <p><input type="file"></p>
         </fieldset>

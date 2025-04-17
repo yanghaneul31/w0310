@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 태그(타입,요소) */
+
+        /* 클래스 선택자 */
+        .p5 {
+            color: brown;
+        }
+
+        /* 하위 선택자->선택자를 >으로 구분
+        선택자1 선택자2
+        조상 자손
+        조상은 부모도 포함된다.
+        자손은 자식도 포함된다.
+         */
+        /* div(붙여서 써야함)중에 클래스 이름이 .abox인 요소의 자손 p를 선택하여 */
+       .abox > p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="abox">
+        <p>div의 첫 번째 자식p</p>
+        <p>div의 두 번째 자식p</p>
+        <ul>
+            <li>
+                <p>p는 첫 번째 li의 자식, div의 손자이다.</p>
+            </li>
+            <li>
+                <p>p는 두 번째 li의 자식, div의 손자이다.</p>
+            </li>
+        </ul>
+    </div>
+
+    <p>p는 body의 자식이다.</p>
+</body>
+
+</html>

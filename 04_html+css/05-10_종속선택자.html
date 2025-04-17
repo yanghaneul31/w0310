@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+             부모 자식 관계 선택자
+             1.선택자  선택자 -> 하위(descendent)선택자
+             2.선택자 > 선택자 -> 자식(child)선택자
+
+             형제 관계 선택자
+             3.선택자 + 선택자 ->형제(sibling)선택자
+             4.선택자 ~ 선택자 ->인접형제(adjacent sibling)선택자
+
+             종속 선택자 -> type, id, class를 결합한 형태
+        */
+        /* atxt는 아이디 선택자 */
+        #atxt {
+            color: aquamarine;
+        }
+
+        /* p#atxt는 종속 선택자 -> type과 class를 결합*/
+        p#atxt {
+            color: aquamarine;
+        }
+
+        /* p.atxt는 종속 선택자 -> type과 class를 결합 */
+        p.atxt {
+            color: brown;
+        }
+
+        /* #atxt.atxt는 종속 선택자 -> id과 class를 결합 */
+        #atxt.atxt {
+            color: blueviolet;
+        }
+        /* 하위 선택자 */
+        p .atxt{color:bisque;}
+    </style>
+</head>
+
+<body>
+    <p>선택자의 다양한 표현</p>
+    <p id="atxt">선택자의 다양한 표현</p>
+    <p class="atxt">선택자의 다양한 표현</p>
+    <p id="atxt" class="atxt">선택자의<span class="atxt">다양한 </span>표현 </p>
+    
+</body>
+
+</html>
