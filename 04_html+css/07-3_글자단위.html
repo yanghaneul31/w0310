@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html+css</title>
+    <style>
+        /* 선택자:root는 html과 같다. */
+        /* 글자 속성은 상속 개념이 있다. */
+        :root {
+            font-size: 24PX;
+        }
+
+        html {
+            font-size: 24PX;
+        }
+
+        ul {
+            font-size: 12px;
+        }
+
+        li {
+            font-size: 1.5em; /* fz1.5em */
+            /* 1.5em은 li의 부모, 즉 ul 12px의 1.5배
+               1.5*12=18px
+            */
+        }
+
+        /* 
+        em의 기준은?부모
+        rem의 기준은? 최상위 부모=html태그
+        선택자로 표시?:root */
+        li:nth-child(4) {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>글자 단위:2em=96px</h1>
+    <p>글자의 단위에는 px,%,em,rem 등이 있다.</p>
+    <ul>
+        <li>px 18px</li>
+        <li>% 18px</li>
+        <li>em 18px</li>
+        <li>rem 36px</li>
+    </ul>
+</body>
+
+</html>
