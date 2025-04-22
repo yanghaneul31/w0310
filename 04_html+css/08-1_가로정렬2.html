@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 기본값은 left */
+        p {
+            margin: 20px;
+            border: 1px solid red;
+            height: 30px;
+            /* 인라인 요소들도 같이 따라감,블록 레벨 요소는 적용x,블록레벨요소의 자식이 인라인 요소 또는 텍스트일 경우는 적용o */
+            text-align:center;
+        }
+
+        span {
+            /* span은 인라인 요소 */
+            display: inline-block;
+            width:20px;
+            height:30px;
+            background: rgb(233, 172, 172);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>가로 맞춤</h1>
+    <p>글자</p>
+    <p><span>나</span></p>
+</body>
+
+</html>

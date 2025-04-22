@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 전체 */
+/* 헤더 */
+body,
+h1,
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    /* 목록의 블릿 기호 제거 */
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #ffffff;
+    color: #222328;
+    /* font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5; */
+
+    font: 15px/1.5 "Noto Sans KR", sans-serif;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+
+}
+
+.logo {
+    margin-top: 30px;
+    width: 200px;
+    /* height:40px; */
+}
+
+.gnb {
+    display: flex;justify-content: flex-end;
+    width: 1000px;
+    padding-right: 32px;
+}
+
+.main {
+    width: 400px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+   
+} 
+
+/* 슬라이드 */
+.slide {
+    height: 300px;
+    background: #f7b9b9;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+}
+
+.notice {
+    padding: 16px 0 0 16px;
+    width: 400px;
+    line-height: 1.8;
+}
+
+.notice h2 {
+    margin-bottom: 8px;
+}
+
+.notice span {
+    display: inline-block;
+    width: 270px;
+
+}
+
+.banner {
+    width: 400px;
+    background: #f18b8b;
+}
+
+.shortcut {
+    width: 400px;
+    background: #ee7878;
+}
+
+/* 푸터 */
+.footer {
+    display: flex;
+    height: 100px;
+    background: #ee7474;
+    color: #e9dede
+}
+
+.blogo {
+    padding-top: 35px;
+    width: 200px;
+}
+
+.copy {
+    padding: 24px;
+    text-align: center;
+    width: 800px;
+
+}
+
+.sns {
+    width: 200px;
+
+    line-height: 100px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.sns li {
+    display: inline-block;
+}
+
+.sns a {
+    color: #e9dede;
+}
