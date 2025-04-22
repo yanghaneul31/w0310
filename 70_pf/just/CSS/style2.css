@@ -46,7 +46,8 @@ body {
 }
 
 .gnb {
-    display: flex;justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
     width: 1000px;
     padding-right: 32px;
 }
@@ -57,8 +58,8 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-   
-} 
+
+}
 
 /* 슬라이드 */
 .slide {
