@@ -31,11 +31,13 @@ ul {
     width: 1000px;
     padding-right: 30px;
     justify-content: center;
+    font-weight: bold;
+    color:#222328;
 }
 
 .main {
     display: flex;
-    width: 400px;
+    width: 600px;
     justify-content: space-between;
     line-height: 50px;
 }
@@ -66,20 +68,26 @@ ul {
 .delivery {
     width: 400px;
     height: 200px;
-    margin-right: 100px;
+    margin-left: 150px;
+    margin-right: 200px;
+    font-weight: bold;
 }
 
 .pickup {
     width: 400px;
     height: 200px;
-    margin-right: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-weight: bold;
 }
 
 
-.myoreder {
+.myorder {
     width: 400px;
     height: 200px;
-    margin-right: 100px;
+    margin-left: 200px;
+    margin-right: 150px;
+    font-weight: bold;
 }
 
 .footer {
@@ -101,10 +109,12 @@ ul {
     text-align: center;
     color: #5c5a5a;
     font-size: 13px;
+    font-weight: bold;
 }
 .sns li {
     display: inline-block;
     margin-top: 70px;
+    font-size: 25px;
 }
 
 .sns a {

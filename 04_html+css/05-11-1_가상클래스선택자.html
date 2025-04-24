@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+        ~child
+        :nth-chlid()
+        :nth-last-child()
+        :first-child
+        :last-child
+
+        ~of type
+        :nth-of-type()
+        :nth-last-of-type()
+        :first-of-type
+        :last-child
+        */
+        p::first-letter {
+            font-size: 150%;
+        }
+
+        p:first-child {
+            color: blue;
+        }
+
+        p {
+            background:lightgray;
+        }
+        /* div의 마지막 자식p */
+        /* last-child와 nth-last-child(1)은 같다. */
+        p:nth-last-child(1) {
+            background: palegoldenrod;
+        }
+        /* div의 3번째 자식 */
+        p:nth-child(3) {
+            color: red;
+        }
+
+        p:before {
+            /* 한글의 ㅁ+한자키 */
+            content: "★";
+        }
+
+        .box:after {
+            content: "항목을 선택해주세요.";
+                color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>COMMUNITY</p>
+    </div>
+</body>
+
+</html>
