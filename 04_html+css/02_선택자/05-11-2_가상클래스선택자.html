@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+        ~child
+        :nth-chlid()
+        :nth-last-child()
+        :first-child
+        :last-child
+
+        ~of type
+        :nth-of-type()
+        :nth-last-of-type()
+        :first-of-type
+        :last-child
+        */
+       /* 공백은 자식과 손자 모두 포함 */
+         div p:first-child{color:red;}
+       /*자식만  */
+        div > p:nth-child(1){color: aqua;}
+        
+        div > p:nth-of-type(1){background: #ffd2d2;color: aqua;}
+
+        p:first-of-type{border: 2px solid red;}
+        /*last-of-type은 :nth-last-of-type(1)과 같다. */
+        p:last-of-type{border: 2px dotted blue;}
+        /* 
+         n은 숫자, 수열(2n,2n+1,3n+2,...),odd(홀수),even(짝수)
+        */
+        .box2 p:nth-of-type(3){border:2px dashed green;}
+        .box1 p:nth-of-type(even){background: #bdfffc;}
+        
+    </style>
+</head>
+
+<body>
+    <h1>가상 클래스 선택자</h1>
+    <h2>~child</h2>
+    <div class="box1">
+        <h3>난 h3으로 내가 첫 번째 자식이야!</h3>
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>COMMUNITY</p>
+    </div>
+    <h2>~of-type</h2>
+    <div class="box2">
+        <p>COMPANY</p>
+        <p>PRODUCT</p>
+        <p>SERVICE</p>
+        <p>COMMUNITY</p>
+    </div>
+</body>
+
+</html>
