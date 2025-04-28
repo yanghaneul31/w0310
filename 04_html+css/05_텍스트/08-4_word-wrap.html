@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        ul {
+            width: 200px;
+            border: 1px solid #000;
+        }
+        .wrapping li{word-wrap:break-word;}
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <p>이름:홍길동</p>
+        </li>
+        <li>
+            <p>이메일:hongkidong20180101koreapublishing20181231@hanmail.net</p>
+        </li>
+    </ul>
+    <ul class="wrapping">
+        <li>
+            <p>이름: 홍길동</p>
+        </li>
+        <li>
+            <p>이메일:hongkidong20180101koreapublishing20181231@hanmail.net</p>
+        </li>
+    </ul>
+    <ul class="wrapping2">
+        <li>
+            <p>이름: 홍길동</p>
+        </li>
+        <li>
+            <!-- 한글은 글자 단위로 줄 바꿈된다. -->
+            <p>이메일:홍길동20180101코리아퍼블리싱20181231@hanmail.net</p>
+        </li>
+    </ul>
+</body>
+
+</html>

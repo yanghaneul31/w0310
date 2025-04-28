@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+
+<body>
+    <h1>폼의 속성:pattern</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>정규식 속성</legend>
+            <p><label for="tel">비밀 번호</label>
+                <!-- 
+                    () 그룹화, 괄호 안의 패턴을 하나의 단위로 취급
+                    (?=...) 전방 탐색, 주언이 패턴이 뒤따라오는지 검사
+                    .* 임의의 문자(0개 이상의 문자)
+                      예) a*는 a가 0번 이상 반복되는 문자열과 일치
+                    \d 숫자 (0-9)와 일치 
+                    {n,} 앞의 요소가 n번 이상 반복되는 패턴과 일치
+                        예)a{2,} 
+                -->
+                <input type="password" id="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z].{8,})"
+                    required="required" title="영문의 대소문자, 숫자 포함 8자 입력"></p>
+            <p><label for="tel">이메일</label>
+                <!-- 
+                    ^ 문자열의 시작
+                    $ 문자열의 끝
+                    . 임의의 한 문자(개행을 제외한 모든 문자)
+                      예) a.c -> abc,acc,a-c
+                    [] 대괄호 안의 문자 중 하나와 일치
+                    [0-9] 숫자 0부터 9 사이의 문자와 일치
+                    [a-z] 소문자 알파벳 문자와 일치
+                    [A-Z] 대문자 알파벳 문와 일치
+                    {n,} 앞의 요소가 n번 이상 반복되는 패턴과 일치 
+                    +    앞의 요소가 1번 이상 반복되는 패턴과 일치
+                         예)a+는 a,aa,aaa등과 일치
+                -->
+                <input type="tel" id="tel" pattern="[a-zA-Z0-9._%+-]@[a-zA-Z]+\.[a-zA-Z{2,}$]"
+                    required="required" title="유효한 이메일 주소를 입력하세요."></p>
+            <p><label for="tel">휴대폰 번호</label>
+                <!-- 
+                    /d 숫자(0-9)와 일치
+                    {n}   앞의 요소가 정확히 n번 반복되는 패턴과 일치
+                    
+                    {n,m} 앞의 요소가 n번 이상, m번 이하 반복되는 패턴과 일치
+                -->
+                <input type="tel" id="tel" pattern="\d{3}-\d{3,4}-\d{4}"
+                    required="required" title="휴대폰 번호는 숫자 3자리-숫자 3자리에서 4자리-숫자 4자리 입력"></p>
+           
+            <p><input type="submit" value="확인"></p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

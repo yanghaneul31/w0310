@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {
+            border: 1px solid #000;
+        }
+        /* 
+           veritcal-align: 수직 맞춤
+           기본값: baseline(기준선)
+           값: top(위), bottom(아래),middle(중간)
+           사용 태그 : 인라인 요소<img>,<input>,<selet>,<label>
+            테이블 셸(th,td),flexbox,grid
+        */
+        .valign img{
+            vertical-align: middle; /* vam */
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        나는 자유다
+        <img src="https://www.nationalretail.org.au/nra-imfree-partnership/#post_image" width="150" alt="자유">
+    </p>
+    <p class="valign">
+        나는 자유다
+        <img src="https://www.nationalretail.org.au/nra-imfree-partnership/#post_image" width="150" alt="자유">
+    </p>
+</body>
+
+</html>

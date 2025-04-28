@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p {
+            width: 200px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        .breaking1{word-break:normal;}
+        
+        /* 양쪽 맞춤 했을 경우 글자를 깨뜨린다. */
+        .breaking2{word-break:break-all;}
+        
+        .breaking3{word-break:keep-all;}
+    </style>
+</head>
+
+<body>
+    <p class="breaking1">
+        홍길동<br>
+        한국사회역사연구회 고고학과 전임교수<br>
+        notonlystartinggood@naver.com
+    </p>
+    <p class="breaking2">
+        홍길동<br>
+        한국사회역사연구회 고고학과 전임교수<br>
+        notonlystartinggood@naver.com
+    </p>
+    <p class="breaking3">
+        홍길동<br>
+        한국사회역사연구회 고고학과 전임교수<br>
+        notonlystartinggood@naver.com
+    </p>
+</body>
+
+</html>

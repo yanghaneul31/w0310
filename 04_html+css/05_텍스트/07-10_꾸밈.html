@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        a {
+            text-decoration: none;
+            /* tdn */
+            color: aquamarine;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            /* tdu */
+            color: #333;
+        }
+
+        p {
+            text-decoration: overline;
+            text-transform: capitalize;
+            /* ttc */
+            font: bold 25px Times;
+            color: blueviolet;
+        }
+
+        span:first-of-type {
+            text-decoration: underline;
+        }
+
+        span:nth-of-type(2) {
+            text-decoration: overline;
+        }
+
+        span:last-of-type {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">현재상영작</a></li>
+        <li><a href="#">상영예정작</a></li>
+    </ul>
+    <p>happy birth day!</p>
+    <span>밑줄</span>
+    <span>윗줄</span>
+    <span>취소선</span>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        h1 {
+            font-size: 40px;
+            /* fz40 */
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: normal;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0, 1);
+        }
+        h3{
+            font-size: 40px;
+            color:#ff5733;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0,5),0 0 25px rgba(0,0,0,0,3);
+        }
+        h4{
+            font-size: 40px;
+            color:#fff;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0000;
+        }
+        button{
+            font-size: 18px;
+            color:#fff;
+            background: #007bff;
+            border:none;
+            padding:10px 20px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer; /* 손가락 모양 나오게하기 */
+        }
+        /* text-shadow:x위치 y위치 blur [색],x위치 y위치 blur [색],...; */
+
+        /* 
+           text-shadow: x위치 y위치 blur [색];
+           x 위치: 그림자가 원본에서 떨어지는 가로 거리색을 생략하면 글자색으로 지정된다.
+           y 위치: 그림자가 원본에서 떨어지는 세로 거리색을 생략하면 글자색으로 지정된다.
+           blur: 흐림효과
+        */
+        .shadow1 {
+            font: 30px "Arial Black";
+            text-shadow: 4px 4px rgba(100, 100, 0, 0.6);
+        }
+
+        .shadow2 {
+            font: 30px "Arial Black";
+            color: #135;
+            text-shadow: 2px 2px #246,
+                3px 3px #357,
+                4px 4px #468,
+                5px 5px #579,
+                6px 6px #68a,
+                7px 7px #79b,
+                8px 8px #8ac;
+
+        }
+
+        p {
+            text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>헤더나 타이틀에 사용한 텍스트 그림자</h1>
+    <h2>미니멀한 효과의 텍스트 그림자</h2>
+    <h3>멀티 레이어 텍스트 그림자</h3>
+    <h4>반짝이는 효과</h4>
+    <button>버튼</button>
+
+    <h2 class="shadow1">SHADOW EFFECT</h2>
+    <h2 class="shadow2">TEXT SHADOW</h2>
+    <p>
+        Internet Explorer 9 and earlier
+        do not support the text-shadow property
+    </p>
+</body>
+
+</html>
