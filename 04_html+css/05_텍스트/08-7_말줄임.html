@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임</title>
+    <style>
+        body {
+            font-size: 16px;
+        }
+
+        ul,
+        li,
+        h3 {
+            margin: 0;
+            padding: 0;
+        }
+        ul{list-style: none;/* 블릿 기호 제거 */}
+        a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            /* 웹 안전컬러:#000000,#333333,#666666,#999999,#cccccc,#ffffff */
+            color: darkblue;
+        }
+
+        .notice {
+            border: 1px solid #000;
+        }
+
+        .notice a h3 {
+            width: 400px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>말줄임</h1>
+    <h2>공지사항:최근 글</h2>
+    <ul class="notice">
+        <!-- h3태그로 묶는 것이 SEO(검색엔진 최적화)나 접근성 측면에서 유리하다. -->
+        <li><a href="#">
+                <h3>시간 배분을 위하여 현명한 판단을 바랍니다.</h3>
+            </a><span>2025-04-29</span></li>
+        <li><a href="#">
+                <h3>욕심껏 내용을 채우는 것도 좋겠습니다.</h3>
+            </a><span>2025-04-28</span></li>
+        <li><a href="#">
+                <h3>결과물을 볼 수 있어야 하는 것이 우선입니다.</h3>
+            </a><span>2025-04-27</span></li>
+    </ul>
+</body>
+
+</html>
