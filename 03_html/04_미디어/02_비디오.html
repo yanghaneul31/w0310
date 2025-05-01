@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        .vid1 {
+            width: 600px;
+        }
+        iframe {
+            border: none;
+            width: 600px;
+            height: 338px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        https://convertio.co/kr/
+
+        속성
+            src: 비디오 파일 경로
+            autoplay: 자동 실행
+            muted: 음소거
+            loop: 무한 반복
+            controls: 컨트롤 표시
+            preload: 미리 로드 방식
+                auto: 일부 또는 전체를 미리 로드한다.(기본값)
+                metadata: 비디오의 메터데이터(길이, 제목 등)만 미리 로드한다.
+                none: 미리 로드하지 않음
+    -->
+    <h1>비디오</h1>
+    <!-- 파일 이름에 공백 사용하지 말것!!! -->
+    <!-- autoplay하려면 muted와 함께 사용해야 한다. -->
+    <video class="vid1" src="./assets/3065047-hd_1920_1080_30fps.mp4" loop autoplay muted></video>
+    <video controls width="600" poster="./assets/비디오poster1691.jpg">
+        <source src="./assets/3065047-hd_1920_1080_30fps.mp4" type="video/mp4">
+        <source src="./assets/3065047-hd_1920_1080_30fps.webm" type="video/webm">
+        <source src="./assets/3065047-hd_1920_1080_30fps.ogv" type="video/ogg">
+        Your browser does not support the video element(당신의 브라우저는 비디오 요소를 지원하지 않습니다).
+    </video>
+
+    <!-- w1431, h805 -->
+    <!-- 
+            소스?파라미터1&파라미터2... 
+            
+            autoplay=1          자동 재생
+            mute=1              음소거(autoplay시 함께 사용!)
+            loop=1              반복 재생
+            controls=0          컨트롤바 숨김
+            start=30            30초부터 재생 시작
+            modestbranding=1    유튜브 로고 최소화
+            rel=0               영상 종료시 다른 채널 영상 표시 방지(같은 채널만 노출)  
+    -->
+    <iframe src="https://www.youtube.com/embed/Ppe5NIRco8A?autoplay=1&mute=1&controls=0&loop=1" title="메가MGC커피 창업 정보 안내"></iframe>
+</body>
+
+</html>

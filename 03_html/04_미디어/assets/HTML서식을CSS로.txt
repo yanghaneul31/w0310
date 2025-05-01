@@ -1,0 +1,13 @@
+    <span style="font-weight:bold;">굵게(bold)</span>
+    <span style="font-weight:bold;">강하게</span>
+    <span style="font-style:italic;">강조(emphasis)</span>
+    <span style="font-style:italic;">이탤릭(italic)</span>
+    <span style="background-color:yellow;">형광펜 효과</span>
+    <span style="font-size:10;">작은 글자</span>
+    <span style="font-size:8;">아래첨자(subscript)</span>
+    <span style="font-size:8;">윗첨자(superscript)</span>
+    <span>삽입(insert)</span>
+    <span style="text-decoration:line-through;">삭제(delete)</span>
+
+
+chaeyo1016@gmail.com

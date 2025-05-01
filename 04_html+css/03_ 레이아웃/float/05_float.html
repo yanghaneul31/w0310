@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HTML+CSS</title>
+   <style>
+      body {
+         margin: 0;
+         /* m0 */
+      }
+
+      /* 
+         블록 레벨 요소
+            width: auto; -> 부모 크기의 100%
+      */
+      h1,
+      p {
+         border: 1px solid;
+         margin: 0;
+         /* bd */
+      }
+
+      h1 {
+         /* h1이 다른 요소에 왼쪽에 배치 */
+         /* float "뜨다" */
+         float: left;
+         /* fl */
+         background: brown;
+         /* 상 우 하 좌 */
+         margin: 15px 10px 5px 16px;
+         /* 상하 좌우 */
+         padding: 3px 10px;
+         /* font-size: 2em; 기본값 => 200% */
+         color: #fff;
+      }
+
+      p {
+         padding: 8px 16px;
+         width: 500px; /* w500 */
+         /* 영문의 경우 justify와 break-all을 함께 사용한다. */
+         text-align: justify; /* taj */
+         word-break: break-all;
+         color: darkgreen;
+      }
+
+      p strong {
+         font-size: 1.2em;
+      }
+
+      span {
+         font-weight: bolder;
+         /* fwbr */
+      }
+   </style>
+</head>
+
+<body>
+   <h1>flo<br>at</h1>
+   <p><strong>강한 강조</strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, iusto harum distinctio labore
+      architecto, <span>possimus</span> quo dolores <b>디자인으로 굵게</b> consequuntur axime itaque veniam? Aliquam ut
+      rovident sit, beatae sequi facere veritatis.</p>
+</body>
+
+</html>
