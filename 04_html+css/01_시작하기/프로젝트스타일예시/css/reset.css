@@ -1,0 +1,16 @@
+/* reset.css: 초기화 파일*/
+@charset "utf-8";
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}

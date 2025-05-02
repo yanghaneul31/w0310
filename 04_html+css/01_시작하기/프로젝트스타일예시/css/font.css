@@ -1,0 +1,8 @@
+/* font.css: 폰트 정의 */
+@charset "utf-8";
+/* CDN (Content Delivery Network)은 웹 콘텐츠를 전 세계에 분산된 서버 네트워크를 통해 사용자에게 전달하는 방식입니다. */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
