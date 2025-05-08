@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 선택자</title>
+    <style>
+        /* 
+            여러 개의 요소에 같은 class명
+            class 선택자 앞에 '.'을 붙여야 한다.
+        */
+        /* 
+            id와 class의 이름 규칙
+                1. 첫 글자는 숫자 x
+                2. 영문의 대소문자를 구별한다.
+                3. 특수문자는 _와 - 사용 가능
+        */
+
+        .atxt {font-weight: bold;}
+        .btxt {color: red;}
+        .ctxt {color: blue;}
+    </style>
+</head>
+<body>
+    <p class="btxt">Lorem ipsum dolor sit amet.</p>
+    <p class="ctxt">Lorem ipsum dolor sit amet.</p>
+    <!-- 클래스는 하나 이상의 속성 값을 사용 가능 -->
+    <p class="ctxt atxt">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

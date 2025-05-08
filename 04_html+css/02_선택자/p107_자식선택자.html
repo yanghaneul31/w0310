@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자식 선택자</title>
+    <style>
+        /* 
+            선택자1>선택자2
+            부모>자식
+            조상>손자 (x)
+        */
+        .abox>p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="abox">
+        <!-- .abox의 자식은 p, ul, p -->
+        <p>.abox의 하위(자식) 요소</p>
+        <ul>
+            <li>
+                <p>.abox의 하위(자식x) 요소</p>
+            </li>
+            <li>
+                <p>.abox의 하위(자식x) 요소</p>
+            </li>
+        </ul>
+        <p>.abox의 하위(자식) 요소</p>
+    </div>
+    <p>.abox의 하위 요소가 아님!</p>
+</body>
+
+</html>

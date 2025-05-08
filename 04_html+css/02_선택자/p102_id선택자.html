@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 선택자</title>
+    <style>
+        /* 
+            유일한 이름
+            id 선택자 앞에 '#'
+        */
+
+        /* 
+            id와 class의 이름 규칙
+                1. 첫 글자는 숫자 x
+                2. 영문의 대소문자를 구별한다.
+                3. 특수문자는 _와 - 사용 가능
+        */
+
+        p {color: red;}
+        #ctxt {color: blue;}
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!-- 한 페이지에서 값이 같은 id가 두 번이상 있으면 안된다! -->
+    <p id="ctxt">Lorem ipsum dolor sit amet.</p>
+    <p id="txt">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
