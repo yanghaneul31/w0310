@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- en: 영문 페이지, ko: 한글 페이지,zh: 중국, ja: 일본 -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+         vendor prefix
+         -webkit- 크롬
+         사파리
+         -ms- 엣지(이전엔 인터넷 익스플로러(IE))
+         -moz-파이어폭스
+         -o-오페라
+         
+         
+        */
+        /* 
+         선택자 {
+            속성: 값;
+            속성: 값;
+            속성: 값;
+            ...
+            }
+        */
+        /* 
+          어떤 요소에 dispaly:flex;를 지정하면 
+          그 요소는 플렉스 컨테이너가 되고,
+          자식 요소는 플렉스 아이템이 된다.
+
+          플렉스 컨테이너에 지정 가능한 속성
+          display: flex;
+          flew- direction -방향
+          justify- content -align(정렬,맞춤) 
+          align- items -정렬 (세로)
+          align-content-정렬
+
+          속기 속성
+          flex-flow: direction wrap;
+          
+          
+         플렉스 아이템
+          align-self-정렬
+          flex-grow(늘리는 것)-성장
+          flex-shrink(줄이는 것)-수축
+          flex-basis-초기 가로 크기
+          order- 자식 요소 순서
+
+          속기 속성
+          flex: 1;
+          
+
+        */
+       
+        .flexbox{
+            /* 가로배치: width가 자식 크기, height는 부모크기의 100% */
+            display: flex;
+            height: 200px;
+            background: #ccc;
+        }
+        .flexbox div{
+            background: darkcyan;
+            margin: 10px;
+            flex:1;
+
+            flex-grow:1;
+            flex-shrink:1;
+            flex-basis:0;
+            /* grow와 shrink가 1이면 basis는 어떤 값이든 같다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <!-- 블록레벨요소는 width는 부모 크기의 100%이며,줄바꿈되기 때문에 세로(위에서 아래로)배치된다. -->
+        <div>flex-item</div>
+        <div>flex-item</div>
+        <div>flex-item</div>
+    </div>
+</body>
+</html>
