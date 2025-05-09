@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    font: 15px/1.6 '굴림','sans-serif';
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 공통 */
+html,
+body {
+    height: 100%;
+}
+
+/* 로고 */
+.logo {
+    text-align: center;
+}
+
+/* 내비게이션 */
+nav {
+    text-align: center;
+    padding: 20px ;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav li {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 8px;
+    border: 1px solid#000;
+}
+nav li a:hover {
+    background: #5E2BB8;
+    color: #fff;
+    
+    
+}
+nav a{
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    transition: .3ms;
+}
+
+.wrap {
+    display: flex;
+    height: calc(100% - 120px);
+}
+
+header {
+    width: 200px;
+    background: lightblue;
+    padding: 20px 0;
+}
+
+.contents {
+    width: 400px;
+    background: lightcoral;
+}
+
+.slide {
+    width: calc(100% - 600px);
+    background: lightgreen;
+    /* overflow hidden;은 콘텐츠가 영역을 벗어나면 숨긴다. */
+    overflow: hidden;
+}
+
+footer {
+    height: 120px;
+    background-color: yellow;
+}
