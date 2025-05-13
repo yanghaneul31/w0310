@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 선택자</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            border-bottom: 3px solid transparent;
+        }
+
+        a:hover {
+            border-bottom: 3px solid red;
+        }
+
+        a::after {
+            display: block;
+            width: 5px;
+            content: "";
+            border-bottom: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">메뉴</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
