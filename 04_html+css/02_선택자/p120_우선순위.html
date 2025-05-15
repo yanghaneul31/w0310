@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자의 우선순위</title>
+    <style>
+
+        /* 
+            선택자의 우선순위
+                1. !important -> 키워드 -> 가능한 사용하지 않는다.
+                2. 인라인 -> 지정 방식 ->  가능한 사용하지 않는다.
+                3. id
+                4. class, 가상 class, 속성
+                5. 요소, 가상 요소
+
+            같은 우선 순위를 가진다면 아래 기록한 내용이 적용된다.
+        */
+
+
+        /* p.atxt {color: blue !important;}
+        p.atxt {color: green !important;} */
+        
+        /* #ctxt {color: red;} */
+        /* .atxt.btxt {color: lime;} */
+        p {color: pink;}
+        p {color: blue;}
+        p:first-child {color:red;}
+        p.atxt {color: magenta;}
+    </style>
+</head>
+<body>
+    <p class="atxt btxt" id="ctxt">
+        선택자의 우선순위
+    </p>
+    <p>선택자의 우선순위2</p>
+</body>
+</html>

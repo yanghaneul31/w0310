@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML의 요소</title>
+</head>
+<body>
+    <!-- 주석: ctrl+/ -->
+    <!-- 
+        1. HTML은 태그(tag)로 구성되어 있고,
+        태그는 <>로 표기한다.
+        <html>, <head>, <body>, <meta>, <title>, <h1>, <a>, ...
+
+        2. <시작태그>콘텐츠</끝태그>
+        <html>내용</html>
+        <head>내용</head>
+        <body>내용</body>
+        <title>웹브라우저상 제목표시줄에 표시될 내용</title>
+        <h1>로고</h1>
+        <h2>섹션의 큰제목</h2>
+        <h3>섹션의 작은제목</h3>
+        <a>텍스트 또는 이미지 또는 비디오</a>
+
+        3. 빈 요소 -> 끝 태그가 없는 요소
+        <meta>
+        <br>
+        <img>
+
+        4. <시작태그 속성="값">콘텐츠</끝태그>
+        <a href="https://naver.com">네이버</a>
+
+        5. HTML 속성에는 필수 속성과 선택 속성(글로벌 속성)이 있다.
+        글로벌 속성이란 모든 태그에 지정할 수 있는 속성을 말한다.
+        - 필수 속성: href, src, alt
+        - 선택 속성: width, height
+        - 글로벌 속성: class, id
+
+
+        6. 태그마다 속성이 정해져있다.
+        <h1 class="" id=""></h1>
+        <a href="" class="" id=""></a>
+        <img src="" alt="" width="" height="" class="" id="">
+
+        7. 속성 값은 큰따옴표("")로 묶는다.
+        <시작태그 속성="속성값">콘텐츠</끝태그>
+        <a href="URL">내용</a>
+
+
+        8. 태그 이름과 속성명은 대소문자를 구별하지 않지만,
+           관례상 소문자로 쓴다.
+
+        9. 태그와 속성사이, 속성과 속성 사이는 한 칸 이상의 공백을 띄워 구분하지만 관례상 한 칸만 띄운다.
+    -->
+    <!-- 웹 브라우저 결과 확인(로컬 테스트): F12 -->
+    <h1>요                          소</h1>
+    <!-- 
+        내용에 한 칸이상의 공백은 한 칸으로 인식한다.
+        공백: spacebar(스페이스바), tab(탭), enter(엔터) 키
+      -->
+    <p>L                            
+        orem ipsum dolor sit amet, consectetur adipisicing elit.<br> Sapiente labore deserunt accusantium cupiditate magnam <br>omnis dicta ad rerum soluta repellendus? Vitae voluptate <br>dolore quas doloribus natus enim alias qui eos!</p>
+</body>
+</html>

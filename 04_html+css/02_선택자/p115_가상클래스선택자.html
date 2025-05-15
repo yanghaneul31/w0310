@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스 선택자</title>
+    <style>
+        /* 
+            가상 클래스 선택자(:)
+                :link
+                :visited
+                :hover
+                :active
+                :focus
+
+                :first-child
+                :last-child
+                :nth-child(n)
+        */
+
+        a {
+            color: #777;
+            text-decoration: none;
+        }
+        /* a태그에 마우스를 올렸을때 */
+        a:hover {
+            color: #333;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a href="#">CUSTOMER</a></li>
+        <li><a href="#">COMMUNITY</a></li>
+    </ul>
+</body>
+
+</html>

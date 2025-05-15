@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 사용하기</title>
+    <style>
+        /* 
+        serif
+        san-serif
+        */
+        p:nth-of-type(2) {
+            font-family: 'Times New Roman', Times, serif;
+            color:red;
+            font-size: 20px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 20px;/* 1.5~2em, 황급비:1.618 */
+            letter-spacing: -1px;
+
+            /* font:[굵기|기울림] 크기/줄간격 글꼴1,글꼴2,snas-serif 
+            속성값의 순서가 있다.
+            굵기,기울임,줄간격은 생략 가능*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>제목</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos molestiae deleniti enim deserunt odit est
+        architecto, officia saepe, ad quo repudiandae distinctio molestias dicta error. Veritatis sequi ea magnam
+        recusandae.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos molestiae deleniti enim deserunt odit est
+        architecto, officia saepe, ad quo repudiandae distinctio molestias dicta error. Veritatis sequi ea magnam
+        recusandae.</p>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexiable 방식</title>
+    <style>
+        /* 
+            [참고]
+            벤더 프리픽스(Vendor Prefix) ?
+                주요 웹 브라우저 공급자가 새로운 기능을 제공할 때 사용하는 접두사입니다. CSS3 표준으로 확정되기 전이나 실험적인 기능을 사용할 때 사용합니다. 
+
+                -webkit- 크롬
+                -webkit- 사파리
+                -ms- IE(인터넷 익스플로러) -> 엣지
+                -moz- 파이어폭스
+                -o- 오페라  
+        */
+        /* 
+            선택자 {
+                속성: 값;
+                속성: 값;
+                속성: 값;
+                ...
+            }
+        
+        */
+
+        /* 
+            부모 요소에 지정
+                display: flex;
+                flex-direction -> 방향
+                flex-wrap -> 줄 바꿈 방식
+                justify-content - align(정렬, 맞춤)
+                align-items - 정렬
+                align-content - 정렬
+
+                속기 속성
+                flex-flow: direction wrap;
+
+            자식 요소에 지정
+                개별 속성
+                align-self - 정렬                
+                flex-glow - 성장
+                flex-shrink - 수축
+                flex-basis - 가로 크기 초기값
+                order - 자식 요소 순서
+
+                속기 속성
+                flex: 1;
+        */
+
+        /* 부모 */
+        .flexbox {
+            display: flex; /* df */
+            /* display: -webkit-flex;
+            display: -ms-flexbox; */
+            flex-direction: row; /* fld */
+            flex-wrap: nowrap; /* flw */
+            height: 200px; /* h200 */
+            background: #ccc; /* bg */
+        }
+
+        /* 자식 */
+        .flexbox > div {
+            
+            /* 개별 속성 */
+            flex-grow: 1; /* flg */
+            flex-shrink: 1; /* fls */
+            flex-basis: 0; /* flb */
+
+            /* 속기 속성 */
+            /* flex: grow shrink basis */
+            flex: 1;
+            flex: 1 1 0;
+            flex: 1 1 auto;
+            flex: 1 1 100px;
+
+            /* -webkit-flex: 1;
+            -ms-flex: 1; */
+            background: darkcyan;
+            margin: 10px; /* m10 */
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <!-- shift+alt+아래방향키 -->
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos vel libero quod voluptates quaerat, labore aspernatur nesciunt illo rerum iure beatae deleniti atque officiis ab doloremque dolore et accusamus modi?</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos vel libero quod voluptates quaerat, labore aspernatur nesciunt illo rerum iure beatae deleniti atque officiis ab doloremque dolore et accusamus modi?</div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos vel libero quod voluptates quaerat, labore aspernatur nesciunt illo rerum iure beatae deleniti atque officiis ab doloremque dolore et accusamus modi?</div>
+    </div>
+</body>
+</html>

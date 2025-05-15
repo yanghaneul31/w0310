@@ -4,26 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>가상요소 선택자</title>
+    <title>가상 요소 선택자(::)</title>
     <style>
-        /* :first-letter-> 단어 첫 글자 */
-        p::first-letter {
+        /* 
+            ::first-letter -> 요소의 첫 번째 글자
+        */
+        p:first-letter {
             font-size: 150%;
         }
 
-        p:before {
-            content: ★;
+        /* 
+            ::before     이전에(시작태그 바로뒤) 내용 삽입
+            ::after     이후에(종료태그 바로앞) 내용 삽입
+        */
+        p::before {
+            /* 한글의 'ㅁ'+한자키 */
+            content: "★";
         }
-
         .box::after {
             content: "항목을 선택해주세요.";
-        color:red}
+            color: red;
+        }
     </style>
 </head>
 
 <body>
     <div class="box">
-        <p>COMPANY</p>
+        <p>Lorem ipsum dolor sit amet.<br> Lorem ipsum dolor sit amet.</p>
         <p>PRODUCT</p>
         <p>SERVICE</p>
         <p>COMMUNITY</p>

@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrap">
         <!-- 헤더 -->
         <header>
             <!-- 로고 -->
-             <h1 class="logo"><a href="#"><img src="./assets/logo.png" alt="로고"></a></h1>
-             <!-- 내비게이션 -->
-                <nav>
-                    <ul>
-                        <li><a href="#">해외여행</a></li>
-                        <li><a href="#">국내여행</a></li>
-                        <li><a href="#">테마여행</a></li>
-                        <li><a href="#">맞춤여행</a></li>
-                    </ul>
-                </nav>
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+            <!-- 내비게이션 -->
+            <nav>
+                <ul>
+                    <li><a href="#">해외여행</a></li>
+                    <li><a href="#">국내여행</a></li>
+                    <li><a href="#">테마여행</a></li>
+                    <li><a href="#">맞춤여행</a></li>
+                </ul>
+            </nav>
         </header>
         <!-- 콘텐츠 -->
-        <div class="contents"></div>
+        <div class="contents">
+            <!-- 배너 -->
+            <div class="banner">
+                <div class="cont">
+                    <img src="./images/banner.png"alt="초특가 타임세일">
+                    <div>
+                        <h2>초특가 타임세일</h2>
+                        <p>매주 월요일 오전 10시,쏟아지는 앱 전용 혜택을 놓치지 마세요!</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="#"><img src="./images/button.png" alt="배너버튼"></a>
+                </div>
+            </div>
+            <!-- 공지사항 -->
+            <div class="notice">
+                <h2>공지사항</h2>
+                <ul>
+                    <li>
+                        <a href="#">&lt;하나live&gt;이벤트 당첨자 안내</a>
+                        <span>2025.05.08</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 갤러리 -->
+            <div class="gallery">
+                <h2>갤러리</h2>
+                <div class="inner">
+                    <a href="#"><img src="./images/gallery1.jpg" alt="리무진 타고 국내여행"> <br>
+                    <span>리무진 버스 타고 국내여행</span></a>
+                    <a href="#"><img src="./images/gallery2.jpg" alt="2025 버킷리스트 울릉도"></a>
+                </div>
+            </div>
+            <!-- 바로가기 링크 -->
+            <div class="link">
+                <a href="#">
+                    <img src="./images/link1.png" alt="하나투어상품권">
+                    <span>하나투어상품권</span>
+                </a>
+                <a href="#">
+                    <img src="./images/link2.png" alt="마일리지클럽">
+                    <span>마일리지클럽</span>
+                </a>
+                <a href="#">
+                    <img src="./images/link3.png" alt="하나LIVE">
+                    <span>하나LIVE</span>
+                </a>
+                <a href="#">
+                    <img src="./images/link4.png" alt="하나트래비즈">
+                    <span>하나트래비즈</span>
+                </a>
+            </div>
+        </div><!-- //.contents end -->
+        
         <!-- 슬라이드 -->
-         <div class="slide">
+        <div class="slide">
             <ul>
-                <li><a href="#"><img src="./assets/slide1.jpg" alt="슬라이드 이미지1"></a></li>
+                <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a></li>
+                <!-- <li><a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a></li>
+                <li><a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a></li> -->
             </ul>
-         </div>
-    </div>
+        </div>
+    </div><!-- //.wrap end -->
     <!-- 푸터 -->
-    <footer></footer>
+    <footer>
+        <!-- 하단 로고 -->
+        <div class="blogo">
+            <img src="images/blogo.png" alt="하단로고">
+        </div>
+        <!-- 하단 메뉴, 주소 및 저작권 -->
+        <div class="center_cont">
+            <ul class="bmenu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">여행약관</a></li>
+                <li><a href="#">해외여행자보험</a></li>
+                <li><a href="#">마케팅제휴</a></li>
+            </ul>
+            <p>주)하나투어 대표 : 송미선 주소 : (03161) 서울특별시 종로구 인사동 5길 41</p>
+            <p>COPYRIGHT HANATOUR SERVICE INC. ALL RIGHTS RESERVED</p>
+        </div>
+        <!-- family site -->
+        <div class="fs">
+            <form action="#">
+                <select name="fs" id="fs">
+                    <option value="">패밀리사이트</option>
+                    <option value="fs1">Cruise</option>
+                    <option value="fs2">BizMODE</option>
+                    <option value="fs3">하나투어 인터내셔널</option>
+                    <option value="fs4">다낭 스테이호텔</option>
+                </select>
+            </form>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,71 @@
+Q. CSS 선택자에 무엇이 있는가?
+
+선택자 {속성: 값;}
+
+태그
+id
+    #
+class
+    .
+전체
+    *
+그룹
+    ,
+하위
+    선택자1 선택자2
+자식
+    선택자1>선택자2
+형제
+    선택자1~선택자2
+인접형제
+    선택자1+선택자2
+속성
+    [속성]
+    [속성=값]
+    [속성~=값]
+    [속성$=값]
+    [속성*=값]
+    [속성|=값]
+    [속성^=값]
+가상 요소
+    ::after
+    ::before
+가상 클래스
+    :link
+    :visited
+    :hover
+    :active
+
+    Q. CSS 속성에는 무엇이 있는가?
+    
+    color
+    letter-spacing
+
+    font-family
+    font-size
+    line-height
+    font-weight
+    font-style
+    font
+
+
+    박스모델 요소
+    width
+    height
+    margin
+    padding
+    border
+
+    display
+    justify-content
+    align-items
+
+    flex-direction
+    flex-wrap
+    flex-flow
+    flex-grow
+    flex-shrink
+    flex-basis
+    order
+    flex
+

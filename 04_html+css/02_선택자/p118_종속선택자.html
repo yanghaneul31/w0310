@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>종속 선택자</title>
     <style>
+
         /* 
-        .atxt    class가 atxt 요소를 선택
-        p        p요소를 선택
-        p.atxt   p이면서 class가 atxt인 요소를 선택 
-        p .atxt  하위선택자
+            .atxt       class가 atxt 요소를 선택
+            p           p 요소를 선택
+            p.atxt      p이면서 class가 atxt인 요소를 선택
+            p .atxt     p 부모(조상)요소의 하위 요소 중에서 class가 atxt인 요소를 선택
         */
-        p .atxt{color:red;}
+
+        p .atxt {
+            color: red;
+        }
     </style>
 </head>
 <body>
-   <p id="atxt">선택자의<i class="atxt"> 다양한</i> 표현</p> 
-   <p>선택자의 다양한 표현</p> 
-   <span class="atxt">선택자의 다양한 표현</span> 
+    <p class="atxt">선택자의 <i class="atxt">다양한</i> 표현</p>
+    <p>선택자의 다양한 표현</p>
+    <span class="atxt">선택자의 다양한 표현</span>
 </body>
 </html>
