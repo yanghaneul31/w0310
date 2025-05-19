@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed</title>
+    <style>
+        body {
+            margin: 0;
+            height: 2000px;
+        }
+
+        header {
+            display: flex;
+            background: crimson;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+        }
+
+        header ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header li {
+            width: 70px;
+        }
+
+        .content_area {
+            background: green;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>logotype</h1>
+        <ul>
+            <li>m1</li>
+            <li>m2</li>
+        </ul>
+    </header>
+    <div class="content_area">
+        <p>내용<br>헤더를 상단에 고정 <br><br>헤더를 상단에 고정</p>
+    </div>
+    <footer>
+        <p>copyright</p>
+    </footer>
+</body>
+
+</html>

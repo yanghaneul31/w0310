@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position:absolute;</title>
+    <style>
+        /* 레이아웃 작업 시 가급적 요소의 기본 배치를 깨지 않는 방법으로 하는 것이 바람직하다. */
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            display: flex;
+            height: 850px;
+        }
+
+        header {
+            width: 200px;
+            background: yellow;
+        }
+        .container{
+            width: calc(100% - 200px);
+        }
+
+        .slide {
+           
+            height: 400px;
+            background: orange;
+        }
+
+        .contents {
+            width: calc(100% - 200px);
+            height: 450px;
+            background: lightblue;
+        }
+
+        .link {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            width: 120px;
+            height: 300px;
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>헤더</header>
+        <div class="container">
+            <div class="slide">이미지</div>
+            <div class="contents">
+                <div class="link">링크</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

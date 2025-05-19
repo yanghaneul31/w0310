@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* 
+    position(퍼지션,위치,layout(배치)하다)속성
+    뜻: 요소의 위치 지정
+    값: 
+    -static(기본값)
+    -relative: 자기 자신
+   
+    -absolute: 부모(조상) 기준
+    -fixed: 창(뷰 포트) 기준
+
+    fixed는 상단 고정 내비 제작시 사용된다.
+
+    absolut와 fixed는 width가 요소 크기로 지정된다.
+
+    absolute도 부모(조상) 중에 position 값이 static이 아닌 요소가 없으면 fixed와 같이 창(뷰포트)기준이다.
+
+    static과 relative의 차이는 left,top,right,bottom,z-index 5가지 속성의 적용 유무에 있다.
+
+    단위: px(없다),%(부모),em(부모),rem(html,:root)
+
+    static을 제외하고 static(기본값),relative,absolute,fixed일 경우 left,top,right,bottom,z-index 5가지 속성을 지정할 수 있다.
+
+    top
+    left
+    right
+    bottom
+    z-index
+    */
+        body{
+            margin: 0;
+            height: 2000px;
+        }
+        .parent {
+            position: relative; 
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+        .child{
+            position: fixed;
+            left: 5px;
+            top: 50px;
+            width: 100%;
+            height: 100px;
+            background: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">박스</div>
+    </div>
+</body>
+
+</html>

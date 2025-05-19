@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* 
+            display 속성: 화면 표시 방식
+                값: block, inline, inline-block, none, ...
+                    list-item
+                    table-cell, ...
+                    flex
+                    grid
+            
+            visibility: 가시성
+                값: visible(기본값)
+                    hidden
+
+            opacity: 불투명도
+                값: 1(기본값), 0~1 사이 값(소수점 사용)
+
+            overflow: 넘침
+                값: visible(기본값), auto, hidden, scroll
+        */
+        li {
+            /* 개별 속성 */
+            list-style-type: none;
+            /* 속기 속성 */
+            list-style: none;
+        }
+        /* 블록레벨 요소는 강제 줄 바꿈된다. */
+        .gnb li {
+            /* 인라인 요소는 줄 바꿈되지 않는다. -> 가로 배치 */
+            display: inline;
+        }
+        .gnb li a {
+            /* 가로 배치 + 가로/세로 적용! */
+            display: inline-block;
+            background: brown;
+            color: #fff;
+            text-decoration: none;
+
+            width: 200px;
+            height: 35px;
+            text-align: center;
+        }
+        .gnb li a:hover {
+            text-decoration: underline;
+            background: #369;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록레벨 요소: html, body, ul, li, ... -->
+    <!-- 인라인 요소: a, ... -->
+    <ul class="gnb">
+        <li><a href="#">Company</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Community</a></li>
+    </ul>
+</body>
+</html>

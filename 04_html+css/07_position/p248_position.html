@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        .box {
+            width: 650px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* 
+         box-sizing:content-box;(기본값)
+         노란색 박스의 가로 크기는?
+         width+padding*2+border*2
+         =500+20*2+1*2
+         =542
+        */
+        p {
+
+            margin: 0;
+            font-weight: bold;
+            box-sizing: content-box;
+            width: 500px;
+            height: 100px;
+            padding: 20px;
+            background: yellow;
+            border: 1px solid yellow;
+        }
+
+        .green {
+            /* 그린박스의 크기는 500px */
+            /* box-sizing: border-box;
+            border: 1px solid green; */
+            background: green;
+            position:relative;
+        }
+
+        .red {
+            background: crimson;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p class="red">레드박스</p>
+        <p class="green">그린박스</p>
+        <p class="blue">블루박스</p>
+    </div>
+</body>
+
+</html>
