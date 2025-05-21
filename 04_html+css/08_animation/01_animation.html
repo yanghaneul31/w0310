@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        /* 
+            개별 속성
+                1. animation-name: 이름;
+                    값: none(없음)
+                        알파벳, 숫자, -(하이픈), _(언더스코어)
+                        대소문자 구분한다.
+                        첫 글자는 숫자x
+                2. animation-duration: 진행시간;
+                    값: 1s -> 단위: s(초)
+                3. animation-iteration-count: 반복횟수;
+                    값: 1(기본값), 숫자, infinite(무한 반복)
+                4. animation-direction: 뱡향;
+                    조건: 반복횟수 2이상 지정해야 함!
+                    값: normal(기본값) - 정방향
+                        reverse - 역방향
+                        alternate - 양방향
+                        alternate-reverse
+                5. animation-delay: 대기시간;
+                    값: 1s -> 단위: s(초)
+                6. animation-timing-function: 속도곡선;
+                    값: ease(기본값) - 처음에 느리고, 중간에 빠르고, 끝에 느리게
+                        ease-in - 처음에 느리고, 끝에 빠르게
+                        ease-out - 처음에 빠르고, 끝에 느리게
+                        ease-in-out - 처음과 끝이 느리고, 중간은 빠르게(처음과 끝이 동일하게 느리게)
+                        linear(등속)
+                7. animation-fill-mode: 종료 후 속성 상태;
+                    값: none(기본값) - 애니메이션이 끝난 후 아무런 스타일 변화가 없음
+                        forwards - 애니메이션 끝난 후 마지막 상태 유지
+                        backwards - 애니메이션 시작 전 적용된 스타일 유지
+                        both - 애니메이션 시작 전과 후의 상태 모두 유지
+                8. animation-play-state: 동작상태;
+                    값: running(기본값) - 재개
+                        paused - 일시정지
+
+
+            속기 속성
+                animation: name duration [count] [direction] [delay] [timing-function] [fill-mode] [play-state];
+                animation: none 0s 1 normal 0s ease none running;
+
+
+            @keyframes 이름 {
+                from {속성: 값; ...}
+                to {속성: 값; ...}
+            }
+
+            @keyframes 이름 {
+                0% {속성: 값; ...}
+                50% {속성: 값; ...}
+                50.99999% {속성: 값; ...}
+                100% {속성: 값; ...}
+            }
+
+        */        
+
+        div {
+            position: absolute;
+            left: auto;
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation-name: right_move;
+            animation-duration: 5s;
+            /* animation-delay: 3s; */
+            /* alternate 뜻? 번갈아가며, 교대로 */
+            /* animation-direction: alternate; */
+            /* animation-timing-function: linear; */
+            /* animation-iteration-count: infinite; */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes right_move {
+            /* 시작 */
+            from {left:0}
+            /* 종료 */
+            to {left:500px}
+        }
+
+        @keyframes right_move2 {
+            /* 시작 */
+            0% {left:0}
+            50% {left: 1000px;}
+            /* 종료 */
+            100% {left:0px}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>

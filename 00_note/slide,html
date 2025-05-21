@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box; /* 이거 쓰는 이유는 레이아웃 깨지는거 방지하려고(정확한 크기 계산하기 쉬움) */
+        }
+
+        .slide {
+            width: 1320px;  /* 슬라이드가 보여지는 영역 */
+            height: 920px;  /* 슬라이드가 보여지는 영역 */
+            overflow: hidden;   /* width 1320px, height 920px을 넘어가는 거는 다 안보이게 숨기는 거*/
+        }
+
+        .slide ul {
+            display: flex;      /* 슬라이드 이미지 가로배치 ( li 태그는 블럭요소라 세로 배치 됨) */
+            position: relative;  /* 애니메이션에 left:-100% 쓰려고 */
+            width: 400%;    /* width 100% 이미지 4개니까 400%  */
+            height: 100%;   
+            animation: slide 8s infinite;   /* animation : 이름(임의로 지정 slide) 8s(8초동안 / 4장이니까 한장에 2초씩) infinite(무한 반복) */
+        }
+        .slide li {
+            width: 25%;     /* ul width 400%를 1/4 하려고 25% (총 100%) */
+            height: 100%;
+        }
+
+        /* 
+           애니메이션 이건 그냥 외워야함 0 10 33 43 66 76 99 100
+        */
+        @keyframes slide/* 애니메이션 이름(너가 정한거) */ {
+            0%{left:0%;}    
+            10%{left:-100%;}    /* -100% 2번 */
+            33%{left:-100%;}
+            43%{left:-200%;}    /* -200% 2번 */
+            66%{left:-200%;}
+            76%{left:-300%;}    /* -300% 2번 */
+            99.99%{left:-300%;}
+            100%{left:0%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <ul>
+            <li><img src="images/slide1.jpg" alt="1"></li>
+            <li><img src="images/slide2.jpg" alt="2"></li>
+            <li><img src="images/slide3.jpg" alt="3"></li>
+            <li><img src="images/slide1.jpg" alt="1"></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        /* 
+            overflow: 콘텐츠 넘침 처리
+                값:
+                    visible(기본값)
+                    hidden
+                    auto
+                    scroll
+            overflow-x
+            overflow-y
+        */
+
+        p {
+            width: 550px;
+            height: 80px;
+            border: 1px solid #000; /* bd */
+        }
+        /* 박스 크기가 콘텐츠보다 작으면 차이가 생긴다. */
+        .agree1 {overflow-y:scroll;}
+        .agree2 {overflow:auto;}
+        .agree3 {overflow:hidden;}
+        .agree4 {overflow:visible;}
+    </style>
+</head>
+<body>
+    <h3>서비스 이용약관</h3>
+    <p class="agree1">
+        제17조 (서비스의 변경 및 내용수정)<br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum ratione at nobis earum! Obcaecati.<br>
+        ② Reprehenderit inventore hic accusamus exercitationem labore non sint animi praesentium laudantium aspernatur ipsa nihil natus dignissimos.<br>
+        ③ ullam dicta, molestias dolorum iste quasi consectetur sunt esse! Odit explicabo iure sed id, dolorum possimus natus quas numquam recusandae ex fugit earum illo, quia expedita?<br>
+    </p>
+    <p class="agree2">
+        제17조 (서비스의 변경 및 내용수정)<br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum ratione at nobis earum! Obcaecati.<br>
+        ② Reprehenderit inventore hic accusamus exercitationem labore non sint animi praesentium laudantium aspernatur ipsa nihil natus dignissimos.<br>
+        ③ ullam dicta, molestias dolorum iste quasi consectetur sunt esse! Odit explicabo iure sed id, dolorum possimus natus quas numquam recusandae ex fugit earum illo, quia expedita?<br>
+    </p>
+    <p class="agree3">
+        제17조 (서비스의 변경 및 내용수정)<br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum ratione at nobis earum! Obcaecati.<br>
+        ② Reprehenderit inventore hic accusamus exercitationem labore non sint animi praesentium laudantium aspernatur ipsa nihil natus dignissimos.<br>
+        ③ ullam dicta, molestias dolorum iste quasi consectetur sunt esse! Odit explicabo iure sed id, dolorum possimus natus quas numquam recusandae ex fugit earum illo, quia expedita?<br>
+    </p>
+    <p class="agree4">
+        제17조 (서비스의 변경 및 내용수정)<br>
+        ① Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum ratione at nobis earum! Obcaecati.<br>
+        ② Reprehenderit inventore hic accusamus exercitationem labore non sint animi praesentium laudantium aspernatur ipsa nihil natus dignissimos.<br>
+        ③ ullam dicta, molestias dolorum iste quasi consectetur sunt esse! Odit explicabo iure sed id, dolorum possimus natus quas numquam recusandae ex fugit earum illo, quia expedita?<br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,109 @@
+font-family:'돋움',Dotum,Arial,Helvetica,sans-serif; 
+font-size:12px 또는 150% 또는 1.5em 또는 1.5rem
+font-weight
+font-style
+font-variant
+line-height:1.4; -> 부모 요소의 글자 크기 기준
+font: weight|style|variant size/line-height family; -> 순서 있다.
+@font-face {font-family: 이름; src:url('폰트');}-> snssn,rnrmf,spdlqj
+color: rgba(R,G,B,alpha); -> alpha는 0~1
+letter-spacing 레 터 스 페 이 싱
+word-spacing 레터     스페이싱
+text-decoration: none; underline(밑줄)
+text-transform
+text-shadow: x위치 y위치 blur color;
+text-align-> 블록레벨 요소에 적용하여 인라인 요소를 수평 맞춤
+vartical-align-> 인라인 요소의 수직 맞춤
+text-indent
+word-wrap
+word-break: break-all; -> text-align:justify(양쪽맞춤)
+white-space:nowrap; ->줄 안바꿈
+text-overflow: ellipsis; -> 말줄임...
+display: block|inline|inline-block|none|flex
+visibility
+overflow:hidden;
+opacity
+background
+background-color
+background-image 
+background-repeat
+background-position
+background-attachment
+background-size
+background-origin
+background-clip
+width
+height
+min-height
+max-height
+padding:패딩(안쪽);
+padding-top
+padding-bottom
+padding-left
+padding-right
+margin: 여백(바깥);
+margin-top
+margin-bottom
+margin-left
+margin-right
+border: 두께 종류 색; -> 순서없다.
+border-top
+border-bottom
+border-left
+border-right
+border-width
+border-style
+border-color
+border-radius
+border-top-left-radius
+border-top-right-radius
+border-bottom-left-radius
+border-bottom-right-radius
+border-image
+outline: 1px solid red;
+box-sizing: border-box;
+box-shadow: x위치 y위치 blur [spread] color; -> 순서 있다.
+resize: none;
+appearance
+transform: 변형;
+transition: 전환;
+transition-property
+transition-duration
+transition-delay
+animation
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteraion-cunt: infinite;
+animation-direction
+animation-fill-mode: backwords;
+amimation-play-state;
+@keyframes 이름 {}
+column-count
+column-gap
+column-rule
+column-span
+column-width
+float: left|right;
+clear: both;
+position
+left
+right
+top
+bottom
+z-index
+@media
+@import url(파일명);
+flex-direction
+flew-wrap
+flew-flow
+justify-content:space-between;
+align-items: center;
+align-content
+flex-grow
+flex-shrink
+flex-basis
+flex
+order
+grid-template

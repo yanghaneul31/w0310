@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구름</title>
+    <style>
+        div {
+            position: absolute;
+        }
+        .cloud1 {
+            left:0;
+            top: 200px;
+            width: 178px;
+            height: 100px;
+            animation: cloud1 10s forwards;
+        }
+        .cloud2 {
+            right:0;
+            top: 20px;
+            width: 238px;
+            height: 111px;
+            animation: cloud2 5s 1s forwards;
+        }
+
+        @keyframes cloud1 {
+            0% {left:0;}
+            50% {left: 300px;}
+            100% {left: 300px;}
+        }
+        @keyframes cloud2 {
+            0% {right:0;}
+            100% {right: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="cloud1">
+        <img src="cloud1.png" alt="구름1">
+    </div>
+    <div class="cloud2">
+        <img src="cloud2.png" alt="구름2">
+    </div>
+</body>
+</html>
