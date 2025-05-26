@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>똑똑한 footer</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body,
+        h1,
+        p,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            /* 개별 속성 */
+            list-style-type: none;
+            /* 속기 속성 */
+            list-style: none;
+        }
+
+        /* 
+            글자색은 상속 개념을 갖고있다.
+            단, a태그는 상속받지 않는다.
+        */
+        a {
+            text-decoration: none;
+            color: #444;
+        }
+
+        header {
+            /* 고정 헤더 */
+            position: fixed; width: 100%;
+            top:0; left:0;
+            display: flex;
+            background: cornflowerblue;
+            /* 글자를 수직 중앙 - 단, 한 줄 텍스트 일때만 가능 */
+            height: 40px;
+            line-height: 40px;
+        }
+
+        /* .outer {
+            display: flex;
+            justify-content: center;
+        } */
+        #container {
+            /* 블록레벨 요소를 가로 가운데 배치 */
+            width: 600px;
+            margin: 0 auto;
+            /* 
+                수학
+                    숫자 - 숫자
+                    -를 연산자
+                    숫자는 피연산자
+            */
+            /*
+                뷰포트(창) 단위
+                    vh - viewport height
+                    vw - viewport width
+                    vmin - viewport minimun
+                    vmax - viewport maximun
+            */
+            min-height: calc(100vh - 80px);
+        }
+
+        .lnb li {
+            display: inline;
+        }
+
+        .lnb li a {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .content_area {
+            background: dodgerblue;
+        }
+
+        footer {
+            background: lightgray;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        section {height: 800px; padding-top: 40px;}
+        #s1 {background: darkcyan;}
+        #s2 {background: darkgoldenrod;}
+        #s3 {background: darkkhaki;}
+        #s4 {background: darkorange;}
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <!-- h1은 font-szie: 2em; 그래서 현재는 32px -->
+            <!-- 
+                a태그의 기본값
+                a {text-decoration:underline;}
+                a:link {color:#0000ee;}
+                a:visited {color:#551A8B;}
+                a:active {color: red;}
+                a:hover {color:blue; color:puple;}
+            -->
+            <!-- 로고를 클릭하면 현재 페이지(#)의 가장 위로 이동 -->
+            <h1><a href="#s1">로고</a></h1>
+            <ul class="lnb">
+                <!-- ul태그 안에는 하나 이상의 li태그가 있어야 한다. -->
+                 <!-- 회사소개를 클릭하면 현재 페이지(#)의 id=s2인 위치로 이동 -->
+                <li><a href="#s2">회사소개</a></li>
+                <li><a href="#s3">메뉴소개</a></li>
+                <li><a href="#s4">이벤트</a></li>
+            </ul>
+        </header>
+
+        <div id="container">
+            <section id="s1">
+                <h2>캐로셀 & 풀스크린 비디오</h2>
+            </section>
+            <section id="s2">
+                <h2>회사소개</h2>
+            </section>
+            <section id="s3">
+                <h2>메뉴소개</h2>
+            </section>
+            <section id="s4">
+                <h2>이벤트</h2>
+            </section>
+        </div>
+
+        <footer>
+            <p>copyright</p>
+            <a href="#top">위로가기</a>
+        </footer>
+    </div><!-- //.wrap end -->
+</body>
+
+</html>

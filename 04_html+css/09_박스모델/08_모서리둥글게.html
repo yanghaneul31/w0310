@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        .radius{
+            display:block;
+            text-align: center;
+            padding:40px 0;
+            margin: 10px;
+            background-color:#07d;
+        }
+        .radius1{
+            width: 230px;
+            /* border-radius: 가로반지름 / 세로반지름; */
+            border-radius: 15px / 70px;
+        }
+        .radius2{
+            width: 490px;
+            border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;
+        }
+    </style>
+</head>
+<body>
+    <span class="radius radius1">border-radius: 20px / 70px;</span>
+    <span class="radius radius2">border-radius: 15px 70px 15px 70px / 70px 15px 70px 15px;</span>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경</title>
+    <style>
+        /* 
+            개별 속성
+                background-color: 색;
+                    background-clip: 배경 색의 시작점
+                        값: border-box(기본값)
+                            padding-box
+                            content-box
+
+                background-image: url(경로/이미지);
+
+                    background-repeat
+                        값: repeat(반복, 기본값)
+                            no-repeat(반복 안함)
+                            repeat-x(가로 반복)
+                            repeat-y(세로 반복)
+                            space(반복, 균등 배분)
+                            round(반복, 비례적 크기 조정)
+
+                    background-position: x위치 y위치;
+                        값: left(기본값, 0), right(100%), center(50%)
+                            top(기본값, 0), bottom(100%), center(50%)
+                            숫자(단위: px, %, em, rem)
+
+                    background-attachment: 고정 여부;
+                        값: scroll(기본값)
+                            fixed -> 패럴렉스 스크롤
+
+                    background-size: 가로 세로;
+                        값: auto(기본값)
+                            contain: 잘림x, 빈공간o
+                            cover: 잘림o, 빈공간x -> 패럴렉스 스크롤
+                            숫자(단위: px, %, em, rem)
+
+                    background-origin: 배경 이미지의 시작점;
+                        값: border-box
+                            padding-box(기본값)
+                            content-box
+
+            속기 속성
+                background: color|image [repeat] [position][/size] [attachment] [origin] [clip];
+
+            https://www.saewooggang.com
+        */
+        body {
+            margin: 0;
+            height:100vh;
+            background: url(./9af1ac2d-bbb4-4788-994f-898beacd4db0.png) repeat-x 0 0, url(./d8620ecb-79f4-4f5d-843a-1baf0316956c\ 2.png) repeat-x 0 100%;
+        }
+        div {
+            width: 800px;
+            height: 500px;
+            /* 다중 배경이미지일 경우 앞에 기록한 것이 앞에 보임! */
+            background-image: url(figma.png), url(don-kaveen-F0CTHqaZth0-unsplash.jpg);
+            background-repeat: no-repeat; /* bgr */
+            /* position: x위치 y위치; */
+            background-position: center 100%;
+            background-size: auto, contain;
+            background-clip: padding-box; /* bgcl */
+            background-origin: border-box;
+            padding: 20px;
+            border: 10px solid rgba(255, 0, 0,0.5);
+            background-color: yellow; /* bgc */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="figma.png" alt="피그마 로고">
+    </div>
+</body>
+</html>

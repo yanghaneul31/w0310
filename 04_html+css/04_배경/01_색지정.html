@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색 지정</title>
+    <style>
+        /* 
+            진법
+                10진법(Decimal, 데시멀) - 10진수 0~9
+                2진법(Binary, 바이너리) - 2진수 0~1
+                8진법(Octal, 옥탈) - 8진수 0~7
+                16진법(Hexadecimal, 헥사데시멀) - 16진수 0~9,A~F
+
+            색 표현
+            1. 색상명 -> 140개 영문 키워드
+            2. HEX 값 
+                -> #RGB 또는 #RRGGBB 
+                -> 예, 
+                    #ff0000(red)
+                    #00ff00(lime)
+                    #008000(green)
+                    #0000ff(blue)
+                    #ffff00(yellow)
+                    #ff00ff(magenta)
+                    #00ffff(cyan)
+                    #000000(black) ~ #ffffff(white)
+                    #333333 -> #333
+                    #112233 -> #123
+                    #123456  -> 3자로 표현 못함
+            3. RGB
+                rgb(R, G, B)
+                R: 0~255
+                G: 0~255
+                B: 0~255
+                예, rgb(255, 0, 0)
+
+            4. RGBa
+                rgba(Red, Green, Blue, alpha)
+                R: 0~255
+                G: 0~255
+                B: 0~255
+                alpha: 0(투명)~0.5(반투명)~1(불투명)
+                예, rgba(255, 0, 0, 0.5)
+                
+            5. HSL
+                hsl(Hue, Saturation, Lightness)
+
+            6. HSLa
+                hsl(Hue, Saturation, Lightness, alpha)
+                H: 0~360
+                S: 0~100%
+                L: 0~100%
+        */
+
+        /* https://www.w3schools.com/colors/colors_names.asp */
+
+        p {
+            /* 글자색의 기본색은 검정이다. */
+            color:orange;
+            background: rgba(245, 245, 220, 0.5);
+            /* border 굵기의 기본값은 medium */
+            /* border-width: 1px; */
+            border-style: solid;
+            /* border의 기본색은 글자색과 같다. */
+            border-color: rgba(255, 99, 71, 0.5);
+            outline: 5px solid lime;
+            text-shadow: 1px 1px 1px #ff0000;
+            box-shadow: 10px 10px 10px 10px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>색 지정</h1>
+    <p>글자 색, 배경 색, 테두리 색을 지정한다.</p>
+</body>
+
+</html>
