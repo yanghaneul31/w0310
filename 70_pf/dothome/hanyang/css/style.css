@@ -76,6 +76,7 @@ nav a {
 .banner .cont img {
     margin-right: 16px;
 }
+/* noge: notice & gallery */
 .noge { 
     display: flex;
     height: 330px;
@@ -98,9 +99,7 @@ nav a {
 }
 .gallery .inner {
     display: flex;
-}
-.gallery a {
-    margin-right: 15px;
+    justify-content: space-evenly;
 }
 
 footer {

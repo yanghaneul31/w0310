@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        /* 
+            개별 속성
+                border-top-left-radius
+                border-top-right-radius
+                border-bottom-right-radius
+                border-bottom-left-radius
+
+            속기 속성
+                border-radius: 값;
+                border-radius: TLBR TRBL;
+                border-radius: TL TRBL BR;
+                border-radius: TL TR BR BL;
+        
+        */
+
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background: red;
+            
+        }
+        
+        
+        /* 1/2이하의 크기면 둥근사각형 */
+        div:nth-of-type(1) {
+            border-radius: 10px;
+        }
+        /* 가로 또는 세로 크기 같고, border-radius를 가로 또는 세로의 1/2이상 지정하면 원 */
+        div:nth-of-type(2) {
+            border-radius: 50px;
+        }
+        
+        div:nth-of-type(3) {
+            /* 개별 */
+            border-top-left-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-left-radius: 40px;
+            
+            /* 속기 */
+            border-radius: 10px 20px 30px 40px;
+        }
+
+        div:nth-of-type(4) {
+             border-radius: 10px 20px 30px;
+        }
+        div:nth-of-type(5) {
+             border-radius: 10px 20px;
+        }
+
+        /* 반원 */
+        div:nth-of-type(6) {
+            width: 100px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+        }
+        /* 1/4 원 */
+        div:nth-of-type(7) {
+            width: 100px;
+            height: 100px;
+            border-radius: 200px 0 0 0;
+        }
+    </style> 
+</head>
+<body>
+    <div>border-radius: 10px;</div>
+    <div>border-radius: 50px;</div>
+    <div>border-radius: 10px 20px 30px 40px;</div>
+    <div>border-radius: 10px 20px 30px;</div>
+    <div>border-radius: 10px 20px;</div>
+    <div>박스6</div>
+    <div>박스7</div>
+</body>
+</html>

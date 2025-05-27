@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터 타입</title>
 </head>
+
 <body>
+    <p class="dd">안녕하세요</p>
     <script>
         /* 
-        데이터 타입
-        1. 숫자(number): 10, 3.14
-        2. 문자열(string): 'javascript', "hello world"
-        3. 불리언(Boolean): true, false -> 예약어(키워드)
-        */
-       var num = 10; // 숫자 타입
-       var num = 10.5; // 소수점 숫자 타입
-       var num = 1e+2; // 지수 표기법 (100)
+            데이터 타입
+                1. 원시(Primitive, 기본)
+                    1. 숫자(number): 10, -10, 10.5, ...
+                    2. 문자열(string): 'javascript' -> '' 또는 ""로 묶는다.
+                    3. 불(Boolean): true, false -> 예약어(키워드)
+                    4. undefined - 정의하지 않은 값 -> 값을 할당하지 않았을 때
+                    5. null - 값 없음
+                    ...
 
-       console.log(num1);
-       console.log(num2);
-       console.log(num3);
+                2. 참조(Reference)
+                    1. 객체(Object): {}
+                    2. 배열(array): []
+                    3. 함수(function): function(){}
+                    ...
+        */
+        var num1 = 10; // 정수
+        var num2 = 10.5; // 소수
+        var num3 = 1e+2; // 지수(exponent): 1 * 10^2
+
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+
+        var str1 = '문자';
+        var str2 = "문자";
+        var str3 = "10"; /* 숫자가 아닌 문자열 10이다. */
+
+        // +는 문자열을 나열
+        // 1 + 2 -> 3
+        // "일" + "이" -> 일이 -> 문자열 연결 연산자
+        // 1 + "이" -> 1이
+        // "일" + 2 -> 일2
+        console.log("str1 = " + str1);
+        console.log("str2 = " + str2);
+        console.log(10 + str3);
+        console.log(10 + num1);
+
+        // "" 또는 '' 출력
+        var str4 = '문자는\t "문자"';
+        var str5 = "문자는\t '문자'";
+
+        // 이스케이프 문자
+        var str6 = '문자는\\ \'문자\'';
+        var str7 = "문자는\n \"문자\"";
+
+        // alert('자바스크립트\n제이쿼리');
+
+        document.write(str4 + '<br>');
+        document.write(str5 + '<br>');
+        document.write(str6 + '<br>');
+        document.write(str7 + '<br>');
+
+        // 1 + 2 * 3
+        // (1 + 2) * 3
+
+        // 비교 연산의 결과는 true 또는 false
+        // 비교 연산자: >, <, >=, <=, ==, ===, !=, !==
+        var boo1 = 5 > 4;
+        var boo2 = false;
+
+        document.write(boo1);
+        document.write('<br>');
+        document.write(boo2);
+        document.write('<br>');
+        
+        var boo3 = 0;
+        var boo4 = -3.3;
+
+        // 객체지향 프로그래밍 언어: Java, JavsScript, Python, C++, ...
+        // 객체, 클래스, 생성자, 함수, 메서드, 속성, ...
+        // Boolean(데이터) -> 데이터를 불 값으로 생성한다.
+        // 0만 false, 나머지 숫자는 true
+        document.write(Boolean(boo3));
+        document.write('<br>');
+        document.write(Boolean(boo4));
+        
+        // 변수 선언후 값을 할당하지 않았을 때
+        var temp1;
+        document.write('<br>');
+        document.write(temp1);
+        
+        // 객체 데이터는 {}로 표기한다.
+        var obj = {};
+        obj.name = '홍길동';
+        obj.age;
+        document.write('<br>');
+        document.write(obj);
+
+        let name = "양하늘";
+        name = "김다영";
+        console.log(`내 이름은${name}이야`);
+        const name1 = "양하늘";
+        name1 = "김다영";
+        hi.style.color = 'red';
     </script>
 </body>
+
 </html>

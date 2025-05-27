@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리</title>
+    <style>
+        /* 
+            개별 속성
+                border-top-width
+                border-top-style
+                border-top-color
+
+                border-bottom-width
+                border-bottom-style
+                border-bottom-color
+
+                border-left-width
+                border-left-style
+                border-left-color
+
+                border-right-width
+                border-right-style
+                border-right-color
+            
+
+            속기 속성
+                border-top
+                border-bottom
+                border-left
+                border-right
+
+                border-width: medium(기본값)
+                border-style: none(기본값)
+                border-color: 글자색(기본값)
+
+                border: medium none 글자색;
+
+        */
+        div {
+            border-top: 1px solid #000; /* bdt */
+            border-bottom: 1px dashed #000; /* bdb */
+        }
+        p {
+            width: 120px;
+            padding: 10px;
+            margin: 10px 8px;
+            border-width: 13px;
+        }
+
+        p:nth-of-type(1) {
+            border-style: solid;
+            border-color: #abcdef;
+        }
+
+        p:nth-of-type(2) {
+            border-style: dotted;
+            border-color: #800;
+        }
+
+        p:nth-of-type(3) {
+            border-style: dashed;
+            border-color: #357;
+        }
+
+        p:nth-of-type(4) {
+            border-style: double;
+            border-color: brown;
+        }
+
+        p:nth-of-type(5) {
+            border-style: none;
+        }
+
+        p:nth-of-type(6) {
+            border-style: groove;
+            border-color: #06c;
+        }
+
+        p:nth-of-type(7) {
+            border-style: ridge;
+            border-color: crimson;
+        }
+
+        p:nth-of-type(8) {
+            border-style: inset;
+            border-color: #0c3;
+        }
+
+        p:nth-of-type(9) {
+            border-style: outset;
+            border-color: #c63;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>테두리 스타일</h1>
+    <div>
+        <p>나는 solid(실선) 스타일이다.</p>
+        <p>나는 dotted(점선) 스타일이다.</p>
+        <p>나는 dashed(대시선) 스타일이다.</p>
+        <p>나는 double(이중실선) 스타일이다.</p>
+        <p>나는 none(없음, 기본값) 스타일이다.</p>
+        <p>나는 groove(그루브, 홈인파인, 파인 듯한 입체선) 스타일이다.</p>
+        <p>나는 ridge(리지, 융기, 튀어나온 입체선) 스타일이다.</p>
+        <p>나는 inset(인셋, 내장된, 안으로 들어간 느낌) 스타일이다.</p>
+        <p>나는 outset(아웃셋, 밖으로 튀어나온 느낌) 스타일이다.</p>
+    </div>
+</body>
+
+</html>

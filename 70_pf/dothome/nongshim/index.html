@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nongshim</title>
+     <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 슬라이드 */
+        .slide{
+            position: relative;
+        }
+        .slide img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover ;
+        }
+        .slide li{
+            width: 100%;
+            position: absolute;
+            animation: fade1 6s infinite;
+        }
+        .slide li:nth-child(1){
+            animation-name: fade1;
+        }
+        .slide li:nth-child(2){
+            animation-name: fade2;
+            opacity: 0;
+        }
+        .slide li:nth-child(3){
+            animation-name: fade3;
+            opacity: 0;
+        }
+        @keyframes fade1{
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            33% { opacity: 1; }
+            43% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        @keyframes fade2{
+            0% { opacity: 0; }
+            33% { opacity: 0; }
+            43% { opacity: 1; }
+            66% { opacity: 1; }
+            76% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        @keyframes fade3{
+            0% { opacity: 1; }
+            10% { opacity: 0; }
+            43% { opacity: 0; }
+            66% { opacity: 0; }
+            76% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 상단 영역 -->
+    <div class="wrap">
+        <!-- 헤더 영역 -->
+        <header>
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="로고"></a></h1>
+            <!-- 
+                .gnb>nav>ul>li*4>a[href="#"]^^div>a[href="#"]*2
+            -->
+
+            <div class="gnb">
+                <nav>
+                    <ul>
+                        <li><a href="#">농심소개</a></li>
+                        <li><a href="#">홍보센터</a></li>
+                        <li><a href="#">오픈이노베이션</a></li>
+                        <li><a href="#">고객서비스</a></li>
+                    </ul>
+                </nav>
+                <div class="spotmenu">
+                    <a href="#">로그인</a>
+                    <a href="#">회원가입</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 오른쪽 영역 -->    
+        <div class="container">
+            <!-- 슬라이드 이미지 -->
+            <div class="slide">
+                 <ul>
+            <li><a href="#"><img src="./images/slide1.jpg" alt="페이드 이미지1"></a></li>
+            <li><a href="#"><img src="./images/slide2.jpg" alt="페이드 이미지2"></a></li>
+            <li><a href="#"><img src="./images/slide3.jpg" alt="페이드 이미지3"></a></li>
+        </ul>
+            </div><!-- //.slide end -->
+
+            <!-- 바로가기 링크 -->
+            <div class="link">
+                <ul>
+                    <li><a href="#"><img src="images/link1.png" alt="링크1"><span>사회공헌</span></a></li>
+                    <li><a href="#"><img src="images/link2.png" alt="링크1"><span>소비자중심경영</span></a></li>
+                    <li><a href="#"><img src="images/link3.png" alt="링크1"><span>동반성장</span></a></li>
+                </ul>
+            </div>
+            <!-- 배너 -->
+            <div class="banner">
+                <div class="cont">
+                    <img src="images/banner.jpg" alt="배너">
+                    <div>
+                        <h2>중국 현지인을 감동시킨 농심의 매운 맛</h2>
+                        <p>품질에 대한 자부심을 바탕으로 중국 전역에 농심의 맛 그대로 프리미엄 이미지를 뿌리내리고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="#"><img src="images/btn.png" alt="배너 버튼"></a>
+                </div>
+            </div>
+
+            <!-- 공지사항 및 갤러리 -->
+            <div class="tabs">
+                <h2>공지사항</h2>
+                <ul>
+                    <li><a href="#"><h3>농심 신라면 툼바, 일본서 초도물량 100만 개 완판</h3><span>2025.05.14</span></a></li>
+                    <li><a href="#"><h3>농심, 감자칩 스낵 ‘크레오파트라 솔트앤김’ 출시</h3><span>2025.05.08</span></a></li>
+                    <li><a href="#"><h3>농심, ‘너구리 다시마의 고장’ 완도 장보고수산물축제 </h3><span>2025.05.06</span></a></li>
+                    <li><a href="#"><h3>농심, 페루 마추픽추에 ‘신라면 분식’ 1호점 오픈</h3><span>2025.04.28</span></a></li>
+                </ul>
+            </div>
+
+        </div><!-- //.container end -->
+    </div><!-- //.wrap end -->
+
+    <!-- 하단(푸터) 영역 -->
+    <footer>
+        <!-- 하단 로고 -->
+        <div class="blogo">
+            <a href="#"><img src="images/blogo.png" alt="하단로고"></a>
+        </div>
+        <div class="right">
+            <!-- 
+                ul.bmenu>li*6>a[href="#"]^^p
+            -->
+            <!-- 하단 메뉴 -->
+            <ul class="bmenu">
+                <li><a href="#">상담접수</a></li>
+                <li><a href="#">오시는길</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">특약점포탈</a></li>
+                <li><a href="#">이메일주소무단수집거부</a></li>
+            </ul>
+            <!-- 주소 및 저작권 표기 -->
+            <p>(주)농심서울특별시 동작구 여의대방로 112 (신대방동)사업자등록번호118-81-03914대표이사이병학</p>
+            <p>© NONGSHIM CO.,LTD. ALL RIGHTS RESERVED	</p>
+        </div>
+    </footer>
+</body>
+
+</html>
