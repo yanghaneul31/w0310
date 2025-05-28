@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Navigation(GNB,글로벌 내비게이션바)</title>
+    <style>
+        /* 공통 */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            font:15px/1.6 '돋움',sans-serif;
+            color:#333;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* GNB */
+        /* 폰트위계 */
+        /* typo */
+        
+        /* 메인과 서브 */
+        .gnb a{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* 서브 */
+        .gnb .sub a{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="gnb">
+          <ul class="main">
+            <li><a href="#">한양소개</a>
+             <ul class="sub">
+                <li><a href="#">한양대는</a></li>
+                <li><a href="#">설립/역사</a></li>
+                <li><a href="#">대학현황</a></li>
+                <li><a href="#">한양프라이드</a></li>
+             </ul>
+            </li>
+            <li><a href="#">서울캠퍼스</a>
+             <ul class="sub">
+                <li><a href="#">캠퍼스소개</a></li>
+                <li><a href="#">학사안내</a></li>
+                <li><a href="#">행정 지원 안내</a></li>
+                <li><a href="#">기관/단체</a></li>
+             </ul>
+            </li>
+            <li><a href="#">입학/교육</a>
+             <ul class="sub">
+                <li><a href="#">입학총괄</a></li>
+                <li><a href="#">인재개발</a></li>
+                <li><a href="#">학술 정보</a></li>
+                <li><a href="#">글로벌 교육</a></li>
+             </ul>
+            </li>
+            <li><a href="#">연구/산학/창업</a>
+             <ul class="sub">
+                <li><a href="#">현장실습</a></li>
+                <li><a href="#">산학협력</a></li>
+                <li><a href="#">연구성과</a></li>
+                <li><a href="#">창업지원</a></li>
+             </ul>
+            </li>
+          </ul>
+        </nav>
+    </header>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:flex;</title>
+    <style>
+        .flexbox{
+            /* display:flex; 부모 요소에 지정하면 부모는 플렉스 컨테이너가 되고, 자식 요소는 플렉스 아이템이 된다. 그리고,플렉스 아이템은 가로 배치된다. */
+            display: flex;
+            /* row: 행 -> 가로, column:열 -> 세로 */
+            flex-direction: row;
+            background: #ccc;
+            height: 200px;
+            align-content: stretch;
+            /* 
+            flex-direction: row; -> 주축이 가로
+               justify-content -> 주축(가로)
+               align~ -> 교차축(세로)
+            flex-direction: column; -> 주축이 세로
+               justify-content -> 교차축(세로)
+               align~ -> 주축(가로)
+
+            주축/교차축 정렬
+                justify-content
+                값: flex-start,flex-end,center
+                    space-between
+                    space-around
+                    space-evenly
+                align-content
+                값: stretch,flex-start,flex-end,center
+                    
+                    align-items
+                값: stretch,flex-start,flex-end,center,baseline
+                
+                align-self
+                값: auto,stretch,flex-start,flex-end,baseline,center
+            */
+        }
+        .flexbox div{
+            background: darkcyan;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록레벨 요소(div)는 세로배치 -->
+    <div class="flexbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
