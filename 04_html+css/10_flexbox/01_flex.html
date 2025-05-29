@@ -35,9 +35,28 @@
                 
                 align-self
                 값: auto,stretch,flex-start,flex-end,baseline,center
-            */
+
+                개별 속성
+                flex: grow 0;
+                값: 1이면 늘어남,0이면 늘어나지 않음
+                flex: shrink:1
+                값:1 이면 줄어듬, 0이면 줄어들지 않음
+                flex-basis:auto
+                값: 가로 크기의 초기 값
+
+                속기 속성
+                flex: grow[shrink][basis]; ->순서 있다.
+
+                flex:1;
+                flex: 1 1 0%
+
+                */
         }
         .flexbox div{
+            width: 200px;/* flex: 0 1 auto; */
+            flex:200px;/* flex: 1 1 0%; */
+            flex:200;/* flex: 1 1 200px; */
+            /* flex:0 1 300px;; */
             background: darkcyan;
             margin: 10px;
         }

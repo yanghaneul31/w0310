@@ -23,18 +23,78 @@
             color: #333;
         }
 
+        /* 헤더 */
+        header{
+            position: relative;
+            width: 1320px;
+            height: 100px;
+            margin: 0 auto;
+            justify-content: flex-end;
+            align-items: center;
+            background: orange;
+        }
+
         /* GNB */
         /* 폰트위계 */
         /* typo */
         
         /* 메인과 서브 */
-        .gnb a{
+        .gnb .main>li>a{
             font-size: 18px;
             font-weight: bold;
         }
         /* 서브 */
         .gnb .sub a{
             font-size: 14px;
+        }
+        .gnb{
+            position: absolute;
+            right: 0;
+            top: 35px;
+            
+        }
+        /* 1depth: 메인 메뉴 */
+        .main{
+            display:flex;
+           
+            
+        }
+        .main>li>a{
+            display: block;
+            width: 160px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+
+        }
+        .main>li:hover{
+            background: #1b3b86;
+            color:#fdfdfd;
+        }
+        .main>li:hover .sub{
+         height: 150px;
+        }
+        /* 2depth: 서브 메뉴 */
+        .sub{
+            height: 0px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+            background: #5d86d9;
+
+        }
+        .sub::before{
+            display: block;
+            content: '';
+            height: 10px;
+
+        }
+        .sub li a{
+            padding: 4px 8px;
+        }
+        .sub li:hover a{
+            color:#fdfdfd;
+             background: #111;
         }
     </style>
 </head>

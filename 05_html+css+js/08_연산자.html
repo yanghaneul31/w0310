@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>연산자</title>
 </head>
+
 <body>
     <script>
         /* 
@@ -26,6 +28,102 @@
         2.이항: 피연산자 2개 -> 
         3.삼항: 피연산자 3개
         */
+        var a = 5;
+        var b = 2;
+
+        //    덧셈
+        document.write(a + b);
+        document.write('<br>');
+        // 문자열 연결
+        document.write(a + '2');
+        document.write('<br>');
+        document.write(a - b);
+        document.write('<br>');
+        document.write(a * b);
+        document.write('<br>');
+
+        // 나눗셈
+        document.write(a / b);
+        document.write('<br>');
+        // 나머지
+        document.write(a & b);
+        document.write('<br>');
+        // 1씩 증가(후위 연산)-> 출력 후 증가
+        document.write(a++);
+        document.write('<br>');
+        // 1씩 증가 (전위 연산)-> 증가 후 출력
+        document.write(++a);
+        document.write('<br>');
+
+        document.write('<hr>');
+
+        /* 
+        = 오른쪽에 값을 왼쪽 변수에 대입
+        += 더한 후 대입
+        -= 뺀 후 대입
+        *= 곱한 후 대입
+        /= 나눈 후 대입
+        %= 나머지를 구한 후 대입
+        */
+        //    NaN: Not a Number
+        // ( )-> 연산의 우선순위를 바꾼다.
+        document.write(b + '<br>'); // b는 2
+        document.write((a = b) + '<br>'); // a는 2
+        document.write((a += b) + '<br>');/* a = a+b */
+        document.write((a -= b) + '<br>');/* a = a-b */
+        document.write((a *= b) + '<br>');/* a = a*b */
+        document.write((a /= b) + '<br>');/* a = a/b */
+        document.write((a %= b) + '<br>');/* a= a%b */
+
+       document.write('<hr>');
+       //비교----------------------
+       /* 
+        >  초과(크다)
+        <  미만(작다)
+        >= 이상(크거나 같다)
+        <= 이하(작거나 같다)
+        == 같다
+        === 같다
+        != 같지 않다
+        !== 같지 않다
+
+       비교 연산의 결과 true 또는 false 이다.
+       */
+          document.write(a > b + '<br>'); //
+          document.write(a < b + '<br>');
+          document.write(a >= b + '<br>');
+          document.write(a <= b + '<br>');
+          document.write(a == b + '<br>');
+          document.write(a === b + '<br>');
+          document.write(a != b + '<br>');
+          document.write(a !== b + '<br>');
+
+          //논리 -----------------------------
+          /* 
+          && 그리고
+          || 또는
+          ! 부정
+
+          주로 논리 연산자는 비교 연산자와 함께 사용한다.
+          논리 연산의 결과도 true 또는 false 이다.
+
+          비교 연산자가 논리 연산자보다 연산 우선 순위가 높다.
+          Boolean(0)은 false, 나머지 숫자 즉, Boolean(0이 아닌 숫자)는 true
+           */
+           document.write('a=' + a+ '<br>'); //false
+           document.write(a>b && a>b); //false
+           document.write(a>b || a>b); //false
+           document.write(!a>b); //false
+
+           var c = true;
+           var d = true;
+           document.write('<hr>')
+           document.write((c && c) + '<br>'); //true
+           document.write((c || c) + '<br>'); //true
+           document.write((!c) + '<br>'); //false
+
+
     </script>
 </body>
+
 </html>
