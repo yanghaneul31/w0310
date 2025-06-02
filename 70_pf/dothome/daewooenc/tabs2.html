@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS:checked Tabs</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font: 15px/1.6 '돋움',sans-serif;
+            color:#333;
+        }
+        ul{
+            list-style-type: none;
+            
+        }
+        a{
+            text-decoration: none;
+            color:#333;
+        }
+        .tabs{
+            position: relative;
+            width: 480px;
+            height: 200px;
+            background: yellow;
+        }
+        .tabs input{
+            display: none;
+        }
+        .tabs label{
+            display: inline-block;
+            padding: 2px 8px;
+            background: #a3a3a3;
+            color: #838388;
+            cursor: pointer;
+        }
+        .tabs input:checked+label{
+        background: #404040;
+        color: #eeebeb;
+        }
+        .tab-content{
+            position: absolute;
+            display: none;
+            width: 100%;
+            padding: 16px;
+            border-top: 1px solid #333;
+
+        }
+        .tabs input:checked+label+.tab-content {
+            display: block;
+        }
+        /* 공지사항 */
+        .tabs .tab1{
+            line-height: 2;
+        }
+        .tabs .tab1 a{
+            display:inline-block ;
+            width: 360px;
+
+        }
+        .tabs .tab1 a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- 탭 -->
+     <div class="tabs">
+         <input type="radio" name="tab" id="tab1">
+         <label for="tab1">공지사항</label>
+         <div class=" tab1 tab-content">
+            <ul>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+                <li><a href="#">공지사항입니다.</a><span>2025.06.02</span></li>
+            </ul>
+         </div>
+         <input type="radio" name="tab" id="tab2">
+         <label for="tab2">갤러리</label>
+         <div class=" tab2 tab-content">
+            <a href="#">이미지1</a>
+            <a href="#">이미지2</a>
+            <a href="#">이미지3</a>
+         </div>
+     </div>
+</body>
+</html>

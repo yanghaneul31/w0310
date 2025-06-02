@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS :target Tabs</title>
+    <style>
+        .tabs {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tab-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ccc;
+            border: 1px solid #aaa;
+            text-decoration: none;
+            color: black;
+            margin-right: -1px;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #aaa;
+            background: #f9f9f9;
+        }
+
+        .tab-content:target {
+            display: block;
+        }
+
+        /* 기본 탭 선택 (처음 열릴 때) */
+        .tab-content:first-of-type:not(:target)~.tab-content {
+            display: none;
+        }
+
+        .tab-content:first-of-type:target,
+        .tab-content:first-of-type:not(:target):nth-of-type(1) {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <div class="tab-buttons">
+            <a href="#tab1">Tab 1</a>
+            <a href="#tab2">Tab 2</a>
+            <a href="#tab3">Tab 3</a>
+        </div>
+
+        <div id="tab1" class="tab-content">
+            <h3>Tab 1 Content</h3>
+            <p>This is the content of tab 1.</p>
+        </div>
+        <div id="tab2" class="tab-content">
+            <h3>Tab 2 Content</h3>
+            <p>This is the content of tab 2.</p>
+        </div>
+        <div id="tab3" class="tab-content">
+            <h3>Tab 3 Content</h3>
+            <p>This is the content of tab 3.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

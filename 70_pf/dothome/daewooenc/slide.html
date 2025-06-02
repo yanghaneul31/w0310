@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상하 슬라이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            vertical-align: top;
+        }
+         ul {
+            list-style:none;
+         }
+
+         /* 슬라이드 */
+         .slide {
+            width: 1200px;
+            height: 300px;
+            overflow:hidden;
+         }
+         .slide ul {
+            position: relative;
+            height: 400%;
+            animation: slide 8s infinite;
+         }
+         .slide li {
+            height: 25%;
+         }
+
+         @keyframes slide {
+            0% {top: 0%}
+            10% {top: -100%}
+            33% {top: -100%}
+            43% {top: -200%}
+            66% {top: -200%}
+            76% {top: -300%}
+            99.99% {top: -300%}
+            100% {top: 0%}
+         }
+    </style>
+</head>
+<body>
+    <!-- 슬라이드 이미지 -->
+    <div class="slide">
+        <ul>
+            <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a></li>
+            <li><a href="#"><img src="images/slide2.jpg" alt="슬라이드 이미지2"></a></li>
+            <li><a href="#"><img src="images/slide3.jpg" alt="슬라이드 이미지3"></a></li>
+            <li><a href="#"><img src="images/slide1.jpg" alt="슬라이드 이미지1"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
