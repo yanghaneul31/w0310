@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐앤탐스 GNB</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* 기본 레이아웃 */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            z-index: 1;
+            background: #f0f0f0;
+            height: 100px;
+        }
+        header .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            background: lightpink;
+        }
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 20px;
+            width: 640px;
+            height: 30px;
+            text-align: center;
+            align-self: self-end;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .gnb .main {
+            display: flex;
+        }
+        /* 가상요소으로 배경바 삽입 */
+        .gnb .main::before{
+            content:"111";
+            background: yellow;
+            position: absolute;
+            right: -20px;
+            top: 0;
+            width: 1200px;
+            height: 150px;
+            display: block;
+        }
+        .gnb .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #999;
+        }
+
+        .gnb .main>li>a:hover {
+            background: #1A4975;
+            color: #fff;
+        }
+
+        .gnb .main>li>a:hover .sub {
+            height: 150px;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .gnb .sub {
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
+            background: yellow;
+        }
+
+        .gnb .sub>li>a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- a영역: 헤더 -->
+        <header>
+            <div class="inner">
+                <!-- 로고 -->
+                <h1 class="logo">
+                    <a href="#"><img src="./images/logo.png" alt="로고"></a>
+                </h1>
+                <!-- 내비게이션 -->
+                <nav class="gnb">
+                    <ul class="main">
+                        <li><a href="#">TOM N TOMS</a>
+                            <ul class="sub">
+                                <li><a href="#">브랜드 소개</a></li>
+                                <li><a href="#">채용안내</a></li>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MENU</a>
+                            <ul class="sub">
+                                <li><a href="#">신메뉴</a></li>
+                                <li><a href="#">음료</a></li>
+                                <li><a href="#">푸드</a></li>
+                                <li><a href="#">MD</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">SERVICE</a>
+                            <ul class="sub">
+                                <li><a href="#">가맹점 개설문의</a></li>
+                                <li><a href="#">렌탈 서비스</a></li>
+                                <li><a href="#">제휴 할인</a></li>
+                                <li><a href="#">제휴 문의</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">COMMUNITY</a>
+                            <ul class="sub">
+                                <li><a href="#">SNS</a></li>
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">예술문화운동</a></li>
+                                <li><a href="#">사회공헌활동</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+</body>
+
+</html>

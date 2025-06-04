@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS :target Popup</title> 
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #fff;
+            color: #333;
+            font: 15px/1.6 '돋움',sans-serif;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        /* 팝업 레이어 */
+        #popup{
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0,0,0.5);
+        }
+        #popup:target{
+            display: block;
+        }
+        /* 팝업 창 */
+        .popup_content{
+                    /* position: relative; */
+                     margin: 10% auto;
+                     padding: 20px;
+                     width: 500px;
+                     background: yellow;
+        }
+        /* 닫기 버튼 */
+        .outer_btn{
+            text-align: right;
+        }
+        .close_btn{
+            display: inline-block;
+            background: #333;
+            color:white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h2>공지사항</h2>
+    <a href="#popup" class="open_btn"> 열기</a>
+
+    <!-- 팝업창 -->
+     <div id="popup">
+        <div class="popup_content">
+            <h3>제목</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa placeat accusamus harum similique magnam doloribus optio blanditiis, officia ab quisquam repellendus architecto reprehenderit vitae necessitatibus et provident exercitationem nam.</p>
+            <div class="outer_btn"><a href="#" class="close_btn">닫기</a></div>
+        </div>
+     </div>
+</body>
+</html>
