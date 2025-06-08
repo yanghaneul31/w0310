@@ -89,11 +89,19 @@ header {
     transition: .3s;
     background: yellow;
 }
-
+.gnb .sub::before {
+    display: block;
+    content: '';
+    padding-top: 10px;
+}
 .gnb .sub>li>a {
     font-size: 14px;
 }
-
+.gnb .sub>li>a:hover {
+    background: #474ead;
+    color: #fff;
+    text-decoration: underline;
+}
 /* 슬라이드 */
 .slide {
     height: 300px;
