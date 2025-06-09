@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color:#333;
+        }
+        ul {
+            list-style: none;
+        }
+
+        header {
+            position: relative;
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .main::before {
+            z-index: -1;
+            width: 1200px;
+            height: 0;
+            content:"";
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: rgba(0,0,0,0.5);
+            transition: .3s;
+        }
+        .main:hover::before {
+            height: 200px;
+        }
+        .main {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            display: flex;
+        }
+
+        .main>li>a {
+            display: block;
+            width: 200px;
+            height: 50px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+        }
+        .main>li>a:hover {
+            background: #000;
+            color:#fff;
+        }
+        .main:hover .sub{
+            height: 200px;
+            opacity: 1;
+            visibility: visible;
+        }
+        .sub {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            transition: .3s;
+        }
+        .sub a{
+            border: 1px solid #000;
+            display: block;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#">로고</a></h1>
+        <nav>
+            <ul class="main">
+                <li><a href="#">메인1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메인3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+                <li><a href="#">메인4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브1</a></li>
+                        <li><a href="#">서브2</a></li>
+                        <li><a href="#">서브3</a></li>
+                        <li><a href="#">서브4</a></li>
+                    </ul></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

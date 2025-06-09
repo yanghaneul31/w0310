@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction</title>
+    <style>
+        /* 
+            특정 요소에 
+            display:flex;를 지정하면 이 요소는 플렉스 컨테이너가 되며, 자식은 플렉스 아이템이 된다.
+            
+            플렉스 컨테이너
+                flex-direction
+                    값: row(기본값, 행: 왼->오)
+                        column(열: 위->아래)
+                        row-reverse(오->왼)
+                        column-reverse(아래->위)
+        */
+
+        /* 플렉스 컨테이너 */
+        .flexbox {
+            display: flex;
+            height: 200px;
+            background: #ccc;
+        }
+        /* 플렉스 아이템 */
+        .flexbox>div {
+            background: darkviolet;
+            /* 첫 번째 요소의 margin-top의 부모 요소 밖으로 생김! */
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox">
+        <div>child-1</div>
+        <div>child-2</div>
+        <div>child-3</div>
+    </div>
+</body>
+</html>
