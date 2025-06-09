@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐앤탐스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font: 15px/1.6 "돋움", sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        header {
+            background: #e1f7f2;
+        }
+
+        header .inner {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+           margin-top: 10px;
+            width: 600px;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        nav a {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide ul {
+            position: relative;
+            height: 300px;
+            animation: slide 8s infinite;
+        }
+
+        .slide li {
+            height: 25%;
+        }
+
+        @keyframes slide {
+            0% {
+                top: 0%
+            }
+
+            10% {
+                top: -100%
+            }
+
+            33% {
+                top: -100%
+            }
+
+            43% {
+                top: -200%
+            }
+
+            66% {
+                top: -200%
+            }
+
+            76% {
+                top: -300%
+            }
+
+            99.99% {
+                top: -300%
+            }
+
+            100% {
+                top: 0%
+            }
+        }
+
+        .contents {
+            height: 200px;
+            display: flex;
+            padding-top: 10px;
+        }
+
+        .contents h2 {
+            margin-bottom: 16px;
+        }
+
+        .notice {
+            width: 440px;
+        }
+
+        .notice a {
+            display: inline-block;
+            width: 340px;
+        }
+
+        .notice span {
+            display: inline-block;
+            width: 80px;
+            text-align: right;
+        }
+
+        .notice a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery {
+            width: 400px;
+        }
+
+        .gallery .inner {
+            display: flex;
+        }
+
+        .link {
+            width: 360px;
+        }
+
+        .link img {
+            height: 180px;
+        }
+
+        footer {
+            height: 100px;
+            background: #111;
+            color: #777;
+        }
+
+        footer .inner {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+        .left {
+            width: 1000px;
+
+        }
+
+        .right {
+            width: 200px;
+        }
+
+        .sns {
+            height: 50px;
+        }
+
+        .sns a {
+            color: #777;
+        }
+
+        .sns a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="./images/logo.png" alt="로고"></a>
+            </h1>
+            <nav>
+                <ul class="main">
+                    <li><a href="#">TOM N TOMS</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">EVENT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="slide">
+            <ul>
+                <li><a href="#"><img src="./images/slide1.jpg" alt="slide1"></a></li>
+                <li><a href="#"><img src="./images/slide2.jpg" alt="slide2"></a></li>
+                <li><a href="#"><img src="./images/slide3.jpg" alt="slide3"></a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <div class="notice">
+                <h2>공지사항</h2>
+                <ul>
+                    <li><a href="#">매장 CCTV를 확인 방법</a><span>2025.04.29</span></li>
+                    <li><a href="#">매장 CCTV를 확인 방법</a><span>2025.04.29</span></li>
+                    <li><a href="#">매장 CCTV를 확인 방법</a><span>2025.04.29</span></li>
+                    <li><a href="#">매장 CCTV를 확인 방법</a><span>2025.04.29</span></li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <h2>갤러리</h2>
+                <div class="inner">
+                    <a href="#"><img src="./images/gallery1.jpg" alt=""></a>
+                    <a href="#"><img src="./images/gallery2.jpg" alt=""></a>
+                    <a href="#"><img src="./images/gallery3.jpg" alt=""></a>
+                </div>
+            </div>
+            <div class="link">
+                <img src="./images/link.jpg" alt="바로가기">
+            </div>
+        </div>
+        <footer>
+            <div class="inner">
+                <div class="left">
+                    <p>서울특별시 광진구 아차산로 426</p>
+                </div>
+                <div class="right">
+                    <div class="sns">
+                        <a href="#">페이스북</a>
+                        <a href="#">트위터</a>
+                        <a href="#">인스타그램</a>
+                    </div>
+                    <div class="fs">
+                        <form action="#">
+                            <select name="fs" id="fs">
+
+                                <option value="">패밀리 사이트</option>
+                                <option value="fs1">커피양성지원센터</option>
+                                <option value="fs2">창업센터</option>
+                                <option value="fs3">커피교육원[서울]</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
