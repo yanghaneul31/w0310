@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slide {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+        }
+        .inner  {
+            position: absolute;
+            opacity: 0;
+        }
+        .active {
+            opacity: 1;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="inner active"><img src="images/slide1.jpg" alt="1"></div>
+        <div class="inner"><img src="images/slide2.jpg" alt="2"></div>
+        <div class="inner"><img src="images/slide3.jpg" alt="3"></div>
+    </div>
+    <script>
+        const inner = document.querySelectorAll('.inner');
+        let i = 0;
+
+        setInterval(() => {
+            inner[i].classList.remove("active");
+            i = (i+1) % inner.length;
+            inner[i].classList.add("active");
+        }, 3000);
+    </script>
+</body>
+</html>

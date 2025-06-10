@@ -1,7 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      *{
+        box-sizing:border-box;
+        margin:0;
+        padding:0;
+      }
+      ul{
+        list-style:none;
+      }
+      a{
+        text-decoration:none;
+        color:#333;
+      }
+     .header{
+        
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+        border: 1px solid #000;
+
+     }
+     .main{
+        width: 200px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
   
+     }
+     .main>li>a{
+        display: block;
+        width: 200px;
+        height: 50px;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 50px;
+     }
+     .main>li>a:hover{
+        background: #000;
+        color: #fff;
+     }
+     .main:hover .sub{
+        height: 200px;
+        opacity: 1;
+        visibility: visible;
+     }
+     .main>li{
+        position: relative;
+        display: flex;
+        
+     }
+     .sub{
+        display: flex;
+        position: absolute;
+        top:0;
+        left:100%;
+        overflow:hidden;
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+       } 
+       .sub a{
+        border: 1px solid #000;
+        display: block;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+
+       }
+       
+
+     
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href="#">로고</a></h1>
+    <nav>
+        <ul class="main">
+            <li><a href="#">메뉴1</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+                <li><a href="#">서브3</a></li>
+                <li><a href="#">서브4</a></li>
+            </ul>
+            </li>
+            <li><a href="#">메뉴2</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+                <li><a href="#">서브3</a></li>
+                <li><a href="#">서브4</a></li>
+            </ul>
+            </li>
+            <li><a href="#">메뉴3</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+                <li><a href="#">서브3</a></li>
+                <li><a href="#">서브4</a></li>
+            </ul>
+            </li>
+            <li><a href="#">메뉴4</a>
+            <ul class="sub">
+                <li><a href="#">서브1</a></li>
+                <li><a href="#">서브2</a></li>
+                <li><a href="#">서브3</a></li>
+                <li><a href="#">서브4</a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+  </header>
+</body>
+
+</html>
