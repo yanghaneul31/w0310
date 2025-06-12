@@ -73,20 +73,27 @@ nav{
     opacity: 1;
     height: 200px;
 }
+.contents{
+    width: 1720px;
+}
 .slide{
-    
+    overflow: hidden;
     position: relative;
-    width: 1000px;
+    width: 1720px;
     height: 400px;
 }
 .slide img {
-    width: 100%;
+    width: 1720px;
     height: 100%;
 }
 .link{
    position: absolute;
    right:0;
    top:0;
+   width: 100px;
+   height: 200px;
+   background: lightcoral;
+   text-align: center;
 }
 .slide li{
     position: absolute;
