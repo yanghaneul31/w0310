@@ -1,0 +1,286 @@
+@charset "utf-8";
+/*기본 CSS 리셋*/
+* {
+	margin: 0; /*기본 상하좌우 여백값 0으로 설정*/
+	padding: 0; /*기본 상하좌우 패딩값 0으로 설정*/
+	box-sizing: border-box;	/* 패딩과 테두리를 포함하여 요소의 너비를 유지 */
+}
+li {
+	list-style: none; /* 목록 항목의 불릿을 숨김 */
+}
+a {
+	text-decoration: none; /* 링크의 밑줄을 제거 */
+	color: inherit;	/* 링크의 글자 색상을 부모 요소로부터 상속받음 */
+}
+img {
+	vertical-align: top; /* 이미지의 아래쪽 여백을 제거하고, 상단 정렬 */
+	max-width: 100%; /* 이미지를 부모 요소의 너비에 맞춤 (이미지가 깨지지 않도록) */
+}
+button {
+	cursor: pointer; /* 버튼을 손가락 커서로 표시 */
+}
+body {
+	background: #fff; /*배경색 #fff표시-요구사항정의서*/
+	color: #333; /*글자색 #333표시-요구사항정의서*/
+}
+.wrap{
+	position:relative
+}
+.inner {
+	width:1200px;
+	margin:auto;
+}
+header{
+	position:relative;
+	height:100px;
+	background:#fff;
+	padding-top:35px; 
+	padding-left:10px; 
+}
+nav{
+	position:absolute;
+	top:40px;
+	right:10px;
+	z-index:10;
+}
+nav>ul{
+	display:flex;
+}
+nav>ul>li>a{
+	display:block;
+	width:120px;
+	text-align:center;
+	font-weight:bold;
+	padding:10px;
+	background:#3d155f;
+	color:#fff;
+}
+nav>ul>li:hover>a{
+	background:#f96167
+}
+.sub{
+	display:none;
+}
+.sub li a{
+	display:block;
+	background:#fff;
+	padding:5px;
+	text-align:center;
+	font-size:14px;
+}
+.sub li a:hover{
+	background:#3d155f;
+	color:#fff;
+}
+.slide {
+	height:300px;
+	overflow:hidden;
+}
+.slide ul{
+	width:3600px;
+	height:300px;
+	display:flex;
+}
+.slide ul li {
+	position:relative;
+	width:1200px;
+	height:300px;
+}
+.slide ul li a {
+	display:block;
+	height:100%;
+}
+.slide ul li.s1 {
+	background:url(../images/s1.jpg) no-repeat center/cover;
+}
+.slide ul li.s2 {
+	background:url(../images/s2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3 {
+	background:url(../images/s3.jpg) no-repeat center/cover;
+}
+.slide ul li h2 {
+	background:rgba(61, 21, 95, 0.7);
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	padding:20px;
+	border-radius:50px;
+	font-size:28px;
+	color:#fff;
+}
+.slide ul li h2 span{
+	color:#f96167;
+}
+.contents {
+	height:200px;
+	display:flex;
+}
+.contents article {
+	width:400px;
+}
+.contents .notice {
+	padding:10px;
+}
+.notice h2 {
+	background:#3d155f;
+	color:#fff;
+	border-radius:10px 10px 0 0;
+	width:120px;
+	text-align:center;
+	padding:5px 0;
+	font-size:20px;
+}
+.notice ul {
+	background:#3d155f;
+	padding:5px 15px;
+}
+.notice ul li {
+	border-bottom:1px dashed #fff;
+}
+.notice ul li:last-child {
+	border-bottom:none
+}
+.notice ul li a {
+	display:block;
+	padding:5px 0;
+	position:relative;
+	color:#fff;
+}
+.notice ul li p {
+	width:260px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.notice ul li span {
+	position:absolute;
+	right:0;
+	top:5px;
+}
+.contents .gall{
+	padding:10px;
+}
+.gall h2 {
+	background:#f96167;
+	color:#fff;
+	border-radius:10px 10px 0 0;
+	width:120px;
+	text-align:center;
+	padding:5px 0;
+	font-size:20px;
+}
+.gall ul {
+	display: flex;
+	background: #f96167;
+	padding: 10px;
+	gap: 10px;
+}
+.gall ul li img {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+}
+.gall ul li:hover {
+	opacity: 0.7;
+}
+.contents .go {
+	background:#eee;
+	padding:10px;
+}
+.go h2 {
+	color:#3d155f;
+	margin-bottom:20px;
+}
+.go ul {
+	display:flex;
+	justify-content:center;
+	gap:20px
+}
+.go ul li {
+	text-align:center;
+}
+.go ul li a {
+	display:block;
+	height:100%;
+}
+.go ul li p {
+	width:80px;
+	height:80px;
+	background:#3d155f;
+	padding-top:20px;
+	border-radius:20px;
+	margin-bottom:5px;
+}
+.go ul li span {
+	font-weight: bold;
+}
+footer {
+	position:relative;
+	height:100px;
+	background:#666;
+	color:#fff;
+	padding-left:20px;
+	display:flex;
+	gap:30px;
+	align-items:center;
+}
+.fsns {
+	position:absolute;
+	display:flex;
+	gap:10px;
+	top:30px;
+	right:30px;
+}
+.fsns li a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:#fff;
+	border-radius:50%;
+	text-align:center;
+	padding-top:10px;
+}
+.fsns li:nth-child(1) a {
+	background:#3f5b9a;
+}
+.fsns li:nth-child(2) a {
+	background:#47b749;
+}
+.fsns li:nth-child(3) a {
+	background:red;
+}
+.popup {
+	position:absolute;
+	width:500px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	background:#fff;
+	text-align:center;
+	padding:20px;
+	border:2px solid #f96167;
+	border-radius:20px;
+	z-index:9999;
+	display:none;
+}
+.popup h2 {
+	color:#f96167;
+	margin-bottom:20px;
+}
+.popup .text {
+	margin:20px 0;
+}
+.popup .close {
+	text-align:right;
+}
+.popup .close button{
+	background:#f96167;
+	border:0;
+	padding:10px;
+	color:#fff;
+}
+.popup .close button:hover{
+	background:#3d155f;
+}

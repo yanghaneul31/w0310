@@ -1,0 +1,277 @@
+@charset "utf-8";
+/*기본 CSS 리셋*/
+* {
+	margin: 0;	/*기본 상하좌우 여백값 0으로 설정*/
+	padding: 0;	/*기본 상하좌우 패딩값 0으로 설정*/
+	box-sizing: border-box;	/* 패딩과 테두리를 포함하여 요소의 너비를 유지 */
+}
+li {
+	list-style: none;	/* 목록 항목의 불릿을 숨김 */
+}
+a {
+	text-decoration: none;	/* 링크의 밑줄을 제거 */
+	color: inherit;	/* 링크의 글자 색상을 부모 요소로부터 상속받음 */
+}
+img {
+	vertical-align: top;	/* 이미지의 아래쪽 여백을 제거하고, 상단 정렬 */
+	max-width: 100%;	/* 이미지를 부모 요소의 너비에 맞춤 (이미지가 깨지지 않도록) */
+}
+button {
+	cursor: pointer;	/* 버튼을 손가락 커서로 표시 */
+}
+body {
+	background: #fff;	/*배경색 #fff표시-요구사항정의서*/
+	color: #333;	/*글자색 #333표시-요구사항정의서*/
+}
+.wrap {
+	width: 1000px;
+	height: 670px;
+	display: flex;
+	position: relative;
+}
+header {
+	width: 200px;
+	background: #1a237e;
+	padding: 80px 10px;
+}
+nav {
+	margin-top: 50px;
+	position: relative;
+}
+nav>ul>li>a {
+	display: block;
+	border: 1px solid #ffeb3b;
+	padding: 10px 0;
+	text-align: center;
+	color: #ffeb3b;
+	border-bottom: 0;
+}
+nav>ul>li:last-child>a {
+	border-bottom: 1px solid #ffeb3b;
+}
+nav>ul>li:hover>a {
+	background: #ffeb3b;
+	color: #1a237e;
+}
+.sub {
+	position: absolute;
+	left: 180px;
+	top: -10px;
+	z-index: 9;
+	width: 150px;
+	height: 250px;
+	background: #ffeb3b;
+	display: none;
+}
+.sub li a {
+	display: block;
+	padding: 10px 0;
+	color: #1a237e;
+	text-align: center;
+}
+.sub li a:hover {
+	background: #757575;
+	color: #fff;
+}
+.contents {
+	width: 800px;
+}
+.slide {
+	height: 350px;
+	overflow: hidden;
+}
+.slide ul li {
+	width: 800px;
+	height: 350px;
+	position: relative;
+}
+.slide ul li a {
+	display: block;
+	height: 100%;
+}
+.slide ul li.s1 {
+	background: url(../images/s1.jpg) no-repeat center/cover;
+}
+.slide ul li.s2 {
+	background: url(../images/s2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3 {
+	background: url(../images/s3.jpg) no-repeat center/cover;
+}
+.slide ul li h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #1a237e;
+	border-radius: 20px 0;
+	padding: 10px 40px;
+	color: #ffeb3b;
+	width: 600px;
+	text-align: center;
+}
+.con {
+	height: 200px;
+	display: flex;
+}
+.notice {
+	width: 300px;
+	padding: 5px;
+}
+.notice ul li {
+	border-bottom: 1px dashed #fff;
+}
+.notice ul li:last-child {
+	border-bottom: none
+}
+.notice ul li a {
+	display: block;
+	padding: 5px 0;
+	position: relative;
+}
+.notice ul li p {
+	width: 180px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.notice ul li span {
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+.notice h2 {
+	background: #1a237e;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.gall {
+	width: 300px;
+	padding: 5px;
+}
+.gall h2 {
+	background: #ffeb3b;
+	padding: 5px;
+	color: #1a237e;
+	text-align: center;
+}
+.gall ul {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+.gall ul li img {
+	width: 100px;
+	height: 120px;
+	object-fit: cover;
+}
+.go {
+	width: 200px;
+	padding: 5px;
+}
+.go h2 {
+	background: #1a237e;
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+}
+.go ul li {
+	margin-top: 5px;
+}
+.go ul li img {
+	width: 20px;
+}
+.go ul li a {
+	display: block;
+	font-size: 13px;
+	height: 40px;
+	border-radius: 5px;
+	background: #757575;
+	text-align: center;
+	color: #fff;
+	padding-top: 10px;
+}
+footer {
+	position: relative;
+	height: 120px;
+	background: #666;
+	color: #fff;
+	padding-left: 20px;
+	padding-top: 50px;
+}
+footer div {
+	position: absolute;
+	top: 25px;
+	right: 20px;
+}
+footer .fsns {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+footer .fsns li a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 9px;
+}
+footer .fsns li:first-child a {
+	background: #3c5b9a;
+}
+footer .fsns li:nth-child(2) a {
+	background: #47b749;
+}
+footer .fsns li:nth-child(3) a {
+	background: red;
+}
+footer select {
+	margin-top: 10px;
+	width: 150px;
+	height: 30px;
+}
+.popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+	display: none;
+}
+.popcon {
+	position: relative;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	text-align: center;
+	padding: 10px;
+	border-radius: 20px;
+}
+.popcon h2 {
+	color: #1a237e;
+	margin-bottom: 20px;
+}
+.popcon .text {
+	margin: 20px 0;
+}
+.popcon .close {
+	text-align: right;
+}
+.popcon .close button {
+	background: #1a237e;
+	border: 0;
+	padding: 10px;
+	color: #fff;
+}
+.popcon .close button:hover {
+	background: #ffeb3b;
+	color: #333;
+}

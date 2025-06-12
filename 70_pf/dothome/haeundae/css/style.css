@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+/* 공통 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.6 '돋움', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 전체 */
+.wrap {
+    display: flex;
+    width: 1000px;
+}
+
+/* 헤더 */
+header {
+    background: #6f8196;
+    width: 200px;
+    height: 650px;
+    padding-top: 30px;
+}
+
+/* 로고 */
+.logo {
+    width: 200px;
+    height: 40px;
+    background: #000;
+}
+
+/* 내비게이션 */
+.gnb {
+    width: 160px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* 1depth: 메인메뉴 */
+.gnb .main>li>a {
+    display: block;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #999;
+    border-bottom: 1px solid #757575;
+}
+
+.gnb .main>li>a:hover {
+    background: #1A4975;
+    color: #fff;
+}
+
+.gnb .main>li:hover .sub {
+    height: 150px;
+}
+
+/* 2depth: 서브메뉴 */
+.gnb .sub {
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+    background: rgba(107, 160, 234, 0.5);
+}
+
+.gnb .sub::before {
+    display: block;
+    content: '';
+    padding-top: 10px;
+}
+
+.gnb .sub>li>a {
+    display: block;
+    font-size: 14px;
+}
+
+.gnb .sub>li>a:hover {
+    background: #474ead;
+    color: #fff;
+}
+
+.container {
+    width: 800px;
+}
+
+/* 슬라이드 */
+.slide {
+    height: 350px;
+    background: plum;
+}
+
+/* 콘텐츠 */
+.contents {
+    display: flex;
+    height: 200px;
+}
+
+/* 탭 */
+.tabs {
+    width: 400px;
+    background: chartreuse;
+}
+
+/* 공지사항 */
+/* 갤러리 */
+/* 배너 */
+.banner {
+    width: 200px;
+    background: aqua;
+}
+
+/* 바로가기 링크 */
+.link {
+    width: 200px;
+    background: gold;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    height: 100px;
+    background: #555;
+}
+
+/* 하단로고 */
+.blogo {
+    width: 200px;
+    background: hotpink;
+}
+
+.right {
+    width: 800px;
+}
+
+/* 하단메뉴 */
+.bmenu {
+    height: 50px;
+    background: indigo;
+}
+
+/* 주소 및 저작권 */
+.copy {
+    height: 50px;
+    background: khaki;
+}

@@ -1,0 +1,285 @@
+@charset "utf-8";
+/*기본 CSS 리셋*/
+* {
+    margin: 0;    /*기본 상하좌우 여백값 0으로 설정*/
+    padding: 0;    /*기본 상하좌우 패딩값 0으로 설정*/
+    box-sizing: border-box;    /* 패딩과 테두리를 포함하여 요소의 너비를 유지 */
+}
+li {
+    list-style: none;    /* 목록 항목의 불릿을 숨김 */
+}
+a {
+    text-decoration: none;    /* 링크의 밑줄을 제거 */
+    color: inherit;    /* 링크의 글자 색상을 부모 요소로부터 상속받음 */
+}
+img {
+    vertical-align: top;    /* 이미지의 아래쪽 여백을 제거하고, 상단 정렬 */
+    max-width: 100%;    /* 이미지를 부모 요소의 너비에 맞춤 (이미지가 깨지지 않도록) */
+}
+button {
+    cursor: pointer;    /* 버튼을 손가락 커서로 표시 */
+}
+body {
+    background: #fff;    /*배경색 #fff표시-요구사항정의서*/
+    color: #333;    /*글자색 #333표시-요구사항정의서*/
+}
+.wrap {
+    height: 950px;
+    position: relative;
+    min-width: 1200px;
+}
+.top {
+    height: 850px;
+    display: flex;
+}
+header {
+    width: 250px;
+    background: #4b88c7;
+    padding: 30px 10px;
+}
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+nav>ul>li>a {
+    display: block;
+    background: #ffc1cc;
+    padding: 10px 20px;
+}
+nav>ul>li:hover>a {
+    background: #a8e6cf;
+}
+.sub {
+    display: none;
+}
+.sub li a {
+    display: block;
+    background: #fff;
+    padding: 10px 20px;
+}
+.sub li a:hover {
+    background: #ccc;
+}
+.spot {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+.spot a:first-child {
+    border-right: 1px solid #fff;
+    padding-right: 5px;
+}
+.contents {
+    width: calc(100% - 250px);
+}
+.slide {
+    height: 400px;
+    overflow: hidden;
+}
+.slide ul {
+    width: 300%;
+    display: flex;
+}
+.slide ul li {
+    width: calc(100% / 3);
+    height: 400px;
+    position: relative;
+}
+.slide ul li h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 30px 0;
+}
+.slide ul li h2 span {
+    color: #a8e6cf;
+}
+.slide ul li a {
+    display: block;
+    height: 100%;
+}
+.slide ul li.s1 {
+    background: url(../images/s1.jpg) no-repeat center/cover;
+}
+.slide ul li.s2 {
+    background: url(../images/s2.jpg) no-repeat center/cover;
+}
+.slide ul li.s3 {
+    background: url(../images/s3.jpg) no-repeat center/cover;
+}
+.go {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4b88c7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    z-index: 10;
+}
+.go li {
+    margin-bottom: 20px;
+}
+.go li a {
+    display: block;
+    height: 100%;
+}
+.go li:last-child {
+    margin-bottom: 0;
+}
+.go span {
+    display: block;
+    margin-top: 10px;
+}
+.banner {
+    height: 200px;
+    padding: 20px 60px;
+    background: #ffc1cc;
+}
+.banner a {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.banner .photo {
+    flex-basis: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+.banner .text {
+    flex-grow: 1;
+}
+.banner .text h2 {
+    font-size: 35px;
+    color: #4B88C7;
+    margin-bottom: 20px
+}
+.banner .text ul li {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.con {
+    height: 250px;
+    padding: 20px 50px;
+    position: relative;
+}
+.tabmenu {
+    display: flex;
+}
+.tabmenu>li {
+    width: 150px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+.tabmenu>li>h2>a {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+}
+.tabmenu>li.on {
+    background: #4B88C7;
+}
+.tabcon {
+    position: absolute;
+    width: calc(100% - 100px);
+    left: 50px;
+    background: #4B88C7;
+    padding: 10px 20px;
+    height: 160px;
+}
+.notice ul {
+    padding: 5px 15px;
+}
+.notice ul li {
+    border-bottom: 1px dashed #fff;
+}
+.notice ul li:last-child {
+    border-bottom: none
+}
+.notice ul li a {
+    display: block;
+    padding: 5px 0;
+    position: relative;
+}
+.notice ul li p {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.notice ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.gall {
+    display: none
+}
+.gall ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.gall ul li a {
+    display: block;
+    height: 100%;
+}
+.gall ul li p {
+    margin-bottom: 10px;
+}
+.gall ul li img {
+    width: 300px;
+    height: 100px;
+    object-fit: cover;
+}
+footer {
+    height: 100px;
+    background: #666;
+    color: #fff;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-left: 20px;
+}
+.popup {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 9999;
+    display: none;
+}
+.popup h2 {
+    color: #4B88C7;
+    margin-bottom: 20px;
+}
+.popup .text {
+    margin: 20px 0;
+}
+.popup .close {
+    text-align: right;
+}
+.popup .close button {
+    background: #4B88C7;
+    border: 0;
+    padding: 10px;
+    color: #fff;
+}
+.popup .close button:hover {
+    background: #FFC1CC;
+}
