@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.6, '돋움', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    vertical-align: top;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    z-index: 1;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    display: flex;
+    
+   
+}
+
+.main>li>a {
+    display: block;
+    border: solid 1px #333;
+    width: 160px;
+    height: 30px;
+    text-align: center;
+}
+
+.main>li>a:hover {
+    background: #ffcaca;
+    color: #333;
+}
+
+.main:hover .sub {
+    height: 150px;
+}
+.main::before{
+    z-index: -1;
+    top: 30px;
+    left:-560px;
+    content:"";
+    background:rgba(0,0,0,0.5);
+    width: 1200px;
+    height: 0;
+    transition: .3s;
+    position: absolute;
+}
+.main:hover::before{
+
+    height: 150px;
+}
+.sub {
+    overflow: hidden;
+    height: 0;
+}
+
+.sub>li {
+    text-align: center;
+    display: block;
+    border: solid 1px #333;
+}
+
+.sub>li>a:hover {
+    background: #fc8989;
+    color: #fff
+}
+
+.slide {
+
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide ul {
+    position: relative;
+    animation: slide 8s infinite;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    10% {
+        top: -100%;
+    }
+
+    33% {
+        top: -100%;
+    }
+
+    43% {
+        top: -200%;
+    }
+
+    66% {
+        top: -200%;
+    }
+
+    76% {
+        top: -300%;
+    }
+
+    99.99% {
+        top: -300%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.contents {
+    display: flex;
+    height: 200px;
+}
+
+.tabs {
+    position: relative;
+    width: 400px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.tabs input:checked+label {
+    background: #404040;
+    color: #fc8989;
+}
+
+.tabs .tab-content {
+    position: absolute;
+    display: none;
+    width: 100%;
+}
+
+.tabs input:checked+label+.tab-content {
+    display: block;
+}
+
+.tabs .tab1 li {
+    display: flex;
+}
+
+.tabs .tab1 a {
+    display: inline-block;
+}
+
+.tabs .tab1 p {
+    margin-left: 50px;
+}
+
+.tabs .tab2 img {
+    border: 1px solid transparent;
+}

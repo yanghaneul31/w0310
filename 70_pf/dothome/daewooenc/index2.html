@@ -1,406 +1,102 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>daewooenc의 사이트</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        body {
-            font: 15px/1.6 '돋움', sans-serif;
-            background: #fff;
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        img {
-            vertical-align: top;
-        }
-
-        .wrap {
-            width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f0f0f0;
-            height: 100px;
-        }
-
-        /* 슬라이드 */
-        .slide {
-            height: 300px;
-            overflow: hidden;
-        }
-
-        .slide ul {
-            position: relative;
-            height: 400%;
-            animation: slide 8s infinite;
-        }
-
-        @keyframes slide {
-            0% {
-                top: 0;
-            }
-
-            10% {
-                top: -100%
-            }
-
-            33% {
-                top: -100%
-            }
-
-            43% {
-                top: -200%
-            }
-
-            66% {
-                top: -200%
-            }
-
-            76% {
-                top: -300%
-            }
-
-            99.9% {
-                top: -300%
-            }
-
-            100% {
-                top: -0%
-            }
-        }
-
-        .contents {
-            display: flex;
-            height: 200px;
-        }
-
-        body {
-            font: 15px/1.6 '돋움', sans-serif;
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .logo {
-            width: 200px;
-            height: 40px;
-        }
-
-        .gnb {
-            position: absolute;
-            right: 0;
-            width: 640px;
-            height: 30px;
-            text-align: center;
-            background: darkblue;
-        }
-        /* 1depth 메인메뉴 */
-        .gnb .main {
-            display: flex;
-        }
-
-        .gnb .main>li>a {
-            display: block;
-            width: 160px;
-            height: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            background: #999;
-        }
-
-<<<<<<< HEAD
-        .main>li:hover .sub {
-            height: 150px;
-            visibility: visible;
-            opacity: 1;
-        }
-       
-        .sub {
-            height: 0;
-            opacity: 0;
-            visibility: hidden;
-            overflow: hidden;
-            transition: .3s;
-            background: yellow;
-        }
-
-
-        /* .gnb .sub::before {
-            display: block;
-            content: '';
-            padding-top: 10px;
-        } */
-=======
-        .ghb .main>li>a:hover .sub {
-            height: 150px;
-        }
-       
-        .gnb .sub {
-            height: 0;
-            overflow: hidden;
-            transition: .3;
-            background: yellow;
-        }
-
-        .gnb .sub>li>a {
-            font-size: 14px;
-        }
-
-        .gnb .sub::before {
-            display: block;
-            content: '';
-            padding-top: 10px;
-        }
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-
-        .gnb .sub>li>a {
-            display: block;
-            font-size: 14px;
-        }
-
-        .gnb .sub>li>a:hover {
-            background: #474ead;
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        .tabs {
-            width: 400px;
-            height: 200px;
-            position: relative;
-            background: yellow;
-        }
-
-        .tabs input {
-            display: none;
-        }
-
-        .tabs label {
-            display: inline-block;
-            padding: 2px 8px;
-            background: #a3a3a3;
-            color: #838388;
-            cursor: pointer;
-        }
-
-        .tab-content {
-            position: absolute;
-            display: none;
-            width: 100%;
-            padding: 16px;
-            border-top: 1px solid #333;
-        }
-
-        .tabs input:checked+label {
-            background: #404040;
-            color: #eeebeb;
-        }
-
-        .tabs input:checked+label+.tab-content {
-            display: block;
-        }
-
-        /* 공지사항 */
-        .tabs .tab1 {
-            font-size: 14px;
-            line-height: 2;
-        }
-
-        .tabs .tab1 a {
-            display: inline-block;
-            width: 280px;
-        }
-
-        .tabs .tab1 a:hover {
-            text-decoration: underline;
-        }
-
-        .banner {
-            width: 400px;
-            background: lightcoral;
-
-        }
-
-        .link {
-            width: 400px;
-            background: lightgray;
-        }
-
-        footer {
-            display: flex;
-            background: #555;
-            height: 100px;
-            width: 1200px;
-<<<<<<< HEAD
-            align-items: center;
-=======
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-        }
-
-        .blogo {
-            width: 200px;
-            background: lightcyan;
-        }
-
-        .copy {
-            width: 800px;
-
-        }
-
-        .sns {
-            width: 200px;
-        }
-
-        .sns a {
-<<<<<<< HEAD
-=======
-            
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-            width: 36px;
-            height: 36px;
-            text-indent: -9999em;
-            margin-right: 8px;
-        }
-        
-    </style>
+    <title>daewoo</title>
+    <link rel="stylesheet" href="./css/style2.css">
 </head>
-
 <body>
     <div class="wrap">
-        <!-- 헤더 -->
         <header>
-            <h1 class="logo">
-                <a href="#"><img src="./images/logo.png" alt="로고"></a>
-            </h1>
-            <nav class="gnb">
-                <ul class="main">
-                    <li><a href="#">회사소개</a>
-                        <ul class="sub">
-                            <li><a href="#">기업정보</a></li>
-                            <li><a href="#">지속가능경영</a></li>
-                            <li><a href="#">투자정보</a></li>
-<<<<<<< HEAD
-                            <li><a href="#">투자정보</a></li>
-=======
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-                        </ul>
-                    </li>
-                    <li><a href="#">사업분야</a>
-                        <ul class="sub">
-                            <li><a href="#">토목</a></li>
-                            <li><a href="#">플랜트</a></li>
-                            <li><a href="#">주택</a></li>
-                            <li><a href="#">개발</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">흥보센터</a>
-                        <ul class="sub">
-                            <li><a href="#">ci/bi</a></li>
-                            <li><a href="#">브로슈어</a></li>
-<<<<<<< HEAD
-                            <li><a href="#">브로슈어</a></li>
-                            <li><a href="#">브로슈어</a></li>
-=======
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-                        </ul>
-                    </li>
-                    <li><a href="#">뉴스룸</a>
-                        <div class="sub"></div>
-                    </li>
+           <h1 class="logo"><a href="#"><img src="./images/logo.png" alt="로고"></a></h1>
+           <nav>
+            <ul class="main">
+                <li><a href="#">탑</a>
+                <ul class="sub">
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
                 </ul>
-            </nav>
+                </li>
+                <li><a href="#">아우터</a>
+                <ul class="sub">
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                </ul>
+                </li>
+                <li><a href="#">팬츠</a>
+                <ul class="sub">
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                </ul>
+                </li>
+                <li><a href="#">악세사리</a>
+                <ul class="sub">
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                    <li><a href="#">블라우스</a></li>
+                </ul>
+                </li>
+            </ul>
+           </nav>
         </header>
-        <!-- 슬라이드 -->
         <div class="slide">
             <ul>
-                <li><a href="#"><img src="./images/slide1.jpg" alt="이미지1"></a></li>
-                <li><a href="#"><img src="./images/gallery2.jpg" alt="이미지2"></a></li>
-                <li><a href="#"><img src="./images/gallery3.jpg" alt="이미지3"></a></li>
+                <li><a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a></li>
+                <li><a href="#"><img src="./images/slide2.jpg" alt="슬라이드2"></a></li>
+                <li><a href="#"><img src="./images/slide3.jpg" alt="슬라이드3"></a></li>
+                <li><a href="#"><img src="./images/slide1.jpg" alt="슬라이드1"></a></li>
             </ul>
         </div>
-        <!-- c콘텐츠 영역 -->
         <div class="contents">
             <div class="tabs">
-<<<<<<< HEAD
-                <input type="radio" name="tabs" id="tab1" checked>
-=======
-                <input type="radio" name="tabs" id="tab1">
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
+                <input type="radio" name="tab" id="tab1" checked>
                 <label for="tab1">공지사항</label>
                 <div class="tab1 tab-content">
                     <ul>
-                        <li><a href="#">공지사항입니다.</a><span>2025.06.08</span></li>
-                        <li><a href="#">공지사항입니다.</a><span>2025.06.08</span></li>
-                        <li><a href="#">공지사항입니다.</a><span>2025.06.08</span></li>
-                        <li><a href="#">공지사항입니다.</a><span>2025.06.08</span></li>
+                        <li><a href="#">공지사항 내용1</a><p>2025.06.13</p></li>
+                        <li><a href="#">공지사항 내용1</a><p>2025.06.13</p></li>
+                        <li><a href="#">공지사항 내용1</a><p>2025.06.13</p></li>
+                        <li><a href="#">공지사항 내용1</a><p>2025.06.13</p></li>
+                      
                     </ul>
                 </div>
-                <input type="radio" name="tabs" id="tab2">
+                <input type="radio" name="tab" id="tab2">
                 <label for="tab2">갤러리</label>
                 <div class="tab2 tab-content">
-                    <a href="#">이미지1</a>
-                    <a href="#">이미지2</a>
-                    <a href="#">이미지3</a>
+                    <a href="#"><img src="./images/gallery1.jpg" alt="갤러리1"></a>
+                    <a href="#"><img src="./images/gallery2.jpg" alt="갤러리2"></a>
+                    <a href="#"><img src="./images/gallery3.jpg" alt="갤러리3"></a>
                 </div>
             </div>
             <div class="banner">
                 <a href="#"><img src="./images/banner.jpg" alt="배너"></a>
             </div>
             <div class="link">
-                <a href="#"><img src="./images/link.jpg" alt="바로가기"></a>
+                <a href="#"><img src="./images/link.jpg" alt="링크"></a>
             </div>
         </div>
-
-        <!-- 푸터영역 -->
         <footer>
-            <div class="blogo">
-                <a href="#"><img src="./images/blogo.png" alt="blogo"></a>
-            </div>
-<<<<<<< HEAD
+            <h2 class="blogo">
+                <a href="#"><img src="./images/blogo.png" alt="하단로고"></a>
+            </h2>
             <div class="copy">
-=======
-            <div class="copyright">
->>>>>>> d75640f7bc337a1cde5ac0c1bb15298a82306fd4
-                <p>04548 서울특별시 중구 을지로 170 ㈜대우건설 대표번호 : 02-2288-3114</p>
+                <p>서울특별시 중구 을지로 170 ㈜대우건설 대표번호 : 02-2288-3114</p>
                 <p>Copyright DAEWOO ENGINEERING & CONSTRUCTION Co., Ltd. All rights reserved</p>
             </div>
             <div class="sns">
-                <a href="#"><img src="./images/sns1.png" alt="sns1"></a>
-                <a href="#"><img src="./images/sns2.png" alt="sns2"></a>
-                <a href="#"><img src="./images/sns3.png" alt="sns3"></a>
+                <a href="#"><img src="./images/facebook.png" alt="페이스북"></a>
+                <a href="#"><img src="./images/youtube.png" alt="유튜브"></a>
+                <a href="#"><img src="./images/instargram.png" alt="인스타그램"></a>
             </div>
         </footer>
     </div>
 </body>
-
 </html>
