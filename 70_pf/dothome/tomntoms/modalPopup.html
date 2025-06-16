@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐앤탐스:모달 팝업 ver.jq</title>
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <style>
+        #modal-overlay {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        #modal-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            z-index:1000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 모달 팝업 버튼 -->
+    <button id="open-modal">모달 팝업 열기</button>
+
+    <!-- 배경 어둡게 (오버레이) -->
+    <div id="modal-overlay"></div>
+ 
+
+
+    <!-- 모달 창 -->
+    <div id="modal-popup">
+        <h2>팝업 제목</h2>
+        <p>팝업 내용입니다.</p>
+    <br><button id="close-modal">닫기</button>
+    </div>
+   <div class="notice">
+        <h2>공지사항</h2>
+        <ul>
+            <li><a href="#" id="open-modal">첫 번째 공지사항입니다.</a></li>
+            <li><a href="#" id="open-modal">두 번째 공지사항입니다.</a></li>
+        </ul>
+    </div>
+    <script>
+        $('#open-modal').click(() => {
+            $('#modal-popup, #modal-overlay').show();
+        });
+        $('#close-modal').click(() => {
+            $('#modal-popup, #modal-overlay').hide();
+        });
+    </script>
+</body>
+
+   
+
+   
+</html>
+
+   
+   

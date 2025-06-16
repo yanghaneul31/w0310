@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layerPopup</title>
+    <style>
+        .popup {
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            z-index: 100;
+        }
+    </style>
+   <script src="./script/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 레이어 팝업 (간단히 띄우는 레이어) -->
+    <div class="popup">
+        ✅ 이것은 레이어 팝업입니다.
+        <br><button id="close-layer">닫기</button>
+    </div>
+
+    <h2>공지사항</h2>
+    <ul>
+        <li><a href="#" id="open-layer">첫 번째 공지사항입니다.</a></li>
+        <li>두 번째 공지사항입니다.</li>
+    </ul>
+    <!-- 레이어 팝업 버튼 -->
+    <button id="open-layer">레이어 팝업 열기</button>
+
+    <script>
+        //ES6 버전에서 화살표 함수
+        //익명함수는 화살표 함수로 바꿀 수 있다.
+        $(document).ready(function () {
+            $('#open-layer').click(function () {
+                $('.popup').show()
+
+            });
+            $('#close-layer').click(function () {
+                $('.popup').hide()
+
+            });
+        });
+    </script>
+</body>
+
+</html>

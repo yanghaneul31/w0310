@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대우건설</title>
+    <style>
+        /* 공통 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            font: 15px/1.6 '돋움', sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* 기본 레이아웃 */
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f0f0f0;
+            height: 100px;
+        }
+
+        /* 로고 */
+        .logo {
+            width: 200px;
+            height: 40px;
+        }
+
+        /* 내비게이션 */
+        .gnb {
+            position: absolute;
+            right: 20px;
+            width: 640px;
+            height: 30px;
+            background: darkkhaki;
+            text-align: center;
+        }
+
+        /* 1depth: 메인메뉴 */
+        .gnb .main {
+            display: flex;
+        }
+
+        .gnb .main>li>a {
+            display: block;
+            width: 160px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #999;
+        }
+
+        .gnb .main>li>a:hover {
+            background: #1A4975;
+            color: #fff;
+        }
+
+        .gnb .main:hover .sub {
+            height: 150px;
+        }
+
+        /* 2depth: 서브메뉴 */
+        .gnb .sub {
+            height: 0;
+            overflow: hidden;
+            transition: .3s;
+            background: rgba(157, 170, 188, 0.5);
+        }
+
+        .gnb .sub::before {
+            display: block;
+            content: '';
+            padding-top: 10px;
+        }
+
+        .gnb .sub>li>a {
+            display: block;
+            font-size: 14px;
+        }
+
+        .gnb .sub>li>a:hover {
+            background: #474ead;
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- a영역: 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="#"><img src="images/logo.png" alt="로고"></a>
+        </h1>
+        <!-- 내비게이션 -->
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">회사소개</a>
+                    <ul class="sub">
+                        <li><a href="#">기업정보</a></li>
+                        <li><a href="#">지속가능경영</a></li>
+                        <li><a href="#">투자정보</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">사업분야</a>
+                    <ul class="sub">
+                        <li><a href="#">토목</a></li>
+                        <li><a href="#">플랜트</a></li>
+                        <li><a href="#">건축</a></li>
+                        <li><a href="#">주택</a></li>
+                        <li><a href="#">개발</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보센터</a>
+                    <ul class="sub">
+                        <li><a href="#">CI/BI</a></li>
+                        <li><a href="#">브로슈어</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">뉴스룸</a>
+                    <div class="sub"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

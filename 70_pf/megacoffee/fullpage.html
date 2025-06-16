@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery 풀페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* 상단 고정 헤더 */
+        .header {
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: transparent;
+            transition: .3s;
+        }
+
+        .section {
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.5s;
+        }
+
+        .section:nth-child(1) {
+            background: #3498db;
+        }
+
+        .section:nth-child(2) {
+            background: #e67e22;
+        }
+
+        .section:nth-child(3) {
+            background: #2ecc71;
+        }
+
+        .section:nth-child(4) {
+            background: #fc82f2;
+        }
+
+        .section:nth-child(5) {
+            background: #82dffc;
+        }
+
+        .footer {
+            height: 300px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">상단고정헤더</header>
+    <div class="container">
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="section">Section 5</div>
+        <div class="footer">Footer Area</div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // var 변수 선언 키워드
+            // ->let(변경되는 값을 저장), const(변경되지 않는 값을 저장)
+            let now = 0;  // 0(section1) -> 1(secion2) -> 2(section3)-> 3(section4)
+            const sections = $('.section');
+            const headerHeight = $('.header').height();
+            // sections.le
+            const total = sections.length + 1;
+
+            function scrollTo(idx) {
+                let pos = 0;
+                if (idx < sections.length) {
+                    pos = sections.eq(idx).position().top - headerHeight;
+                } else {
+                    pos = $('.footer').position().top - headerHeight;
+                }
+                $('html,body').stop().animate({ scrollTop: pos }, speed);
+            }
+
+            $(window).on('wheel', function (e) {
+                if ($('html, body').is(':animated')) return; // 중복 스크롤 방지
+
+                const delta = e.originalEvent.deltaY;
+                if (delta > 0 && now < total - 1) {
+                    // now가 1 씩 증가
+                    now++;
+                } else if (delta < 0 && now > 0) {
+                    // now가 1 씩 감소
+                    now--;
+                }
+                scrollTo(now);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

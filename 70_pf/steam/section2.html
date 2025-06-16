@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(./images/KakaoTalk_20250616_163911022.jpg);
+            background-repeat: repeat-y;
+            font: 16px/1.6 'Noto Sans Kr', sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+
+        h2 {
+            margin-left: 190px;
+        }
+
+        .slider {
+            display: flex;
+            justify-content: space-evenly;
+            overflow: hidden;
+            width: 1600px;
+            padding: 20px;
+        }
+        .card_slide{
+            width: 1600px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+        .card {
+            width: 270px;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .slide_btn {
+            width: 60px;
+            height: 130px;
+            text-align: center;
+            line-height: 130px;
+            background: transparent;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+       .notice_box{
+        display: flex;
+        justify-content: space-evenly;
+       }
+      .notice h3{
+        font-size: 24px;
+        margin-left: 60px;
+      }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>지금 플레이하세요.</h2>
+        <div class="card_slide">
+            <div class="slider" id="slider">
+                <div class="card"><img src="./images/card1.jpg" alt="card1">갓 오브 워 라그나로크</div>
+                <div class="card"><img src="./images/card2.jpg" alt="card2">마블 스파이더맨2</div>
+                <div class="card"><img src="./images/card3.jpg" alt="card3">언틸다운</div>
+                <div class="card"><img src="./images/card4.jpg" alt="card4">헬다이버즈2</div>
+                <div class="card"><img src="./images/card5.jpg" alt="card5">스텔라 블레이드2</div>
+                <!-- <div class="card"><img src="./images/card1.jpg" alt="card1">갓 오브 워 라그나로크</div> -->
+            </div>
+            <div class="slide_btn">
+                &#9654;
+            </div>
+        </div><!-- card_slide 끝 -->
+
+        <div class="notice">
+            <h3>신규소식</h3>
+          <div class="notice_box">
+              <div class="notice1"><img src="./images/notice1.jpg" alt="notice1"></div>
+              <div class="notice2"><img src="./images/notice2.jpg" alt="notice2"></div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollSlider() {
+            const slider = document.getElementById('slider');
+            const scrollAmount = 200;
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
