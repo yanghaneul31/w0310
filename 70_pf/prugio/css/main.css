@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import url("common.css");
+
+#section4 .tit{
+    height: 288px;
+    background: #015152;
+    text-align: center;
+    padding-top: 80px;
+}
+#section4 .tit h2{
+    margin-bottom: 10px;
+}
+#section4 .cont{
+    display: flex;
+}
+
+
+#section4 .description {
+    position: absolute;
+    left:372px;
+    top: 80px;
+    width: 310px;
+ }   
+
+
+#section4 .bg{
+    overflow: hidden;
+}
+#section4 .bg img{
+    transition: .7s;
+}
+#section4 .bg:hover img{
+    transform: scale(1.1);
+}
+#section4 .description p{
+    margin-top: 18px;
+}
+#section4 .right {
+    width: 50%;
+    height: 584px;
+}
+
+#section4 .left {
+    width: 50%;
+    height: 584px;
+}
+#section4 .cont>div {
+    position: relative;
+}
+#section4 .btn img{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.description a{
+    display: inline-block;
+    padding-top: 20px;
+}

@@ -38,6 +38,16 @@
             display: block;
         }
 
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        body {
+            margin: 0;
+        }
 
 
         h2 {
@@ -52,24 +62,23 @@
             width: 1600px;
             padding: 20px;
         }
-        .card_slide{
+
+        .card_slide {
             width: 1600px;
             display: flex;
             align-items: center;
             margin: 0 auto;
         }
+
         .card {
-            width: 270px;
-            border-radius: 10px;
+            width: 320px;
+            height: 512px;
+
             overflow: hidden;
             cursor: pointer;
+
         }
 
-        .card img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
         .slide_btn {
             width: 60px;
             height: 130px;
@@ -80,15 +89,68 @@
             border-radius: 20px;
             cursor: pointer;
         }
-       .notice_box{
-        display: flex;
-        justify-content: space-evenly;
-       }
-      .notice h3{
-        font-size: 24px;
-        margin-left: 60px;
-      }
 
+        .notice_box {
+            width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .notice_box img {
+            width: 780px;
+            transition:  0.3s;
+        }
+        .notice_box img:hover{
+            opacity: 0.7;
+        }
+        .notice h3 {
+            font-size: 24px;
+            margin-left: 170px;
+        }
+
+        .card_wrap:hover {
+            transform: scale(1.05);
+        }
+
+        .card_wrap {
+            width: 320px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .card_wrap p {
+            margin-top: 10px;
+        }
+
+        .card_wrap {
+            transition: .3s;
+        }
+
+        .card_wrap:nth-of-type(1) {
+            background: url(./images/card1.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .card_wrap:nth-of-type(2) {
+            background: url(./images/card2.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .card_wrap:nth-of-type(3) {
+            background: url(./images/card3.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .card_wrap:nth-of-type(4) {
+            background: url(./images/card4.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .card_wrap:nth-of-type(5) {
+            background: url(./images/card5.jpg);
+            background-repeat: no-repeat;
+        }
     </style>
 
 </head>
@@ -98,12 +160,29 @@
         <h2>지금 플레이하세요.</h2>
         <div class="card_slide">
             <div class="slider" id="slider">
-                <div class="card"><img src="./images/card1.jpg" alt="card1">갓 오브 워 라그나로크</div>
-                <div class="card"><img src="./images/card2.jpg" alt="card2">마블 스파이더맨2</div>
-                <div class="card"><img src="./images/card3.jpg" alt="card3">언틸다운</div>
-                <div class="card"><img src="./images/card4.jpg" alt="card4">헬다이버즈2</div>
-                <div class="card"><img src="./images/card5.jpg" alt="card5">스텔라 블레이드2</div>
-                <!-- <div class="card"><img src="./images/card1.jpg" alt="card1">갓 오브 워 라그나로크</div> -->
+                <div class="card_wrap">
+                    <div class="card"></div>
+                    <p>갓 오브 워 라그나로크</p>
+                </div>
+                <div class="card_wrap">
+                    <div class="card"></div>
+                    <p>마블 스파이더맨2</p>
+                </div>
+                <div class="card_wrap">
+                    <div class="card"></div>
+                    <p>언틸다운</p>
+                </div>
+
+                <div class="card_wrap">
+                    <div class="card"></div>
+                    <p>헬다이버즈2</p>
+                </div>
+
+                <div class="card_wrap">
+                    <div class="card"></div>
+                    <p>스텔라 블레이드2</p>
+                </div>
+
             </div>
             <div class="slide_btn">
                 &#9654;
@@ -112,20 +191,13 @@
 
         <div class="notice">
             <h3>신규소식</h3>
-          <div class="notice_box">
-              <div class="notice1"><img src="./images/notice1.jpg" alt="notice1"></div>
-              <div class="notice2"><img src="./images/notice2.jpg" alt="notice2"></div>
-          </div>
+            <div class="notice_box">
+                <div class="notice1"><img src="./images/notice1.jpg" alt="notice1"></div>
+                <div class="notice2"><img src="./images/notice2.jpg" alt="notice2"></div>
+            </div>
         </div>
     </div>
 
-    <script>
-        function scrollSlider() {
-            const slider = document.getElementById('slider');
-            const scrollAmount = 200;
-            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-    </script>
 </body>
 
 </html>

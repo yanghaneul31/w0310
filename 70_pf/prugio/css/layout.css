@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+#section4 .tit{
+   height: 288px;
+    background: #015152;
+}
+#section4 .cont{
+    display: flex;
+}
+#section4 .left{
+    width: 50%;
+    height: 584px;
+    
+}
+#section4 .right{
+    width: 50%;
+    height: 584px;
+    
+}
