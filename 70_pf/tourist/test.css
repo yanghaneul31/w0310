@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+}
+header{
+    height: 113px;
+    background: rgba(0,0,0,0.5);
+}
+.box_inner{
+    width: 1050px;
+    height: 113px;
+    margin: 0 auto;
+    background: rgba(149, 133, 219, 0.5);
+}
+footer{
+    border-top: 1px solid #ddd;
+}
