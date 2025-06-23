@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입연산자</title>
+    <style>
+        table {border-collapse: collapse;}
+        td {border:1px solid #000;}
+    </style>
+</head>
+<body>
+    <script>
+        /* 
+            대입연산자
+                =
+                -> '같다'의 의미가 아니라 변수에 대입(저장)을 의미한다.
+        */
+        let num = 10; // 10을 num에 대입
+        let x = 0;
+        let y = 0;
+        // '=' 연산자는 연속 대입도 가능하다.
+        // 연산의 방향이 오른쪽에서 왼쪽으로 계산된다.
+        x = y = num; // y = 10 -> x = 10
+        console.log(`${x},${y}`);
+
+        /*
+            복합대입연산자
+                +=      i+=1 -> i=i+1
+                -=      i-=1 -> i=i-1
+                *=      i*=1 -> i=i*1
+                /=      i/=1 -> i=i/1
+                %=      i%=1 -> i=i%1
+                **=     i**=1 -> i=i**1
+
+                예> let i = 2;
+                    i**=5; 
+                    -> i=i**5 
+                    -> i=2**5 
+                    -> i=2*2*2*2*2 
+                    -> i=32
+        */
+
+        // +=, -=, *=, /=, %=
+        let num1 = 5;
+        let num2 = 15;
+        let num3 = 5;
+        let num4 = 20;
+        let num5 = 10;
+        let num6 = 2;
+
+        num1 += 10;
+        num2 -= 10;
+        num3 *= 10;
+        num4 /= 10;
+        num5 %= 10;
+        num6 **= 5;
+
+        console.log(num1 + ',' + num2 + ',' + num3 + ',' + num4 + ',' + num5 + ',' + num6);
+
+        // 템플릿 문자열(백틱 `)
+        console.log(`${num1},${num2},${num3},${num4},${num5},${num6}`)
+
+        // += 연산자를 이용한 문자연결
+        let str = '자바스크립트';
+        str += ' 제이쿼리'; // str = '자바스크립트' + ' 제이쿼리'
+        console.log(str); // 자바스크립트 제이쿼리
+
+        let table = '<table>';
+        table += '<tr>';
+        table += '<td>자바스크립트</td><td>제이쿼리</td>';
+        table += '</tr>';
+        table += '</table>';
+        // -> <table><tr><td>자바스크립트</td><td>제이쿼리</td></tr></table>
+        // -> <table>
+        //       <tr>
+        //         <td>자바스크립트</td>
+        //         <td>제이쿼리</td>
+        //       </tr>
+        //    </table>
+        document.write(table);
+    </script>
+</body>
+</html>

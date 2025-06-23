@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 타입(Data Type)</title>
+</head>
+
+<body>
+    <!-- <div id="gnb"></div> -->
+
+    <script>
+        /* 
+            원시(Primitive) 데이터 타입
+                1. 숫자(number) - 정수, 소수점, 지수
+                2. 문자열(string) - '' 또는 ""로 묶는다.
+                3. 불(boolean) - true, false
+                4. undefined - 선언후 할당하지 않은 값
+                5. null - 빈 값
+                6. symbol
+                7. BigInt
+            객체(Object) 데이터 타입
+                1. 함수(function) -> function(){}
+                2. 객체(object) -> {}
+                3. 배열(array) -> []
+        */
+        
+        // 숫자 데이터
+        let num1 = 10;
+        let num2 = 10.5;
+        let num3 = 1e+2; // 1 x 10의 2승
+        console.log(num1); // 10
+        console.log(num2); // 10.5
+        console.log(num3); // 100
+
+        // 문자열 데이터
+        let str1 = '문자1';
+        let str2 = "문자2";
+        console.log(str1);
+        console.log(str2);
+
+        // '' 또는 "" 안에 있는 ' 또는 "는 특수문자로 처리
+        let str3 = '문자는 "문자"'
+        let str4 = "문자는 '문자"
+        console.log(str3);
+        console.log(str4);
+
+        // \" 는 이스케이프 시퀀스
+        /* 
+            이스케이프 시퀀스
+            \"
+            \'
+            \\
+            \n  -> 행 바꿈
+            \t  -> 탭 문자
+        
+        */
+        let str5 = "문\t자      는 \n\\\n\"문자\""
+        console.log(str5);
+
+        // document.write() 에서는 <br> 태그로 행을 바꾼다.
+        // alert()에서는 <br>를 사용할 수 없다.
+        document.write(str5);
+        // alert(str5);
+
+        // 불(Boolean, 논리) 데이터
+        // 비교 연산의 결과는 논리 값(true 또는 false)이다.
+        let temp1 = 5 > 4;
+        let temp2 = 5 < 4;
+        console.log(temp1);
+        console.log(temp2);
+
+        // 0값은 false, 0이외의 값은 true
+        console.log(Boolean(true)); // true
+        console.log(Boolean(false)); // false
+        console.log(Boolean(0)); // false
+        console.log(Boolean(1)); // true
+        console.log(Boolean(null)); // false
+        console.log(Boolean(undefined)); // false
+        console.log(Boolean("0")); // true
+        console.log(Boolean({})); // true
+        console.log(Boolean([])); // true
+        console.log(Boolean(function(){})); // true
+
+        // undefinded
+        // -> 변수를 선언하였으나, 데이터 값을 지정하지 않았을 경우
+        let tmp;
+        console.log(tmp); // undefined
+
+        // obj는 객체
+        // 객체.속성
+        // 객체.메서드()
+        let obj = {};
+        obj.name = '홍길동';
+        // 객체의 속성 값을 지정하지 않았을 경우
+        obj.age;
+        console.log(obj.name);
+        console.log(obj.age);
+
+        // null
+        // -> 변수를 빈(empty) 상태(초기화)로 만들거나,
+        // -> 데이터를 저장하였으나 값이 존재하지 않을 때
+        let obj2 = 10;
+        obj2 = null;
+        console.log(obj2); // null
+
+        // $(document).find('#gnb') -> $('#gnb')
+        // get: 가져온다
+        // Element: 요소
+        // By: ~의해서
+        // Id: 아이디 선택자
+        // 문서에서 아이디가 gnb인 요소를 가져온다.
+        let obj3 = document.getElementById('gnb');
+        console.log(obj3);
+
+        // typeof 연산자
+        // -> 변수에 저장된 데이터의 타입을 확인
+        // 형식: typeof 값
+        console.log(typeof 10); // number
+        console.log(typeof '문자'); // string
+        console.log(typeof true); // boolean
+        console.log(typeof undefined); // undefined
+        console.log(typeof null); // object -> 기본 데이터 타입이다.
+        console.log(typeof {}); // object
+        console.log(typeof []); // object
+        console.log(typeof function(){}); // function
+    </script>
+</body>
+
+</html>

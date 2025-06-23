@@ -1,11 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header class="header">
+      <div class="header_top">
+        <div class="header_user">
+          <a href="sub/login.html" class="login">로그인</a>
+          <a href="sub/sign_up.html" class="sign_up">회원가입</a>
+          <div class="user_ui">
+              <img src="images/index/header/person.png" alt="유저모양 아이콘" />
+              <span class="username_show"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <h1 class="logo">
+          <a href="#"><img src="images/index/header/logo.png" alt="스팀로고" /></a>
+        </h1>
+        <nav class="gnb">
+          <ul class="main">
+            <li>
+              <a href="#" class="header_main">스토어</a>
+              <ul class="sub">
+                <li><a href="#">아케이드</a></li>
+                <li><a href="#">스포츠</a></li>
+                <li><a href="#">롤플레잉</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="header_main">랭킹</a>
+              <ul class="sub">
+                <li><a href="#">랭킹</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="header_main">커뮤니티</a>
+              <ul class="sub">
+                <li><a href="#">새로운소식</a></li>
+                <li><a href="#">리뷰</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="header_main">고객센터</a>
+              <ul class="sub">
+                <li><a href="#">QnA</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="header_main">브랜드소개</a>
+              <ul class="sub">
+                <li><a href="#">브랜드소개</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ================================================================= -->
+
+    <div class="sec2_container">
+      <h2>지금 플레이하세요.</h2>
+      <div class="sec2_card_slide">
+        <div class="sec2_slider" id="sec2_slider">
+          <div class="sec2_card_wrap">
+            <div class="sec2_card"><img src="./images/index/sec2/card1.jpg" alt="갓 오브 워 이미지" /></div>
+            <p>갓 오브 워 라그나로크</p>
+          </div>
+          <div class="sec2_card_wrap">
+            <div class="sec2_card"><img src="./images/index/sec2/card2.jpg" alt="마블 스파이더맨 이미지" /></div>
+            <p>마블 스파이더맨2</p>
+          </div>
+          <div class="sec2_card_wrap">
+            <div class="sec2_card"><img src="./images/index/sec2/card3.jpg" alt="언틸다운 이미지" /></div>
+            <p>언틸다운</p>
+          </div>
+
+          <div class="sec2_card_wrap">
+            <div class="sec2_card"><img src="./images/index/sec2/card4.jpg" alt="헬다이버즈2 이미지" /></div>
+            <p>헬다이버즈2</p>
+          </div>
+
+          <div class="sec2_card_wrap">
+            <div class="sec2_card"><img src="./images/index/sec2/card5.jpg" alt="스텔라블레이드2 이미지" /></div>
+            <p>스텔라 블레이드2</p>
+          </div>
+        </div>
+        <div class="sec2_slide_btn">&#9654;</div>
+      </div>
+      <!-- card_slide 끝 -->
+
+      <div class="sec2_notice">
+        <h3>신규소식</h3>
+        <div class="sec2_notice_box">
+          <div class="sec2_notice1">
+            <img src="./images/index/sec2/notice1.jpg" alt="공지사항 썸네일1번" />
+          </div>
+          <div class="sec2_notice2">
+            <img src="./images/index/sec2/notice2.jpg" alt="공지사항 썸네일2번" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

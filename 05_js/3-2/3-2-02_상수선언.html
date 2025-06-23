@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 선언: const</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            let: 변경되는 데이터를 저장
+            const: 변경하지 않을 데이터를 저장
+        */
+        // 단위 환산: cm -> m
+        let cm = prompt('cm를 입력하세요!','');
+        const DIVSION_VALUE = 100; /* 스네이크_표기법 + 대문자 */
+        let m = cm / DIVSION_VALUE;
+        document.write(m + 'm입니다.');
+
+        // const는 재선언할 수 없다.
+        // const DIVSION_VALUE; (x)
+        // Uncaught SyntaxError: Identifier 'DIVSION_VALUE' has already been declared
+        // const는 재할당할 수 없다.
+        // DIVSION_VALUE = 100; (x)
+        // Uncaught TypeError: Assignment to constant variable.
+        // let은 재선언할 수 없다.
+        // let cm; (x)
+        // let은 재할당은 가능하다.
+        cm = 500;
+        document.write('<br>' + cm);
+    </script>
+</body>
+
+</html>

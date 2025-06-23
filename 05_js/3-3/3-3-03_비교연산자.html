@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교연산자</title>
+</head>
+<body>
+    <script>
+        /* 
+            비교 연산자(Comparsion Operators)
+                >
+                <
+                >=
+                <=
+                ==, != -> 데이터 타입을 구분x
+                ===, !== -> 데이터 타입을 구분o -> 권장!
+            
+            비교 연산자는 값을 비교하여 결과 값을 Boolean(논리) 값인 true 또는 false로 반환한다.
+            -> 비교 연산의 결과는 true(참) 또는 false(거짓)이다.
+        */
+        console.log(5>2);   // true
+        console.log(5<2);   // false
+        console.log(5==5);  // true
+        console.log(5=='5');  // true -> 데이터 타입은 달라도 된다.
+        console.log(5==='5'); // false -> 데이터 타입도 같아야 true
+        console.log(5!='5');  // false
+        console.log(5!=='5'); // true
+
+    </script>
+</body>
+</html>
