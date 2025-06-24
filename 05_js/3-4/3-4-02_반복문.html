@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>반복문</h1>
+    <h2>while</h2>
+    <div id="sum">결과 출력</div>
+    <script>
+        /* 
+        반복문
+        1.while
+        2.do~while
+        3.for
+
+         //조건이 만족하는 동안, 실행문을 실행한다.
+         선언문;
+        while(조건){
+           실행문;
+           증감식문;
+        }
+        */
+
+        let n = 1;
+        let sum = 0;
+        while (n < 8) {
+            //sum = 1
+            sum += n;
+            //n = n + 1;
+            n++; //1 -> 2
+        }
+        //제이쿼리
+        $('#sum').text(`n = ${n}, sum = ${sum}`);
+        //바닐라 스크립트
+        document.getElementById('sum').textContent = `n = ${n}, sum =${sum}`;
+        console.log(`sum = ${sum}, sum = ${sum}`);
+
+        /*
+        while(조건식){
+        코드;
+        }
+        
+        //무조건 1번은 코드가 실행된다.
+        do{
+        코드;
+        }while (조건식)
+        */
+       let n2 = 1;
+       let sum2 = 0;
+       do{
+        sum2 += n2;
+        n2++;
+       }while (n<8);
+       console.log(sum);
+
+       const x = 0;
+       const y = 0;
+       const z = 6;
+       const total1 = 0
+       const total2 = 0
+       while (x <= 5){
+        total1 += x;
+        x++;
+       }
+       console.lof('x :' + total1);
+
+       do{
+        total2 += y;
+        y++;
+       }while (y <= 5);
+
+       console.log('y :' + total2);
+
+       do{
+        z++;
+       }while(z <= 5);
+       console.log('z :' + z);
+    </script>
+</body>
+
+</html>

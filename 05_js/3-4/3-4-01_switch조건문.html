@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch조건문</title>
+</head>
+<body>
+   <script>
+    $(document).ready(function(){
+        $('#login_btn').click(function(){
+            const user_id = $('input').val();
+            console.log(user_id);
+            switch(user_id){
+                case 'abc':
+                    $('#output').text('abc가 입장하였습니다.');
+                    location.href('https://www.naver.com');
+                    break;
+                    case 'def':
+                    $('output').text('def가 입장하였습니다.');
+                    break;
+                    default:
+                        $('#output').text('회원가입을 하세요.');
+            }
+        });
+    });
+   </script> 
+</body>
+</html>

@@ -7,40 +7,158 @@
 </head>
 <body>
     <script>
-        /* 
-        제어문
-        1. 조건문(선택문): if,switch
-        2. 반복문: while, do, for
-        3. continue, break
+        /*
+            제어문
+                1. 조건문(선택문): if, switch
+                2. 반복문: while, do, for
+                3. continue, break
+        
+            if문 
+            형식1:
+                조건식이 true이면 실행문 실행
+                if (조건식) {
+                    실행문;
+                }
 
-        if 문 형식
-        if(조건식){
-           실행문;
-        }
-        형식2:
-        if(조건식){
-           실행문1;
-        } else {
-           실행문2;
-        }   
-        형식3:
-        if(조건식1){
-           실행문1;
-        } else if (조건식2){
-          실행문2; 
-        } else {
-            실행문3; 
-        } 
+            형식2:
+                if (조건식) {
+                    실행문1;
+                } else {
+                    실행문2;
+                }
 
-         if문안에 또 다른 if문을 중첩하여 사용할 수 있다.
-         -> 중첩if문 
-         형식4:
-              if(조건식1){
-                 if(조건식2){
-                   실행문;
-                 }
-              }
+            형식3:
+                if (조건식1) {
+                    실행문1;
+                } else if (조건식2) {
+                    실행문2;
+                } else {
+                    실행문3;
+                }
+
+            if문안에 또 다른 if문을 중첩하여 사용할 수 있다.
+            -> 중첩if문
+            형식4:
+                if (조건식1) {
+                    if (조건식2) {
+                        실행문;
+                    }
+                }
+
         */
+
+        let age = 10;
+        let admissionFee = ''; // ''는 빈 문자열
+
+        // if문
+        // if의 뜻: 만약~이라면
+        // 만약 age가 13보다 작으면
+        if (age < 13) {
+            // admissionFee에 '2,000원'을 할당(대입)
+            admissionFee = '2,000원';
+        }
+
+        console.log(admissionFee); // 2,000원
+        
+
+        // if~else문
+        age = 20;
+        // 만약 age가 13보다 작으면(참이면)
+        if (age < 13) {
+            // admissionFee에 '2,000원'을 할당(대입)
+            admissionFee = '2,000원';
+        // 작지 않으면(거짓이면)
+        } else {
+            // admissionFee에 '4,000원'을 할당(대입)
+            admissionFee = '4,000원';
+        }
+
+        console.log(admissionFee); // 4,000원
+
+        // admissionFee 뜻? 입장료
+        // if ~ else if ~ else문
+        age = prompt('나이입력', '');
+        if (age < 13 || age >= 65) { // 13미만 또는 65이상
+            admissionFee = '2,000원';
+        } else if (age >= 13 && age < 20) { // 13이상 그리고 20미만
+            admissionFee = '4,000원';
+        } else { // 20이상
+            admissionFee = '6,000원';
+        }
+
+        document.write(admissionFee); // 6,000원
+
+        /* 
+            요구사항
+                - 시험과목: html, css, javascript
+                - 합격기준: 100점 만점 기준, 과목당 40점 이상, 전과목 평균 60 이상이면 합격
+        */
+
+        let html = Number(prompt('html 점수입력', ''));
+        let css = Number(prompt('css 점수입력', ''));
+        let javascript = Number(prompt('javascript 점수입력', ''));
+        let avg = (html+css+javascript) / 3;
+        let comment;
+
+        // 중첩if
+        if (avg >= 60) {
+            if (html < 40) {
+                comment = `HTML 40점 미만 불합격`;
+            } else if (css < 40) {
+                comment = 'CSS 40점 미만 불합격';
+            } else if (javascript < 40) {
+                comment = 'JAVASCRIPT 40점 미만 불합격';
+            } else {
+                comment = `평균 ${avg}점 합격`;
+            }
+        } else {
+            comment = '평균' + avg + '점 불합격';
+        }
+
+        document.write(comment);
+
+        //선언문
+        let subject = 'react';
+
+        //제어문
+        switch (subject) {
+         case 'html':
+            //subject = subject + '은 1학점입니다';
+            subject += '은 1학점입니다.';
+            //break를 만나면 제어문을 탈출한다.
+            break;
+            case 'css':
+               subject += '은 2학점입니다.';
+               break;
+            case 'javascript':
+               subject += '은 3학점입니다.';
+               break;
+           default:
+               subject = '해당과목이 없습니다.';
+        }
+
+        //출력문
+        console.log(subject);
+
+        let classification = prompt('아동,청소년,성인 중 선택 입력 ','')
+        switch (classification) {
+         case'아동':
+            classification += ':입장료 무료';
+            break;
+         case'청소년':
+            classification += ':입장료 2000원';
+            break;
+         case'성인':
+            classification += ':입장료 5000원';
+            break;
+        
+         default:
+            classification = '입력 값을 다시 확인하세요.';
+        }
+        //테스트 출력문
+        alert(classification);
+        document.write(classification);
+        console.log(classification);
     </script>
 </body>
 </html>
