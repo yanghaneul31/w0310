@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return과 매개변수</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>확인란 선택 유무 체크</h1>
+    <input type="checkbox" id="chk">
+    <label for="chk">(필수) Lorem ipsum dolor sit amet.</label><br>
+    <a href="#" id="link_btn">페이지 이동</a>
+
+    <script>
+        // 요소 탐색
+        const chk = document.getElementById('chk');
+        const link_btn = document.getElementById('link_btn');
+
+        // 이벤트
+        link_btn.onclick = function (e) {
+            e.preventDefault();
+
+            if (chk.checked) {
+                location.href = 'https://naver.com';
+            } else {
+                alert('확인란을 선택해 주세요.')
+            }
+
+            // console.log(examPass('이함수', 80, 90, 70));
+        };
+
+    </script>
+</body>
+
+</html>

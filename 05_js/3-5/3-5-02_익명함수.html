@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+       익명(이름없는)함수 생성
+       const(변수) = function (){코드;};
+         
+       호이스팅x
+
+        함수 호출
+           변수();
+        */
+         //클릭 메서드
+        객체.click(function(){});
+        //on클릭 속성
+        객체.onclick = function(){};
+        
+        const compute = function (){
+            const x = 0.5;
+            const y = 10;
+            const result = x * y;
+            console.log(result);
+        };
+
+        compute();
+        /* 
+        즉시 실행 함수
+            변수 = function (){};
+
+            호출문x
+        */
+        (function(){
+            iife();
+        })();
+
+        function iife(){
+            console.log('즉시 실행 함수1');
+        }
+
+        const instant = (function(){
+            console.log('즉시 실행 함수2');
+        })();
+
+       console.log(instant);
+    </script>
+</body>
+</html>

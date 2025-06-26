@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOURIST2: 슬라이더</title>
+    <!-- bx슬라이더 CSS 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 JS 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+    <div class="bxslider">
+        <!-- 
+            더미 이미지
+                1. https://picsum.photos/
+                2. https://placehold.co/
+        -->
+        <div><img src="https://picsum.photos/id/237/800/600" alt="이미지1"></div>
+        <div><img src="https://picsum.photos/id/238/800/600" alt="이미지1"></div>
+        <div><img src="https://picsum.photos/id/239/800/600" alt="이미지1"></div>
+    </div>
+
+    <script>
+        $('.bxslider').bxSlider({
+            auto: true,
+            autoControls: true,
+            stopAutoOnClick: true,
+            pager: true,
+            slideWidth: 600
+        });
+    </script>
+</body>
+
+</html>
