@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>개인 정보 수정</title>
+  <link rel="stylesheet" href="./css/mypage2.css">
+</head>
+<body>
+<header class="header">
+    <div class="header_top">
+      <div class="header_user">
+        <a href="./login.html" class="login">로그인</a>
+        <a href="./sign_up.html" class="sign_up">회원가입</a>
+        <div class="user_ui">
+          <img src="./images/index/header/bg.jpg" alt="유저 아이콘" />
+          <span class="username_show">홍길동</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_bottom">
+      <h1 class="logo">
+        <a href="../index.html"><img src="./images/index/header/logo.png" alt="로고" /></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li><a href="#" class="header_main">스토어</a>
+            <ul class="sub"><li><a href="./store1.html">스토어</a></li></ul>
+          </li>
+          <li><a href="#" class="header_main">랭킹</a>
+            <ul class="sub"><li><a href="./ranking.html">랭킹</a></li></ul>
+          </li>
+          <li><a href="#" class="header_main">커뮤니티</a>
+            <ul class="sub">
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./review.html">리뷰</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="header_main">고객센터</a>
+            <ul class="sub">
+              <li><a href="./qna.html">QnA</a></li>
+              <li><a href="./notice.html">공지사항</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="header_main">브랜드소개</a>
+            <ul class="sub"><li><a href="./brand.html">브랜드소개</a></li></ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-section">
+      <div class="profile-box">
+        <div class="profile-img">
+          <span>📷</span>
+        </div>
+        <button>닉네임 수정</button>
+        <textarea placeholder="상태 메시지 수정..."></textarea>
+      </div>
+
+      <div class="form-box">
+        <h2>개인 정보 수정</h2>
+        <form>
+          <label>아이디 <input type="text" /></label>
+          <label>현재 비밀번호 <input type="password" /></label>
+          <label>새 비밀번호 <input type="password" /></label>
+          <label>새 비밀번호 확인 <input type="password" /></label>
+          <label>이름 <input type="text" /></label>
+          <label>이메일 <input type="email" /></label>
+          <label>휴대폰 <input type="tel" /></label>
+          <button type="button" class="auth-btn">다른 번호 인증</button>
+          <label>생년월일 <input type="date" /></label>
+          <button type="submit" class="save-btn">수정 완료</button>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
