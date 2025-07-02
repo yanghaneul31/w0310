@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /*
+            객체(Object)
+                데이터 값을 필요한 대로 만들어 사용
+                데이터는 '이름: 값'의 쌍으로 이루어져 있다.
+                -> 이것을 속성(properties)이라고 한다.
+
+            객체의 유형
+                1. 사용자 정의 객체
+                2. 내장 객체
+
+            객체 생성 방법
+                1. 리터럴
+                2. 생성자 함수
+                3. Class(클래스) (ver.ES6)
+
+            객체 리터럴로 객체 생성
+                const 객체 = {
+                    속성: 값, 
+                    메서드: function(){ this.속성 }, 
+                    ...
+                };
+            
+            객체 참조
+                객체.속성;
+                객체.메서드();
+
+        */
+
+        // 객체 생성
+        const info = {
+            subject: 'css',
+            credit: 1,
+            printOut: function () {
+                // this는 info이다. -> 객체 자신
+                console.log(this);
+                return this.subject + ', ' + this.credit + '학점';
+            }
+        };
+        // 객체 사용
+        console.log(info.subject); // css
+        console.log(info.credit); // 1
+        console.log(info.printOut()); // css, 1학점
+
+        // 객체 생성 후 객체 리터럴의 속성을 추가, 삭제, 변경(갱신)할 수 있다.
+        // 속성 추가
+        // 객체.속성 = 값
+        info.days = 20;
+        console.log(info.days); // 20
+        // 속성 삭제
+        // delete 객체.속성
+        delete info.credit;
+        console.log(info.credit);
+        // 속성 변경
+        info.printOut = function () {
+            return this.subject + ', ' + this.days + '일';
+        }
+        console.log(info.printOut()); // css, 20일
+
+        // 심볼(Symbol) 데이터
+        const info2 = {
+            subjectName: '자바스크립트',
+            subjectName: '제이쿼리'
+        }
+        console.log(info2.subjectName); // 제이쿼리
+
+        const subjectName = Symbol();
+        const info3 = {
+            [subjectName]: '자바스크립트',
+            subjectName: '제이쿼리'
+        }
+        console.log(info3[subjectName] + ', ' + info3.subjectName); // 자바스크립트, 제이쿼리
+
+
+    </script>
+</body>
+
+</html>

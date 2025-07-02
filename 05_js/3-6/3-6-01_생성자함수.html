@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            객체 생성자 함수로 객체 생성
+                function 함수명(매개변수1, 매개변수2, ...) {
+                    this.속성1 = 매개변수1;
+                    this.속성2 = 매개변수2;
+                    ...
+                    this.메서드 = function(){};
+                }
+
+            생성자 함수 호출
+                const 변수 = new 함수명(인자1, 인자2, ...);
+
+        */
+
+        // 생성자(Constructor) 함수로 객체 생성
+        // 생성자 함수의 이름은 첫 글자를 대문자로 쓴다. (관례)
+        // -> 사용자 정의 함수와 구별한다.
+
+        // 생성자 함수 정의(선언)
+        function Info(subject, credit) {
+            // this는 생성자 함수를 통해 생성되는 객체를 가리킨다.
+            this.subject = subject;
+            this.credit = credit;
+            this.printOut = function () {
+                return this.subject + ', ' + this.credit + '학점';
+            }
+        }
+
+        // 객체 생성
+        const sub1 = new Info('html', 1);
+        const sub2 = new Info('css', 2);
+
+        // 객체 참조
+        console.log(sub1.subject); // html
+        console.log(sub1.credit); // 1
+        console.log(sub1.printOut()); // html, 1학점
+        console.log(sub2.subject); // css
+        console.log(sub2.credit); // 2
+        console.log(sub2.printOut()); // css, 2학점
+
+        // 속성 추가
+        sub1.days = 20;
+        console.log(sub1);
+        // 속성 삭제
+        delete sub1.credit;
+        console.log(sub1);
+        // 속성 변경
+        sub1.printOut = function () {
+            return this.subject + ', ' + this.days + '일';
+        }
+        console.log(sub1.printOut());
+
+        // sub1 객체에 추가, 제거, 변경된 속성들은 sub1 객체에만 적용되고,
+        // sub2 객체의 속성에는 영향을 주지 않는다.
+        // 속성의 추가, 제거, 변경을 모든 객체에 적용하려면
+        // -> Info 생성자 함수 안에 속성들을 수정해야 한다.
+        console.log(sub2);
+        console.log(sub2.days);
+        console.log(sub2.credit);
+        console.log(sub2.printOut());
+
+        // 리터럴로 객체 생성하기
+        const circle = {
+            color: 'yellow',
+            diameter: 100,
+            radius: function () {
+                return this.diameter / 2;
+            }
+        };
+
+        console.log(circle.color); // yellow
+        console.log(circle.diameter); // 100
+        console.log(circle.radius()); // 50
+
+        // 생성자 함수 만들기
+        function Triangle(b, h) {
+            this.base = b;
+            this.height = h;
+            this.area = function () {
+                return this.base * this.height / 2;
+            }
+        }
+
+        // 생성자 함수로 객체 생성하기
+        const triangle1 = new Triangle(15, 15);
+        const triangle2 = new Triangle(25, 10);
+
+        console.log(triangle1.base); // 15
+        console.log(triangle1.height); // 15
+        console.log(triangle1.area()); // 112.5
+        console.log(triangle2.base); // 25
+        console.log(triangle2.height); // 10
+        console.log(triangle2.area()); // 125
+
+    </script>
+</body>
+
+</html>

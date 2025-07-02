@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            class 정의
+                class 클래스명 {
+                    constructor(매개변수1, 매개변수2, ...) {
+                        this.속성1 = 값1;
+                        this.속성2 = 값2;
+                        ...
+                    }
+                    
+                    메서드(){}
+                    get 메서드(){} // getter(게터)
+                    set 메서드(매개변수){} // setter(세터)
+                }
+
+            객체(인스턴스) 생성
+                const 변수1 = new 클래스명(인자1, 인자2, ...);
+                const 변수2 = new 클래스명(인자1, 인자2, ...);
+        */
+
+        // 클래스명은 파스칼 표기법으로 쓴다. (관례)
+        // 클래스 생성
+        // 클래스는 객체를 생성하는 설계도이다.
+        class SubjectInfo {
+            constructor(subject, credit) {
+                this.subject = subject;
+                this.credit = credit;
+                this.days = [80, 120, 140];
+                this.day = this.days[0];
+            }
+            printOut() {
+                return '과목 : ' + this.subject + ', 학점 : ' + this.credit + ', 수업일 : ' + this.day;
+            }
+            // get메서드: 가져오기
+            get lessonTime() {
+                return this.day;
+            }
+            // set메서드: 지정하기
+            set lessonTime(num) {
+                this.day = this.days[num];
+            }
+        }
+
+        // 객체 생성
+        const sub1 = new SubjectInfo('html', 1);
+        const sub2 = new SubjectInfo('css', 2);
+
+        // 출력
+        console.log(sub1.subject); // html
+        console.log(sub1.printOut()); // 과목 : html, 학점 1, 수업일 : 80
+
+        // lessonTime 속성을 읽을 때 get메서드를 자동 호출
+        sub1.lessonTime;
+        // lessonTime 속성에 값을 대입하면 set메서드를 자동 호출
+        sub1.lessonTime = 1;
+
+        console.log(); // 80
+        
+        // 지정하기: set
+        console.log(sub1.days);
+        console.log(sub1.day);
+        sub1.day = 120;
+        console.log(sub1.day);
+
+        
+        console.log(sub1.lessonTime); // 120
+
+        console.log(sub2.subject); // css
+        
+        // 지정하기: set
+        sub2.lessonTime = 2; // 140
+        console.log(sub2.printOut()); // 과목 : css, 학점 2, 수업일 : 140
+
+    </script>
+</body>
+
+</html>

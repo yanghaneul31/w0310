@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            제어문
+                1. 조건문: if~else, switch~case
+                2. 반복문: while, do~while, for, for~in, for~of
+                3. 기타: break, continue
+        
+            for (let 초기값; 조건식; 증감값) {
+                코드;
+            }
+            
+            for (let 변수 in 객체명) {
+                코드;
+            }
+        */
+
+        const info = {
+            subject: 'javascript',
+            credit: 3, // 학점
+            days: 20,
+            tuition: 10000 // 수업료
+        };
+
+        // 객체.속성 또는 객체['속성']
+        console.log('subject: ' + info.subject); // subject: javascript
+        console.log('subject: ' + info['subject']); // subject: javascript
+        console.log('credit: ' + info.credit); // credit: 3
+
+        // i는 info 객체의 속성이다.
+        // info[i]는 info 객체의 속성 값이다.
+        for (let i in info) {
+            console.log(i + ': ' + info[i]);
+        }
+    </script>
+</body>
+
+</html>
