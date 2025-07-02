@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/index/header/bg.jpg);
+    background-repeat: repeat-y;
+    font: 16px/1.6 'Noto Sans Kr',sans-serif;
+    color:#fff;
+}
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

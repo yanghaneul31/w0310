@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>개인 정보 수정</title>
   <link rel="stylesheet" href="./css/mypage2.css">
+  <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
 <header class="header">
@@ -56,24 +57,26 @@
         <div class="profile-img">
           <span>📷</span>
         </div>
-        <button>닉네임 수정</button>
+        <button>프로필이미지 수정</button>
         <textarea placeholder="상태 메시지 수정..."></textarea>
       </div>
 
       <div class="form-box">
         <h2>개인 정보 수정</h2>
-        <form>
-          <label>아이디 <input type="text" /></label>
-          <label>현재 비밀번호 <input type="password" /></label>
-          <label>새 비밀번호 <input type="password" /></label>
-          <label>새 비밀번호 확인 <input type="password" /></label>
-          <label>이름 <input type="text" /></label>
-          <label>이메일 <input type="email" /></label>
-          <label>휴대폰 <input type="tel" /></label>
-          <button type="button" class="auth-btn">다른 번호 인증</button>
-          <label>생년월일 <input type="date" /></label>
-          <button type="submit" class="save-btn">수정 완료</button>
-        </form>
+        
+          <label>아이디</label> <input type="text" />
+          <label>현재 비밀번호 </label><input type="password" />
+          <label>새 비밀번호</label> <input type="password" />
+          <label>새 비밀번호 확인 </label><input type="password" />
+          <label>이름</label> <input type="text" />
+          <label>이메일</label> <input type="email" />
+          <label>휴대폰</label> <div class="btn-flex">
+              <input type="tel" />
+              <button type="button" class="auth-btn">다른 번호 인증</button>
+          </div>
+          <label>생년월일</label> <input type="date" />
+          <button type="button" class="save-btn">수정 완료</button>
+       
       </div>
     </section>
   </main>

@@ -178,6 +178,7 @@ body {
     display: flex;
     gap: 40px;
     justify-content: center;
+    
 }
 
 .profile-box,
@@ -235,25 +236,24 @@ textarea {
     padding: 8px;
 }
 
-.form-box {
-    width: 500px;
-}
+
 
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-box form {
+.form-box  {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 200px;
+    width: 800px;
 }
 
 .form-box label {
     margin-bottom: 10px;
     font-size: 14px;
+    margin-left: 50px;
 }
 
 .form-box input {
@@ -261,8 +261,12 @@ textarea {
     border-radius: 5px;
     border: none;
     margin-top: 4px;
+    width: 400px;
+   margin-left: 50px;
 }
-
+.btn-flex{
+    display: flex;
+}
 .auth-btn:hover {
     background:#8e2de2;
 }
