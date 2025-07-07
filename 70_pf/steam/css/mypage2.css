@@ -208,10 +208,8 @@ body {
 .profile-box button,
 .auth-btn,
 .save-btn {
-
     width: 150px;
-    padding: 10px;
-    margin-top: 10px;
+    height: 40px;
     border: none;
     background: #5d0cff;
     color: white;
@@ -251,22 +249,27 @@ textarea {
 }
 
 .form-box label {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 14px;
     margin-left: 50px;
+    margin-top: 15px;
 }
 
 .form-box input {
     padding: 8px;
     border-radius: 5px;
     border: none;
-    margin-top: 4px;
+   
     width: 400px;
    margin-left: 50px;
 }
 .btn-flex{
     display: flex;
+    width: 650px;
+    justify-content: space-between;
+    
 }
+
 .auth-btn:hover {
     background:#8e2de2;
 }
@@ -275,6 +278,7 @@ textarea {
 
 .save-btn {
     margin-left: 300px;
+    margin-top: 20px;
 }
 
 .save-btn:hover {
