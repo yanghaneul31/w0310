@@ -1,0 +1,8 @@
+@charset "utf-8";
+@import url(common.css);
+
+/* 섹션1: PC 메인 롤링 */
+.main_rolling_pc {
+    height: 650px;
+    background: rgb(255, 36, 3);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬렉션 객체: ver.ES6</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Map 객체
+                객체 리터털을 보완해 주는 객체이다.
+
+                객체 생성
+                    const 변수 = new Map();
+
+                    const 변수 = new Map([
+                        ['키', 값],
+                        [키, 값],
+                        ...
+                    ]);
+
+                속성
+                    size
+                        객체의 속성 수
+
+
+                메서드
+                    set(키, 값)
+                        객체에 값을 추가
+                    get(키)
+                        객체에 키에 해당하는 값을 가져오기
+                    has(키)
+                        키가 존재하면 true, 아니면 false
+                    keys()
+                        객체의 모든 키를 가져오기
+                    values()
+                        객체의 모든 값을 가져오기
+                    entries()
+                        객체의 모든 키와 값을 가져오기
+                    delete(키)
+                        객체의 키를 삭제
+                    clear()
+                        모든 요소 삭제
+        */
+
+        // Map 객체 생성
+        const sub = new Map();
+
+        // Map 객체에 값 추가
+        // -> Map객체.set(키, 값);
+        sub.set('html', 1);
+        sub.set('css', 2);
+        sub.set('javascript', 3);
+
+        console.log('===== sub =====');
+        console.log(sub); // Map(3) {'html' => 1, 'css' => 2, 'javascript' => 3}
+
+        // Map 객체 생성 및 할당
+        const sub2 = new Map([
+            ['html', 1],
+            ['css', 2],
+            ['javascript', 3]
+        ]);
+        console.log('sub2='+sub2); // sub2=[object Map]
+
+        // size
+        console.log(sub.size); // 3
+        console.log(sub2.size); // 3
+
+        // get(키)
+        console.log(sub.get('html')); // 1
+        console.log(sub2.get('javascript')); // 3
+
+        // has(키)
+        console.log(sub.has('css')); // true
+        console.log(sub2.has('jQuery')); // false
+
+        // keys()
+        console.log('===== keys() =====');
+        for (let key of sub.keys()) {
+            console.log(key); // html css javascript
+        }
+        // values()
+        console.log('===== values() =====');
+        for (let key of sub.values()) {
+            console.log(key); // 1 2 3
+        }
+        // entries()
+        console.log('===== entries() =====');
+        for (let key of sub.entries()) {
+            console.log(key); // (2) ['html', 1] (2) ['css', 2] (2) ['javascript', 3]
+        }
+
+        // delete(키)
+        sub.delete('html');
+        console.log(sub.has('html')); // false
+        console.log(sub); // Map(2) {'css' => 2, 'javascript' => 3}
+
+        // clear()
+        sub.clear()
+        console.log(sub.size); // 0
+
+
+
+    </script>
+</body>
+
+</html>

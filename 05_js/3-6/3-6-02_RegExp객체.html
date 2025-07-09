@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /*
+            RegExp 객체
+                정규표현식 객체는 정해진 문자의 패턴을 만들 때 사용한다.
+
+            // 리터럴
+            const reg = /Javascript/;
+
+            // new 키워드
+            const reg = new RegExp('Javascript');
+
+            메서드
+                test()
+                    정규표현식과 일치하는 문자열이 있으면 true, 없으면 false
+                match()
+                    정규표현식과 일치하는 문자열을 배열 반환
+                    일치하는 문자열이 없으면 null 반환
+            
+            정규표현식 객체 플래그
+                i
+                    대소문자 구분 없이 정규표현식과 문자열을 비교
+                g
+                    문자열 전체를 정규표현식과 비교
+                m
+                    여러 행의 문자열을 정규표현식과 비교
+            
+            정규표현식 객체 주요 패턴
+                abc
+                    abc 문자열을 검색한다.
+                    /abc/는 'abc'
+                [abc]
+                    a,b,c 중 문자 하나를 검색한다.
+                    /[abc]d/는 'ad','bd','cd'
+                    /a|b|cd/는 a, b, cd
+                    /(a|b|c)d/는 ad, bd, cd
+                [^abc]
+                    a,b,c를 제외한 문자 하나를 검색한다.
+                    /[^abc]d/는 'ed','fd','gd',...
+                [A-Z]
+                    알파벳 대문자를 검색한다.
+                [a-z]
+                    알파벳 소문자를 검색한다.
+                [0-9]
+                    0~9까지의 숫자를 검색한다.
+                .
+                    하나의 문자를 검색한다.
+                    만약 '마침표' 문자 그대로의 의미를 사용할 경우 '\.'으로 표현해야 한다.
+                \w
+                    알파벳, 숫자, _를 검색한다.
+                \W
+                    알파벳, 숫자, _를 제외하고 검색한다.
+                \d
+                    숫자를 검색한다.
+                \D
+                    숫자를 제외하고 검색한다.
+                \s
+                    하나의 공백을 검색한다.
+                \S
+                    공백을 제외하고 검색한다.
+                ^
+                    행의 첫 문자가 일치해야 함을 의미한다.
+                $
+                    행의 끝 문자가 일치해야 함을 의미한다.
+                *
+                    * 앞의 문자가 0번 이상 반복을 의미한다.
+                    /a*b/ -> b, ab, aab, aaab, aaa....b
+                +
+                    + 앞의 문자가 1번 이상 반복을 의미한다.
+                    /a+b/ -> ab, aab, aaab, aaa...b
+                ?
+                    ? 앞의 문자가 0번 또는 1번 의미한다.
+                    /a?b/ -> b, ab
+                {}
+                    \d{3} -> 숫자 3개
+                    \d{3,5} -> 숫자 3~5개
+                    \d{3,} -> 숫자 3개 이상
+                a|b
+                    a or b를 의미한다.
+                (abc)
+                    그룹화를 의미한다.   
+        */
+
+        /* 
+            ^             행의 첫 문자가 일치
+            \d{10,11}     숫자 10~11개
+            $             행의 끝 문자가 일치  
+        */
+        // 핸드폰(hp)
+        // 0101234567 -> (o)
+        // 0111234567 -> (o)
+        // 01012345678 -> (o)
+        // 010-123-4567 -> (x)
+        // 010-1234-5678 -> (x)
+        // 123456 -> (x)
+        const hpReg = /^\d{10,11}$/;
+
+        // id@yahoo.co.kr
+        // id@gmail.com
+        // id@naver.com
+        // id@daum.net
+        // hong@도메인
+        // _hong@도메인
+        // $$$$$hong@도메인
+        // 1111@도메인
+        // @hong@도메인 (x)
+        // 이메일(email)
+        /* 
+            ^                           문자열의 시작
+            [A-Za-z0-9!#$%^&*_-]        영숫자,!#$%^&*_- 하나 이상
+            +                           앞의 문자가 1번 이상 반복
+            @                           @ 표시
+            [A-Za-z0-9_-]+              영숫자,_,- 하나 이상
+
+            \d{10,11}                   숫자 10~11개
+            (...)                       그룹(Group) -> 반복 또는 논리 구조 표현
+            \.                          .을 정규식 표시 기호가 아닌 문자열로 지정
+            [A-Za-z0-9_-]+              영숫자,_,- 하나 이상
+            (...){1,2}                  () 안의 내용을 1번 또는 2번 반복
+            $                           문자열의 끝
+        */
+        const emailReg = /^[A-Za-z0-9!#$%^&*_-]+@[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+){1,2}$/;
+
+        const hp1 = '010123456'; // (x)
+        const hp2 = '01012345678'; // (o)
+
+        const email1 = 'abc&1_23&A-BC@icox'; // (x)
+        const email2 = 'abc&1_23&A-BC@icox.com'; // (o)
+        const email3 = 'abc&1_23&A-BC@icox.co.kr'; // (o)
+        const email4 = 'abc&1_23&A-BC@icox.abc.co.kr'; // (x)
+
+        /* 
+            test()
+                정규표현식과 일치하는 문자열이 있으면 true, 없으면 false 
+        */
+        console.log(hpReg.test(hp1)); // false
+        console.log(hpReg.test(hp2)); // true
+        console.log(emailReg.test(email1)); // false
+        console.log(emailReg.test(email2)); // true
+        console.log(emailReg.test(email3)); // true
+        console.log(emailReg.test(email4)); // false
+    </script>
+</body>
+
+</html>

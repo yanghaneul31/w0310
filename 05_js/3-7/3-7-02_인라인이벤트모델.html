@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 인라인 이벤트 모델 -->
+    <!-- 인라인 스크립트 -->
+    <!-- onclick은 HTML의 이벤트 속성 -->
+    <button onclick="sum(10);">클릭</button>
+    <button onmouseover="console.log('over ok');">mouseover</button>
+    <button onmouseout="console.log('out ok');">mouseout</button>
+    <script>
+        function sum(n){
+            alert(n); // 10
+        }
+    </script>
+</body>
+
+</html>

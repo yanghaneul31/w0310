@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* sub 페이지의 #location_area */
+#location_area .bg_box {
+    width: 93%;
+    margin: 0 auto;
+    height: 445px;
+    background: url('https://picsum.photos/id/510/1920/445') no-repeat 0% 0%/cover;
+}
+#location_area .tit_page {
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 200px;
+    color: #fff;    
+}
+#location_area .tit_page h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding: 0;
+    border-bottom: 1px solid #fff;
+    margin:0 40px;
+}
+#location_area .tit_page h2 span {
+    font-variant: small-caps;
+}
+#location_area .tit_page p {
+    margin: 16px 0 0 40px;
+}

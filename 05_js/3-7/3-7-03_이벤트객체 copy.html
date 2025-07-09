@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            height: 100px;
+            background: #718c00;
+            margin-top: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="bt">클릭</button>
+    <div id="area">여기에 마우스 왼쪽, 가운데, 오른쪽 버튼 클릭</div>
+    <script>
+        /* 
+            이벤트 객체: event
+                익명 함수의 매개 변수 event가 이벤트 객체이다.
+                변수명을 반드시 'event'로 사용할 필요는 없으나,
+                보통 이벤트 객체의 의미로 'event'를 많이 사용한다.(관례)
+
+                bt.onclick = function(e) {
+                    e.속성 = 값;
+                    e.메서드();
+                };
+
+            속성
+                event.target
+                이벤트를 발생시킨 객체 반환
+                event.type
+                이벤트 유형 반환
+                event.clientX
+                이벤트가 발생한 x좌표(브라우저 기준)
+                event.clientY
+                이벤트가 발생한 y좌표(브라우저 기준)
+                event.screenX
+                이벤트가 발생한 x좌표(모니터 기준)
+                event.screenY
+                이벤트가 발생한 y좌표(모니터 기준)
+                event.button
+                마우스 왼쪽 번튼 -> 0
+                마우스 가운데 버튼 -> 1
+                마우스 오른쪽 버튼 -> 2
+            
+            메서드
+                event.preventDefault();
+                ->기본 이벤트 방지
+                ->prevent 뜻? 방지하다,막다,예방하다
+                ->기본 이벤트란? HTML요소 자체가 가지고 있는 이벤트
+                -> a태그, button 태그
+                event.stopPropagation()
+                
+        */
+    //객체 찾기
+       const outer =document.getElementById('outer');
+       const inner =document.getElementById('inner');
+
+       //이벤트
+       outer.onclick = function(){
+        alert('부모를 클릭하였습니다.');
+       };
+       inner.onclick = function(){
+        
+       }
+
+
+   </script>
+</body>
+
+</html>

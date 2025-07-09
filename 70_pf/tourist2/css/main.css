@@ -1,0 +1,80 @@
+@charset "utf-8";
+@import url(common.css);
+@import url(slider.css);
+
+/* 섹션1: PC 메인 롤링 */
+
+/* 섹션2: 인기 여행지 */
+.about_area {
+    height: 685px;
+    background: linear-gradient(#FFF 30%, #F4F0E9 30%);
+    text-align: center;
+}
+
+.about_area ul {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.about_area li {
+    width: 340px;
+    height: 500px;
+}
+
+/* .about_area li:not(:first-of-type) {
+    margin-left: 2%;
+} */
+.about_area h3 {
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 16px;
+}
+
+.about_area p {
+    padding: 10px 0 24px 0;
+}
+
+.about_area a {
+    border-top: 2px solid var(--gray3);
+    padding-top: 4px;
+}
+
+/* 섹션3 */
+.appbbs_area {
+    padding: 56px 0 136px;
+    background: white;
+}
+
+.appbbs_area .box_inner {
+    display: flex;
+}
+
+.notice {
+    margin-left: 60px;
+    line-height: 2;
+}
+
+.notice h3 {
+    font: 26px 'GothicA1-Light', sans-serif;
+    margin-bottom: 8px;
+}
+
+.notice ul {
+    list-style: disc;
+}
+
+.link {
+    background: url("https://picsum.photos/seed/picsum/200/300") no-repeat 0 0/cover;
+    padding: 35px;
+}
+
+.link a {
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.link a:first-of-type {
+    margin-right: 6px;
+}
+

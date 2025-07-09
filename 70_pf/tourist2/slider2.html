@@ -1,0 +1,170 @@
+< !DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>슬라이더</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.js"></script>
+        <style>
+            body,
+            h2,
+            p {
+                margin: 0;
+            }
+
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            /* slider */
+            #slideWrap {
+                position: relative;
+            }
+
+            .bx-wrapper {
+                border: none;
+            }
+
+            /* Title */
+            #slideWrap .title {
+                z-index: 9999;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            #slideWrap .title h2 {
+                color: #FFF;
+                font-family: "Noto Sans";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 200;
+                line-height: normal;
+                letter-spacing: 7.5px;
+                margin-top: 150px;
+                margin-bottom: 24px;
+                border-bottom: 1px solid #fff;
+            }
+
+            #slideWrap .title p:first-of-type {
+                color: #FFF;
+                font-family: "Noto Sans KR";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                letter-spacing: 10.6px;
+                margin-bottom: 160px;
+            }
+
+            #slideWrap .title p:nth-of-type(2) {
+                color: #FFF;
+                font-family: "Noto Sans KR";
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.76px;
+            }
+
+
+            .bx-controls {
+                display: flex;
+                flex-direction: row-reverse;
+                z-index: 9999;
+                position: absolute;
+                left: 50%;
+                bottom: 30px;
+                transform: translateX(-50%);
+            }
+
+            .bx-controls-auto {
+                display: flex;
+            }
+
+            .bx-controls-auto a {
+                display: inline-block;
+                text-indent: -9999px;
+                vertical-align: middle;
+                margin-left: 8px;
+            }
+
+            .bx-start {
+                width: 14px;
+                height: 14px;
+                /* border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 12px solid #fff;
+            border-right: 7px solid transparent; */
+                background: url(/w0310/70_pf/tourist2/images/start.svg);
+            }
+
+            .bx-stop {
+                width: 10px;
+                height: 12px;
+                background: url(/w0310/70_pf/tourist2/images/stop.svg) no-repeat;
+            }
+
+            .bx-pager {
+                display: flex;
+            }
+
+            .bx-pager-item a {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: #fff;
+                border-radius: 12px;
+                text-indent: -9999px;
+                vertical-align: middle;
+                margin: 0 8px;
+            }
+
+            .bx-pager-item a.active {
+                width: 34px;
+            }
+        </style>
+        <script>
+            $(function () {
+                $('.slide').bxSlider({
+                    mode: 'fade', // 'horizontal(기본값)', 'vertical' 
+                    // 자동 슬라이드
+                    auto: true,
+                    // 좌우(next/prev) 버튼
+                    controls: false,
+                    stopAutoOnClick: true,
+                    // 일지정지/실행 버튼
+                    autoControls: true,
+                    // 중앙의 동그라미: pagination 또는 indicator
+                    // pager: false,
+                    // 멀티스라이드의 하나의 슬라이드 크기
+                    // slideWidth: 1440
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="slideWrap">
+            <div class="slide">
+                <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
+                <div><img src="./images/337-1903x600.jpg" alt="이미지"></div>
+                <div><img src="./images/339-1903x600.jpg" alt="이미지"></div>
+            </div>
+            <div class="title">
+                <h2>TUUST &amp;
+                    INFORMATION</h2>
+                <p>믿을 수 있는 여행정보,
+                    여행... 어디로 가세요?</p>
+                <p>BE TOURIST FOR BETTER LIFE</p>
+            </div>
+        </div>
+    </body>
+
+    </html>

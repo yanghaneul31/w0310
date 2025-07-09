@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스크립트</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 기본 이벤트 모델 -->
+    <!-- 내부 스크립트 -->
+    <!-- onclick은 HTML의 이벤트 속성 -->
+
+    <button onmouseover="console.log('over ok');">mouseover</button>
+    <button onmouseout="console.log('out ok');">mouseout</button>
+    <script>
+        /* 
+            기본 이벤트 모델
+                HTML 요소를 취득한 후
+                    document.getElementById('아이디')
+                    document.querySelector('선택자')
+
+                    document.getElementsByClassName('클래스')
+                    document.getElementsByTagName('태그명')
+                    document.querySelectorAll('선택자')
+                이벤트를 '객체의 메서드' 형식으로 연결
+                    객체.메서드 = function(){};
+                    객체.메서드 = ()=>{};
+
+            제이쿼리
+                HTML 요소를 취득한 후
+                    $('선택자')
+                이벤트를 '객체의 메서드' 형식으로 연결
+                    객체.메서드(function(){});
+                    객체.메서드(()=>{});
+
+
+        window.on이벤트명 = function(){};
+        $(function(){});
+        
+        */
+        window.onload = function(){
+            const bt = document.getElementById('bt');
+            const bt2 = document.getElementById('bt2');
+            const bt3 = $('#bt3');
+            const bt4 = $('#bt4');
+    
+            // 익명 함수
+            // bt.onclick = function () {
+            //     console.log('ok'); // ok
+            // };
+            // 화살표 함수
+            bt.onclick = () => console.log('ok'); // ok
+            bt3.click(()=>{ console.log('제이쿼리 ok') }); // ok
+
+            // 선언적 함수
+            function view() {
+                console.log('view');
+            }
+
+            // bt2.onclick = function(){
+            //     view();
+            // };
+            // 기본 이벤트 모델로 함수를 호출할 때는 함수에 ()를 붙이지 않는다.
+            bt2.onclick = view;
+            bt4.click(()=>view());
+        };
+
+    </script>
+    <button id="bt">익명함수 클릭</button>
+    <button id="bt2">선언적함수 클릭</button>
+    <button id="bt3">제이쿼리 익명함수 클릭</button>
+    <button id="bt4">제이쿼리 선언적함수 클릭</button>
+</body>
+
+</html>

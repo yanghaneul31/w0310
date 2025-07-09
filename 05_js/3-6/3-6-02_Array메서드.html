@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // 배열 객체 생성
+        const alphabet = ['a', 'b', 'c', 'd', 'e'];
+        const alphabet2 = ['f', 'g'];
+
+        // 배열 메서드 /------------------------------------
+
+
+
+        // 배열의 값 가져오기 -> getter
+        // -> 배열의 index 활용
+        // -> 배열명[index]
+        console.log(`alphabet[2] = ${alphabet[2]}`); // c
+
+        // 배열의 값 변경하기 -> setter
+        alphabet[2] = 's';
+        console.log(alphabet); // (5) ['a', 'b', 's', 'd', 'e']
+
+        // 배열의 값 추가하기
+        alphabet[5] = 'z';
+        console.log(alphabet); // (7) ['가', 'a', 'b', 's', 'd', 'e', 'z']
+
+        // 배열의 값 삽입(추가)
+        // -> unshift(값): 맨 앞에 값 삽입
+        alphabet.unshift('가')
+        console.log(alphabet); // (6) ['가', 'a', 'b', 'c', 'd', 'e']
+        // -> push(값): 맨 뒤에 값 삽입
+        alphabet.push('나');
+        console.log(alphabet); // (7) ['가', 'a', 'b', 'c', 'd', 'e', '나']
+
+        // 배열의 값 삭제
+        // -> shift(): 맨 앞에 값 삭제
+        alphabet.shift();
+        console.log(alphabet); // (6) ['a', 'b', 'c', 'd', 'e', '나']
+        // -> pop(): 맨 뒤에 값 삭제
+        alphabet.pop();
+        alphabet.pop();
+        alphabet.pop();
+        console.log(alphabet); // (4) ['a', 'b', 's', 'd']
+
+        console.log('===== 여기서부터 splice =====')
+        // 배열 요소 삭제 후 추가
+        // 배열.splice(인덱스, 삭제개수, [삽입값1, 값2, ...])
+        // -> 인덱스번호부터 배열 요소를 개수만큼 삭제 후 해당 위치에 새로운 요소 삽입
+        alphabet.splice(1, 2, 'f');
+        console.log(alphabet); // (3) ['a', 'f', 'd']
+
+        // 배열 요소 삭제
+        alphabet.splice(1, 1); // idx1번 위치의 배열 값 1개 삭제
+        console.log(alphabet); // (2) ['a', 'd']
+
+        alphabet.splice(0, 1, 'f', 'g', 'h');
+        console.log(alphabet); // (4) ['f', 'g', 'h', 'd']
+
+
+        // 배열 요소 가져오기
+        // 배열.slice(idx1, [idx2]); 
+        // -> idx1에서 부터 idx2 이전까지 반환
+        // -> idx2를 생략하면 -> idx1부터 끝까지 반환
+        console.log('===== 여기서부터 slice =====')
+        console.log(alphabet.slice(0, 3)); // (3) ['f', 'g', 'h']
+        console.log(alphabet); // (4) ['f', 'g', 'h', 'd']
+        console.log(alphabet.slice(2)); //(2) ['h', 'd']
+
+
+        const alphabet3 = [2, 41, 11];
+
+        // 배열의 순서 바꾸기
+        console.log(alphabet3.reverse()); // (3) [11, 41, 2]
+        // 배열의 오름차순 정렬
+        // 배열.sort([함수])
+        // 배열.sort(function(a, b){return a - b});
+        // 배열.sort((a, b)=>a - b);
+        console.log(alphabet3.sort((a, b) => a - b)); // (3) [2, 11, 41]
+        // 배열의 내림차순 정렬
+        console.log(alphabet3.reverse()); // (3) [41, 2, 11]
+
+        // 배열.join('연결자') -> 배열 값을 하나의 문자열로 반환
+        console.log(alphabet.join('/')); // a/b/c/d/e
+        console.log(alphabet);
+        // 배열1.concat(배열2) -> 배열을 연결
+        console.log(alphabet.concat(alphabet2)); // (7) ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+        console.log(alphabet);
+        // 배열.toString(); -> 배열을 문자열로 반환
+        console.log(alphabet.toString()); // a,b,c,d,e
+        console.log(alphabet);
+    </script>
+</body>
+
+</html>

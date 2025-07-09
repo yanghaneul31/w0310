@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            Date 객체
+                날짜와 시간에 대한 정보 값을 얻거나 설정한다.
+
+            const date = new Date();
+            const date = new Date('년/월/일');
+                예) const date = new Date('2025-07-07');
+            const date = new Date(년,월,일,시,분,초,밀리초);
+        
+            메서드
+                getFullYear()
+                    년을 4자리로 반환
+                getMonth() + 1
+                    0~11 -> 1~12 월을 반환
+                getDate()
+                    일을 반환
+                getDay()
+                    0(일) ~ 6(토) -> 요일를 숫자로 반환
+                getHours()
+                    시 값을 반환
+                getMinutes()
+                    분 값을 반환
+                getSeconds()
+                    초 값을 반환
+                getMilliseconds()
+                    밀리초(1/1000초) 값을 반환
+                getTime()
+                    1970년 1월 1일 자동 이후부터 경과한 밀리초 값을 반환
+
+                toUTCString()
+                    UTC(국제 표준시, Coordinated Universal Time) 날짜/시간 정보를 문자열로 반환
+                toLocaleString()
+                    지역의 Date 정보를 문자열로 반환
+                toLocaleDateString()
+                    지역의 날짜 정보를 문자열로 반환
+                toLocaleTimeString()
+                    지역의 시간 정보를 문자열로 반환
+        */
+
+        // const date = new Date();
+        const dateObj = new Date();
+        const dateInfo = {
+            year: dateObj.getFullYear(), // 2025
+            month: dateObj.getMonth() + 1, // 7
+            date: dateObj.getDate(), // 7
+            day: dateObj.getDay(), // 1
+            hours: dateObj.getHours(), // 11
+            minutes: dateObj.getMinutes(), // 56
+            // GMT(Greenwich Mean Time, 그리니치 표준시)
+            locale: dateObj.toLocaleString(), // 2025. 7. 7. 오전 11:59:31
+            localeDate: dateObj.toLocaleDateString(), // 2025. 7. 7.
+            localeTime: dateObj.toLocaleTimeString() // 오전 11:59:31
+        };
+        for (let i in dateInfo) {
+            console.log(i + ':' + dateInfo[i]);
+        }
+
+        const today = new Date(2025, 3, 10);
+        const afterDay = new Date(2025, 8, 22);
+        // getTime() -> 1970년 1월 1일 자동 이후부터 경과한 밀리초 값을 반환
+        const diffDay = afterDay.getTime() - today.getTime();
+        console.log(diffDay); // 63158400000 밀리초 -> 몇 일?
+
+        // 1000(밀리초), 60(초), 60(분), 24(시간)
+        const willDay = Math.ceil(diffDay / 1000 / 60 / 60 / 24);
+
+        console.log(willDay + '일'); // 165일
+    </script>
+</body>
+
+</html>

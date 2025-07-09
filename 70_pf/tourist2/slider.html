@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background: olive;
+        }
+
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* slider */
+        #slideWrap {
+            position: relative;
+        }
+
+        .bx-wrapper {
+            border: none;
+        }
+
+        /* Title */
+        #slideWrap .title {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* 
+            구형 브라우저도 동작한다.
+            width: 500px;
+            height: 300px;
+            margin-top: -150px;
+            margin-left: -250px; */
+            background: yellow;
+        }
+
+
+        /* start/pause */
+        /* .bx-wrapper .bx-controls-auto {
+            text-align: center;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-start {
+            display: block;
+            text-indent: -9999px;
+            width: 10px;
+            height: 11px;
+            outline: 0;
+            background: url('images/controls.png') -86px -11px no-repeat;
+            margin: 0 3px;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-start:hover,
+        .bx-wrapper .bx-controls-auto .bx-start.active,
+        .bx-wrapper .bx-controls-auto .bx-start:focus {
+            background-position: -86px 0;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-stop {
+            display: block;
+            text-indent: -9999px;
+            width: 9px;
+            height: 11px;
+            outline: 0;
+            background: url('images/controls.png') -86px -44px no-repeat;
+            margin: 0 3px;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-stop:hover,
+        .bx-wrapper .bx-controls-auto .bx-stop.active,
+        .bx-wrapper .bx-controls-auto .bx-stop:focus {
+            background-position: -86px -33px;
+        } */
+
+        .bx-controls {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        /* pager */
+        .bx-wrapper .bx-pager,
+        .bx-wrapper .bx-controls-auto {
+            /* position: static; */
+            bottom: 30px;
+        }
+
+        .bx-controls .bx-has-controls-auto .bx-has-pager {
+            justify-content: center;
+            height: 100px;
+            background: red;
+        }
+
+        .bx-wrapper .bx-pager {
+            text-align: center;
+            padding-top: 0px;
+            background: blue;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #fff;
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            margin: 0 8px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: #fff;
+            width: 34px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: #fff;
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $('.slide').bxSlider({
+                mode: 'fade', // 'horizontal(기본값)', 'vertical' 
+                // 자동 슬라이드
+                auto: true,
+                // 좌우(next/prev) 버튼
+                controls: false,
+                stopAutoOnClick: true,
+                // 일지정지/실행 버튼
+                autoControls: true,
+                // 중앙의 동그라미: pagination 또는 indicator
+                // pager: false,
+                // 멀티스라이드의 하나의 슬라이드 크기
+                // slideWidth: 1440
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <div class="slide">
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <!-- <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
+            <div><img src="./images/337-1903x600.jpg" alt="이미지"></div>
+            <div><img src="./images/339-1903x600.jpg" alt="이미지"></div> -->
+        </div>
+        <div class="title">
+            <h2>TUUST &amp; INFORMATION</h2>
+            <p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
+            <p>BE TOURIST FOR BETTER LIFE</p>
+        </div>
+    </div>
+</body>
+
+</html>

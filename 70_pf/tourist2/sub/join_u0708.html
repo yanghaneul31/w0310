@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOURIST IN TOUR</title>
-    <link rel="stylesheet" href="/w0310/70_pf/tourist2/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
     <script src="/w0310/70_pf/tourist2/js/slider.js"></script>
     <script src="/w0310/70_pf/tourist2/js/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
+    <link rel="stylesheet" href="/w0310/70_pf/tourist2/css/join_u0708.css">
 </head>
 
 <body>
@@ -58,66 +59,81 @@
         </div><!-- //.box_inner -->
     </header>
 
-    <!-- 섹션1: PC 메인 롤링 -->
-    <div class="main_rolling_pc">
-        <div id="slideWrap">
-            <div class="slide">
-                <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
-                <div><img src="./images/337-1903x600.jpg" alt="이미지"></div>
-                <div><img src="./images/339-1903x600.jpg" alt="이미지"></div>
-            </div>
-            <div class="title">
-                <h2>TUUST &amp; INFORMATION</h2>
-                <p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
-                <p>BE TOURIST FOR BETTER LIFE</p>
+    <!-- section1 -->
+    <div id="location_area">
+        <div class="bg_box">
+            <div class="tit_page">
+                <h2>TOURIST <span>in</span> TOUR</h2>
+                <p><span>MEMBER</span> / <span>회원가입</span></p>
             </div>
         </div>
     </div>
-    <!-- 섹션2: 인기 여행지 -->
-    <section class="about_area">
-        <div class="box_inner">
-            <h2>Lorem ipsum dolor sit amet</h2>
+    <!-- section2 -->
+    <div id="join">
+        <p class="required_input">* 는 필수 입력 항목입니다.</p>
+        <form action="" method="post" class="join_form">
             <ul>
                 <li>
-                    <img src="https://picsum.photos/id/100/340/340" alt="이미지1">
-                    <h3>Lorem, ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, illum.</p>
-                    <a href="#">VIEW</a>
+                    <label for=""><span class="required_input">*</span>이메일</label>
+                    <input type="text" required>@<input type="text" required>
+                    <select name="" id="">
+                        <option value="">직접입력</option>
+                        <option value="naver">naver.com</option>
+                        <option value="google">goole.com</option>
+                    </select>
                 </li>
+
+                <!-- 작성자명 -->
                 <li>
-                    <img src="https://picsum.photos/id/101/340/340" alt="이미지2">
-                    <h3>Lorem, ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, illum.</p>
-                    <a href="#">VIEW</a>
+                    <label for=""><span class="required_input">*</span>작성자명</label>
+                    <input type="text" placeholder="이름을 입력해주세요" required class="w100p">
                 </li>
+
+                <!-- 비밀번호 -->
                 <li>
-                    <img src="https://picsum.photos/id/102/340/340" alt="이미지3">
-                    <h3>Lorem, ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, illum.</p>
-                    <a href="#">VIEW</a>
+                    <label for=""><span class="required_input">*</span>비밀번호</label>
+                    <input type="password" placeholder="비밀번호를 입력해주세요" required class="w100p">
+                </li>
+
+                <!-- 비밀번호 확인 -->
+                <li>
+                    <label for=""><span class="required_input">*</span>비밀번호 확인</label>
+                    <input type="password" placeholder="비밀번호를 다시 입력해주세요" required class="w100p">
+                </li>
+
+                <!-- 연락처 -->
+                <li>
+                    <label for=""><span class="required_input">*</span>연락처</label>
+                    <input type="tel" placeholder="휴대폰'-'없이 숫자만 입력해주세요" required class="w100p" pattern="^01[0-9]{8,9}$">
+                </li>
+
+                <!-- 라디오버튼 -->
+                <li>
+                    <label class="pl16">성별</label>
+                    <input type="radio" name="gender" id="man">
+                    <label for="man" class="gender">남</label>
+                    <input type="radio" name="gender" id="woman">
+                    <label for="woman" class="gender">여</label>
+                </li>
+
+                <!-- 확인란(체크박스) -->
+                <li>
+                    <label class="pl16">개인정보 활용동의</label>
+                    <input type="checkbox" id="agree">
+                    <label for="agree">동의함</label>
+                </li>
+                <!-- textarea -->
+                <li>
+                    <label for="inquiry_detail" class="pl16 lbl_inquiry_detail">문의내용</label>
+                    <textarea class="w100p" name="inquiry_detail" id="inquiry_detail"
+                        placeholder="간단한 상담 요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.&#10;전화 상담 희망시 기재 부탁드립니다."></textarea>
                 </li>
             </ul>
-        </div>
-    </section>
-    <!-- 섹션3: 상담 및 최근게시물 -->
-    <div class="appbbs_area">
-        <div class="box_inner">
-            <div class="link">
-                <a href="#"><img src="https://picsum.photos/id/301/294/100" alt="링크1"></a>
-                <a href="#"><img src="https://picsum.photos/id/302/294/100" alt="링크2"></a>
-            </div>
-            <div class="notice">
-                <h3>NOTICE</h3>
-                <ul>
-                    <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                    <li><a href="#">Lorem ipsum dolor sit amet consectetur.</a></li>
-                </ul>
-            </div><!-- //.notice end -->
-        </div><!-- //.box_inner -->
-    </div><!-- //.appbbs_area -->
+
+            <!-- 등록 버튼 -->
+            <div class="register_btn"><button>등록</button></div>
+        </form>
+    </div>
 
     <!-- side menu -->
     <aside class="quick_area">
@@ -145,7 +161,8 @@
         </p>
     </aside>
 
-    <!-- footer -->
+
+    <!-- 푸터 -->
     <footer>
         <div class="box_inner">
             <div class="foot_left">

@@ -1,16 +1,18 @@
 // JavaScript
 
 $(function () {
-  $(".bxslider").bxSlider({
-    // 'horizontal', 'vertical', 'fade'
-    mode: "fade",
+  $(".slide").bxSlider({
+    mode: "fade", // 'horizontal(기본값)', 'vertical'
+    // 자동 슬라이드
     auto: true,
-    // play/pause - 실행/일시정지
-    // autoControls: true
+    // 좌우(next/prev) 버튼
+    controls: false,
     stopAutoOnClick: true,
-    // pagenation(indicator) 
-    // -> 하단 중앙의 동그라미 버튼
+    // 일지정지/실행 버튼
+    autoControls: true,
+    // 중앙의 동그라미: pagination 또는 indicator
     // pager: false,
-    slideWidth: 1903,
+    // 멀티스라이드의 하나의 슬라이드 크기
+    // slideWidth: 1440
   });
 });

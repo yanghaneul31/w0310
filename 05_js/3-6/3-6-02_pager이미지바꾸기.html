@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace()</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <img src="https://picsum.photos/id/400/200/150" alt="">
+        <a href="#">400</a>
+        <a href="#">401</a>
+        <a href="#">402</a>
+    </div>
+    <script>
+        const img = $('img');
+        const btn = $('a');
+        let currentPath; // https://picsum.photos/id/400/200/150
+        let currentImgNum; // 400
+
+
+        function pager(i) {
+            currentPath = img.attr('src');
+            currentImgNum = currentPath.substring(25, 28);
+            img.attr({ src: currentPath.replace(currentImgNum, i + 400) });
+        }
+
+        btn.eq(0).click(() => pager(0));
+        btn.eq(1).click(() => pager(1));
+        btn.eq(2).click(() => pager(2));
+
+    </script>
+</body>
+
+</html>

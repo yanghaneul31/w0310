@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* header + footer */
+@import url('/w0310/70_pf/tourist2/css/common.css');
+/* sub 페이지의 #location_area */
+@import url('/w0310/70_pf/tourist2/css/sub_common.css');
+
+/* join */
+#join {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-right: 0;
+}
+.join_form ul {
+    padding: 20px 0;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+.join_form li {
+    padding: 8px 0;
+}
+#join label {
+    display: inline-block;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 700;
+}
+#join .w100p {
+    width: calc(100% - 155px);
+}
+#join .required_input {
+    color: #f00;
+    margin-right: 8px;
+}
+#join .gender {
+    width: 14px;
+}
+#join #man, #join #woman, #join #agree {
+    height: 13px;
+}
+#join input {
+    height: 43px;
+    border: 1px solid #ccc;
+}
+#join select {
+    height: 43px;
+    border: 1px solid #ccc;
+}
+#join textarea {
+    height: 245px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.register_btn {
+    text-align: center;
+    padding: 20px;
+}
+.register_btn button {
+    width: 125px;
+    height: 50px;
+    background: #384d75;
+    color: #fff;
+    font-size: 20px;
+}

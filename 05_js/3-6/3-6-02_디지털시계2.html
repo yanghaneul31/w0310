@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 시계</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>디지털 시계</h1>
+    <p id="currentDate">0000년 0월 0일 (0요일)</p>
+    <p id="currentTime">00:00:00</p>
+    <script>
+        const currentDate = $('#currentDate');
+        const currentTime = $('#currentTime');
+
+        function updateClock() {
+            const date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let week = date.getDay();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let second = date.getSeconds();
+
+            // 요일은 숫자를 문자열로 표시하기
+            // 0~6 -> 일~토
+            switch (week) {
+                case 0: week = '일'; break;
+                case 1: week = '월'; break;
+                case 2: week = '화'; break;
+                case 3: week = '수'; break;
+                case 4: week = '목'; break;
+                case 5: week = '금'; break;
+                default: week = '토';
+            }
+
+            // 한 자리일때 두 자리로 표시하기
+            // 0~9 -> 00 ~ 09
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            currentDate.text(`${year}년 ${month}월 ${day}일 (${week}요일)`);
+            currentTime.text(`${hour}:${minute}:${second}`);
+        }
+
+        // 1초 마다 시계 업데이트
+        setInterval(updateClock, 1000);
+
+        // 처음 페이지가 로드될 때 바로 시계 업데이트
+        updateClock();
+
+    </script>
+</body>
+
+</html>

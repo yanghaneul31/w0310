@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            내장 객체
+                1. Number
+                2. String
+                3. Array
+                4. Math
+                5. Date
+                6. RegExp
+                ...
+        */
+
+        /* 
+            Number 객체
+                const 객체 = new Number(숫자);
+
+            객체.toFixed(숫자)
+                -> 반올림
+            객체.toString()
+                -> 진법 변환
+
+        */
+
+        const num1 = new Number(328.555);
+        const num2 = 328.975;
+        const num3 = 12;
+
+        console.log(num1); // Number {328.575}
+        console.log(num2); // 328.575
+
+        // 반올림
+        console.log(num1.toFixed()); // 329
+        console.log(num2.toFixed(0)); // 329
+        console.log(num2.toFixed(1)); // 328.6
+        console.log(num2.toFixed(2)); // 328.56
+
+        // 진법 변환
+        console.log(num3.toString(2)); // 1100 -> 2진수
+        console.log(num3.toString(8)); // 14 -> 8진수
+        console.log(num3.toString(16)); // c -> 16진수
+
+        // 소수점 계산에 대한 문제점
+        console.log(46000 * 0.7); // 32199.999999999996
+
+        // 해결 방법
+        console.log(46000 * (0.7 * 10) / 10); // 32200
+    </script>
+</body>
+
+</html>

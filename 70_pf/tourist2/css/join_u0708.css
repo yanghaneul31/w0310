@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* header + footer */
+@import url('/w0310/70_pf/tourist2/css/common.css');
+/* sub 페이지의 #location_area */
+@import url('/w0310/70_pf/tourist2/css/sub_common.css');
+
+/* join */
+#join {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-right: 0;
+}
+#join .join_form ul {
+    padding: 20px 0;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #ccc;
+}
+#join .join_form li {
+    padding: 8px 0;
+}
+#join input {
+    height: 43px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#join label {
+    display: inline-block;
+    width: 170px;
+    font-size: 17px;
+    font-weight: 700;
+}
+#join .w100p {
+    width: calc(100% - 175px);
+}
+#join .pl16 {
+    padding-left: 16px;
+}
+#join ::placeholder {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* E-mail: select */
+#join select {
+    height: 43px;
+    border: 1px solid #ccc;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+/* 반드시 입력 */
+#join .required_input {
+    color: #f00;
+    margin-right: 8px;
+    font-weight: 400;
+}
+
+/* 성별 */
+#join .gender {
+    width: 14px;
+}
+#join #man, #join #woman, #join #agree {
+    height: 13px;
+}
+#join #woman {
+    margin-left: 24px;
+}
+#join input[type="radio"]+label,
+#join input[type="checkbox"]+label {
+    font-weight: 400;
+}
+
+
+/* 문의내용: textarea */
+#join .lbl_inquiry_detail {
+    vertical-align: top;
+}
+#join textarea {
+    height: 245px;
+    border: 1px solid #ccc;
+    resize: none;
+    padding: 10px;
+}
+
+/* 등록 버튼: button */
+#join .register_btn {
+    text-align: center;
+    padding: 20px;
+}
+#join .register_btn button {
+    width: 125px;
+    height: 50px;
+    background: #384d75;
+    color: #fff;
+    font-size: 20px;
+}

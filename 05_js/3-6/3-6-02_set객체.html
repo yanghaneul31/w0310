@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컬렉션 객체: ver.ES6</title>
+</head>
+
+<body>
+    <script>
+        /* 
+            Set 객체
+                중복된 값은 허용하지 않는다.
+
+                객체 생성
+                    const 변수 = new Set();
+                    const 변수 = new Set([값, 값, ...]);
+
+                속성
+                    size
+                        객체의 속성 수
+
+                메서드
+                    add(값)
+                        객체에 값을 추가
+                    has(키)
+                        키가 존재하면 true, 아니면 false
+                    values()
+                        객체의 모든 값을 가져오기
+                    delete(키)
+                        객체의 키를 삭제
+                    clear()
+                        모든 요소 삭제
+        */
+
+        // Set 객체 생성
+        const sub = new Set();
+
+        // Set 객체에 값 추가
+        // -> Set객체.add(값);
+        sub.add('a');
+        sub.add('b');
+        sub.add('c');
+        sub.add('a'); // 에러 없이, 추가되지 않는다.
+        sub.add('d');
+
+        console.log('===== sub =====');
+        console.log(sub); // Set(3) {'a', 'b', 'c'}
+
+        // Set 객체 생성 및 할당
+        const sub2 = new Set(['a', 'b', 'c']);
+        console.log('sub2=' + sub2); // sub2=[object Set]
+
+        // size
+        console.log(sub.size); // 4
+        console.log(sub2.size); // 3
+
+        // has(키)
+        console.log(sub.has('d')); // true
+        console.log(sub2.has('d')); // false
+
+        // values()
+        console.log('===== values() =====');
+        for (let val of sub.values()) {
+            console.log(val); // a b c d
+        }
+
+        // delete(키)
+        sub.delete('a');
+        console.log(sub.has('a')); // false
+        console.log(sub); // Set(3) {'b', 'c', 'd'}
+
+        // clear()
+        sub.clear()
+        console.log(sub.size); // 0
+
+
+
+    </script>
+</body>
+
+</html>

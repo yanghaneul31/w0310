@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* slider */
+#slideWrap {
+    position: relative;
+}
+
+.bx-wrapper {
+    border: none;
+}
+
+/* Title */
+#slideWrap .title {
+    z-index: 999;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#slideWrap .title h2 {
+    color: #FFF;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 7.5px;
+    margin-top: 220px;
+    padding: 0;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #fff;
+}
+
+#slideWrap .title p:first-of-type {
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 10.6px;
+    margin-bottom: 160px;
+}
+
+#slideWrap .title p:nth-of-type(2) {
+    color: #FFF;
+    font-family: "Noto Sans KR";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.76px;
+}
+
+
+.bx-controls {
+    display: flex;
+    flex-direction: row-reverse !important;
+    z-index: 9999;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.bx-controls-auto {
+    display: flex;
+}
+
+.bx-controls-auto a {
+    display: inline-block;
+    text-indent: -9999px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.bx-start {
+    width: 14px;
+    height: 14px;
+    /* border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            border-left: 12px solid #fff;
+            border-right: 7px solid transparent; */
+    background: url(/w0310/70_pf/tourist2/images/start.svg) no-repeat;
+}
+
+.bx-stop {
+    width: 10px;
+    height: 12px;
+    background: url(/w0310/70_pf/tourist2/images/stop.svg) no-repeat;
+}
+
+.bx-pager {
+    display: flex;
+}
+
+.bx-pager-item a {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 12px;
+    text-indent: -9999px;
+    vertical-align: middle;
+    margin: 0 8px;
+}
+
+.bx-pager-item a.active {
+    width: 34px;
+}

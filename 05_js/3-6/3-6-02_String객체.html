@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script>
+        /* 
+            String 객체
+                const 객체 = new String('문자열');
+
+            속성
+                length
+                    -> 문자열의 개수
+            메서드()
+                charAt(index)
+                    -> index에 해당하는 문자 반환
+                    -> index를 생략하면 0
+                    -> 0 이상의 숫자
+                indexOf('문자열')
+                    -> 왼쪽 문자부터 검색하여 일치하는 index 번호를 반환
+                    -> 없으면 -1
+                lastIndexOf('문자열')
+                    -> 오른쪽 문자부터 검색하여 일치하는 index 번호를 반환
+                includes('문자열')
+                    -> ES6
+                    -> 문자열을 포함하면 true, 아니면 false 반환
+                
+                substring(index1, [index2])
+                    -> index1만 지정한 경우
+                    -> index1부터 끝까지 문자열 반환
+                    -> index1, index2 둘다 지정한 경우
+                    -> index1부터 index2-1까지 문자열 반환
+                substr(index, length)
+                    -> index부터 length 만큼 문자열 반환
+                
+                split('구분자')
+                    -> 'Javascript jQuery' -> split('')
+                    -> ['J','a','v','a','s', ..., 'y']
+                    -> 'Javascript jQuery' -> split(' ')
+                    -> ['Javascript', 'jQuery']
+                    -> 'Javascript_jQuery' -> split('_')
+                    -> 구분자를 기준으로 문자열을 분할하여 배열로 반환
+                replace('찾은문자열', '교체문자열')
+                    -> 찾은문자열을 교체문자열로 바꾸어 반환
+
+                concat()
+                    -> 문자열 연결
+                trim()
+                    -> 문자열의 앞/뒤 공백 제거
+                toLowerCase()
+                    -> 소문자로 변환
+                toUpperCase()
+                    -> 대문자로 변환
+
+        */
+
+        const str1 = new String('javascript');
+        const str2 = 'javascript';
+
+        console.log(str1); // Number {328.575}
+        console.log(str2); // 328.575
+
+        // 문자수
+        console.log(str1.length); // Number {328.575}
+        console.log(str2.length); // 328.575
+
+        // charAt()
+        console.log(str2.charAt(0)); // j
+        // indexOf(): 왼->오 검색
+        console.log(str2.indexOf()); // -1
+        console.log(str2.indexOf('a')); // 1
+        console.log(str2.indexOf('k')); // -1
+        console.log(str2.indexOf('j')); // 0
+        console.log(str2.indexOf('t')); // 9
+        console.log(str2.indexOf('av')); // 1
+        console.log(str2.indexOf('as')); // 3
+        // lastIndexOf(): 오->왼 검색
+        // javascript
+        console.log(str2.lastIndexOf('a')); // 3
+
+        // includes() 뜻? 포함
+        console.log(str2.includes()); // false
+        console.log(str2.includes('java')); // true
+        console.log(str2.includes('jquery')); // false
+
+        const str3 = 'http://icoxpublish.com';
+        // substring()
+        console.log(str3); // http://icoxpublish.com
+        // 인덱스 7부터 출력
+        console.log(str3.substring(7)); // icoxpublish.com
+        console.log(str3.substring(7,)); // icoxpublish.com
+        // 인덱스 0부터 4 -1까지 출력
+        console.log(str3.substring(0, 4)); // http
+        // 인덱스 4부터 7 -1까지 출력
+        console.log(str3.substring(7, 4)); // ://
+        console.log(str3.substring(4, 7)); // ://
+        // 0보다 작은 값은 0으로 인식
+        console.log(str3.substring(-2, 2)); // ht
+
+        // substr()
+        console.log(str3.substr()); // http://icoxpublish.com
+        // index 7부터 4개의 문자열을 반환
+        console.log(str3.substr(7, 4)); // icox
+
+        const str4 = 'Javascript_jQuery';
+        // split(구분자) 뜻? 쪼개다
+
+        /* 
+            배열 생성
+                const 배열 = [값1, 값2, ...];
+            배열 참조
+                배열[index]
+                -> index는 0, 1, 2, ...
+        */
+
+        // const division = ['Javascript', 'jQuery'];
+        const division = str4.split(' ');
+        console.log(division[0] + ', ' + division[1]); // Javascript, jQuery
+
+        const str5 = 'm_out.png';
+        // replace()
+        console.log(str5.replace('out', 'over'));
+
+        // concat()
+        const str6 = 'nav';
+        const str7 = '_bg';
+        console.log(str6.concat(str7)); // nav_bg
+
+        // trim()
+        let str8 = '    rem   ove ';
+        console.log(str8);
+        console.log(str8.length);
+        str8 = str8.trim();
+        console.log(str8);
+        console.log(str8.length);
+
+        // toUpperCase()
+        console.log(str8.toUpperCase());
+        // toLowerCase()
+        console.log('ReMove'.toLowerCase());
+    </script>
+</body>
+
+</html>

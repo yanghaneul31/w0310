@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부 스크립트</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="bt">클릭</button>
+    <button id="bt2">클릭2</button>
+    <button id="bt3">제이쿼리 클릭3</button>
+    <script>
+        /* 
+            표준 이벤트 모델
+                객체.addEventListener('이벤트', 함수);
+        */
+
+        const bt = document.getElementById('bt');
+        const bt2 = document.getElementById('bt2');
+        const bt3 = $('#bt3');
+        
+        // 기본 이벤트 모델
+        // bt.onclick = function(){
+        //     console.log('ok');
+        // };
+
+        // 표준 이벤트 모델
+        bt.addEventListener('click', function(){
+            console.log('ok');
+        });
+        // 제이쿼리
+        bt3.on('click', function(){
+            console.log('제이쿼리 ok');
+        });
+
+        function view() {
+            console.log('view');
+        }
+
+        bt2.addEventListener('click', view);
+
+
+        // 기본 이벤트 모델
+        // -> 객체에 동일한 이벤트가 한번만 적용된다.
+        window.onload = function(){
+            console.log('ok1'); // ok1은 실행되지 않는다.
+        };
+        window.onload = function(){
+            console.log('ok2');
+        };
+
+        // 표준 이벤트 모델
+        // -> 객체에 동일한 이벤트가 여러번 적용할 수 있다.
+        function win1() {
+            console.log('ok3');
+        };
+        function win2() {
+            console.log('ok4');
+        }
+        // window 객체는 생략 가능
+        addEventListener('load', win1); // ok3
+        window.addEventListener('load', win2); // ok4
+    </script>
+</body>
+
+</html>
