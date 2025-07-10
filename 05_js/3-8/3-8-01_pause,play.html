@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play/pause Button</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button type="button" id="pause_btn">일시정지(pause)</button>
+    <button type="button" id="play_btn">실행(play)</button>
+    <script>
+        const pause_btn = document.getElementById('pause_btn');
+        const play_btn = document.getElementById('play_btn');
+        let intervalId = null;
+        let count = 0;
+        
+        pause_btn.onclick = () => pause();
+        play_btn.onclick = () => play();
+
+        play();
+
+        function play() {
+            // 타이머가 중복 실행되는 것을 방지 한다.
+            if (intervalId !== null) return;
+            intervalId = setInterval(() => {
+                // count++;
+                console.log('2초 마다 반복 실행' + ++count);
+            }, 2000);
+        }
+        
+        function pause() {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        span {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">임시 링크, 현재 페이지 위로 이동</a>
+    <a href="https://fs-class.github.io/w0310">나의 사이트로 이동하기</a>
+    <span id="my_site_go">나의 사이트로 이동하기</span>
+    <span id="my_site_go2">나의 사이트로 이동하기</span>
+    <span id="refresh">현재 페이지 새로 고침</span>
+    <script>
+        /* 
+            location 객체
+                웹브라우저의 주소 URL 관련 객체이다.
+
+            URL(Uniform Resource Locator, 통합 자원 위치자)
+                인터넷 상에서 웹 페이지, 이미지, 파일 등 리소스의 위치를 나타내는 주소입니다.
+
+            URL 형식
+                https://www.example.com:443/path/page.html?search=apple#section1
+                프로토콜://도메인:포트번호/경로?쿼리문자열#해시
+
+            속성
+                href 
+                    URL로 이동
+                    -> 히스토리가 남음 -> 뒤로가기 가능
+                    -> 일반적인 링크
+                    -> https://www.example.com:443/path/page.html?search=apple#section1
+                protocol 
+                    주소의 프로토콜명을 반환
+                    -> http:, https:
+                host
+                    주소의 호스명과 포트 번호 반환
+                    -> https://www.example.com:443
+                port 
+                    주소의 포트 번호 반환
+                    -> 443
+                pathname 
+                    주소의 패스명 반환
+                    -> /path/page.html
+                search 
+                    주소의 쿼리 문자열을 반환
+                    -> ?search=apple
+                hash
+                    주소의 앵커명(#)을 반환
+                    -> #section1
+            
+            메서드
+                reload()
+                    현재 페이지를 다시 로드
+                replace(URL)
+                    URL로 교체
+                    -> 히스토리가 남지 않음 -> 뒤로가기 불가능
+                    -> 로그인 후 이동
+        */
+
+        const my_site_go = document.getElementById('my_site_go');
+        const my_site_go2 = document.getElementById('my_site_go2');
+        const refresh = document.getElementById('refresh');
+
+        my_site_go.onclick = ()=>location.href = "https://fs-class.github.io/w0310";
+        my_site_go2.onclick = ()=>location.replace("https://fs-class.github.io/w0310");
+        refresh.onclick = ()=>location.reload();
+
+    </script>
+</body>
+
+</html>

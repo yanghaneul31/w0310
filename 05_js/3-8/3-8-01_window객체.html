@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+        /* 
+            BOM(Browser Object Model)
+                객체
+                    window
+                        loacation
+                        screen
+                        history
+                        navigation
+                        document
+        */
+
+        /* 
+            window 객체
+
+                메서드
+                    alert()
+                        경고창
+                    prompt()
+                        입력창
+                    confirm()
+                        확인창
+                    open()
+                        새로운 창을 만든다.
+                        -> 팝업 창
+                    setInterval(함수, 시간)
+                        -> 시간 간격으로 함수를 반복
+        */
+
+        /* 
+            window.open('URL','창이름','옵션=값,...');
+                옵션
+                    width=숫자
+                    height=숫자
+                    left=숫자
+                    top=숫자
+
+                    아래 옵션은 모던 브라우저에서는 무시됨
+                    location=yes|no
+                    scrollbars=yes|no
+                    menubar=yes|no
+                    toolbar=yes|no
+                    status=yes|no
+        */
+
+        window.open('https://fs-class.github.io/w0310','pf','width=400,height=500,left=100,top=150');
+    </script>
+</body>
+
+</html>

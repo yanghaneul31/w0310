@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <button type="button" id="bt">일시정지</button>
+    <button type="button" id="bt">실행</button>
+    <script>
+        /* 
+            window 객체
+
+            메서드 -> 타이머 함수
+                const 변수 = setInterval(함수, 시간);
+                    일정 시간마다 함수를 반복한다.
+                clearInterval(변수);
+                    setInterval 중지
+                const 변수 = setTimeout(함수, 시간);
+                    시간 이후 함수를 1번 실행
+                clearTimeout(변수);
+                    setTimeout 중지
+        */
+
+        /* 
+            setInterval(function(){}, 밀리초);
+        */
+
+        let i = 0;
+        const increase = setInterval(() => {
+            i++;
+            console.log('2초 마다 반복 실행' + i);
+        }, 2000);
+
+        const bt = document.getElementById('bt');
+        bt.onclick = ()=>{
+            clearInterval(increase);
+        };
+
+        let a = 0;
+        setTimeout(() => {
+            a++;
+            console.log('2초 후 1번 실행' + i);
+        }, 2000);
+    </script>
+</body>
+
+</html>

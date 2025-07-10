@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹</title> <!-- 최소 너비가 992 -> 992이상 -->
+    <link rel="stylesheet" media="all and (max-width:575px)" href="phone.css">
+    <!-- 576이상 992 이하 -->
+    <link rel="stylesheet" media="all and (max-width:576px) and (max-width:992px)" href="tablet.css">
+    <!-- 992이상 -->
+    <link rel="stylesheet" media="all and (max-width:992px)" href="desktop.css">
+    <style>
+        /* 모바일 우선 */
+        /* 공통 ->폰(767이하) */
+        body{color:red;}
+
+        @media(orientation: portrait){
+            body{color:skyblue;}
+        }
+        
+        @media (min-width:768px){
+            /* 768이상 1199이하 -> tablet*/
+            body{color:blue;}
+        }
+        @media (min-width:1200px){
+            /*1200이상 -> desktop */
+            body{color:green;}
+        }
+       
+        /* 데스크탑 우선 */
+        /* 공통 -> 데스크탑(1200이상) */
+        body{color:red;}
+
+        @media(max-width:1199px){
+            /* 1199이하 -> tablet */
+            body{color:blue;}
+        }
+        @media(max-width:767px){
+            /* 767이하 -> phone */
+            body{color:green;}
+        }
+        /* 
+        반응형 웹 사이트 제작
+        1.미디어 쿼리(Media Query)
+        <link rel='stylesheet' media="all and (min-width: 992px)"
+        href="desktop.css">
+
+        중단점(breakpoint)
+        부트스트랩 프레임워크: 576,768,992,1200,1400
+        크롬 개발자: 320,375,425,768,1024,1440,2560
+        
+        1.화면 너비에 따라
+        min-width
+        max-width
+        2.화면 방향에 따라
+        orientation: landscape(기본값-가로)|portrait(세로);
+
+        2.뷰포트(viewport)
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        */
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Musee d'Orsay</h1>
+        </header>
+        <div id="container">
+            <div class="lnb">
+                <ul>
+                    <li><a href="#">작가의 작품</a></li>
+                    <li><a href="#">작가의 시대</a></li>
+                    <li><a href="#">작가의 일생</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2>PICTURES</h2>
+                <p>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">황색 그리스도가 있는 화가의 자화상</a><br>
+                    <a href="#">오페라좌의 관현악단</a><br>
+                    <a href="#">만종</a><br>
+                    <a href="#">제비꽃 장식을 단 베르트모리조</a><br>
+                    <a href="#">피리부는 소년</a><br>
+                    <a href="#">고흐의 방</a><br>
+                    <a href="#">황색 그리스도가 있는 화가의 자화상</a><br>
+                    <a href="#">오페라좌의 관현악단</a><br>
+                    <a href="#">만종</a><br>
+                    <a href="#">제비꽃 장식을 단 베르트모리조</a><br>
+                </p>
+            </div>
+            <div class="aside">
+                <ul class="ext">
+                    <li>
+                        <h2>Workshop Go</h2>
+                        <a href="#">Life drawing workshop</a>
+                    </li>
+                    <li>
+                        <h2>Summer Exhibition </h2>
+                        <a href="#">A-level Summer Exihibition Online 2010</a>
+                    </li>
+                    <li>
+                        <h2>Summer Exhibition Online 2010 </h2>
+                        <a href="#">Life drawing workshop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p>&copy;2018 Les Amis du Musee d'Orsay. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
