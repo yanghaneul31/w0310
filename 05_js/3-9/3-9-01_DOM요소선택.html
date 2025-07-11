@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <div id="box1">
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li>
+        <li>내용3</li>
+    </ul>
+   </div> 
+   <div id="box2">
+    <ul>
+        <li>내용4</li>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+   </div> 
+   <div>
+    <nav id="gnb">
+        <ul>
+            <li class="first">내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </nav>
+   </div>
+   <script>
+    /* 
+    상대 위치롤 선택
+    DOM의 탐색 - 부모,자식,형제(sibling) 관계
+                 ->즉, 상대위치로 선택
+                 ->선택한 요소의 현재 위치를 기준으로 요소를 선택
+    요소 parentNode
+    선택된 요소의 부모 노드 선택
+
+    요소 childNode
+    요소의 자식 노드들(요소 노드,텍스트 노드)선택
+
+    요소 children
+    요소의 자식 노드들(요소 노드만)선택
+
+    요소 nextsibling
+    요소의 다음 노드 선택
+
+    요소 previousSibling
+    요소의 이전 노드 선택
+
+    요소 firstChild
+    요소의 자식 노드 중 첫 번째 노드 선택
+
+    요소 lastChild
+    요소의 자식 노드 중 마지막 노드 선택
+
+    요소 tagName
+    요소의 태그명 반환
+
+    요소 id
+    요소의 id값 반환
+    
+    요소 className
+    요소의 class값 반환
+
+    요소 nodeValue
+    요소의 value값 반환
+
+    요소 nodeType
+    요소의 type값 반환
+    ->반환 값이 1이면 요소
+    ->반환 값이 2이면 속성
+    ->반환 값이 3이면 텍스트
+
+    */
+    const list1 = document.querySelector('#box1 > ul >li');
+    const list2 = document.querySelector('#box2 > ul >li');
+    console.log(list1);
+    console.log(list2);
+    
+   /*  list1.style.background = "#ff6600";
+    //배열 선택 방법
+    list2[0].style.background = "#ccc";
+    //item() 메서드를 이용
+    list2.item(1).style.background = "#ddd";
+ */
+    const gnb = document.getElementById('gnb');
+    console.log(gnb.parentNode); //body
+    console.log(gnb.children);//HTMLCollection [ul]
+    console.log(gnb.children[0]); //ul
+    console.log(gnb.children[0].children[0]);//li.first
+    console.log(gnb.children[0].firstChild); //#text
+   </script>
+</body>
+</html>

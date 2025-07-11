@@ -58,6 +58,42 @@
         2.뷰포트(viewport)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         */
+        footer{
+            padding: 10px;
+            background: #aaa;
+        }
+        /* tablet Pc */
+        @media(min-width: 768px){
+            #container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .lnb{
+                width: 25%;
+            }
+            .content{
+                width: 75%;
+                background: yellow;
+            }
+        }
+        /*desktop Pc */
+        @media(min-width: 1200px){
+            .wrap{
+                width: 1280px;
+                margin: 0 auto;
+            }
+            #container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .lnb{
+                width: 25%;
+            }
+            .content{
+                width: 75%;
+                background: yellow;
+            }
+        }
     </style>
 </head>
 <body>

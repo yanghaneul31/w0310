@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background: 그라디언트</title>
+    <style>
+        /* 
+            Gradient란? 
+                1. 색상이 부드럽게 변하는 시각 효과
+                2. 여러 가지 색상을 선형(linear)과 원형(radial)으로 점진적으로 채워줄 수 있다.
+                3. 색상의 위치나 영역도 조절할 수 있다.
+        */
+
+        /* 
+            선형 gradient 기본형
+            background: linear-gradient([to x방향 [y방향]], 색1, 색2, [...]);
+            background: linear-gradient([to y방향 [x방향]], 색1, 색2, [...]);
+            background: linear-gradient([각도], 색1, 색2, [...]);
+                - x방향: left, right
+                - y방향: top, bottom
+                - 각도: 숫자deg
+        */
+
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        .linear1 {
+            background: linear-gradient(180deg, red, yellow);
+        }
+
+        .linear2 {
+            /* 
+                0~10%: Red
+                10~20%: Red -> Yellow
+                20%~100%: Yellow
+            */
+            background: linear-gradient(red 10%, yellow 20%);
+        }
+        .linear3 {
+            /* 
+                0~70%: Red
+                70%~100%: Yellow
+            */
+            background: linear-gradient(to top, #F4F0E9 70%, rgb(203, 203, 149) 70%);
+        }
+        .linear4 {
+            /* 
+                background: repeating-linear-gradient(색1 p%, 색2 p%, ...);   
+            */
+            background: repeating-linear-gradient(red 10%, yellow 20%);
+        }
+
+        /* 
+            background: radial-gradient([circle|기준 at 중심점], 색1 [p%], 색 [p%], [...]);
+                - circle을 쓰면 원, 안쓰면 타원
+                - 기준
+                    1. closest-side: 시작점에서 가까운 쪽의 면까지 점진적으로 채움
+                    2. closest-corner: 시적점에서 가까운 쪽의 꼭지점까지 점진적으로 채움
+                    3. farthest-side: 시작점에서 멀리 떨어진 쪽의 면까지 점진적으로 채움
+                    4. farthest-corner: 시작점에서 멀리 떨어진 쪽의 꼭지점까지 점진적으로 채움
+                - 중심점: 숫자% 숫자%
+
+        */
+
+        .radial1 {
+            width: 200px;
+            height: 100px;
+            /* 
+                0 ~ 5%: red
+                5% ~ 15%: R -> Y
+                15% ~ 60%: Y -> G
+                60% ~ 100%: Green
+            */
+            background: radial-gradient(circle, red 5%, yellow 15%, green 60%);
+        }
+
+        /* 
+            background: repeating-radial-gradient(색1, 색2 p%, ...);
+        */
+
+        .radial2 {
+            background: repeating-radial-gradient(red, yellow 5%, green 10%);
+        }
+
+        p {
+            width: 100px;
+            height: 100px;
+            padding: 60px;
+        }
+        .rg1 {
+            background: radial-gradient(closest-side at 30% 30%, red, yellow, green);
+        }
+        .rg2 {
+            background: radial-gradient(closest-corner at 30% 30%, red, yellow, green);
+        }
+        .rg3 {
+            background: radial-gradient(farthest-side at 30% 30%, red, yellow, green);
+        }
+        .rg4 {
+            background: radial-gradient(farthest-corner at 30% 30%, red, yellow, green);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="linear1">박스</div>
+    <div class="linear2">박스</div>
+    <div class="linear3">박스</div>
+    <div class="linear4">박스</div>
+
+    <div class="radial1">박스</div>
+    <div class="radial2">박스</div>
+
+    <p class="rg1">박스</p>
+    <p class="rg2">박스</p>
+    <p class="rg3">박스</p>
+    <p class="rg4">박스</p>
+</body>
+
+</html>
