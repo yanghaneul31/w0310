@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form객체</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+
+
+  </style>
+
+
+
+
+</head>
+
+<body>
+  <form action="#" name="frm1">
+    <input type="search" name="search" placeholder="검색어입력"><br>
+    <input type="submit" value="확인">
+  </form>
+  <form action="#" name="frm2">
+    <input type="text" name="subject" placeholder="과목입력"><br>
+    <input type="password" name="credit" placeholder="학점입력"><br>
+    <input type="submit" value="확인">
+  </form>
+
+  <script>
+    /* 
+    폼 객체 선택
+    document.폼명.요소명
+    document.forms[idx].element[idx]
+    document.forms[idx][idx]
+    document.forms['폼명'].element['요소명']
+    document.forms['폼명']['요소명']
+
+    속성
+    value
+    checked
+    disabled
+    defaultValue
+    length
+
+    메서드
+    focus()
+    blur()
+    submit()
+    reset()
+    */
+   
+    //document.body -> body
+    //document.form_name
+
+    //폼 찾기 (선택)
+    const frm1_1 = document.querySelectorAll('form')[0];
+
+    const frm1 = document.frm1;
+    const frm1_2 = document.forms[0];
+    const frm2 = document.frm2;
+    const frm2_1 = document.forms[1];
+
+    //폼명.요소명.속성명 -> 속성값 출력
+    console.log(frm1.search.placeholder);
+    console.log(frm1_1.search.placeholder);
+    console.log(frm1_2.elements[0].placeholder);
+    console.log(document.forms['frm1'].elements['search'.placeholder]);
+
+
+    console.log(frm2.subject.placeholder);
+    console.log(document.forms[1][0].placeholder);
+    console.log(frm2_1[0].placeholder);
+    console.log(document.forms['frm2']['subject'].placeholder);
+
+    console.log(frm2.credit.placeholder);
+    console.log(document.forms[1][1].placeholder);
+    console.log(frm2_1[1].placeholder);
+
+
+  </script>
+</body>
+
+</html>

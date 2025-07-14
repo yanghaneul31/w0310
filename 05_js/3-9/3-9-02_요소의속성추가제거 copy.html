@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    .div {
+      position: absolute;
+      top: 100px;
+      left: -160px;
+      width: 200px;
+      height: 200px;
+      background: #718c00;
+      transition: .4s;
+    }
+
+    .active {
+      left: 0;
+    }
+
+    /* .div:hover {
+            left: 0;
+        } */
+  </style>
+</head>
+
+<body>
+
+  <button>HTML 속성 set</button>
+  <button>HTML 속성 get</button>
+  <button>HTML 속성 remove</button>
+  <div class="div">박스</div>
+
+  <script>
+    /*
+        DOM 요소 속성 추가/삭제
+        
+            메서드
+                attr('속성')
+                    요소의 속성 값을 가져온다.
+                attr('속성', 값)
+                    요소의 속성을 설정한다.
+                removeAttr('속성')
+                    요소의 속성을 제거한다.
+ 
+    */
+    // DOM 객체 선택
+    /* 
+    document.getElementByld('아이디')
+    document.getElementByClassname('클래스')
+    document.getElmentByTagname('태그명')
+    document.get
+    */
+    const bt0 = $('button').eq(0);
+    const bt1 = $('button').eq(1);
+    const bt2 = $('button').eq(2);
+    const div = $('div');
+
+    // 이벤트
+    /* 
+    객체 onclick = 함수;
+
+    객체.click(함수);
+    */
+    bt0.click(() => {
+      div.setAttribute('class', 'div active');
+      a.attr('href','https://fs-class.github.io/w0310');
+      a.attr('target','_blank');
+      a.attr('title','클릭하면 포트폴리오를 확인할 수 있습니다.');
+
+    });
+    /* 
+    setAttribute('속성',값)
+    getAttribute('속성')
+    removeAttribute('속성')
+
+    attr('속성',값)
+    attr('속성')
+    */
+    bt1.click(() => {
+      const res = div.attr('class');
+      console.log(res);
+    });
+    bt2.click(() => {
+      div.attr('class');
+      div.attr('class', 'div');
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    .div {
+       width: 200px;
+      height: 200px;
+      background: #718c00;
+      transition: .4s;
+    }
+     .m1{
+    color: red;
+   }
+     
+</style>
+  
+
+   
+  
+</head>
+
+<body>
+ <button>textContent</button>
+ <button>innerHTML</button>
+ <div id="content"></div>
+
+  <script>
+    const bt0 = document.querySelectorAll('button')[0];
+    const bt1 = document.querySelectorAll('button')[1];
+    const content = document.getElementById('content');
+  /* 
+  <태그 속성=값>내용</태그>
+
+   DOM 객체의 내용 변경 속성
+  textcontent
+  ->태그 인식x
+  innerHTML
+  문자 방식으로 요소를 생성하는 방법
+  -> 태그 인식
+  */
+
+ //이벤트
+ bt0.onclick = (function(){
+    content.text = ('<p class="m1">자바스크립트</p>')
+ });
+ bt1.onclick = (function(){
+   content.html = ('<p class="m1">자바스크립트</p>')
+ });
+
+  </script>
+</body>
+
+</html>
+ 
+ 
+ 
