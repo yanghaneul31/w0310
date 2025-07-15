@@ -1,0 +1,140 @@
+body {
+  background-image: url(./../images/index/header/bg.jpg);
+  /* margin: 0 auto; */
+}
+
+.ranking-container {
+  width: 1600px;
+  margin: 30px auto 0;
+}
+
+.ranking-header {
+  display: flex;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #666;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #5f2efc;
+  color: white;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.search-bar {
+  margin-left: auto;
+}
+
+.search-bar input {
+  margin-left: auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 200px;
+}
+
+.ranking-list {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #442eff;
+  border-radius: 20px;
+  padding: 20px;
+  height: 495px;
+  overflow: hidden;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid transparent;
+  /* 처음부터 border 자리를 확보 */
+  border-radius: 15px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.ranking-item:hover {
+  background-color: rgba(30, 0, 120, 0.3);
+  border: 2px solid #442eff;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+.ranking-item img {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.rank {
+  font-size: 24px;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  flex: 1;
+}
+
+.highlight {
+  background-color: rgba(30, 0, 120, 0.3);
+  border: 2px solid #442eff;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.ranking-container a {
+  font-family: 'Arial';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin: 30px auto 0;
+  background-color: #442eff;
+  color: white;
+  font-size: 32px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+a svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+.ranking-container a:hover {
+  background: #5f2efc;
+}
+
+.ranking-btn {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #5f2efc;
+  text-align: center;
+  border-radius: 20px;
+  line-height: 60px;
+  cursor: pointer;
+  margin-top: 20px;
+}

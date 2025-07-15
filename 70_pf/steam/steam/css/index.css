@@ -1,0 +1,386 @@
+@charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+body {
+  background-image: url(./../images/index/header/bg.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+
+/* sec1 */
+.container {
+  position: relative;
+  width: 100%;
+  height: 895px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  height: 895px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rects {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.rect {
+  width: 11px;
+  height: 37px;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: bottom;
+  transition: 0.3s;
+  box-shadow: 0 0 6px rgba(122, 61, 245, 0.3);
+}
+
+.rect.choice {
+  transform: scaleY(1.6);
+  opacity: 1;
+  background: white;
+  box-shadow: 0 0 15px rgba(122, 61, 245, 1);
+}
+
+/* sec2 */
+.sec_container {
+  background: url(/images/index/header/sec_bg.jpg)
+}
+
+.sec2_container {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.sec2_container h2 {
+  margin-left: 180px;
+}
+
+.sec2_slide_full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec2_card_slide {
+  position: relative;
+  width: 1500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sec2_slider {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 200%;
+  height: 550px;
+  padding: 20px;
+  transition: opacity .5s;
+}
+
+.sec2_card {
+  width: 280px;
+  height: 470px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.none {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.sec2_slide_btn {
+  width: 60px;
+  height: 130px;
+  text-align: center;
+  line-height: 130px;
+  background: transparent;
+  border: 3px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: .5;
+  transition: .3s;
+}
+
+.sec2_slide_btn:hover {
+  opacity: 1;
+}
+
+
+.sec2_notice {
+  width: 1580px;
+  margin: 0 auto;
+}
+
+.sec2_notice_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec2_notice_box img {
+  width: 750px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sec2_notice_box img:hover {
+  opacity: 0.7;
+}
+
+.sec2_notice h3 {
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.sec2_card_wrap:hover {
+  transform: scale(1.05);
+}
+
+.sec2_card_wrap {
+  z-index: 1;
+  width: 320px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.sec2_card_wrap p {
+  margin-top: 10px;
+}
+
+
+
+/* sec3 */
+.sec3_teaser_section {
+  padding: 60px 20px;
+  position: relative;
+}
+
+.sec3_teaser_section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  z-index: 0;
+}
+
+.sec3_teaser_section>* {
+  position: relative;
+  z-index: 1;
+}
+
+.sec3_title {
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  color: #fff;
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  gap: 20px;
+}
+
+.sec3_title span {
+  white-space: nowrap;
+}
+
+.gradient_line {
+  flex: 1;
+  height: 3px;
+  margin: 40px;
+  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+}
+
+.sec3_video_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 20px 30px 12px rgba(0, 0, 0, 0.8);
+  margin: 0 auto 40px;
+}
+
+.sec3_thumbnail_slider {
+  margin-top: 20px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.sec3_thumbnail_title {
+  margin: 80px 0 25px;
+  font-size: 25px;
+}
+
+/* 슬라이드 라디오 버튼 숨김 */
+input[type="radio"] {
+  display: none;
+}
+
+.sec3_slider_wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.sec3_thumbnail_track {
+  display: flex;
+  width: 300%;
+  /* 3슬라이드 */
+  transition: transform 0.5s ease-in-out;
+}
+
+.sec3_slide {
+  display: flex;
+  gap: 16px;
+  width: 33.3333%;
+  /* 3슬라이드 */
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sec3_slide img {
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.2s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.sec3_slide img:hover {
+  transform: scale(1.05);
+}
+
+/* 슬라이드 전환 */
+#sec3_slide1:checked~.sec3_thumbnail_slider .sec3_thumbnail_track {
+  transform: translateX(0%);
+}
+
+#sec3_slide2:checked~.sec3_thumbnail_slider .sec3_thumbnail_track {
+  transform: translateX(-33.3333%);
+}
+
+#sec3_slide3:checked~.sec3_thumbnail_slider .sec3_thumbnail_track {
+  transform: translateX(-66.6666%);
+}
+
+/* 화살표 버튼 공통 스타일 */
+.sec3_arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 50px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.sec3_arrow:hover {
+  opacity: 1;
+}
+
+.sec3_arrow img {
+  width: 35px;
+  height: 80px;
+  user-select: none;
+  pointer-events: none;
+  transition: .3s;
+}
+
+.sec3_arrow.left {
+  left: 0;
+}
+
+.sec3_arrow.right {
+  right: 0;
+}
+
+/* 각 버튼마다 라디오 연결 (loop 효과) */
+/* 왼쪽 버튼 (이전) */
+#sec3_slide1:checked~.sec3_thumbnail_slider label.sec3_left_slide3 {
+  display: flex;
+}
+
+#sec3_slide2:checked~.sec3_thumbnail_slider label.sec3_left_slide1 {
+  display: flex;
+}
+
+#sec3_slide3:checked~.sec3_thumbnail_slider label.sec3_left_slide2 {
+  display: flex;
+}
+
+/* 오른쪽 버튼 (다음) */
+#sec3_slide1:checked~.sec3_thumbnail_slider label.sec3_right_slide2 {
+  display: flex;
+}
+
+#sec3_slide2:checked~.sec3_thumbnail_slider label.sec3_right_slide3 {
+  display: flex;
+}
+
+#sec3_slide3:checked~.sec3_thumbnail_slider label.sec3_right_slide1 {
+  display: flex;
+}
+
+/* 기본적으로 버튼 숨기기 */
+.sec3_thumbnail_slider label.sec3_left_slide1,
+.sec3_thumbnail_slider label.sec3_left_slide2,
+.sec3_thumbnail_slider label.sec3_left_slide3,
+.sec3_thumbnail_slider label.sec3_right_slide1,
+.sec3_thumbnail_slider label.sec3_right_slide2,
+.sec3_thumbnail_slider label.sec3_right_slide3 {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* 위치 지정 */
+.sec3_thumbnail_slider label.sec3_left_slide1,
+.sec3_thumbnail_slider label.sec3_left_slide2,
+.sec3_thumbnail_slider label.sec3_left_slide3 {
+  left: 0;
+}
+
+.sec3_thumbnail_slider label.sec3_right_slide1,
+.sec3_thumbnail_slider label.sec3_right_slide2,
+.sec3_thumbnail_slider label.sec3_right_slide3 {
+  right: 0;
+}

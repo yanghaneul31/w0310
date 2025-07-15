@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steam 랭킹</title>
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/ranking.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header_top">
+      <div class="header_user">
+        <a href="./login.html" class="login">로그인</a>
+        <a href="./sign_up.html" class="sign_up">회원가입</a>
+        <div class="user_ui">
+          <img src="../images/index/header/person.png" alt="유저모양 아이콘">
+          <span class="username_show"></span>
+          <div class="profile_info">
+            <div class="mypage"><a href="./mypage.html">Mypage</a></div>
+            <button class="sign_out_btn">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_bottom">
+      <h1 class="logo">
+        <a href="../index.html"><img src="../images/index/header/logo.png" alt="스팀로고"></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li>
+            <a href="#" class="header_main">스토어</a>
+            <ul class="sub">
+              <li><a href="./store1.html">스토어</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">랭킹</a>
+            <ul class="sub">
+              <li><a href="./ranking.html">랭킹</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">커뮤니티</a>
+            <ul class="sub">
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./review.html">리뷰</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">고객센터</a>
+            <ul class="sub">
+              <li><a href="./qna.html">QnA</a></li>
+              <li><a href="./notice.html">공지사항</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">브랜드소개</a>
+            <ul class="sub">
+              <li><a href="./brand.html">브랜드소개</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ranking container -->
+  <div class="ranking-container">
+    <div class="ranking-header">
+      <div class="tab active">베스트 판매</div>
+      <div class="tab">가장 많이 플레이한 게임</div>
+      <div class="search-bar">
+        <input type="text" placeholder="검색" />
+      </div>
+    </div>
+
+    <div class="ranking-list">
+      <!-- 반복 요소 -->
+      <div class="ranking-item highlight">
+        <div class="rank">1</div>
+        <img src="../images/ranking/counter_strike.png" alt="Counter-Strike 2">
+        <div class="title">COUNTER - STRIKE 2</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">2</div>
+        <img src="../images/ranking/battle_grounds.png" alt="PUBG">
+        <div class="title">PUBG: BATTLEGROUNDS</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">3</div>
+        <img src="../images/ranking/starfiled.png" alt="스타필드">
+        <div class="title">스타필드 블레이드</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">4</div>
+        <img src="../images/ranking/fantasy_life_i.png" alt="Fantasy Life">
+        <div class="title">FANTASY LIFE :: 방랑길과 용과 시간을 훔치는 소녀</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">5</div>
+        <img src="../images/ranking/elden_ring.png" alt="Elden Ring">
+        <div class="title">ELDEN RING 별의 황제자</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">6</div>
+        <img src="../images/ranking/once_human.png" alt="Once Human">
+        <div class="title">ONCE HUMAN</div>
+      </div>
+
+      <div class="ranking-item">
+        <div class="rank">7</div>
+        <img src="../images/ranking/helldivers.png" alt="Helldivers 2">
+        <div class="title">HELLDIVERS™ 2</div>
+      </div>
+
+    </div>
+
+    <div class="ranking-btn">&#9660;</div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer_left">
+      <ul class="bmenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">비즈니스 협력</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+      <div class="blogo">
+        <a href="#"><img src="./../images/index/footer/blogo.png" alt="로고"></a>
+      </div>
+      <div class="copy">
+        <p>Copyright. COGNOSPHERE. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <div class="footer_right">
+      <div class="footer_icon">
+        <ul class="icon">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="btn_box"><a href="#" class="btn">맨 위로 돌아가기</a></div>
+  </footer>
+  <script src="../js/header.js"></script>
+  <script src="../js/ranking.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+@charset "utf-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+
+.overlay {
+  background: url(./../images/store1/bg.jpg);
+}
+
+/*sec1*/
+.sec1 {
+  height: 250px;
+
+  display: flex;
+}
+
+.search-box {
+  margin-top: 154px;
+  margin-left: 138px;
+  position: relative;
+  width: 420px;
+  height: 70px;
+}
+
+.search-input {
+  width: 100%;
+  height: 70px;
+  padding-left: 45px;
+  /* 아이콘 위치(15px) + 아이콘 크기 + 15px 간격 */
+  padding-right: 30px;
+  /* 오른쪽 여백 */
+  font-size: 16px;
+  line-height: 70px;
+  /* 높이와 맞춰서 세로 중앙 정렬 */
+  background: #434343;
+  border: none;
+  border-radius: 35px;
+  /* 높이 절반으로 둥글게 */
+  outline: none;
+  color: white;
+  text-align: right;
+  /* 텍스트 오른쪽 정렬 */
+  box-sizing: border-box;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  /* 왼쪽 여백 */
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+  pointer-events: none;
+  /* 아이콘 클릭 방지 */
+}
+
+/*sec2*/
+.sec2 {
+  height: 770px;
+}
+
+.sec2_container {
+  display: flex;
+  width: 1633px;
+  height: 700px;
+  margin: auto;
+  margin-top: px;
+}
+
+/*큰이미지*/
+.large-image-area {
+  width: 1272px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.large-image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.large-image-area img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*  확대 효과 */
+.large-image-area:hover img.active {
+  transform: scale(1.05);
+}
+
+/*클릭 할 이미지*/
+.thumbnail-area {
+  width: 360px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+
+
+  .thumbnail {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: background 0.3s;
+  }
+
+  .thumbnail.active {
+    border: 0.5px solid #3b3636;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.5);
+  }
+
+  .thumbnail p {
+    color: white;
+  }
+
+  .small-box {
+    padding-top: 5px;
+  }
+
+  .index_img {
+    width: 95px;
+    height: 120px;
+    object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+.small-box::before,
+.small-box::after {
+  content: "";
+  position: absolute;
+}
+
+.small-box::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.small-box::after {
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/*sec3*/
+.sec3 {
+  height: 600px;
+}
+
+.sec3 h2 {
+  color: #ce5ed2;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 75px;
+  padding-top: 80px;
+}
+
+.icon_list {
+  display: flex;
+  flex-wrap: wrap;
+  /* ✅ 2줄로 */
+  justify-content: center;
+  column-gap: 90px;
+  /* ✅ 좌우 간격 */
+  row-gap: 40px;
+  /* ✅ 위아래 간격 */
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.icon_list li {
+  width: 110px;
+  text-align: center;
+}
+
+.ocon_list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 수직 가운데 정렬 */
+  text-decoration: none;
+  color: black;
+}
+
+.icon_list img {
+  object-fit: contain;
+}
+
+.icon_list span {
+  display: block;
+  text-align: center;
+}
+
+/*sec4*/
+.sec4 {
+  height: 390px;
+}
+
+.adv {
+  width: 1645px;
+  height: 390px;
+  background: url(./../image/sec4.jpg);
+  margin: 0 auto;
+}
+
+/*sec5*/
+.sec5 {
+  height: 1380px;
+}
+
+.sec5 h2 {
+  padding-top: 120px;
+  padding-bottom: 64px;
+  padding-left: 150px;
+}
+
+.game_adv1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* ✅ 2줄로 */
+  justify-content: center;
+  column-gap: 30px;
+  /* ✅ 좌우 간격 */
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.img-wrapper2 {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-wrapper2 img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper2:hover img {
+  transform: scale(1.1);
+  /* ✅ 내부에서만 확대됨 */
+}
+
+.game_adv1 li {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.gav_adv1 p span {
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+  color: gray;
+}
+
+.game_adv1 p {
+  font-size: 20px;
+}
+
+.gav_adv1 .first {
+  color: #fff;
+}
+
+li a p:nth-of-type(2) {
+  color: #8d8d8d;
+}
+
+li a p span {
+  color: #b55edd;
+}
+
+.sale {
+  font-size: 24px;
+  width: 400px;
+  height: 80px;
+  display: block;
+  margin: 110px auto 0 auto;
+  border: none;
+  background-color: rgba(255, 100, 200, 0.3);
+  border-radius: 40px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sale:hover {
+  background: rgb(255, 100, 200);
+  box-shadow: 0 0 15px inset rgba(255, 255, 255, 0.8);
+  color: #fff;
+}
+
+/*sec6*/
+.sec6 {
+  height: 850px;
+}
+
+.sec6 h2 {
+  padding-top: 50px;
+  padding-bottom: 64px;
+  padding-left: 150px;
+}
+
+.main_cont {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.img-wrapper3 {
+  width: 520px;
+  height: 380px;
+}
+
+.img-wrapper3 img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper3:hover img {
+  transform: scale(1.05);
+  /* ✅ 내부에서만 확대됨 */
+}
+
+.cont_b {
+  display: flex;
+  margin-top: 50px;
+}
+
+.cont_b img {
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+}
+
+.cont_b p {
+  padding-left: 28px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+
+.cont_b span {
+  font-size: 19px;
+  color: #888;
+}
+
+/*sec7*/
+.sec7 {
+  height: 600px;
+  display: flex;
+  /* 중앙 정렬을 위해 */
+  justify-content: center;
+  /* 가로 가운데 */
+  align-items: center;
+  /* 세로 가운데 (선택) */
+}
+
+.sec7_cont {
+  display: flex;
+  gap: 43px;
+  /* ✅ 이미지 간격 */
+}
+
+.sec7 img {
+  width: 800px;
+  height: 408px;
+}

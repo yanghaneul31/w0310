@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>마이페이지</title>
+  <link rel="stylesheet" href="../css/mypage.css" />
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header">
+    <div class="header_top">
+      <div class="header_user">
+        <a href="./login.html" class="login">로그인</a>
+        <a href="./sign_up.html" class="sign_up">회원가입</a>
+        <div class="user_ui">
+          <img src="../images/index/header/person.png" alt="유저모양 아이콘">
+          <span class="username_show"></span>
+          <div class="profile_info">
+            <div class="mypage"><a href="./mypage.html">Mypage</a></div>
+            <button class="sign_out_btn">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_bottom">
+      <h1 class="logo">
+        <a href="../index.html"><img src="../images/index/header/logo.png" alt="스팀로고"></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li>
+            <a href="#" class="header_main">스토어</a>
+            <ul class="sub">
+              <li><a href="./store1.html">스토어</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">랭킹</a>
+            <ul class="sub">
+              <li><a href="./ranking.html">랭킹</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">커뮤니티</a>
+            <ul class="sub">
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./review.html">리뷰</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">고객센터</a>
+            <ul class="sub">
+              <li><a href="./qna.html">QnA</a></li>
+              <li><a href="./notice.html">공지사항</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">브랜드소개</a>
+            <ul class="sub">
+              <li><a href="./brand.html">브랜드소개</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main class="profile-page">
+    <aside class="left-panel">
+      <img src="../images/mypage/profile.jpg" alt="프로필 이미지" class="profile-img" />
+      <div class="user-info">
+        <div class="username"></div>
+        <button class="save-btn">보관함</button>
+      </div>
+      <div class="friend-list">
+        <h3>친구</h3>
+        <ul>
+          <li><img src="../images/mypage/friends1.jpg" alt="친구프로필1"/><span>friends1</span></li>
+          <li><img src="../images/mypage/friends2.webp" alt="친구프로필2"/><span>friends2</span></li>
+          <li><img src="../images/mypage/freinds3.jpg" alt="친구프로필3"/><span>friends3</span></li>
+          <li><img src="../images/mypage/freinds4.jpg" alt="친구프로필4"/><span>friends4</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="main-panel">
+      <div class="top-bar">
+        <h2>나의 업적</h2>
+        <button class="edit-btn">프로필 수정</button>
+      </div>
+
+      <div class="badges">
+        <div class="badge">
+          <div class="badge-icon-wrapper">
+            <div><img src="../images/mypage/bronze.png" alt="브론즈휘장"></div>
+          </div>
+          <div class="score">10 / 35</div>
+          <div class="label">일일 도전과제</div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon-wrapper">
+            <div><img src="../images/mypage/gold.png" alt="골드휘장"></div>
+          </div>
+          <div class="score">200 / 365</div>
+          <div class="label">통합 도전과제</div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon-wrapper">
+            <div><img src="../images/mypage/silver.png" alt="실버휘장"></div>
+          </div>
+          <div class="score">175 / 365</div>
+          <div class="label">보통 도전과제</div>
+        </div>
+      </div>
+
+      <div class="history">
+        <h3>활동 히스토리</h3>
+        <div class="game">
+          <img src="../images/mypage/history1.jpg" alt="게임 썸네일" />
+          <div class="info">
+            <strong>FEIGN</strong><br />
+            기록: 12시간<br />
+            마지막으로 플레이 한 날짜: 2025년 2월 15일
+          </div>
+        </div>
+        <div class="game">
+          <img src="../images/mypage/history2.jpg" alt="게임 썸네일" />
+          <div class="info">
+            <strong>슈퍼버니맨</strong><br />
+            기록: 200시간<br />
+            마지막으로 플레이 한 날짜: 2025년 3월 31일
+          </div>
+        </div>
+        <div class="game">
+          <img src="../images/mypage/history3.jpg" alt="게임 썸네일" />
+          <div class="info">
+            <strong>피코파크2</strong><br />
+            기록: 1시간<br />
+            마지막으로 플레이 한 날짜: 2025년 1월 20일
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer_left">
+      <ul class="bmenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">비즈니스 협력</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+      <div class="blogo">
+        <a href="#"><img src="../images/index/footer/blogo.png" alt="하단로고"></a>
+      </div>
+      <div class="copy">
+        <p>Copyright. COGNOSPHERE. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <div class="footer_right">
+      <div class="footer_icon">
+        <ul class="icon">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="btn_box"><a href="#" class="btn">맨 위로 돌아가기</a></div>
+  </footer>
+  <script src="../js/mypage.js"></script>
+  <script src="../js/header.js"></script>
+</body>
+
+</html>

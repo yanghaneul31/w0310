@@ -1,0 +1,14 @@
+@charset "utf-s";
+
+header{
+    background: url(/w0310/70_pf/mysite/image/♡.jpg) no-repeat 50% 50%/ cover fixed;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}

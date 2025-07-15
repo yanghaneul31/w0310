@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notice</title>
+  <link rel="stylesheet" href="./../css/notice.css">
+  <link rel="stylesheet" href="./../css/header.css">
+  <link rel="stylesheet" href="./../css/common.css">
+  <link rel="stylesheet" href="./../css/footer.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header_top">
+      <div class="header_user">
+        <a href="./login.html" class="login">로그인</a>
+        <a href="./sign_up.html" class="sign_up">회원가입</a>
+        <div class="user_ui">
+          <img src="../images/index/header/person.png" alt="유저모양 아이콘">
+          <span class="username_show"></span>
+          <div class="profile_info">
+            <div class="mypage"><a href="./mypage.html">Mypage</a></div>
+            <button class="sign_out_btn">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_bottom">
+      <h1 class="logo">
+        <a href="../index.html"><img src="../images/index/header/logo.png" alt="스팀로고"></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li>
+            <a href="#" class="header_main">스토어</a>
+            <ul class="sub">
+              <li><a href="./store1.html">스토어</a></li>
+
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">랭킹</a>
+            <ul class="sub">
+              <li><a href="./ranking.html">랭킹</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">커뮤니티</a>
+            <ul class="sub">
+              <li><a href="./news.html">새로운소식</a></li>
+              <li><a href="./review.html">리뷰</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">고객센터</a>
+            <ul class="sub">
+              <li><a href="./qna.html">QnA</a></li>
+              <li><a href="./notice.html">공지사항</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="header_main">브랜드소개</a>
+            <ul class="sub">
+              <li><a href="./brand.html">브랜드소개</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>중요사항안내</h2>
+    <div class="card_list">
+      <div class="card">
+        <ul>
+          <li><img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/spotlights/37ef16a0b8c34dbc0733393c/spotlight_image_english.jpg?t=1749071133"
+              alt="이미지1"></li>
+          <h3>[중요] 계정 보안 시스템 업데이트 안내</h3>
+          <p>모든 스팀 계정에 새로운 2단계 인증 기능이 추가됩니다.<br> 보안을 위해 설정을 권장드립니다.</p>
+          <a href="#">점검 | 운영자</a>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li><img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/spotlights/94edcd18d4249fe9cfe682a7/spotlight_image_english.jpg?t=1750701846"
+              alt="이미지2"></li>
+          <h3>스팀 여름 할인 2025 일정 공개</h3>
+          <p>2025년 여름 할인은 6월 20일부터 7월 4일까지 진행됩니다.<br> 수천 개의 게임이 할인 대상입니다</p>
+          <a href="#">GM소식 | 운영자</a>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li><img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/spotlights/fe024e9996a668f060128bde/spotlight_image_english.jpg?t=1748984693"
+              alt="이미지3"></li>
+          <h3>리눅스 클라이언트 성능 향상 업데이트</h3>
+          <p>리눅스 사용자를 위한 클라이언트 최적화로 적용되었습니다.<br> 다양한 호환성 문제가 개선되었습니다.</p>
+          <a href="#">공지 | 운영자</a>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li><img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/spotlights/65a0b02a5c6c479fa55fd6a7/spotlight_image_english.jpg?t=1748984172"
+              alt="이미지4"></li>
+          <h3>스팀 덱 호환성 인증 시스템 강화</h3>
+          <p>게임 개발자를 위한 스팀 덱 호환성 기준이 강화되었습니다.<br> 새로운 인증 마크도 도입됩니다.</p>
+          <a href="#">공지 | 운영자</a>
+        </ul>
+      </div>
+    </div>
+
+    <h2>스팀공지</h2>
+    <div class="tabs">
+      <input type="radio" name="tab" id="tab1" checked>
+      <label for="tab1">steam 공지</label>
+      <input type="radio" name="tab" id="tab2">
+      <label for="tab2">게임공지</label>
+
+      <div class="tab-content steam_notice">
+        <ul>
+          <li><span class="notice_txt">공지</span><a href="#">Steam 클라이언트 인터페이스 전면 리뉴얼 및 라이브러리 성능 개선 관련 안내</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Steam Deck 호환성 검토 기준 확대 및 관련 정보 표시 정책 변경 공지</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Steam 개발자 대시보드에 실시간 통계 시각화 기능 도입 예정 공지</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Steam 워크샵 인기 콘텐츠 필터 기능 신설 및 검색 시스템 개선 안내</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">사용자 계정 보안을 위한 이중 인증 방식 선택 옵션 업데이트 안내</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">2025년 하반기 Steam 할인 행사 및 특별 기획전 사전 일정 안내</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-content game_notice">
+        <ul>
+          <li><span class="notice_txt">공지</span><a href="#">CyberPulse: Night Runner 시즌 2 개막 및 신규 무기·맵·시네마틱 콘텐츠 추가
+              안내</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Mystic Woods 대형 업데이트 배포 – 신규 보스, 던전, 파티 시스템 개편 포함</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Battlefront Legacy 경쟁전 랭크 매치 시스템 정식 도입 및 전용 보상 공개</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Rogue Expedition 그래픽 최적화 및 고사양 기기 대응 렌더링 개선 사항 공지</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Skyward Realms 한정 테마 이벤트 '오로라의 계곡' 개시 및 특별 의상 출시 예고</a></li>
+          <li><span class="notice_txt">공지</span><a href="#">Dungeon Builders 유저 제작 맵 크리에이터 모드 정식 출시 및 공유 플랫폼 오픈</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer_left">
+      <ul class="bmenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">비즈니스 협력</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+      <div class="blogo">
+        <a href="#"><img src="./../images/index/footer/blogo.png" alt="로고"></a>
+      </div>
+      <div class="copy">
+        <p>Copyright. COGNOSPHERE. All Rights Reserved.</p>
+      </div>
+    </div>
+
+    <div class="footer_right">
+      <div class="footer_icon">
+        <ul class="icon">
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="btn_box"><a href="#" class="btn">맨 위로 돌아가기</a></div>
+  </footer>
+  <script src="./../js/header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(./../images/index/header/bg.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+.container {
+    margin: 30px auto;
+    width: 1400px;
+    height: 1400px;
+    padding: 40px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.container h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 10px 0 24px 20px;
+}
+
+.card_list {
+    display: flex;
+    gap: 24px;
+    width: 1280px;
+    height: 390px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0.4);
+    transition: .2s;
+}
+
+.card h3,
+.card p {
+    color: #fff;
+}
+
+
+
+.card_list .card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.card_list .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card_list .card img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 30px;
+}
+
+.card_list .card h3 {
+    font-size: 16px;
+    margin: 8px 0 12px 0;
+    padding: 10px;
+}
+
+.card_list .card p {
+    font-size: 12px;
+    margin-bottom: 24px;
+    min-height: 48px;
+}
+
+.card_list .card a {
+    display: inline-block;
+    padding: 6px 30px;
+    background: #28CB5B;
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+.card_list .card a:hover {
+    background: #005fa3;
+}
+
+/* tab:스팀공지/게임공지 */
+.tabs {
+    height: 700px;
+    position: relative;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    padding: 16px 32px;
+    width: 50%;
+    text-align: center;
+    margin-right: -5px;
+    cursor: pointer;
+}
+
+.tabs input:checked+label {
+    background: transparent;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+
+#tab1:checked~.steam_notice {
+    display: block;
+}
+
+#tab2:checked~.game_notice {
+    display: block;
+}
+
+.notice_txt {
+    color: #28CB5B;
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+
+.tab-content ul>li {
+    height: 100px;
+    line-height: 100px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-content a {
+    color: #fff;
+    transition: .3s;
+}
+
+.tab-content a:hover {
+    color: aquamarine;
+    /* text-decoration: underline; */
+}

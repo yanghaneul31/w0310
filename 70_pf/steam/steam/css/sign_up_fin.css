@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+body {
+    background:  linear-gradient(rgba(0,0,0,0.6)), url(./../images/sign_up/sign_up_bg.jpg);
+}
+.box {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #fff;
+    margin: 15% auto;
+    text-align: center;
+    line-height: 200px;
+    backdrop-filter: blur(7px);
+}
+.box p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.home,.login {
+    width: 100px;
+    height: 60px;
+    color:white;
+    background: #0f2a6d;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #1e419b;
+}
