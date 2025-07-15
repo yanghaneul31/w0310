@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>children()</title>
+    <!-- CDN 방식: 제이쿼리 라이브러리 파일 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        div {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>오렌지</li>
+    </ul>
+
+    <script>
+        /* 
+            HTML/CSS 메서드
+                $(부모요소).append(자식요소) - 자식요소를 부모요소 맨 뒤에 추가한다.
+                $(부모요소).prepend(자식요소) - 자식요소를 부모요소 맨 앞에 추가한다.
+        */
+
+        $(function () {
+            $('ul').append('<li>딸기</li>');
+            $('ul').prepend('<li>수박</li>');
+        });
+    </script>
+</body>
+
+</html>

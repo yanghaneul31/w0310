@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS5 레이아웃</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--
+        중단점
+            Extra small         None    576미만
+            Small               sm      576이상
+            Medium              md      768이상
+            Large               lg      992이상
+            Extra large         xl      1200이상
+            Extra extra large   xxl     1400이상
+
+        컨테이너
+            .container-*
+                *는 sm, md, lg, xl, xxl
+            .container-fluid -> width:100%;
+
+            예) .container 또는 .container-sm 일때
+                장치해상도  max-width -> 좌우 각 12px 패딩의 합
+                576미만     100%
+                576이상     540
+                768이상     720
+                992이상     960
+                1200이상    1140
+                1400이상    1320
+
+            예) .container-lg 일때
+                장치해상도  max-width -> 좌우 각 12px 패딩의 합
+                576미만     100%
+                576이상     100%
+                768이상     100%
+                992이상     960
+                1200이상    1140
+                1400이상    1320
+
+        그리드
+            .row
+            .col
+        열
+            .col-숫자
+                숫자는 1~12까지 정수
+
+            .col[-*][-*]
+                첫 번째 *은 sm, md, lg, xl, xxl
+                두 번째 *은 1~12까지 정수
+        거터
+    -->
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col bg-primary-subtle">3</div>
+            <div class="col bg-warning-subtle">3</div>
+            <div class="col bg-success-subtle">3</div>
+            <div class="col bg-secondary-subtle">3</div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- 열의 수는 최대 12 -->
+            <div class="col-2 bg-primary-subtle">2</div>
+            <div class="col-4 bg-warning-subtle">4</div>
+            <div class="col-4 bg-success-subtle">4</div>
+            <div class="col-2 bg-secondary-subtle">2</div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 bg-primary-subtle">3</div>
+            <div class="col-sm-6 col-md-3 bg-warning-subtle">3</div>
+            <div class="col-sm-6 col-md-3 bg-success-subtle">3</div>
+            <div class="col-sm-6 col-md-3 bg-secondary-subtle">3</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

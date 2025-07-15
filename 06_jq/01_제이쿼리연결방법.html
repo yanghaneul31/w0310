@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리연결방법</title>
+      <!-- 
+    제이쿼리 공식 사이트
+   https://jquery.com/
+    -->
+  <!--  <script src="./jquery-3.7.1.min.js"></script>
+   <script src="./jquery-3.7.1.js"></script> -->
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <!--  <script src="https://fs-class.github.io/w0310/06_jq/jquery-3.7.1.min.js"></script> -->
+   <!-- google cdn -->
+ <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+   <!-- ms cdn -->
+  <!--  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.7.1.min.js"></script> -->
+   <!-- cdnjs.com -->
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+</head>
+<body>
+  <button type="button">버튼</button>
+  <script>
+    $(document).ready(function(){
+       //실행문; 
+       document.write('Hello!');
+    });
+    
+    $(function(){
+        //실행문;
+        document.write('Hello!');
+    });
+    //익명 함수는 화살표 함수로 대체가능
+    $(()=>{
+        //실행문;
+        document.write('Hello!');
+    });
+  </script>
+</body>
+</html>

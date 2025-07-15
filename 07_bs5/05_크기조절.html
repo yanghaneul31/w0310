@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS5 색상</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 
+        크기 조절
+            너비(width)
+                w-*
+                    *는 25, 50, 75, 100, auto
+                    단위는 % -> 기준은 부모
+            높이(height)
+                h-*
+                    *는 25, 50, 75, 100, auto
+    -->
+
+    <!-- 너비 -->
+    <div class="w-25 p-3 bg-primary">Width 25%</div>
+    <div class="w-50 p-3 bg-secondary">Width 50%</div>
+    <div class="w-75 p-3 bg-success">Width 75%</div>
+    <div class="w-100 p-3 bg-info">Width 100%</div>
+    <div class="w-auto p-3 bg-danger">Width auto</div>
+
+
+    <!-- 높이 -->
+    <div style="height: 200px;">
+        <div class="h-25 d-inline-block bg-primary w-25">Height 25%</div>
+        <div class="h-50 d-inline-block bg-secondary w-25">Height 50%</div>
+        <div class="h-75 d-inline-block bg-success w-25">Height 75%</div>
+        <div class="h-100 d-inline-block bg-info w-25">Height 100%</div>
+        <div class="h-auto d-inline-block bg-danger w-25">Height auto</div>
+    </div>
+
+</body>
+
+</html>
