@@ -5,21 +5,33 @@
 }
 
 body {
-    background-image: url(../images/index/header/bg.jpg);
-    background-repeat: repeat-y;
-    font: 16px/1.6 'Noto Sans Kr',sans-serif;
-    color:#fff;
+    font: 16px/1.6 'Noto Sans Kr', sans-serif;
+    color: #fff;
+    margin: 0;
 }
+
 ul {
     list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
 }
+
 img {
-    width: 100%;
     height: auto;
-    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body {
+    margin: 0;
 }

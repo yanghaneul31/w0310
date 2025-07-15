@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./../css/common.css">
+    <link rel="stylesheet" href="./../css/login.css">
+
+</head>
+
+<body>
+    <div class="bg_list">
+        <div class="overlay"></div>
+        <div class="inner active"><img src="./../images/login/login_bg.jpg" alt=""></div>
+        <div class="inner"><img src="./../images/login/login_bg2.png" alt=""></div>
+        <div class="inner"><img src="./../images/login/login_bg3.png" alt=""></div>
+    </div>
+    <div class="login_box">
+        <form action="">
+            <div class="login_box_top">
+                <div><a href="./../index.html"><img src="./../images/login/logo_symbol.png" alt="스팀로고심볼"></a></div>
+                <h2>로그인</h2>
+            </div>
+            <div class="input_box">
+                <input type="id" id="username" required>
+                <label for="id">Enter Username</label>
+            </div>
+            <div class="input_box">
+                <input type="password" id="password" placehorder="Password" required>
+                <label for="password">Enter Password</label>
+                <div class="toggle" id="open"><img src="./../images/login/eye.svg" alt="보이기"></div>
+                <div class="toggle show" id="close"><img src="./../images/login/eye-off.svg" alt="숨기기"></div>
+            </div>
+
+            <button type="button" class="login">로그인</button>
+
+            <div class="login_box_bottom">
+                <p>또는 다른 계정으로 로그인</p>
+                <div class="other">
+                    <div class="box"><i class="fa-brands fa-facebook-f"></i></div>
+                    <div class="box"><i class="fa-brands fa-google"></i></div>
+                    <div class="box"><i class="fa-brands fa-apple"></i></div>
+                    <div class="box"><i class="fa-brands fa-xbox"></i></div>
+                </div>
+                <a href="sign_up.html" class="sign_up">회원가입</a>
+            </div>
+        </form>
+    </div>
+    <script src="./../js/login.js"></script>
+</body>
+
+</html>

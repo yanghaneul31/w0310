@@ -5,7 +5,7 @@ body {
 
 .ranking-container {
   width: 1600px;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 
 .ranking-header {
@@ -116,15 +116,14 @@ body {
 
 }
 
-/* a svg {
+a svg {
   width: 32px;
   height: 32px;
   fill: white;
-} */
+}
 
 .ranking-container a:hover {
   background: #5f2efc;
-
 }
 
 .ranking-btn {
