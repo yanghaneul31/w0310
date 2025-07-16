@@ -3,12 +3,40 @@
 header{
     background: url(/w0310/70_pf/mysite/image/♡.jpg) no-repeat 50% 50%/ cover fixed;
 }
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+/* typo */
+body {
+  font-family: Georgia, serif;
 }
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+
+p,
+footer {
+  font-family: Arial, Helvetica, sans-serif;
 }
-p{
-    font-family: Arial, Helvetica, sans-serif;
+
+nav a:hover {
+  color: #333 !important;
+}
+
+nav a {
+  vertical-align: middle;
+}
+
+nav li:nth-of-type(1)::after {
+  content: "●";
+  color: #999;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+footer li:first-of-type::after {
+  content: "｜";
+  font-size: 20px;
+  color: #ccc;
+  vertical-align: middle;
+  margin-left: 24px;
+}
+
+footer a {
+  vertical-align: middle;
 }
