@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 기본 선택자</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">로고</div>
+        <div class="util">회원가입</div>
+        <nav id="gnb">
+            <ul>
+                <li>메뉴1
+                    <ul>
+                        <li>메뉴1_1</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="visual">
+            <p>비주얼</p>
+        </div>
+        <div id="content">
+            <div class="left">왼쪽</div>
+            <div class="right">
+                <div class="util">오른쪽</div>
+            </div>
+        </div>
+        <div id="banner">배너</div>
+        <footer id="footer">푸터</footer>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            형식: 
+                $('선택자')
+
+            선택자의 종류
+                태그        태그명                  $('p')
+                id          #id명                   $('#gnb')
+                class       .class명                $('.logo')
+
+                하위        부모 자식(손자포함)     
+                    $('div .util')
+                    -> div의 하위 요소 중 .util 클래스 요소
+                자식        부모>자식               
+                    $('div>.util')
+                    -> div의 .util 클래스 인 자식 요소
+                형제        형~모든제               
+                    $('.a~.b')
+                    -> .a 클래스 아래에 있는 .b를 가진 모든 요소
+                인접형제    형+제              
+                    $('.a+.b')
+                    -> .a 클래스 바로 아래에 있는 .b 클래스 요소 1개
+                종속                                
+                    $('div.util')
+                    -> div 이면서 .util 클래스 요소
+
+                그룹
+                    $('선택자1, 선택자2, ...')
+                    -> 속성과 메서드 처리 등 같은 명령어를 실행할 경우
+                전체
+                    $('*')
+
+        */
+        $(()=>{
+            const p = $('p');
+
+            /* 
+                객체.style.속성 = 값;
+                객체.css('속성', 값);
+                객체.css({속성: 값, 속성:값, ...});
+            */
+
+            p.css('border', '4px solid red');
+            p.css({border: '4px solid red'});
+            $('#gnb').css('border', '4px solid orange');
+            $('.logo').css('border', '4px solid yellow');
+            $('#gnb>ul>li').css('border', '4px solid green');
+            $('#gnb ul').css('border', '4px solid blue');
+            $('#visual + #content').css('border', '4px solid navy');
+            $('#visual ~ #footer').css('border', '4px solid purple');
+            $('div.util').css('border', '4px solid pink');
+            $('.left,.right,#banner').css('border', '4px solid gray');
+        });
+    </script>
+</body>
+
+</html>

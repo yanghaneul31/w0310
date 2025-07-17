@@ -1,42 +1,67 @@
 @charset "utf-s";
-
-header{
-    background: url(/w0310/70_pf/mysite/image/♡.jpg) no-repeat 50% 50%/ cover fixed;
-}
+@import url('common.css');
 
 /* typo */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
-  font-family: Georgia, serif;
+    font-family: "Noto Serif", serif;
 }
 
 p,
-footer {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-nav a:hover {
-  color: #333 !important;
-}
-
-nav a {
-  vertical-align: middle;
-}
-
-nav li:nth-of-type(1)::after {
-  content: "●";
-  color: #999;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-footer li:first-of-type::after {
-  content: "｜";
-  font-size: 20px;
-  color: #ccc;
-  vertical-align: middle;
-  margin-left: 24px;
-}
-
 footer a {
-  vertical-align: middle;
+    font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 940px;
+}
+
+img {
+    max-width: 100px;
+}
+
+/* a tag hover effect */
+nav a:hover {
+    color: #111 !important;
+}
+
+nav a,
+footer a {
+    vertical-align: middle;
+}
+
+nav li:first-of-type::after {
+    content: '●';
+    font-size: 8px;
+    color: #999;
+    vertical-align: middle;
+    margin: 0 16px;
+}
+
+/* Background Image Parallex Scrolling */
+header {
+    background: url(/w0310/70_pf/mysite/image/다운로드.jpg) no-repeat 50% 50%/cover fixed;
+}
+
+footer li:first-of-type a {
+    font-size: 32px !important;
+}
+
+
+@media (min-width: 768px) {
+    footer li:first-of-type::after {
+        content: '｜';
+        font-size: 20px;
+        color: #ccc;
+        vertical-align: middle;
+        margin-left: 4px;
+    }
 }

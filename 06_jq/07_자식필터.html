@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+    자식 필터 선택자
+    :first-child
+    :last-child
+    :first-of-type
+    :last-of-type
+    :nth-child(n)
+    :nth-last-type(n) 
+    :nth-of-type(n)
+    :nth-last--of-type
+    :only-child
+    :only-of-type
+
+   
+    -->
+    <script>
+        $(()=>{
+     $("#m1> span:first-child").css("border","2px solid red");
+     $("#m1> span:last-child").css("border","2px solid red");
+     $("#m2> span:first-of-type").css("border","2px solid orange");
+     $("#m2> span:last-of-type").css("border","2px solid orange");
+     $("#m3> span:nth-child(1)").css("border","2px solid yellow");
+     $("#m3> span:nth-last-child(1)").css("border","2px solid yellow");
+     $("#m4> span:nth-of-type(1)").css("border","2px solid green");
+     $("#m4> span:nth-last-of-type(1)").css("border","2px solid green");
+     $("#m5> span:only-child").css("border","2px solid blue");
+     $("#m6> span:only-of-type").css("border","2px solid navvy");
+    </script>
+});
+</body>
+</html>
