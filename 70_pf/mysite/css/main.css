@@ -1,5 +1,5 @@
 @charset "utf-s";
-@import url('common.css');
+@import url('/css/common.css');
 
 /* typo */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
@@ -48,7 +48,7 @@ nav li:first-of-type::after {
 
 /* Background Image Parallex Scrolling */
 header {
-    background: url(/w0310/70_pf/mysite/image/다운로드.jpg) no-repeat 50% 50%/cover fixed;
+    background: url(/image/♡.jpg) no-repeat 50% 50%/cover fixed;
 }
 
 footer li:first-of-type a {
