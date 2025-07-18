@@ -48,7 +48,7 @@ nav li:first-of-type::after {
 
 /* Background Image Parallex Scrolling */
 header {
-    background: url(/image/♡.jpg) no-repeat 50% 50%/cover fixed;
+    background: url(../image/다운로드.jpg) no-repeat 50% 50%/cover fixed;
 }
 
 footer li:first-of-type a {

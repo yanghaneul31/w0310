@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 기울기 애니메이션</title>
+<style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f5f5;
+  margin: 0;
+}
+
+.tilt-image img {
+  width: 300px;
+  animation: tilt 2s ease-in-out infinite alternate;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="tilt-image">
+    <img src="./images/KakaoTalk_20250717_162333611.png" alt="명상하는 사람">
+  </div>
+</body>
+</html>

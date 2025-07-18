@@ -1,0 +1,71 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #001833;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
+  overflow: hidden;
+}
+
+/* 구름 스타일 */
+.cloud {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  height: 150px;
+  background: url('../images/구름2.png') no-repeat center/contain;
+  animation: moveCloud 30s linear infinite;
+  opacity: 0.7;
+}
+
+.cloud1 {
+  left: -300px;
+  animation-delay: 0s;
+}
+
+.cloud2 {
+  top: 100px;
+  left: -600px;
+  animation-delay: 15s;
+}
+
+/* 구름 이동 애니메이션 */
+@keyframes moveCloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200vw);
+  }
+}
+
+/* 글씨 애니메이션 */
+.floating-text {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  top: 120px;
+  width: 80%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+  animation: floatText 4s ease-in-out infinite;
+}
+
+/* 글씨 부유 애니메이션 */
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
