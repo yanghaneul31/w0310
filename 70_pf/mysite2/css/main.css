@@ -1,0 +1,31 @@
+@charset "utf-s";
+@import url('./reset.css');
+
+/* typo */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+
+}
+
+.ls10 {
+    letter-spacing: 10px;
+}
+
+p,
+footer a {
+    font-family: 'Pretendard-Regular', Helvetica, sans-serif;
+}
+
+#sec1 {
+    height: 100vh;
+    background: url(../images/10011.jpg) no-repeat 50% 50%/cover fixed;
+}
