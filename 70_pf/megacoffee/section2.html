@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메가커피: section2</title>
+   <!--  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+   -->
+   <link rel="stylesheet" href="./css/section2.css">
+</head>
+<body>
+    <!-- 콘텐츠 섹션들 -->
+  <div class="container">
+        <div class="section1">Section 1</div>
+        <!-- section2 -->
+        <div id="section2">
+            <h2>메가MGC커피 여름시즌 신메뉴</h2>
+            <p>최근 한 달동안 인기있는 여름시즌 신메뉴입니다.</p>
+
+            <!-- tabs -->
+             <div id="tabs">
+
+                <!-- tabs menu button -->
+                <ul id="tabs_btn">
+                    <li><a href="#tabs-1">전체</a></li>
+                    <li><a href="#tabs-2">2~30대</a></li>
+                    <li><a href="#tabs-3">4~50대</a></li>
+                    <li><a href="#tabs-4">6~70대</a></li>
+                </ul>
+
+                <!-- tab contents -->
+                <div id="tabs-1">
+                   <div>
+                       <div><img src="./images/10020.jpg" alt="왕메가헛개리카노"></div>
+                       <h3>1위. 왕메가헛개리카노</h3>
+                   </div>
+                   <div>
+                       <div><img src="./images/10022.jpg" alt="왕메가사과유자"></div>
+                       <h3>2위. 왕메가사과유자</h3>
+                   </div>
+                   <div>
+                       <div><img src="./images/10025.jpg" alt="엠지씨네 와앙 메가칩"></div>
+                       <h3>3위. 엠지씨네 와앙 메가칩</h3>
+                   </div>
+                </div>
+
+                <div id="tabs-2">
+                   
+                   <div>
+                       <div><img src="./images/10022.jpg" alt="왕메가사과유자"></div>
+                       <h3>1위.왕메가사과유자</h3>
+                   </div>
+                   <div>
+                       <div><img src="./images/10020.jpg" alt="왕메가헛개리카노"></div>
+                       <h3>2위. 왕메가헛개리카노</h3>
+                   </div>
+                   <div>
+                       <div><img src="./images/10025.jpg" alt="엠지씨네 와앙 메가칩"></div>
+                       <h3>3위. 엠지씨네 와앙 메가칩</h3>
+                   </div>
+                </div>
+
+                <div id="tabs-3">
+                     <div>
+                         <div><img src="./images/10025.jpg" alt="엠지씨네 와앙 메가칩"></div>
+                                            <h3>1위. 엠지씨네 와앙 메가칩</h3>
+                     </div>
+                   <div>
+                       <div><img src="./images/10022.jpg" alt="왕메가사과유자"></div>
+                       <h3>2위.왕메가사과유자</h3>
+                   </div>
+                  <div>
+                      <div><img src="./images/10020.jpg" alt="왕메가헛개리카노"></div>
+                       <h3>3위. 왕메가헛개리카노</h3>
+                  </div>
+                   
+                </div>
+
+                <div id="tabs-4">
+                    <div>
+                        <div><img src="./images/10020.jpg" alt="왕메가헛개리카노"></div>
+                                           <h3>1위. 왕메가헛개리카노</h3>
+                    </div>
+                   <div>
+                       <div><img src="./images/10022.jpg" alt="왕메가사과유자"></div>
+                       <h3>왕메가사과유자</h3>
+                   </div>
+                   <div>
+                       <div><img src="./images/10025.jpg" alt="엠지씨네 와앙 메가칩"></div>
+                       <h3>3위. 엠지씨네 와앙 메가칩</h3>
+                   </div>
+                </div>
+             </div>
+        </div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <footer id="footer">Footer Area</footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+   <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 탐색 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <a href="#">1</a>
+        <span>2</span>
+    </div>
+    <div id="m2">
+        <div>
+            <a href="#">3</a>
+            <a href="#">3</a>
+            <span>4</span>
+            <span>4</span>
+        </div>
+    </div>
+    <div id="m3">
+        <div>
+            <span>5</span>
+        </div>
+    </div>
+    <div id="m4">
+        <span class="m">6</span>
+        <span>7</span>
+        <span>8</span>
+        <em>9</em>
+    </div>
+    <div id="m5">
+        <span class="m">10</span>
+        <span>11</span>
+        <span>12</span>
+    </div>
+    <div id="m6">
+        <div><span>13</span></div>
+        <div>14</div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            탐색 메서드
+                children(['선택자'])
+                    - 모든 자식 요소 선택
+                    - 선택자에 해당하는 자식 요소 선택
+                    
+                parent(['선택자'])
+                    부모(조상x)
+
+                parents(['선택자'])
+                    모든 부모(조상 포함)
+
+                closest('선택자')
+                    선택자에 해당하는 가장 가까운 부모 요소 선택(자신 포함)
+
+                next()
+                다음 요소 하나
+
+                nextAll()
+                다음 요소들 모두
+
+                nextUntil('요소')
+                다음 요소부터 요소2 이전까지 (요소2는 포함x)
+
+                prev()
+                이전 요소
+
+                prevAll()
+                이전 요소들 모두
+
+                prevUntil()
+                이전 요소부터 요소2 전까지
+
+                siblings(['선택자'])
+                형제 요소 모두 선택 또는
+                선택자에 해당하는 형제 요소 모두 선택
+                -> 형이든 동생이든 관계없이 모두 선택
+
+                부모요소.find('선택자')
+                부모 요소의 하위 요소 중 선택자에 해당하는 요소 선택
+                예)$('div').find(.'m')
+                ->div의 하위 요소 중 클래스가 m인 요소 선택
+
+                요소.filter('선택자')
+                요소 중 선택자를 가지고 있는 요소 선택
+                예)$('div').filter('.m')
+                ->클래스가 m인 div요소 선택
+
+                not()
+                has()
+                eq()
+                gt()
+                lt()
+
+        */
+        $(() => {
+
+            // 메서드 체이닝
+            $('#m1').children().css({border: '2px solid red'});
+            $('#m2').children().css({border: '1px dotted blue'});
+            $('#m2').children().parent().css({border: '2px dashed green'});
+            $('#m2').css({border: '2px dashed green'});
+            $('#m2').children().children('span').css({fontStyle: 'italic'});
+            $('#m2').children().children('span').css({'font-style': 'italic'});
+            $('#m2').children().children('span').parents('div').css({border: '2px solid orange'});
+            
+            // 숫자만 쓰면 px
+            $('#m2').css({marginBottom: 40});
+
+            $('#m3 span').closest('div').css({border: '2px solid red'});
+            $('#m3').css({border: '2px solid blue', marginBottom: '40px'});
+
+            $('#m4').html('여기서 부터 #m4입니다.');
+            $('#m4 > span.m').nextUntil('em').css({border: '2px solid red'});
+            $('#m5 > span').filter('.m').css({border: '2px solid red'});
+            $('#m6 > div').has('span').css({border: '2px solid red'});
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

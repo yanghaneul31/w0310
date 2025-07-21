@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* tyop system */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+    font-style: 10px;
+    /* 변수 선언 */
+    --gray1:#111;
+}
+
+body{
+    font:1.6rem/1.5 "Noto Sans KR",sans-serif;
+    color:var(--gray1);
+}
+/* sections */
+#container > div {
+height: 100vh;
+}

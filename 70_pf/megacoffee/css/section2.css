@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import url('./reset.css');
+@import url('./common.css');
+
+#section2 {
+    background: lightblue;
+    padding: 80px;
+}
+
+#section2 h2 {
+    font-style: 4.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #111;
+}
+
+#section2 p {
+    text-align: center;
+    color: #555;
+    margin: 36px 0 60px 0;
+}
+
+#tabs {
+    position: relative;
+    width: 1128px;
+    margin: 0 auto;
+}
+
+#tabs_btn {
+    position: absolute;
+    left: 643px;
+    top: 0px;
+}
+
+#tabs_btn li {
+    display: inline-block;
+}
+
+/* tab contents */
+/* top1 */
+#tabs>div>div:first-of-type div {
+    width: 580px;
+    height: 433px;
+    border: 1px solid #ccc;
+}
+
+/* top1 title */
+#tabs>div>div:first-of-type h3 {
+    position: absolute;
+    left: 643px;
+    top: 48px;
+    font-style: 3.6rem;
+    font-weight: 700;
+}
+/* top 2와 3 */
+#tabs>div>div:first-of-type ~ div{
+    position: absolute;
+    left: 645px;
+    top: 210px;
+}
+#tabs>div>:first-of-type ~ div div{
+     width: 225px;
+    height: 170px;
+    padding: 0px 27px 0px 26px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+}
+
+/* top3 */
+#tabs>div>div:nth-of-type(3) {
+    position: absolute;
+    left: 903px;
+    top: 210px;
+}
+
+#tabs>div>div:nth-of-type(3) div {
+    width: 225px;
+    height: 170px;
+    padding: 0px 27px 0px 26px;
+    border: 1px solid #ccc;
+
+}
