@@ -1,19 +1,32 @@
 @charset "utf-8";
 
-/* tyop system */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&display=swap');
-
-:root{
-    font-style: 10px;
-    /* 변수 선언 */
-    --gray1:#111;
+/* color system */
+:root {
+    font-size: 10px;
+    /* 변수 선언은 :root에 정의한다. */
+    --gray1: #111;
+    --gray2: #555;
+    --main: #FFDB00;
+    /* --main: #0065fc; */
 }
 
-body{
-    font:1.6rem/1.5 "Noto Sans KR",sans-serif;
-    color:var(--gray1);
+/* typo system */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font: 1.6rem/1.5 "Noto Sans KR", sans-serif;
+    /* 변수 사용! */
+    color: var(--gray1);
 }
+h2 {
+    font-size: 4.5rem;
+    font-weight: 200;
+}
+h3 {
+    font-weight: 200;
+}
+
 /* sections */
 #container > div {
-height: 100vh;
+    height:100vh;
 }

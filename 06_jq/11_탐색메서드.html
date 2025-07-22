@@ -30,20 +30,31 @@
             <span>5</span>
         </div>
     </div>
+
     <div id="m4">
-        <span class="m">6</span>
-        <span>7</span>
-        <span>8</span>
         <em>9</em>
+        <span>7</span>
+        <span class="m">6</span>
+        <p>나는 p이다.</p>
+        <span>8</span>
     </div>
+
     <div id="m5">
         <span class="m">10</span>
         <span>11</span>
+        <span class="m">10</span>
         <span>12</span>
     </div>
+
     <div id="m6">
-        <div><span>13</span></div>
+        <div class="m"><span>13</span></div>
         <div>14</div>
+        <div>
+            <section><span>15</span></section>
+        </div>
+        <div>16</div>
+        <div><span>17</span></div>
+        <div>18</div>
     </div>
 
 
@@ -52,80 +63,114 @@
     <script>
         /* 
             탐색 메서드
-                children(['선택자'])
+
+                // 부모 자식 관계
+
+                부모요소.children(['선택자'])
                     - 모든 자식 요소 선택
                     - 선택자에 해당하는 자식 요소 선택
-                    
-                parent(['선택자'])
+                자식요소.parent(['선택자'])
                     부모(조상x)
-
-                parents(['선택자'])
+                자식요소.parents(['선택자'])
                     모든 부모(조상 포함)
 
-                closest('선택자')
+                자식요소.closest('선택자')
                     선택자에 해당하는 가장 가까운 부모 요소 선택(자신 포함)
 
-                next()
-                다음 요소 하나
+                부모요소.find('선택자') -> 하위 요소
+                    부모 요소의 하위 요소 중 선택자에 해당하는 요소 선택
+                    예) $('div').find('.m')
+                    -> div의 하위 요소 중 클래스가 m인 요소 선택
 
-                nextAll()
-                다음 요소들 모두
+                요소.filter('선택자') -> 자기 자신
+                    요소 중 선택자를 가지고 있는 요소 선택
+                    예) $('div').filter('.m')
+                    -> 클래스가 m인 div 요소 선택
 
-                nextUntil('요소')
-                다음 요소부터 요소2 이전까지 (요소2는 포함x)
 
-                prev()
-                이전 요소
 
-                prevAll()
-                이전 요소들 모두
 
-                prevUntil()
-                이전 요소부터 요소2 전까지
+                // 형제 관계
 
-                siblings(['선택자'])
-                형제 요소 모두 선택 또는
-                선택자에 해당하는 형제 요소 모두 선택
-                -> 형이든 동생이든 관계없이 모두 선택
+                요소.next(['선택자'])
+                    다음 요소 -> CSS의 +선택자
+                요소.nextAll(['선택자'])
+                    다음 요소들 모두 -> CSS의 ~선택자
+                요소.nextUntil(['선택자'])
+                    다음 요소부터 선택자 전까지 (선택자는 포함x)
+                요소.prev(['선택자'])
+                    이전 요소
+                요소.prevAll(['선택자'])
+                    이전 요소들 모두
+                요소.prevUntil(['선택자'])
+                    이전 요소부터 선택자 전까지
 
-                부모요소.find('선택자')
-                부모 요소의 하위 요소 중 선택자에 해당하는 요소 선택
-                예)$('div').find(.'m')
-                ->div의 하위 요소 중 클래스가 m인 요소 선택
+                요소.siblings(['선택자'])
+                    형제 요소 모두 선택 또는
+                    선택자에 해당하는 형제 요소 모두 선택
+                    -> 형이든 동생이든 관계 없이 모두 선택
 
-                요소.filter('선택자')
-                요소 중 선택자를 가지고 있는 요소 선택
-                예)$('div').filter('.m')
-                ->클래스가 m인 div요소 선택
 
-                not()
-                has()
-                eq()
-                gt()
-                lt()
+                요소.not('선택자') -> 요소:not('선택자')
+                    요소 중에서 선택자를 가지고 있지 않은 요소 선택
+
+                요소.has('선택자') -> 요소:has('선택자')
+                    요소 중에서 선택자를 하위 요소로 가지고 있는 요소 선택
+
+                eq(n) -> :eq(n) -> CSS의 nth-child(n), nth-of-type(n)
+                    숫자는 index number로 정수로 지정한다.
+
+                :gt(n)
+
+                :lt(n)
 
         */
         $(() => {
 
             // 메서드 체이닝
-            $('#m1').children().css({border: '2px solid red'});
-            $('#m2').children().css({border: '1px dotted blue'});
-            $('#m2').children().parent().css({border: '2px dashed green'});
-            $('#m2').css({border: '2px dashed green'});
-            $('#m2').children().children('span').css({fontStyle: 'italic'});
-            $('#m2').children().children('span').css({'font-style': 'italic'});
-            $('#m2').children().children('span').parents('div').css({border: '2px solid orange'});
+            // $('#m1').children().css({border: '2px solid red'});
+            // $('#m2').children().css({border: '1px dotted blue'});
+            // $('#m2').children().parent().css({border: '2px dashed green'});
+            // $('#m2').css({border: '2px dashed green'});
+            // $('#m2').children().children('span').css({fontStyle: 'italic'});
+            // $('#m2').children().children('span').css({'font-style': 'italic'});
+            // $('#m2').children().children('span').parents('div').css({border: '2px solid orange'});
             
             // 숫자만 쓰면 px
-            $('#m2').css({marginBottom: 40});
+            // $('#m2').css({marginBottom: 40});
+            // $('#m3 span').closest('div').css({border: '2px solid red'});
+            // $('#m3').css({border: '2px solid blue', marginBottom: '40px'});
 
-            $('#m3 span').closest('div').css({border: '2px solid red'});
-            $('#m3').css({border: '2px solid blue', marginBottom: '40px'});
+            // $('#m4 > span.m').next().css({border: '2px solid blue'});
+            // $('#m4 > span.m').nextAll('em').css({border: '2px solid blue'});
+            // $('#m4 > span.m').nextUntil('em').css({border: '2px solid red'});
 
-            $('#m4').html('여기서 부터 #m4입니다.');
-            $('#m4 > span.m').nextUntil('em').css({border: '2px solid red'});
-            $('#m5 > span').filter('.m').css({border: '2px solid red'});
-            $('#m6 > div').has('span').css({border: '2px solid red'});
+            // $('#m4 > span.m').prev().css({border: '2px solid blue'});
+            // $('#m4 > span.m').prevAll().css({border: '2px solid blue'});
+            // $('#m4 > span.m').prevUntil('em').css({border: '2px solid red'});
+
+            // $('#m4 > span.m').nextAll().css({border: '2px solid red'});
+            // $('#m4 > span.m').siblings('span').css({border: '2px solid red'});
+
+            // $('#m5').find('.m').css({border: '2px solid red'});
+            // -> #m5의 하위 요소 중 클래스가 m인 요소 선택
+
+            // $('#m5 > span').filter('.m').css({border: '2px solid red'});
+            // -> span 중에 클래스가 m인 요소 선택
+
+            // $('#m6 > div:not(".m")').css({border: '2px solid blue'});
+            // $('#m6 > div').not('.m').css({border: '2px solid blue'});
+            // div 중에서 클래스가 .m이 아닌 요소를 선택
+
+            // $('#m6 > div').has('span').css({border: '2px solid red'});
+            // $('#m6 > div:has("span")').css({border: '2px solid red'});
+
+            // $('#m6 > div').eq(1).css({border: '2px solid blue'});
+            $('#m6 > div:eq(-6)').css({border: '2px solid red'});
+            // $('#m6 > div:nth-of-type(2n-1)').css({border: '2px solid red'});
+
+            // $('#m6 > div:gt(1)').css({fontWeight: 'bold'});
+            // $('#m6 > div:lt(4)').css({border: '2px solid red'});
 
         }); //document.ready()
     </script>

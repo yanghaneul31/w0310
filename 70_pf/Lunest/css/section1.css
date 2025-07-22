@@ -1,71 +1,88 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Pretendard', sans-serif;
-  background-color: #001833;
-}
+@charset "utf-8";
 
-.hero {
+ @font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+.hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
-  overflow: hidden;
+  background: url(../images/KakaoTalk_20250715_164802197.png) no-repeat center center / cover;
 }
 
 /* 구름 스타일 */
 .cloud {
   position: absolute;
-  top: 50px;
-  width: 300px;
-  height: 150px;
-  background: url('../images/구름2.png') no-repeat center/contain;
-  animation: moveCloud 30s linear infinite;
-  opacity: 0.7;
+  opacity: 0.6;
+  animation: cloudFloat 5s ease-in-out infinite;
 }
 
+.cloud1 img { width: 600px; }
+.cloud2 img { width: 900px; }
+.cloud3 img { width: 700px; }
+.cloud4 img { width: 650px; }
+
+
+/* 구름 각각의 위치 + 딜레이로 자연스러운 효과 */
 .cloud1 {
-  left: -300px;
+  top: 0%;
+  left: 0%;
   animation-delay: 0s;
 }
-
 .cloud2 {
-  top: 100px;
-  left: -600px;
-  animation-delay: 15s;
+  top: 0%;
+  right:0%;
+  animation-delay: 2s;
+}
+.cloud3 {
+  top: 50%;
+  left:0%;
+  animation-delay: 4s;
+}
+.cloud4 {
+  top: 50%;
+ right:0%;
+  animation-delay: 6s;
 }
 
-/* 구름 이동 애니메이션 */
-@keyframes moveCloud {
-  0% {
+/* 구름이 좌우로 부드럽게 흔들리는 애니메이션 */
+@keyframes cloudFloat {
+  0%, 100% {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(200vw);
+  50% {
+    transform: translateX(25px);
   }
 }
 
-/* 글씨 애니메이션 */
-.floating-text {
-  position: relative;
-  z-index: 2;
-  margin: 0 auto;
-  top: 120px;
-  width: 80%;
+/* 텍스트 영역 */
+.hero-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 2rem;
-  color: white;
-  font-weight: 400;
-  animation: floatText 4s ease-in-out infinite;
 }
 
-/* 글씨 부유 애니메이션 */
-@keyframes floatText {
+/* 텍스트 애니메이션 효과 */
+.floating-text {
+  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+  font-size: 6rem;
+  color: white;
+  animation: textFloat 4s ease-in-out infinite;
+  white-space: pre-line;
+}
+
+@keyframes textFloat {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateX(25px);
   }
+  
 }

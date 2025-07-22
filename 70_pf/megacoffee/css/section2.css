@@ -1,47 +1,78 @@
 @charset "utf-8";
-@import url('./reset.css');
-@import url('./common.css');
+@import url("reset.css");
+@import url("common.css");
 
+/* section2 area */
 #section2 {
-    background: lightblue;
+    position: relative;
     padding: 80px;
+}
+.inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #section2 h2 {
-    font-style: 4.5rem;
-    font-weight: 500;
     text-align: center;
-    color: #111;
 }
 
 #section2 p {
     text-align: center;
-    color: #555;
+    color: var(--gray2);
     margin: 36px 0 60px 0;
 }
 
+/* tabs */
 #tabs {
     position: relative;
     width: 1128px;
     margin: 0 auto;
 }
 
+/* tab menu button */
 #tabs_btn {
     position: absolute;
     left: 643px;
     top: 0px;
 }
 
+/* li 중에서 마지막 li 제외한 li의 종료 태그 앞에 */
+#tabs_btn li:not(li:last-child)::after {
+    content: '|';
+    margin: 0 8px;
+    color: var(--gray2);
+}
 #tabs_btn li {
     display: inline-block;
 }
+#tabs_btn a {
+    color: var(--gray2);
+}
+#tabs_btn li:first-child a {
+    color: var(--main);
+}
+
 
 /* tab contents */
-/* top1 */
+/* top 1 */
 #tabs>div>div:first-of-type div {
     width: 580px;
     height: 433px;
-    border: 1px solid #ccc;
+    border: 1px solid #CCC;
+}
+
+#tabs>div>div:first-of-type div::after {
+    content: '1위';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: var(--main);
 }
 
 /* top1 title */
@@ -49,34 +80,26 @@
     position: absolute;
     left: 643px;
     top: 48px;
-    font-style: 3.6rem;
-    font-weight: 700;
+    font-size: 3.6rem;
+    font-weight: 500;
 }
+
 /* top 2와 3 */
-#tabs>div>div:first-of-type ~ div{
+#tabs>div>div:first-of-type~div {
     position: absolute;
     left: 645px;
     top: 210px;
 }
-#tabs>div>:first-of-type ~ div div{
-     width: 225px;
-    height: 170px;
-    padding: 0px 27px 0px 26px;
-    margin-bottom: 14px;
-    border: 1px solid #ccc;
-}
 
-/* top3 */
-#tabs>div>div:nth-of-type(3) {
-    position: absolute;
-    left: 903px;
-    top: 210px;
-}
-
-#tabs>div>div:nth-of-type(3) div {
+#tabs>div>div:first-of-type~div div {
     width: 225px;
     height: 170px;
     padding: 0px 27px 0px 26px;
-    border: 1px solid #ccc;
+    margin-bottom: 14px;
+    border: 1px solid #CCC;
+}
 
+/* top 3 */
+#tabs>div>div:nth-of-type(3) {
+    left: 903px !important;
 }
