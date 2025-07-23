@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+@font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Ownglyph_Memo_Okja-Rg', cursive;
+  background: url(../images/KakaoTalk_20250715_164802197.png)no-repeat center/cover;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+.hero {
+    display: flex;
+  text-align: center;
+  padding: 50px 50px;
+}
+.logo{
+    margin-top: 400px;
+    margin-left: 300px;
+}
+.logo img{
+    width: 270px;
+    height: 270px;
+      animation: glowLoop 2.5s ease-in-out infinite;
+}
+@keyframes glowLoop {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
+  }
+}
+.logo p{
+    margin-top: 0px;
+    font-size:128px;
+}
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.hero-text h1 {
+    margin-top: 400px;
+  font-size: 128px;
+  margin-left: 300px;
+}
+.glow-text {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4),
+               0 0 15px rgba(255, 255, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.glow-text:hover {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.hero-text p {
+  font-size: 48px;
+  margin-left: 300px;
+}
+
+.emotion {
+  text-align: center;
+  padding: 100px 20px 60px;
+}
+
+.emotion h2 {
+  font-size: 96px;
+  margin-bottom: 20px;
+  margin-top: 400px;
+}
+@keyframes sway {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.sway-text {
+  display: inline-block;
+  animation: sway 4s ease-in-out infinite;
+}
+
+.emotion .quote {
+  font-size: 40px;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.modes {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.mode-card {
+  border-radius: 30px;
+  padding: 70px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.mode-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mode-card img {
+ width: 319px;
+ height: 459px;
+  border-radius: 20px;
+}
+
+.mode-card p {
+  margin-top: 10px;
+  font-size: 64px;
+ text-align: center;
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 319px;
+  height: 459px;
+  border-radius: 20px;
+  display: block;
+}
+
+/* 재생 버튼 */
+.mode-btn {
+    width: 80px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1); 
+  border: 2px solid white;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%) scale(1.05);
+}
+
+
+.features {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 96px;
+  margin-bottom: 50px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: nowrap;
+}
+
+.feature {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.feature img {
+  width:373px;
+  height: 373px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 64px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 45px;
+}
+/* 처음엔 숨겨진 상태 */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.6s ease-out;
+}
+
+/* 스크롤 도달 시 활성화 */
+.reveal.active {
+    position: relative;
+  opacity: 1;
+  transform: translateY(0);
+}
+

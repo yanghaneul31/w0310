@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+.section3 {
+  background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+
+.text-box h2 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+
+.text-box p {
+  font-size: 40px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.person-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.person-box img {
+  width: 407px;
+  height: auto;
+   animation: tilt 4s ease-in-out infinite;
+}
+
+.start-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2a3f4f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+
+.start-btn:hover {
+  background-color: #3e566b;
+}
+
+/* 기울어짐 애니메이션 */
+@keyframes tilt {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+#timer {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+/* 오버레이 전체 화면 */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* 어둡게 */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 오버레이 타이머 중앙 텍스트 */
+#overlay-timer {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+

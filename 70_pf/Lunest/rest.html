@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/rest.css">
+</head>
+
+<body>
+    <header>
+        <h1>휴식과 명상</h1>
+        <p>“이 소리와 함께 잠들어보세요.”</p>
+    </header>
+
+    <!-- 카드 리스트 -->
+    <div class="sound-card">
+        <img src="./images/수면페이지 비.png" alt="rain">
+        <p>“잠시 멈추고,자연의 숨결을 느껴보세요.”</p>
+        <button class="heart" onclick="toggleHeart(this)">♡</button>
+    </div>
+    <div class="sound-card">
+        <img src="./images/수면페이지 바람.png" alt="dandelion">
+        <p>“모든 건 바람처럼 스쳐가요, 걱정도 함께”</p>
+        <button class="heart" onclick="toggleHeart(this)">♡</button>
+    </div>
+    <div class="sound-card">
+        <img src="./images/수면페이지 불.png">
+        <p>“불꽃의 귓솔말에 귀를 기울여보세요.”</p>
+        <button class="heart" onclick="toggleHeart(this)">♡</button>
+    </div>
+
+<!-- 모달 -->
+  <div id="alertModal" class="modal">
+    <div class="modal-content">
+      즐겨찾기에 추가되었습니다!
+      <br>
+      <button onclick="closeAlert()">닫기</button>
+    </div>
+  </div>
+  
+ <div class="accordion">
+  <!-- 메뉴 1: 새 소리 -->
+  <div class="accordion-header" onclick="toggleAccordion('a1')">빗 소리</div>
+  <div class="accordion-content" id="a1">
+    <div class="sound-item">
+      <img src="./images/수면페이지 비.png" alt="rain1">
+      <div class="sound-info">
+        <h3>rain</h3>
+        <p>비 오는 날의 분위기를 담은 사운드</p>
+      </div>
+    </div>
+    <div class="sound-item">
+      <img src="./images/rain2.png" alt="rain2">
+      <div class="sound-info">
+        <h3>rain</h3>
+        <p>태풍 오는 날의 분위기를 담은 사운드</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메뉴 2: 명상음 -->
+  <div class="accordion-header" onclick="toggleAccordion('a2')">새소리</div>
+  <div class="accordion-content" id="a2">
+    <div class="sound-item">
+      <img src="./images/meditation1.png" alt="med1">
+      <div class="sound-info">
+        <h3>relax</h3>
+        <p>호흡에 집중하는 명상음</p>
+      </div>
+    </div>
+    <div class="sound-item">
+      <img src="./images/meditation2.png" alt="med2">
+      <div class="sound-info">
+        <h3>focus</h3>
+        <p>마음의 고요를 위한 배경 사운드</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메뉴 3: 장작불 -->
+  <div class="accordion-header" onclick="toggleAccordion('a3')">장작불</div>
+  <div class="accordion-content" id="a3">
+    <div class="sound-item">
+      <img src="./images/수면페이지 불.png" alt="fire1">
+      <div class="sound-info">
+        <h3>campfire</h3>
+        <p>타닥타닥 불소리로 힐링</p>
+      </div>
+    </div>
+    <div class="sound-item">
+      <img src="./images/fire2.png" alt="fire2">
+      <div class="sound-info">
+        <h3>fireplace</h3>
+        <p>벽난로 앞에 앉은 듯한 고요한 사운드</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ <script>
+  function toggleHeart(button) {
+    button.classList.toggle('active');
+    button.textContent = (button.textContent === '♡') ? '❤' : '♡';
+    showAlert();
+  }
+
+  function showAlert() {
+    document.getElementById('alertModal').style.display = 'flex';
+  }
+
+  function closeAlert() {
+    document.getElementById('alertModal').style.display = 'none';
+  }
+</script>
+
+
+   <script>
+  function toggleAccordion(id) {
+    const all = document.querySelectorAll(".accordion-content");
+    all.forEach(el => {
+      if (el.id === id) {
+        el.classList.toggle("open");
+      } else {
+        el.classList.remove("open"); // 나머지는 닫힘
+      }
+    });
+  }
+</script>
+
+
+</body>
+
+</html>

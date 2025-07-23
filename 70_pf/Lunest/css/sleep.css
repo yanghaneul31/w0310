@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Ownglyph_Memo_Okja-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+    font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+    background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    font-size: 60px;
+}
+
+header h1 {
+    font-size: 74px;
+    margin-bottom: 5px;
+}
+
+.heart {
+    background: none;
+    border: none;
+    font-size: 53px;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 500px;
+    height: 100px;
+    font-size: 40px;
+    background: #fff;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 카드 리스트 */
+.sound-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 20px auto;
+    width: 1122px;
+    height: 190px;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.sound-card img {
+    width: 177px;
+    height: 149px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.sound-card p {
+    flex: 1;
+    margin: 0 50px;
+    font-size: 48px;
+}
+
+.sound-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+}
+
+/* 플립 카드 */
+.flip-title {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+}
+
+.flip-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.flip-card {
+    width: 285px;
+    height: 285px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+}
+
+.flip-card-front {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.flip-card-back {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.heart {
+    color: #aaa
+}
+
+.heart.active {
+    color: white;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #0b1e2d;
+    color: #fff;
+    padding: 40px 60px;
+    font-size: 30px;
+    margin-top: auto;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+}
+
+.footer-logo {
+    width: 230px;
+    margin-left: 40px;
+    margin-top: 55px;
+
+}
+
+.footer-brand {
+    font-size: 24px;
+    margin-top: 2px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.footer-desc {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-nav li {
+    white-space: nowrap;
+}
+
+.footer-policy {
+    margin-top: 10px;
+}
+
+.footer-right {
+    text-align: right;
+    white-space: nowrap;
+    align-self: flex-end;
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+.noto {
+    font-family: 'Noto Sans', sans-serif;
+}

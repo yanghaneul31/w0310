@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+        #m2{
+            text-align: center;
+        }
+        .box{
+            border-bottom: 2px solid #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        .circle0,.circle1,.circle2{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            border: 4px solid #ff6600;
+            line-height: 200px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <div>제이쿼리</div>
+    </div>
+    
+    <div id="m2">
+        <div><em>HTML</em></div>
+        <div><em>CSS</em></div>
+        <div><em>JavaScript</em></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            <태그 속성="값">콘텐츠</태그>
+
+                addClass('클래스명')
+                클래스 추가
+                removeClass('클래스명')
+                클래스 제거
+                toggleClass()
+                클래스 추가/제거
+                hasClass()
+                클래스 지정 여부
+
+        */
+       $(document).ready(function(){
+        $("#m1 > div").addClass("box");
+        $("#m2 > div").addClass(function(index){
+            return "circle" + index;
+        });
+       })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 기울기 애니메이션</title>
+  <link rel="stylesheet" href="./css/section3.css">
+</head>
+<body>
+  <section class="section3">
+  <div class="text-box">
+    <h2>자연 속 명상 가이드</h2>
+    <p>숲속에 있는 자신을 이미지처럼<br>몸의 감각에 집중해 보세요.</p>
+  </div>
+  <div class="person-box">
+    <img src="./images/KakaoTalk_20250717_162333611.png" alt="명상하는 사람" />
+    <button class="start-btn" id="start-btn">5분 명상 시작하기</button>
+    <div id="timer"> </div>
+  </div>
+</section>
+
+<div id="overlay">
+  <div id="overlay-timer">05:00</div>
+</div>
+
+</body>
+</html>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const startBtn = document.getElementById("start-btn");
+    const overlay = document.getElementById("overlay");
+    const overlayTimer = document.getElementById("overlay-timer");
+
+    let timerInterval;
+    let time = 5 * 60;
+
+    startBtn.addEventListener("click", function () {
+      time = 5 * 60;
+      overlay.style.display = "flex";
+      updateOverlayDisplay();
+
+      timerInterval = setInterval(() => {
+        time--;
+        updateOverlayDisplay();
+
+        if (time <= 0) {
+          clearInterval(timerInterval);
+          overlayTimer.innerText = "명상이 완료되었습니다 🧘";
+        }
+      }, 1000);
+    });
+
+    overlay.addEventListener("click", function () {
+      clearInterval(timerInterval);
+      overlay.style.display = "none";
+    });
+
+    function updateOverlayDisplay() {
+      const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+      const seconds = String(time % 60).padStart(2, '0');
+      overlayTimer.innerText = `${minutes}:${seconds}`;
+    }
+  });
+</script>

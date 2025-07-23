@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/sleep.css">
+</head>
+<body>
+    <header>
+    <h1>수면</h1>
+    <p>“이 소리와 함께 잠들어보세요.”</p>
+  </header>
+
+  <!-- 카드 리스트 -->
+  <div class="sound-card">
+    <img src="./images/수면페이지 비.png" alt="rain">
+    <p>“잠시, 모든 숨을 잊고 빗소리 속으로”</p>
+    <button class="heart" onclick="toggleHeart(this)">♡</button>
+  </div>
+  <div class="sound-card">
+    <img src="./images/수면페이지 바람.png" alt="dandelion">
+    <p>“모든 건 바람처럼 스쳐가요, 걱정도 함께”</p>
+    <button class="heart" onclick="toggleHeart(this)">♡</button>
+  </div>
+  <div class="sound-card">
+    <img src="./images/수면페이지 불.png">
+    <p>“불꽃의 귓솔말에 귀를 기울여보세요.”</p>
+    <button class="heart" onclick="toggleHeart(this)">♡</button>
+  </div>
+
+  <!-- 플립 카드 -->
+   <div class="flip-title">오늘 밤, 어떤 소리와 함께 잠들까요?</div>
+
+  <div class="flip-container">
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      <div class="flip-card-front"><img src="./images/동그라미 바람.png" alt=""></div>
+      <div class="flip-card-back">"바람이 전해주는 인사"</div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      <div class="flip-card-front"><img src="./images/동그라미 밤.png" alt=""></div>
+      <div class="flip-card-back">산들바람</div>
+    </div>
+  </div>
+
+  <div class="flip-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-card-inner">
+      <div class="flip-card-front"><img src="./images/동그라미 불.png" alt=""></div>
+      <div class="flip-card-back">장작 타는 소리</div>
+    </div>
+  </div>
+</div>
+  <!-- 모달 -->
+  <div id="alertModal" class="modal">
+    <div class="modal-content">
+      즐겨찾기에 추가되었습니다!
+      <br>
+      <button onclick="closeAlert()">닫기</button>
+    </div>
+  </div>
+
+ <footer class="footer">
+        <div class="footer-left">
+            <img src="./images/푸터 로고.png" alt="Lunest Logo" class="footer-logo" />
+        </div>
+
+        <div class="footer-center">
+            <p class="footer-desc">Lunest</p>
+            <p class="footer-desc">당신의 고요한 밤을 지켜주는 작은 자연입니다.</p>
+            <hr class="footer-line" />
+            <ul class="footer-nav">
+                <li>[ 홈 ]</li>
+                <li>[ 자연의 소리 ]</li>
+                <li>[ 명상 가이드 ]</li>
+                <li>[ 마이페이지 ]</li>
+                <li>[ 문의하기 ]</li>
+            </ul>
+            <hr class="footer-line" />
+            <p class="footer-policy">이용약관&nbsp;&nbsp;|&nbsp;&nbsp;개인정보처리방침</p>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-copy"><span class="noto">©</span> 2025 Lunest. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <script>
+  function toggleHeart(button) {
+    button.classList.toggle('active');
+    button.textContent = (button.textContent === '♡') ? '❤' : '♡';
+    showAlert();
+  }
+
+  function showAlert() {
+    document.getElementById('alertModal').style.display = 'flex';
+  }
+
+  function closeAlert() {
+    document.getElementById('alertModal').style.display = 'none';
+  }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lunest - 자연과 다시 연결되다</title>
+  <link rel="stylesheet" href="./css/brand.css">
+</head>
+<body>
+  <!-- 메인 소개 -->
+  <div class="reveal">
+    <section class="hero">
+      <div class="logo"><img src="./images/최종로고.png" alt="로고"><p class="glow-text">Lunest</p></div>
+      <div class="hero-text">
+        <h1 class="glow-text">자연과 다시 연결되다</h1>
+        <p class="glow-text">Lunest는 단순한 힐링 사운드를 넘어서,<br>
+        자연과 당신을 정서적으로 연결하는
+        소리의 기술이자 명상 플랫폼입니다.</p>
+      </div>
+    </section>
+  </div>
+    <!-- 소리 너머의 감정 -->
+
+      <section class="emotion reveal">
+        <h2 class="sway-text">소리 너머의 감정</h2>
+        <p class="quote">“우리는 단순한 배경음이 아닌, 감정과 상황에 맞춘 사운드 큐레이션을 제공합니다.<br>
+        집중하고 싶을 때, 마음을 쉬고 싶을 때, 혹은 길을 잃고 싶을 때, 자연에 있는 리듬을 들어보세요.”</p>
+      <div class="modes">
+      <div class="mode-card">
+        <div class="image-wrapper">
+          <img src="./images/집중모드.png" alt="집중모드">
+          <button class="mode-btn">⏵</button>
+        </div>
+        <p>수면모드</p>
+      </div>
+      <div class="mode-card">
+        <div class="image-wrapper">
+          <img src="./images/수면모드.png" alt="힐링모드">
+          <button class="mode-btn">⏵️</button>
+        </div>
+        <p>힐링모드</p>
+      </div>
+      </div>
+      </section>
+
+    <!-- 기능 설명 -->
+    <div class="reveal">
+      <section class="features">
+        <h2>모든 공간에 자연을...</h2>
+        <div class="feature-cards">
+          <div class="feature">
+            <img src="./images/사운드믹싱.png" alt="사운드 믹싱">
+            <h3>사운드 믹싱</h3>
+            <p>Lunest는 원하는 모든 자연의 소리를<br> 믹싱할 수 있습니다.</p>
+          </div>
+          <div class="feature">
+            <img src="./images/공간맞춤형.png" alt="환경 맞춤">
+            <h3>공간 맞춤형 환경</h3>
+            <p>어느 공간에서든 자연의 소리를<br> 경험할 수 있도록 돕습니다.</p>
+          </div>
+          <div class="feature">
+            <img src="./images/대화형.png" alt="대화형 UI">
+            <h3>대화형 인터페이스</h3>
+            <p>자연의 흐름을 선택하고 경험할 수<br> 있는 직관적 UI를 제공합니다.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+<script>
+  function revealOnScroll() {
+    const sections = document.querySelectorAll('.reveal');
+    sections.forEach((el) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 150; // 조정 가능
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active'); // 필요 시 제거
+      }
+    });
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
+
+
+</body>
+</html>

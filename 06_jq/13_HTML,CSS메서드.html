@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1"><strong>자바스크립트</strong></div>
+    
+    <div id="m2">
+        <div><em>HTML</em></div>
+        <div><em>CSS</em></div>
+        <div><em>JavaScript</em></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            <태그 속성="값">콘텐츠</태그>
+
+            1. 콘텐츠 조작 메서드
+                요소.text()
+                    -> 요소의 콘텐츠를 가져오기
+                요소.text(text)
+                    -> 요소의 콘텐츠를 text로 지정한다.
+                    -> HTML 인식x
+                text(function(index, currentText){...})
+
+                요소.html()
+                    -> 요소의 콘텐츠를 가져오기
+                요소.html(text)
+                    -> 요소의 콘텐츠를 text로 지정한다.
+                    -> HTML 인식
+                html(function(index, currentText){...})
+
+                val()
+
+            2. 속성 조작 메서드
+                attr()
+                prop()
+                removeAttr()
+
+            3. 스타일 조작 메서드
+                css()
+                offset()
+                position()
+                scrollTop()
+                scrollLeft()
+
+            4. 클래스 조작 메서드
+                addClass()
+                removeClass()
+                toggleClass()
+                hasClass()
+
+        */
+        $(() => {
+            // get(가져오기)
+            const txt = $("#m1").text();
+            console.log(txt);
+            // set(지정하기)
+            // text()는 HTML 태그도 문자열로 처리한다.
+            $("#m1").text('<h1>jQuery</h1>');
+            // html()은 HTML 태그를 태그로 처리한다.
+            console.log($("#m1").html());
+            $("#m1").html('<h1>자바스크립트</h1>');
+
+            $('#m2 > div').text(function(index, text){
+                return `div 요소의 텍스트는 ${text}, index는 ${index}`;
+                // return 'div 요소의 텍스트는 ' + text + ', index는 ' + index;
+            });
+            $('#m2 > div').html(function(index, text){
+                return `div 요소의 텍스트는 ${text}, index는 ${index}`;
+                // return 'div 요소의 텍스트는 ' + text + ', index는 ' + index;
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

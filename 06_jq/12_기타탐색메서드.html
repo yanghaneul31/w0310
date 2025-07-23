@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 기타 탐색 메서드</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <div>1</div>
+        <p>2</p>
+    </div>
+    <div id="m2">
+        <p>3</p>
+    </div>
+    <div id="m3">
+        <span>4</span>
+        <em>5</em>
+    </div>
+    <div id="m4">
+        <em>6</em>
+        <p>6</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            탐색 메서드
+                add()
+                    추가
+                    예) $('div').add('p')
+                    -> div요소와 p요소를 선택한다.
+                addBack()
+                    예) $('div').children('p').addBack()
+                    -> p요소와 이전 선택요소 div를 선택
+                end()
+                    끝나면
+                    예) $('div').find('span').css(...).end().find('em').css(...)
+                    예) $('div').find('span').css(...)
+                    예) $('div').find('em').css(...)
+                    -> $('div').find('span').css(...) 실행이 끝나면, 처음 선택자 $('div')로 다시 돌라와 $('div').find('em').css(...) 가 실행된다.
+
+            필터 메서드
+                is()
+                    예) if (('div').children().is('p')) {...}
+                    -> div의 자식 요소에 p가 있으면 true, 아니면 false
+        */
+        $(() => {
+
+            // 메서드 체이닝
+            // 코드 간결 -> 유지 보수 편리
+            // 중복 코드 제거
+            // 선택한 대상이 동적일 때 유용하다.
+            // $('#m1 > div').add('#m1 > p').css({ border: '2px solid red'});
+            // $('#m2').children('p').addBack().css({ border: '2px solid red'});
+            // 본문에서 $('m3')를 한 번만 찾는다.
+            // $('#m3').find('span').css({ border: '2px solid red'}).end().find('em').css({ border: '2px solid green'});
+
+            // 본문에서 $('m3')를 두 번 찾는다.
+            // $('#m3').find('span').css({ border: '2px solid red'});
+            // $('#m3').find('em').css({ border: '2px solid green'});
+
+            // $('#m4')의 자식으로 p가 있으면 true, 아니면 false
+            if ($('#m4').children().is('p')) {
+                console.log('p는 자식 요소입니다.');
+            } else {
+                console.log('p는 자식 요소가 아닙니다.');
+            }
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>
