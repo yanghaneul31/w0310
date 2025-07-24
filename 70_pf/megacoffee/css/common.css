@@ -6,8 +6,14 @@
     /* 변수 선언은 :root에 정의한다. */
     --gray1: #111;
     --gray2: #555;
+    --gray3: #ccc;
+    --white: #fff;
     --main: #FFDB00;
-    /* --main: #0065fc; */
+}
+
+::selection {
+    background: var(--main);
+    color: var(--gray1);
 }
 
 /* typo system */
@@ -26,7 +32,15 @@ h3 {
     font-weight: 200;
 }
 
-/* sections */
-#container > div {
+/* sections area */
+/* .sec {
+    position: relative;
     height:100vh;
-}
+    padding: 80px;
+} */
+/* .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+} */

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fullpage Scroll with Pager</title>
+  <style>
+    /* 기본 초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; /* 패딩, 테두리 포함한 너비/높이 계산 */
+    }
+    html, body {
+      scroll-behavior: smooth; /* 브라우저 기본 부드러운 스크롤 */
+      font-family: sans-serif;
+      overflow: hidden; /* 스크롤바 숨김, 휠 이벤트로 스크롤 제어 */
+    }
+    /* 헤더 스타일 */
+    .header {
+      position: fixed; /* 항상 상단 고정 */
+      top: 0; left: 0;
+      width: 100%; /* 화면 너비 꽉 채움 */
+      height: 60px;
+      background: #333; /* 진한 회색 배경 */
+      color: #fff; /* 글자 흰색 */
+      display: flex;
+      align-items: center; /* 수직 중앙 정렬 */
+      justify-content: space-between; /* 좌우 끝 정렬 */
+      padding: 0 30px; /* 좌우 여백 */
+      z-index: 1000; /* 다른 요소 위에 표시 */
+    }
+    /* 헤더 내 로고 스타일 */
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    /* 메뉴 스타일: 가로 정렬, 간격 20px */
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+    /* 메뉴 링크 스타일 */
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    /* 마우스 오버 시 밑줄 */
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    /* 각 섹션 공통 스타일 */
+    .section {
+      width: 100%;
+      height: 100vh; /* 뷰포트 높이만큼 */
+      padding-top: 60px; /* 헤더 높이만큼 패딩(헤더와 겹치지 않도록) */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    /* 각 섹션 배경색 다르게 */
+    .section:nth-child(2) { background: #ff9a9e; }
+    .section:nth-child(3) { background: #a1c4fd; }
+    .section:nth-child(4) { background: #fbc2eb; }
+    .section:nth-child(5) { background: #d4fc79; }
+    /* 푸터 스타일 */
+    .footer {
+      height: 300px;
+      background: #222; /* 짙은 배경 */
+      color: white;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 오른쪽 중간 세로 페이저 컨테이너 */
+    .pager {
+      position: fixed;
+      top: 50%; /* 세로 화면 중앙 */
+      right: 20px; /* 오른쪽에서 20px 떨어짐 */
+      transform: translateY(-50%); /* 정확히 중앙 정렬 */
+      display: flex;
+      flex-direction: column; /* 세로 방향 정렬 */
+      gap: 15px; /* 버튼 간 간격 */
+      z-index: 1100; /* 헤더보다 위 */
+    }
+    /* 페이저 버튼 공통 스타일 */
+    .pager button {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%; /* 동그라미 */
+      border: none;
+      background: rgba(255,255,255,0.5); /* 반투명 흰색 */
+      cursor: pointer;
+      transition: background 0.3s; /* 부드러운 색상 변화 */
+    }
+    /* 활성화 및 호버 시 색상, 그림자 강조 */
+    .pager button.active,
+    .pager button:hover {
+      background: #fff;
+      box-shadow: 0 0 6px 2px rgba(255,255,255,0.8);
+    }
+  </style>
+  <!-- jQuery 라이브러리 불러오기 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <!-- 상단 고정 헤더 -->
+  <div class="header">
+    <div class="logo">🚀 MyLogo</div>
+    <div class="menu">
+      <a data-index="0">1번</a>
+      <a data-index="1">2번</a>
+      <a data-index="2">3번</a>
+      <a data-index="3">4번</a>
+      <a data-index="4">푸터</a>
+    </div>
+  </div>
+
+  <!-- 섹션 4개 -->
+  <div class="section">1번 화면</div>
+  <div class="section">2번 화면</div>
+  <div class="section">3번 화면</div>
+  <div class="section">4번 화면</div>
+
+  <!-- 하단 푸터 -->
+  <div class="footer">🔚 푸터 영역 (300px)</div>
+
+  <!-- 오른쪽 중간 페이저 버튼 컨테이너 -->
+  <div class="pager"></div>
+
+  <script>
+    $(function () {
+      // 현재 보고 있는 섹션 인덱스
+      let current = 0;
+
+      // 스크롤 대상: 4개 섹션 + 1개 푸터 = 총 5개
+      const $targets = $(".section, .footer");
+      const total = $targets.length;
+
+      // 헤더 높이 (스크롤 시 빼줘야 함)
+      const headerHeight = $(".header").outerHeight();
+
+      // 마지막 휠 이벤트 시간 저장 (throttle 용)
+      let lastTime = 0;
+      // 휠 이벤트 처리 최소 시간 간격(ms)
+      const throttleDelay = 500;
+
+      // 페이저 버튼을 동적으로 생성하는 부분
+      const $pager = $(".pager");
+      for(let i=0; i < total; i++) {
+        // 버튼 요소 생성 후 data-index 부여
+        const $btn = $("<button>").attr("data-index", i);
+        // 첫 번째 버튼은 활성화 상태로 시작
+        if(i === 0) $btn.addClass("active");
+        $pager.append($btn);
+      }
+
+      // 페이저 활성화 상태를 업데이트 하는 함수
+      function updatePager(index) {
+        // 모든 버튼에서 active 제거
+        $pager.find("button").removeClass("active");
+        // 현재 인덱스 버튼에만 active 추가
+        $pager.find(`button[data-index=${index}]`).addClass("active");
+      }
+
+      // 실제 스크롤 위치 이동 함수
+      function scrollToTarget(index) {
+        // 타겟 요소의 문서 내 위치(상단), 헤더 높이만큼 빼서 스크롤 위치 계산
+        const targetTop = $targets.eq(index).offset().top - headerHeight;
+        // 즉시 스크롤 이동 (animate 대신 scrollTop)
+        $("html, body").stop().scrollTop(targetTop);
+        // 페이저 상태 갱신
+        updatePager(index);
+      }
+
+      // 마우스 휠 이벤트: throttle 적용해 500ms 내 중복 실행 방지
+      $(window).on("wheel", function (e) {
+        const now = Date.now();
+        if (now - lastTime < throttleDelay) return;  // 일정 시간 안에 재실행 방지
+        lastTime = now;
+
+        const delta = e.originalEvent.deltaY;
+        // 휠 방향에 따라 current 인덱스 증감 (한 단계씩만)
+        if (delta > 0 && current < total - 1) {
+          current++;
+        } else if (delta < 0 && current > 0) {
+          current--;
+        }
+        // 스크롤 이동 함수 호출
+        scrollToTarget(current);
+      });
+
+      // 헤더 메뉴 클릭 시 해당 섹션으로 이동
+      $(".menu a").on("click", function () {
+        current = parseInt($(this).data("index"));
+        scrollToTarget(current);
+      });
+
+      // 페이저 버튼 클릭 시 해당 섹션으로 이동
+      $pager.on("click", "button", function () {
+        current = parseInt($(this).attr("data-index"));
+        scrollToTarget(current);
+      });
+    });
+  </script>
+</body>
+</html>

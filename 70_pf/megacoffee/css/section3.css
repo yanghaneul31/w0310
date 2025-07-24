@@ -8,6 +8,7 @@
 }
 
 #sec3 .inner {
+    position: absolute;
     width: 1573px;
     height: 580px;
 }
@@ -25,9 +26,9 @@
 /* text & button scroll Motion */
 #fav_txt .scroll_motion {
     position: relative;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: all 1s ease-out;
+    opacity: 1;
+    /* transform: translateX(-100px); */
+    transition: 1s ease-out;
 }
 #fav_txt .scroll_motion.show {
   opacity: 1;
@@ -86,12 +87,12 @@
     top: 50px;
 }
 #fav_img div {
+    position: absolute;
     border: 10px solid var(--main);
     background: var(--white);
 }
 
 #fav_img div:first-child {
-    position: absolute;
     left: 0px;
     top: 54px;
     width: 270px;
@@ -101,7 +102,6 @@
 
 #fav_img div:nth-child(2) {
     z-index: 1;
-    position: absolute;
     left: 258px;
     top: 0;
     width: 260px;
@@ -109,7 +109,6 @@
 }
 
 #fav_img div:last-child {
-    position: absolute;
     left: 483px;
     top: 33px;
     width: 335px;

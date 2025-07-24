@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+/* navigation */
+#menu {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: -10px;
+}
+
+#menu li {
+  display: inline-block;
+}
+
+#menu a {
+  position: relative;
+  top: 5px;
+  color: #111;
+  background: #fff;
+  padding: 20px 20px 10px;
+  border-radius: 0 0 10px 10px;
+  transition: 0.3s;
+}
+
+#menu li.active a {
+  color: #fff;
+  background: #111;
+}
+
+#menu a:hover {
+  top: 10px;
+}
+
+/* 오른쪽 페이저 버튼 색 */
+#fp-nav ul li a span {
+  background: #fff;
+}
+
+/* 오른쪽 페이저 툴립 글자 색 */
+#fp-nav ul li .fp-tooltip {
+  color: #fff;
+}
+
+/* 슬라이드 이미지 크기 */
+.slide img {
+  width: 70%;
+}
+
+.fp-slidesNav ul li a span {
+  background: red;
+}
+
+/* 슬라이드 좌우 버튼 위치 */
+.fp-controlArrow.fp-prev {
+  left: 140px;
+  background: red;
+  transition: 0.3s;
+  border-color: transparent;
+}
+
+.fp-controlArrow.fp-next {
+  right: 140px;
+  background: red;
+  transition: 0.3s;
+  border-color: transparent;
+}
+
+.fp-controlArrow.fp-prev:hover {
+  background: blue;
+}
+
+.fp-controlArrow.fp-next:hover {
+  background: blue;
+}
+
+#footer {
+  background: #111;
+  padding: 100px 0;
+  color: #fff;
+}

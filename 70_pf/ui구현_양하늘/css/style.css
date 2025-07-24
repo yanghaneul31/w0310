@@ -1,0 +1,391 @@
+ @charset "utf-8";
+
+ @font-face {
+     font-family: 'Cafe24Lovingu';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'SangSangShin';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ /* Reset & base */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: 'Cafe24Lovingu', 'Nanum Gothic', sans-serif;
+ }
+
+ /* Header */
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 999;
+     background: rgb(255, 222, 222);
+     padding: 1rem 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid #eee;
+ }
+
+ .logo {
+     font-size: 1.8rem;
+     font-weight: bold;
+ }
+
+ .logo img {
+     height: 4.375rem;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 1.5rem;
+ }
+
+ nav li {
+     font-size: 3.125rem;
+     
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #555;
+     font-weight: 500;
+ }
+
+ /* Sections */
+ .section {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     padding: 2rem;
+     text-align: center;
+ }
+
+ .hero {
+     color: #555;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     padding: 2rem;
+     text-align: center;
+ }
+
+ .hero h1 {
+     font-size: 100px;
+     margin-top: 150px;
+     opacity: 0;
+     animation: fadeIn 1.2s ease-out forwards;
+
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .hero h1 span {
+     font-size: 200px;
+ }
+
+ .hero img {
+     max-width: 100%;
+     /* 원하면 더 키워도 됨 */
+     width: 1000px;
+     /* 화면에 꽉 차게 */
+     height: auto;
+     display: block;
+     margin: 0 auto;
+ }
+.slide{
+    position: relative;
+     margin-top: -200px;
+}
+.inner {
+    position: absolute;
+    top: 10vh;
+    left: 28vw;
+    opacity: 0;
+    transition: .3s;
+}
+.inner.show {
+    opacity: 1;
+}
+ .section-title {
+     font-size: 6.250rem;
+     color: #555;
+     margin-bottom: 2rem;
+ }
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+     gap: 2rem;
+     width: 100%;
+     max-width: 1400px;
+ }
+
+ .product {
+     border: 1px solid #eee;
+     padding: 2rem;
+     background: white;
+     font-size: 3.125rem;
+     transition: transform 0.2s;
+ }
+
+ .product img {
+     width: 100%;
+     height: auto;
+     margin-bottom: 1rem;
+ }
+
+ .ranking-tabs {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-bottom: 2rem;
+ }
+
+ .tab-btn {
+     padding: 0.5rem 1rem;
+     color: #555;
+     background: #ffd7d7;
+     border: none;
+     border-radius: 20px;
+     cursor: pointer;
+     font-weight: bold;
+     font-family: 'SangSangShin';
+     font-size: 3.125rem;
+ }
+
+ .tab-btn.active {
+     background: #ff8fa3;
+     color: #fff;
+ }
+
+ .products-tab {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1.5rem;
+     max-width: 1100px;
+     margin: 0 auto;
+ }
+
+ .products-tab.hidden {
+     display: none;
+ }
+
+ .product .rank {
+     font-weight: bold;
+     margin-bottom: 0.5rem;
+     font-family: 'SangSangShin';
+     font-size:3.750rem !important;
+     color: #555;
+ }
+
+ button {
+     font-size: 1.875rem;
+     padding: 0.75rem 1.5rem;
+ }
+
+
+ button:hover {
+     background-color: #ff8fa3;
+ }
+
+ .brand-section {
+     opacity: 0;
+     transform: translateY(100px);
+     transition: all 1s ease;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #fff;
+ }
+
+
+ .brand-section.show {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .brand-section img {
+     width: 1000px;
+     height: auto;
+     border-radius: 50px;
+     transition: 0.3s ease;
+ }
+
+ .brand-section img:hover {
+    color: #555;
+     opacity: 0.7;
+ }
+
+ .brand-section .text {
+     text-align: left;
+ }
+
+ .brand-section h2 {
+     font-size: 4.375rem;
+     font-weight: bolder;
+     color: #333;
+ }
+
+ .brand-section p {
+     font-size: 3.125rem;
+     font-weight: bold;
+     color: #555;
+     font-family: 'SangSangShin';
+ }
+.brand-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 100px 0;
+}
+
+.brand-item {
+  position: relative;
+  width: 1000px;
+  height: 800px;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-top: -50px;
+}
+
+.brand-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* 텍스트 중앙 위치 */
+.brand-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size:4.375rem;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+/* 어두운 오버레이 */
+.brand-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.brand-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+ /* Footer */
+ .footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     background-color: rgb(255, 222, 222);
+     color: #555;
+     padding: 40px 60px;
+     font-size: 2.500rem;
+ }
+
+ .footer-left {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 280px;
+ }
+
+ .footer-logo {
+     width: 230px;
+     margin-left: -70px;
+     margin-top: 55px;
+
+ }
+
+ .footer-center {
+     flex: 1;
+     text-align: left;
+     padding: 0 40px;
+ }
+
+ .footer-desc {
+     margin-top: 0;
+     margin-bottom: 15px;
+ }
+
+ .footer-line {
+     border: none;
+     border-top: 1px solid #ccc;
+     margin: 15px 0;
+ }
+
+ .footer-nav {
+     list-style: none;
+     padding: 15px;
+     margin: 0;
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ .footer-nav li {
+     white-space: nowrap;
+ }
+
+ .footer-policy {
+     margin-top: 10px;
+ }
+ .footer-policy span:nth-of-type(1):after{
+    content:"|";
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+ .footer-right {
+     text-align: right;
+     white-space: nowrap;
+     align-self: flex-end;
+     font-size: 1.562rem;
+
+     opacity: 0.9;
+     margin-left: 150px;
+ }
