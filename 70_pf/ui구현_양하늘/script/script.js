@@ -1,51 +1,42 @@
  
 
-  document.addEventListener('DOMContentLoaded', function () {
-    new fullpage('#fullpage', {
-      autoScrolling: true,
-      navigation: true,
-      scrollHorizontally: false,
-      licenseKey: 'YOUR_KEY_HERE' // 또는 null
-    });
-
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabs = document.querySelectorAll('.products-tab');
-
-    tabBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        tabs.forEach(tab => {
-          if (tab.id === btn.dataset.target) {
-            tab.classList.remove('hidden');
-          } else {
-            tab.classList.add('hidden');
-          }
-        });
-      });
-    });
+ $(document).ready(function () {
+  // fullpage 초기화 (2.9.7 방식)
+  $('#fullpage').fullpage({
+    autoScrolling: true,
+    navigation: true,
+    scrollHorizontally: false
   });
 
- document.addEventListener("DOMContentLoaded", function () {
-    const inner = document.querySelectorAll(".inner");
-    let i = 0;
+  // 탭 버튼
+  $('.tab-btn').on('click', function () {
+    $('.tab-btn').removeClass('active');
+    $(this).addClass('active');
 
-    setInterval(() => {
-      inner[i].classList.remove("show");
-      i = (i + 1) % inner.length;
-      inner[i].classList.add("show");
-    }, 3000);
+    var target = $(this).data('target');
+    $('.products-tab').addClass('hidden');
+    $('#' + target).removeClass('hidden');
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-  const brand = document.querySelector('.brand-section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  // 이미지 슬라이드
+  var $inner = $('.inner');
+  var i = 0;
+  setInterval(function () {
+    $inner.eq(i).removeClass('show');
+    i = (i + 1) % $inner.length;
+    $inner.eq(i).addClass('show');
+  }, 3000);
+
+  // 브랜드 섹션 등장 애니메이션
+  var $brand = $('.brand-section');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
       if (entry.isIntersecting) {
-        brand.classList.add('show');
+        $brand.addClass('show');
       }
     });
   }, { threshold: 0.4 });
 
-  observer.observe(brand);
+  var brandDom = $brand.get(0); // jQuery → DOM
+  if (brandDom) observer.observe(brandDom);
 });

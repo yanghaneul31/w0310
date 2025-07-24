@@ -137,8 +137,8 @@
 }
 
 .inner img {
-  width: 900px;
-  height:900px;
+  width: 100%;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
 }
@@ -263,9 +263,10 @@
  }
 
  .brand-section h2 {
-     font-size: 4.375rem;
+     font-size: 5rem;
      font-weight: bolder;
      color: #333;
+     margin-top: -100px;
  }
 
  .brand-section p {
@@ -278,8 +279,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
-  padding: 100px 0;
+  gap: 50px;
+  padding:50px 0;
 }
 
 .brand-item {
@@ -307,7 +308,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size:4.375rem;
+  font-size:50px;
   font-weight: bold;
   z-index: 2;
   text-align: center;
@@ -328,7 +329,6 @@
 .brand-item:hover::before {
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 
 
  /* Footer */
