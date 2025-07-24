@@ -1,10 +1,13 @@
- new fullpage('#fullpage', {
+ 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    new fullpage('#fullpage', {
       autoScrolling: true,
       navigation: true,
-      scrollHorizontally: false
+      scrollHorizontally: false,
+      licenseKey: 'YOUR_KEY_HERE' // 또는 null
     });
 
-    // 탭 버튼 스크립트
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabs = document.querySelectorAll('.products-tab');
 
@@ -21,28 +24,28 @@
         });
       });
     });
+  });
 
-    // 브랜드 섹션 등장 애니메이션
-    document.addEventListener('DOMContentLoaded', () => {
-      const brand = document.querySelector('.brand-section');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            brand.classList.add('show');
-          }
-        });
-      }, { threshold: 0.4 });
+ document.addEventListener("DOMContentLoaded", function () {
+    const inner = document.querySelectorAll(".inner");
+    let i = 0;
 
-      observer.observe(brand);
+    setInterval(() => {
+      inner[i].classList.remove("show");
+      i = (i + 1) % inner.length;
+      inner[i].classList.add("show");
+    }, 3000);
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const brand = document.querySelector('.brand-section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        brand.classList.add('show');
+      }
     });
+  }, { threshold: 0.4 });
 
-
-
-const inner = document.querySelectorAll(".inner");
-let i = 0;
-setInterval(() => {
-  inner[i].classList.remove("show")
-  i = (i + 1) % inner.length;
-  inner[i].classList.add("show");
-
-}, 3000);
+  observer.observe(brand);
+});
