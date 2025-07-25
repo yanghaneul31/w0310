@@ -11,14 +11,14 @@ body, html {
 }
 .section {
   height: 100%;
-  width: 1920px;
+  width: 100%;
   text-align: center;
-  margin: 0 auto;
 }
 .header {
-  margin: 0 auto;
+  top: 0;
+  left: 0;
   height: 150px;
-  width: 1920px;
+  width: 100%;
   background: #f9e3ec;
   display: flex;
   justify-content: space-between;

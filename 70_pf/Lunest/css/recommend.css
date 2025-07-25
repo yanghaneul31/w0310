@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+@font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+body {
+  margin: 0;
+  font-family:'Ownglyph_Memo_Okja-Rg', sans-serif;
+  background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.time-display p {
+  margin: 0.2rem;
+  font-size: 5rem;
+  margin-right: 500px;
+}
+
+#clock {
+  font-size:8rem;
+  margin: 0.5rem 0;
+}
+
+.main-player {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 2rem auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.main-player .main-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recommend-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.recommend-overlay .sub-text {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  opacity: 0.9;
+}
+
+.recommend-overlay .main-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.3rem 0 1rem;
+}
+
+.recommend-overlay .play-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

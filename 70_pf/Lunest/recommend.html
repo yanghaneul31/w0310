@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>추천 사운드</title>
+  <link rel="stylesheet" href="./css/recommend.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="time-display">
+      <p>지금 시간은...</p>
+      <h1 id="clock">00:00</h1>
+      <p>편안한 밤 되세요</p>
+    </div>
+
+    <div class="main-player">
+      <img src="img1.jpg" alt="sound1" />
+      <div class="overlay">
+        <p>오늘의 추천 사운드</p>
+        <h2 id="title">잔잔한 빗소리</h2>
+        <button class="play-btn">▶</button>
+      </div>
+    </div>
+
+    <div class="player-controls">
+      <img src="img1.jpg" class="thumb active" data-audio="rain.mp3" data-title="잔잔한 빗소리">
+      <img src="img2.jpg" class="thumb" data-audio="wind.mp3" data-title="바람 부는 숲속">
+      <img src="img3.jpg" class="thumb" data-audio="night.mp3" data-title="고요한 밤">
+    </div>
+
+    <audio id="audio" src="rain.mp3"></audio>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // 시간 업데이트
+      function updateClock() {
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, '0');
+        const m = String(now.getMinutes()).padStart(2, '0');
+        $('#clock').text(`${h}:${m}`);
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+
+      // 재생/일시정지 버튼
+      $('.play-btn').click(function() {
+        const audio = $('#audio')[0];
+        if (audio.paused) {
+          audio.play();
+          $(this).text('⏸');
+        } else {
+          audio.pause();
+          $(this).text('▶');
+        }
+      });
+
+      // 썸네일 클릭 시 해당 사운드로 전환
+      $('.thumb').click(function() {
+        const audioSrc = $(this).data('audio');
+        const title = $(this).data('title');
+
+        $('#audio').attr('src', audioSrc)[0].play();
+        $('.play-btn').text('⏸');
+        $('#title').text(title);
+
+        $('.thumb').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+  </script>
+</body>
+</html>

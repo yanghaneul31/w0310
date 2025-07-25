@@ -24,8 +24,8 @@ body {
   padding: 50px 50px;
 }
 .logo{
-    margin-top: 400px;
-    margin-left: 300px;
+    margin-top: 300px;
+    margin-left: 200px;
 }
 .logo img{
     width: 270px;
@@ -58,7 +58,7 @@ body {
 }
 
 .hero-text h1 {
-    margin-top: 400px;
+    margin-top: 300px;
   font-size: 128px;
   margin-left: 300px;
 }
