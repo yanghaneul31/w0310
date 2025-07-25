@@ -10,15 +10,15 @@ body, html {
   font-family: sans-serif;
 }
 .section {
-  height: 1300px;
-  width:1920px;
+  height: 100%;
+  width: 1920px;
   text-align: center;
+  margin: 0 auto;
 }
 .header {
-  top: 0;
-  left: 0;
+  margin: 0 auto;
   height: 150px;
-  width: 100%;
+  width: 1920px;
   background: #f9e3ec;
   display: flex;
   justify-content: space-between;
@@ -95,7 +95,7 @@ body, html {
             100% { opacity: 0; }
 }
 @keyframes fade3 {
-  0% { opacity: 1; }
+   0% { opacity: 1; }
             10% { opacity: 0; }
             43% { opacity: 0; }
             66% { opacity: 0; }
