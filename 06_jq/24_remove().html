@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <a href="#">링크</a>
+    </div>
+    <div id="m2">
+        <span>내용1</span>
+    </div>
+    <div id="m3">
+        <span>내용2</span>
+    </div>
+    <div id="m4">
+        <span>내용3</span>
+    </div>
+    <button>삭제</button>
+    <button>detach</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+           삭제
+                removeAttr('속성')
+                    속성 제거
+                empty()
+                    하위 요소(콘텐츠) 제거
+                remove()
+                    요소 제거
+                    이벤트/데이터 보존x
+                detach() 
+                    요소 제거
+                    이벤트/데이터 보존     
+   
+        */
+        $(() => {
+
+            let detachDiv;
+            $('button:eq(0)').click(function(){
+                $('#m1 a').removeAttr('href');
+                $('#m2').empty();
+                $('#m3').remove();
+                detachDiv = $('#m4').detach();
+            });
+            $('button:eq(1)').click(function(){
+                detachDiv.insertAfter('#m2');
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

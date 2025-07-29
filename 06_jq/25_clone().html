@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        li {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="m1">
+        <li><img src="images/1.jpg" alt="HTML"></li>
+        <li><img src="images/2.jpg" alt="CSS"></li>
+        <li><img src="images/3.jpg" alt="Javascript"></li>
+        <li><img src="images/4.jpg" alt="jQuery"></li>
+    </ul>
+    <div id="m2">
+        <strong>내용1</strong>
+        <strong>내용2</strong>
+    </div>
+    <div id="m3">
+        <strong>내용3</strong>
+        <strong>내용4</strong>
+    </div>
+
+    <div id="m4">내용5</div>
+    <div id="m5">내용6</div>
+    <div id="m6">내용7</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            복제/감싸기
+                요소.clone()
+                    요소 복제
+                요소.wrap('대상요소')
+                    요소를 개별적으로 대상요소로 감싼다.
+                요소.wrapAll('대상요소')
+                    요소 전체를 하나의 대상요소로 감싼다.
+                요소.wrapInner('대상요소')
+                    요소의 내용을 대상요소로 감싼다.
+
+                요소.replaceWith('대상요소')
+                    요소를 대상요소로 변경한다.
+                대상요소.replaceAll(요소)
+                    요소를 대상요소로 변경한다.
+   
+        */
+        $(() => {
+
+            $('.m1').clone().insertAfter('.m1');
+            $('#m2 strong').wrap('<div></div>');
+            $('#m3 strong').wrapAll('<div><div>');
+            $('#m4').wrapInner('<div></div>');
+
+            $('#m5').replaceWith('<p>변경5</p>');
+            $('<p>변경7</p>').replaceAll('#m6');
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

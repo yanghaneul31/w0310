@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        div {
+            border: 5px solid gray;
+            margin: 20px;
+            padding: 20px;
+            background: #f60;
+        }
+    </style>
+</head>
+
+<body>
+    <div>박스</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            크기
+                width()
+                    콘텐츠 가로 크기를 가져오기
+                width(값)
+                    콘텐츠 가로 크기을 값으로 지정하기
+                height()
+                    콘텐츠 세로 크기
+                innerWidth()
+                    콘텐츠 가로 크기(padding 포함)
+                innerHeight()
+                    콘텐츠 세로 크기(padding 포함)
+                outerWidth()
+                    콘텐츠 가로 크기(padding+border 포함)
+                outerHeight()
+                    콘텐츠 세로 크기(padding+border 포함)
+                
+                // 읽기(가져오기) 전용, 지정 못함!
+                outerWidth(true)
+                    콘텐츠 가로 크기(padding+border+margin 포함)
+                outerHeight(true)
+                    콘텐츠 세로 크기(padding+border+margin 포함)
+        */
+        $(() => {
+
+            $('div')
+                .width(300)
+                .height(200)
+                .html(`
+                    width: ${$('div').width()/* 콘텐츠 가로: 300 */}<br>
+                    height: ${$('div').height()/* 콘텐츠 세로: 150 */}<br>
+                    innerWidth: ${$('div').innerWidth()/* 패딩추가: 300+20*2 */}<br>
+                    innerHeight: ${$('div').innerHeight()/* 패딩추가: 200+20*2  */}<br>
+                    outerWidth: ${$('div').outerWidth()/* 보더추가: 300+20*2+5*2 */}<br>
+                    outerHeight: ${$('div').outerHeight()/* 보더추가: 300+20*2+5*2 */}<br>
+                    outerWidth(true): ${$('div').outerWidth(true)/* 마진추가: 300+20*2+5*2+20*2 */}<br>
+                    outerHeight(true): ${$('div').outerHeight(true)/* 마진추가: 200+20*2+5*2+20*2 */}
+                `);
+
+            
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

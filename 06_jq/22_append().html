@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="m1">
+        <strong>내용1</strong>
+    </div>
+    <div id="m2">
+        <strong>내용2</strong>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+
+            before<태그>prepend내용append</태그>after
+            
+            DOM 조작 메서드
+                1) 삽입(추가)
+                2) 삭제
+                3) 복제
+
+            삽입 관련 메서드
+
+                부모.append(자식)
+
+                prepend() -> ::before -> :before
+                append() -> ::after -> :after
+                before()
+                after()
+
+
+                자식.appendTo(부모)
+
+                prependTo()
+                appendTo()
+                insertBefore()
+                insertAfter()
+
+        */
+        $(() => {
+
+            // 부모.append(자식)
+            $('#m1').prepend('<b>삽입1</b>');
+            $('#m1').append('<b>삽입2</b>');
+            $('#m1').before('<i>삽입3</i>');
+            $('#m1').after('<i>삽입4</i>');
+            
+            $('#m1').css({border: '1px solid red'});
+
+            // 자식.appendTo(부모)
+            $('<b>삽입1</b>').prependTo('#m2');
+            $('<b>삽입2</b>').appendTo('#m2');
+            $('<i>삽입3</i>').insertBefore('#m2');
+            $('<i>삽입4</i>').insertAfter('#m2');
+            
+            $('#m2').css({border: '1px solid red'});
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

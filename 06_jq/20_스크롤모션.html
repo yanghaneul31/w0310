@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {
+            height: 2000px;
+        }
+
+        #up {
+            position: fixed;
+            right: -100px;
+            bottom: 30px;
+            transition: all .5s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #up.on {
+            right:0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #up a {
+            display: inline-block;
+            padding: 20px;
+            text-align: center;
+            background: #333;
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap"></div>
+    <div id="up">
+        <a href="#">TOP</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            스크롤 모션(Scroll Motion)
+
+            위치
+                scrollTop()
+                scrollLeft()
+            
+            이벤트
+                click()
+                scroll()
+        */
+        $(() => {
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#up').addClass('on');
+                } else {
+                    $('#up').removeClass('on');
+                }
+            });
+            $('#up a').click(function (event) {
+                $(window).scrollTop(0);
+                event.preventDefault();
+            });
+
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

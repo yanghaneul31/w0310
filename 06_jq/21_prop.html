@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button type="button">toggle</button>
+    <input type="checkbox" id="html"><label for="html">html</label>
+    <input type="checkbox" id="css"><label for="css">css</label>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            HTML 속성 가져오기/지정하기
+                attr('속성')
+                    HTML 속성 가져오기
+                attr('속성',값)
+                attr({속성:값, 속성: 값, ...})
+                    HTML 속성 지정하기
+                removeAttr()
+
+                prop()
+                    자바스크립트 속성(property)
+                css({속성: 값})
+                    CSS 속성
+
+                animate({속성: 값}, 시간)
+                    시간은 밀리초(ms)
+                    
+        */
+        $(() => {
+
+            // 객체 탐색
+            const chk = $('input:checkbox');
+            const chk0 = chk.eq(0);
+            const chk1 = chk.eq(1);
+
+            // 출력
+            console.log(chk0.attr('checked'));
+            console.log(chk1.prop('checked'));
+            
+            // 전역 변수
+            let flag = true;
+
+            $('button').click(()=>{
+
+                if (flag === true) {
+                    chk0.attr({checked: 'checked'});
+                    chk1.prop({checked: true});
+                    // 출력
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.prop('checked'));
+                    flag = false;
+                } else {
+                    chk0.attr({checked: null});
+                    chk1.prop({checked: false});
+                    // 출력
+                    console.log(chk0.attr('checked'));
+                    console.log(chk1.prop('checked'));
+                    flag = true;
+                }
+                
+                console.log(typeof undefined);
+                console.log(typeof null);
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

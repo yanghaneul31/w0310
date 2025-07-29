@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 이벤트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .pic {
+            background: #ccc;
+        }
+        .pic img {
+            transform: translateX(-200px);
+            transition: all 0.5s ease;
+            vertical-align: top;
+        }
+        .pic img.on {
+            transform: translateX(0);
+        }
+        button {
+            width: 200px;
+            height: 50px;
+            border:none;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pic">
+        <img src="images/4.jpg" alt="jQuery">
+    </div>
+    <button type="button">hover 이벤트</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트의 종류
+                click
+                dbclick
+
+                mouseover
+                mouseout
+                    -> 이벤트 버블링
+                mouseenter
+                mouseleave
+                    -> 이벤트 버블링x
+                
+                mousedown
+                mouseup
+                mousemove
+                hover
+                    mouseenter + mouseleave
+            
+            이벤트 전파(Event Propagation)
+                이벤트 버블링(Bubbling)
+                    상위 요소에서 하위 요소로 전파
+                이벤트 캡처링(Capturing)
+                    하위 요소에서 상위 요소로 전파
+
+            이벤트 작성 방법
+                // 이벤트 메서드로 직접 기록
+                객체.이벤트(function(){});
+
+                // on() 메서드를 이용한 기록
+                객체.on('이벤트1 이벤트2 ...', function(){});
+   
+        */
+        $(() => {
+
+            /* $('button').hover(function(){
+                // mouseenter
+                $('.pic img').toggleClass('on');
+            }, function(){
+                // mouseleave
+                $('.pic img').toggleClass('on');
+            }); */
+
+            // $('button').mouseenter(()=>
+            //     $('.pic img').toggleClass('on')
+            // );
+            // $('button').mouseleave(()=>
+            //     $('.pic img').toggleClass('on')
+            // );
+
+            // on() 이벤트 메서드
+            // $('button').on('mouseenter',()=>
+            //     $('.pic img').toggleClass('on')
+            // );
+            // $('button').on('mouseleave',()=>
+            //     $('.pic img').toggleClass('on')
+            // );
+
+            // 이벤트 연결
+            $('button').on('mouseenter mouseleave',()=>
+                $('.pic img').toggleClass('on')
+            );
+
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

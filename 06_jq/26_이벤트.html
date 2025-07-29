@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 이벤트</title>
+    <style>
+        .bg {
+            padding: 40px;
+            margin-bottom: 40px;
+            background: #ccc;
+        }
+        .inner {
+            padding: 20px;
+            background: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap1 bg">
+        <div class="inner">mouseover</div>
+    </div>
+    <div class="wrap2 bg">
+        <div class="inner">mouseenter</div>
+    </div>
+    <div class="display"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트의 종류
+                click
+                dbclick
+
+                mouseover
+                mouseout
+                    -> 이벤트 버블링
+                mouseenter
+                mouseleave
+                    -> 이벤트 버블링x
+                
+                mousedown
+                mouseup
+                mousemove
+                hover
+            
+            이벤트 전파(Event Propagation)
+                이벤트 버블링(Bubbling)
+                    상위 요소에서 하위 요소로 전파
+                이벤트 캡처링(Capturing)
+                    하위 요소에서 상위 요소로 전파
+
+                
+   
+        */
+        $(() => {
+
+            $('.wrap1').mouseover(function(){
+                $('.display').append('<strong>마우스오버</strong>');
+            });
+            $('.wrap2').mouseenter(function(){
+                $('.display').append('<strong>마우스들어감</strong>');
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooq Fullpage</title>
+
+  <!-- Fonts & CSS -->
+  <link rel="stylesheet" href="./css/brand.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+
+  <!-- jQuery & fullPage.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+</head>
+<body>
+
+  <!-- 전체 페이지 섹션 시작 -->
+  <div id="fullpage">
+
+    <!-- SECTION 1: 헤더 + 원형 이미지 -->
+    <div class="section">
+      <header>
+        <div class="logo"><img src="./images/10014.png" alt="logo"></div>
+        <nav>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="circle-image">
+        <img src="./images/about2.jpeg" alt="Circle Image">
+      </div>
+        <h2>About (Tooq)</h2>
+      <div class="about-text-top">
+        특별한 순간도 일상도 누구나, ‘툭’ 무심한 듯 편안하게. <br />
+        우리는 누구나 쉽게 즐길 수 있는 꾸밈없는 감성의 아름다움을 선사합니다.<br /><br />
+      </div>
+    </div>
+
+    <!-- SECTION 2: About + 회전 Tooq 마크 -->
+    <div class="section">
+     
+      <div class="about-text">
+       
+        At Tooq, we pursue: Effortless glow, Basic skills, Casual beauty. <br>
+        We create casual aesthetic products that everyone can easily access.
+      </div>
+
+      <div class="spin-wrapper">
+        <div class="spin-item">
+          <img src="./images/10014.png" alt="Tooq Image">
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: 브랜드 설명 + 모델 이미지 -->
+    <div class="section">
+      <div class="about-text-bottom">
+        무심한 듯 멋이 있게, 투크 <br>
+        투크는 누구든지 편안하고 손쉽게 '잘 사용할 수 있는' 제품을 생산하는 라이프 스타일 뷰티 브랜드입니다. <br>
+        우리는 일상 속에 자연스레 스며들어 익숙한 시간 사용받는 브랜드가 되고 싶습니다. <br>
+        무심한 듯 멋이 있게, 헤든–투–토 만족시킬 투크의 상품들로 여러분의 일상을 채워보세요.
+      </div>
+      <img class="model-img" src="./images/about1.jpg" alt="Model Image">
+    </div>
+
+    <!-- SECTION 4: 푸터 (auto-height로 화면 아래에 딱 붙음) -->
+    <div class="section fp-auto-height">
+      <footer class="footer">
+        <div class="footer-left">
+          <img src="./images/10014.png" alt="Lunest Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+          <p class="footer-desc">Effortless Mood <br> TooQ</p>
+          <hr class="footer-line">
+          <ul class="footer-nav">
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+            <li>Shopping Guide</li>
+          </ul>
+          <hr class="footer-line">
+          <p class="footer-policy"><span>instagram</span><span>kakaotalk</span></p>
+        </div>
+        <div class="footer-right">
+          <p class="footer-copy">Copyright © Tooq® . All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+  </div> <!-- #fullpage 끝 -->
+
+  <!-- fullPage.js 초기화 -->
+  <script>
+   new fullpage('#fullpage', {
+  autoScrolling: true,
+  navigation: true,
+  anchors: ['home', 'about', 'story', 'footer'],
+  showActiveTooltip: false,           // ✅ 이건 꺼주고
+  navigationTooltips: [],             // ✅ 툴팁은 비워줌
+});
+
+  </script>
+
+</body>
+</html>

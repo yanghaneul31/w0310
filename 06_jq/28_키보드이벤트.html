@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: 이벤트</title>
+    <style>
+        body {
+            font-size: 12px;
+        }
+        textarea {
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        textarea.on {
+            background: #f60;
+            color: #fff;
+        }
+        #display {
+            width: 300px;
+            height: 100px;
+            word-break: break-all;
+            border: 1px solid #000;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea></textarea>
+    <div id="display"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            이벤트의 종류
+                click
+                dbclick
+
+                mouseover
+                mouseout
+                    -> 이벤트 버블링
+                mouseenter
+                mouseleave
+                    -> 이벤트 버블링x
+                
+                mousedown
+                mouseup
+                mousemove
+                hover
+                    mouseenter + mouseleave
+            
+            이벤트 전파(Event Propagation)
+                이벤트 버블링(Bubbling)
+                    상위 요소에서 하위 요소로 전파
+                이벤트 캡처링(Capturing)
+                    하위 요소에서 상위 요소로 전파
+
+            이벤트 작성 방법
+                // 이벤트 메서드로 직접 기록
+                객체.이벤트(function(){});
+
+                // on() 메서드를 이용한 기록
+                객체.on('이벤트1 이벤트2 ...', function(){});
+   
+        */
+        $(() => {
+
+            $('textarea').keydown(function(){
+                $(this).addClass('on');
+            }).keyup(function(){
+                $('#display').text($(this).val());
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리: HTML/CSS 관련 메서드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            /* 콘텐츠가 넘치면 스크롤 생김 */
+            overflow: auto;
+        }
+
+        .inner {
+            width: 1000px;
+            height: 1000px;
+            background: #f60;
+        }
+        #info {
+            position: fixed;
+            top:0;
+            left: 50%;
+            width: 300px;
+            margin-left: -550px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div class="inner"></div>
+    </div>
+    <div id="info">
+        <span></span>
+        <button type="button">클릭</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        /* 
+            스크롤 모션(Scroll Motion)
+
+            위치
+                scrollTop()
+                scrollLeft()
+            
+            이벤트
+                click()
+                scroll()
+        */
+        $(() => {
+
+            let top = $('#outer').scrollTop();
+            let left = $('#outer').scrollLeft();
+            $('#info span').text(`scrollTop: ${top} / scrollLeft: ${left}`);
+            
+            // 스크롤 이벤트
+            $('#outer').scroll(function(){
+                top = $('#outer').scrollTop();
+                left = $('#outer').scrollLeft();
+                $('#info span').text(`scrollTop: ${top} / scrollLeft: ${left}`);
+            });
+
+            $('button').click(function(){
+                $('#outer').scrollTop(250).scrollLeft(250);
+            });
+
+        }); //document.ready()
+    </script>
+</body>
+
+</html>
