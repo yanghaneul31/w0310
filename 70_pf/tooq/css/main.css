@@ -19,6 +19,7 @@
     --gray4: #aaa;
     --white: #fff;
     --gray5: #eee;
+    --brown1:#a08d75;
 }
 
 body {
@@ -38,7 +39,7 @@ h3 {
     width: 100%;
     z-index: 9999;
     padding: 18px 32px;
-    background: var(--white);
+    background: var(--brown1);
 }
 
 /* logo */
@@ -148,6 +149,9 @@ h3 {
     filter:saturate(30%)
 }
 /* sec4 */
+#sec4{
+    padding-top:250px;
+}
 #sec4 > p{
     margin-bottom: 16px;
 }
@@ -181,7 +185,68 @@ h3 {
     display: block;
 }
 /* tablet */
-@media(min-width:768px) {}
+@media(min-width:768px) {
+     /* gnb */
+    #gnb {
+        display: block;
+    }
+
+    #gnb ul {
+        display: flex;
+    }
+
+    #gnb li:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    /* sec1 */
+    #sec1 h2 span:last-child {
+        display: inline-block;
+    }
+
+    /* sec2~3 common */
+    #sec2 ul,
+    #sec3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px 16px;
+    }
+
+    #sec2 li,
+    #sec3 li {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+}
 
 /* desktop */
-@media(min-width:1200px) {}
+@media(min-width:1200px) {
+     /* sec1 */
+    #sec1 {
+        max-width:1510px;
+        margin: 0 auto;
+    }
+    
+    /* sec2~4 common */
+    .sec {
+        padding: 68px 205px 0;
+    }
+
+    /* sec2~3 common */
+    #sec2 li,
+    #sec3 li {
+        /* 48px을 4분할->12px */
+        flex: 0 0 calc(25% - 12px);
+    }
+
+    /* footer */
+    #footer span:first-child {
+        display: inline;
+    }
+    #footer span:nth-child(2) {
+        display: none;
+    }
+    #footer span:last-child {
+        display: inline;
+    }
+}

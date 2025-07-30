@@ -41,10 +41,9 @@
     </div>
 
     <!-- SECTION 2: About + 회전 Tooq 마크 -->
-    <div class="section">
+    <div class="section"  style="background: url('./images/ChatGPT\ Image\ 2025년\ 7월\ 30일\ 오후\ 12_19_46.png') no-repeat center center/cover;">
      
       <div class="about-text">
-       
         At Tooq, we pursue: Effortless glow, Basic skills, Casual beauty. <br>
         We create casual aesthetic products that everyone can easily access.
       </div>
@@ -58,13 +57,13 @@
 
     <!-- SECTION 3: 브랜드 설명 + 모델 이미지 -->
     <div class="section">
-      <div class="about-text-bottom">
+      <div class="about-text-bottom  fade-up">
         무심한 듯 멋이 있게, 투크 <br>
         투크는 누구든지 편안하고 손쉽게 '잘 사용할 수 있는' 제품을 생산하는 라이프 스타일 뷰티 브랜드입니다. <br>
-        우리는 일상 속에 자연스레 스며들어 익숙한 시간 사용받는 브랜드가 되고 싶습니다. <br>
+        우리는 일상 속에 자연스레 스며들어 익숙한 시간 사용받는 브랜드가 되고 싶습니다. 
         무심한 듯 멋이 있게, 헤든–투–토 만족시킬 투크의 상품들로 여러분의 일상을 채워보세요.
       </div>
-      <img class="model-img" src="./images/about1.jpg" alt="Model Image">
+      <img class="model-img  fade-up" src="./images/about1.jpg" alt="Model Image">
     </div>
 
     <!-- SECTION 4: 푸터 (auto-height로 화면 아래에 딱 붙음) -->
@@ -96,10 +95,12 @@
   <script>
    new fullpage('#fullpage', {
   autoScrolling: true,
-  navigation: true,
   anchors: ['home', 'about', 'story', 'footer'],
-  showActiveTooltip: false,           // ✅ 이건 꺼주고
-  navigationTooltips: [],             // ✅ 툴팁은 비워줌
+  afterLoad: function(origin, destination) {
+    if (destination.index === 2) {
+      $('.fade-up').addClass('start');
+    }
+  }
 });
 
   </script>
