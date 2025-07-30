@@ -23,6 +23,12 @@
  }
 body {
     font-size: 16px;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
 
  /* Header */
@@ -47,6 +53,7 @@ body {
 
  .logo img {
      height: 4.375rem;
+     display: block;
  }
 
  nav ul {

@@ -1,0 +1,219 @@
+@charset "utf-8";
+
+ @font-face {
+     font-family: 'Cafe24Lovingu';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'SangSangShin';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ /* Reset & base */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: 'Cafe24Lovingu', 'Nanum Gothic', sans-serif;
+ }
+body {
+    font-size: 16px;
+}
+
+ /* Header */
+ header {
+     
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 999;
+     background: rgb(255, 222, 222);
+     padding: 1rem 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid #eee;
+ }
+
+ .logo {
+     font-size: 1.8rem;
+     font-weight: bold;
+ }
+
+ .logo img {
+     height: 4.375rem;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 1.5rem;
+ }
+
+ nav li {
+     font-size: 3.125rem;
+     
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #555;
+     font-weight: 500;
+ }
+ /* 카테고리 메뉴 */
+.shop-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.shop-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'SangSangShin';
+}
+
+.category-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.category-menu li a {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.category-menu li.active a,
+.category-menu li a:hover {
+  background: pink;
+  color: #fff;
+  border-color: pink;
+}
+
+/* 상품 카드 */
+.product-grid {
+  display: grid;
+  grid-template-columns:  repeat(4, 1fr); ;
+  gap: 2rem;
+  padding: 2rem 4rem;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 1rem;
+  color: #555;
+}
+
+.discount {
+  color: #e91e63;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffe0e0;
+  color: #555;
+  padding: 50px 60px 30px;
+  font-size: 1.5rem;
+  font-family: 'Cafe24Lovingu', cursive;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-left {
+  flex: 0 0 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+}
+
+.footer-center {
+  flex: 1;
+  padding: 0 40px;
+}
+
+.footer-desc {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px 0;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  font-size: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.footer-policy {
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+.footer-policy span:nth-of-type(1)::after {
+  content: "|";
+  margin: 0 10px;
+}
+
+.footer-right {
+  position: absolute;
+  right: 60px;
+  bottom: 20px;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
