@@ -220,6 +220,16 @@ h3 {
 #sec3 li img:hover {
     filter: brightness(70%);
 }
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-fade.on {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* sec4 */
 
@@ -344,4 +354,5 @@ h3 {
     #footer span:last-child {
         display: inline;
     }
+    
 }

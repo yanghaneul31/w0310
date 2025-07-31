@@ -12,6 +12,9 @@ $(function () {
     $('html, body').animate({ scrollTop: targetTop }, 700, function () {
       isScrolling = false;
       current = index;
+
+      // 💥 스크롤 애니메이션 후 강제로 scroll 이벤트 트리거
+      $(window).trigger('scroll');
     });
   }
 
@@ -33,6 +36,9 @@ $(function () {
         current = i;
       }
     });
+
+    // 초기 등장 체크
+    $(window).trigger('scroll');
   });
 
   // 탭 메뉴 동작
@@ -40,8 +46,28 @@ $(function () {
     const target = $(this).data('target');
     $('.tab').removeClass('active');
     $(this).addClass('active');
-
     $('.product-group').removeClass('show');
     $('.' + target).addClass('show');
+  });
+
+  // ✨ #sec3 등장 애니메이션
+  const $targets = $('#sec3 li');
+  $targets.each(function (i) {
+    $(this).addClass('scroll-fade');
+    $(this).css('transition-delay', `${i * 0.1}s`);
+  });
+
+  $(window).on('scroll', function () {
+    const winTop = $(window).scrollTop();
+    const winBottom = winTop + $(window).height();
+
+    $targets.each(function () {
+      const $el = $(this);
+      const elTop = $el.offset().top;
+
+      if (winBottom > elTop + 100) {
+        $el.addClass('on');
+      }
+    });
   });
 });
