@@ -203,7 +203,7 @@ h3 {
 }
 /* sec4 */
 #sec4{
-    padding-top:250px;
+    padding-top:80px;
 }
 #sec4 > p{
     margin-bottom: 16px;
@@ -275,7 +275,7 @@ h3 {
         flex: 0 0 calc(50% - 8px);
     }
     #sec3 li{
-        margin-bottom: 300px;
+        margin-bottom: 250px;
     }
 }
 
