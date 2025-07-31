@@ -91,7 +91,6 @@ h3 {
 .main_banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   opacity: 0;
   animation: fadeSlide 12s infinite;
   position: absolute;  /* 유지 */
@@ -162,15 +161,8 @@ h3 {
 }
 
 /* sec3 */
-#sec3 h2 {
-    margin-bottom: 20px;
-}
-
-#sec3>p {
-    margin-bottom: 40px;
-}
 #sec3 li{
-    margin-bottom: 32px;
+   margin-top: 30px;
 }
 #sec3 li h3 {
     color: var(--gray1);
@@ -179,7 +171,6 @@ h3 {
 
 #sec3 li p:first-of-type {
     color: var(--gray4);
-    margin: 18px 0;
 }
 
 #sec3 li a {
@@ -196,6 +187,7 @@ h3 {
 }
 #sec3 li img {
   transition: 0.3s ease;
+  object-fit: cover;
 }
 
 #sec3 li img:hover {
@@ -203,7 +195,7 @@ h3 {
 }
 /* sec4 */
 #sec4{
-    padding-top:80px;
+    padding-top:px;
 }
 #sec4 > p{
     margin-bottom: 16px;
