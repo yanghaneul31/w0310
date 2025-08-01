@@ -219,11 +219,9 @@ body {
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-    padding: 20px;
-  }
+
+@media (max-width: 390px) {
+  /* 여기 안에 아이폰 13 대응 CSS를 작성하세요 */
 
   .hero {
     flex-direction: column;
@@ -237,86 +235,77 @@ body {
   }
 
   .logo img {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .logo p {
-    font-size: 48px;
-  }
-
-  .hero-text {
-    margin: 0;
+    font-size: 36px;
   }
 
   .hero-text h1 {
-    margin: 40px 0 20px;
-    font-size: 36px;
+    margin: 30px 0 10px;
+    font-size: 28px;
     margin-left: 0;
   }
 
   .hero-text p {
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 0;
   }
 
   .emotion h2 {
-    font-size: 36px;
-    margin-top: 200px;
+    font-size: 30px;
+    margin-top: 150px;
   }
 
   .emotion .quote {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 10px;
   }
 
   .modes {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 
   .mode-card {
     padding: 20px;
   }
 
-  .mode-card img,
-  .image-wrapper img {
+  .mode-card img {
     width: 100%;
     height: auto;
   }
 
   .mode-card p {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .mode-btn {
-    width: 60px;
-    font-size: 18px;
+    width: 50px;
+    font-size: 16px;
   }
 
   .features h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .feature-cards {
     flex-direction: column;
-    gap: 40px;
-  }
-
-  .feature {
-    margin-top: 50px;
+    gap: 30px;
   }
 
   .feature img {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 
   .feature h3 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .feature p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
