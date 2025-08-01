@@ -5,7 +5,8 @@
   $('#fullpage').fullpage({
     autoScrolling: true,
     navigation: true,
-    scrollHorizontally: false
+    scrollHorizontally: false,
+   
   });
 
   // 탭 버튼
