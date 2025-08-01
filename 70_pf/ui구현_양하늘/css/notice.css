@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Cafe24Lovingu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SangSangShin';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cafe24Lovingu', 'Nanum Gothic', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header */
+header {
+   
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgb(255, 222, 222);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 4.375rem;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    font-size: 3.125rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+.notice-wrapper {
+  width: 1200px;
+  margin: 100px auto 100px;
+  padding: 0 20px;
+}
+
+.notice-title {
+  font-size:4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 70px;
+  font-family: 'SangSangShin';
+}
+
+.notice-list {
+  list-style: none;
+  border-top: 1px solid #ccc;
+}
+
+.notice-item {
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+   cursor: pointer;
+}
+.notice-item:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.notice-item:hover .notice-subject {
+  color: #ff8fa3;  /* 포인트 컬러: 원하는 색으로 바꿔도 좋아요 */
+  font-weight: bold;
+}
+.notice-number {
+  width: 40px;
+  font-weight: bold;
+  font-size:2rem;
+  color: #333;
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-subject {
+  font-size: 1rem;
+  color: #111;
+  margin-bottom: 5px;
+}
+
+.notice-date {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.pagination .arrow {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.pagination .page {
+  font-weight: bold;
+}
+
+.pagination .current {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffe0e0;
+    color: #555;
+    padding: 50px 60px 30px;
+    font-size: 1.5rem;
+    font-family: 'Cafe24Lovingu', cursive;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.footer-left {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+
+.footer-center {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.footer-desc {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    font-size: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.footer-policy {
+    margin-top: 10px;
+    font-size: 1.6rem;
+}
+
+.footer-policy span:nth-of-type(1)::after {
+    content: "|";
+    margin: 0 10px;
+}
+
+.footer-right {
+    position: absolute;
+    right: 60px;
+    bottom: 20px;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+.floating-talk {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.floating-talk img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 3px;
+   border-radius: 50%;
+}
+
+.floating-talk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.notice-title,
+.notice-number,
+.notice-date {
+  font-family: 'SangSangShin', sans-serif !important;
+}
+

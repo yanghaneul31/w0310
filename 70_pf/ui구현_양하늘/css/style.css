@@ -182,7 +182,6 @@ main {
      border-radius: 20px;
      cursor: pointer;
      font-weight: bold;
-     font-family: 'SangSangShin';
      font-size: 3.125rem;
  }
 
@@ -322,7 +321,7 @@ main {
 }
 
 
- /* Footer */
+/* Footer */
  .footer {
      display: flex;
      justify-content: space-between;
@@ -331,7 +330,8 @@ main {
      color: #555;
      padding: 40px 60px;
      font-size: 2.500rem;
-     height: 200px;
+     height: auto;
+     min-height: 200px;
  }
 
  .footer-left {
@@ -396,3 +396,482 @@ main {
      opacity: 0.9;
      margin-left: 150px;
  }
+ .floating-talk {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.floating-talk img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 3px;
+   border-radius: 50%;
+}
+
+.floating-talk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+@charset "utf-8";
+
+ @font-face {
+     font-family: 'Cafe24Lovingu';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Lovingu.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'SangSangShin';
+     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ /* Reset & base */
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: 'Cafe24Lovingu', 'Nanum Gothic', sans-serif;
+ }
+body {
+    font-size: 16px;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+
+ /* Header */
+ header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 999;
+     background: rgb(255, 222, 222);
+     padding: 1rem 2rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid #eee;
+ }
+
+ .logo {
+     font-size: 1.8rem;
+     font-weight: bold;
+ }
+
+ .logo img {
+     height: 4.375rem;
+     display: block;
+ }
+
+ nav ul {
+     list-style: none;
+     display: flex;
+     gap: 1.5rem;
+ }
+
+ nav li {
+     font-size: 3.125rem;
+     
+ }
+
+ nav a {
+     text-decoration: none;
+     color: #555;
+     font-weight: 500;
+ }
+
+ /* Sections */
+ .section {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     text-align: center;
+ }
+
+ .hero {
+  color: #555;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:200px;
+}
+
+.hero h1 {
+  font-size: 100px;
+  
+  opacity: 1;
+}
+
+.hero h1 span {
+  font-size: 180px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 600px;
+  margin-top: -600px;
+}
+
+.inner {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.inner.show {
+  opacity: 1;
+  z-index: 1;
+}
+
+.inner img {
+  width: 700px;
+  height: 600px;;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+ .section-title {
+     font-size: 6.250rem;
+     color: #555;
+    
+ }
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+     gap: 2rem;
+     width: 100%;
+     max-width: 1400px;
+ }
+
+ .product {
+     border: 1px solid #eee;
+     padding: 2rem;
+     background: white;
+     font-size: 3.125rem;
+     transition: transform 0.2s;
+     margin-top: 10px;
+ }
+ .product img {
+     width: 100%;
+     height: auto;
+     margin-bottom: 1rem;
+ }
+
+ .ranking-tabs {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     margin-bottom: 2rem;
+ }
+
+ .tab-btn {
+     padding: 0.5rem 1rem;
+     color: #555;
+     background: #ffd7d7;
+     border: none;
+     border-radius: 20px;
+     cursor: pointer;
+     font-weight: bold;
+     font-size: 3.125rem;
+ }
+
+ .tab-btn.active {
+     background: #ff8fa3;
+     color: #fff;
+ }
+
+ .products-tab {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 1.5rem;
+     max-width: 1100px;
+     margin: 0 auto;
+ }
+
+ .products-tab.hidden {
+     display: none;
+ }
+
+ .product .rank {
+     font-weight: bold;
+     margin-bottom: 0.5rem;
+     font-size:3.750rem !important;
+     color: #555;
+ }
+
+ button {
+     font-size: 1.875rem;
+     padding: 0.75rem 1.5rem;
+ }
+
+
+ button:hover {
+     background-color: #ff8fa3;
+ }
+
+ .brand-section {
+     opacity: 0;
+     transform: translateY(100px);
+     transition: all 1s ease;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #fff;
+ }
+
+
+ .brand-section.show {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .brand-section img {
+     width: 1000px;
+     height: auto;
+     border-radius: 50px;
+     transition: 0.3s ease;
+ }
+
+ .brand-section img:hover {
+    color: #555;
+     opacity: 0.7;
+ }
+
+ .brand-section .text {
+     text-align: left;
+     margin-left: 80px;
+     margin-top: 80px;
+ }
+
+ .brand-section h2 {
+     font-size:60px;
+     font-weight: bolder;
+     color: #333;
+ }
+
+ .brand-section p {
+     font-size: 3.125rem;
+     font-weight: bold;
+     color: #555;
+     font-family: 'SangSangShin';
+ }
+.brand-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.brand-item {
+  position: relative;
+  width: 700px;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 30px;
+  margin-top: 100px;
+}
+
+.brand-item img {
+  width: 700px;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* 텍스트 중앙 위치 */
+.brand-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+}
+
+
+/* 어두운 오버레이 */
+.brand-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+  border-radius: 30px;
+}
+
+.brand-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Footer */
+ .footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     background-color: rgb(255, 222, 222);
+     color: #555;
+     padding: 40px 60px;
+     font-size: 2.500rem;
+     height: auto;
+     min-height: 200px;
+ }
+
+ .footer-left {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 280px;
+ }
+
+ .footer-logo {
+     width: 230px;
+    margin-right: 100px;
+     margin-top: 20px;
+
+ }
+
+ .footer-center {
+     flex: 1;
+     text-align: left;
+     padding: 0 40px;
+ }
+
+ .footer-desc {
+     margin-top: 0;
+     margin-bottom: 15px;
+ }
+
+ .footer-line {
+     border: none;
+     border-top: 1px solid #ccc;
+     margin: 15px 0;
+ }
+
+ .footer-nav {
+     list-style: none;
+     padding: 15px;
+     margin: 0;
+     display: flex;
+     gap: 10px;
+     flex-wrap: wrap;
+ }
+
+ .footer-nav li {
+     white-space: nowrap;
+ }
+
+ .footer-policy {
+     margin-top: 10px;
+ }
+ .footer-policy span:nth-of-type(1):after{
+    content:"|";
+    margin-right: 10px;
+    margin-left: 10px;
+ }
+ .footer-right {
+     text-align: right;
+     white-space: nowrap;
+     align-self: flex-end;
+     font-size: 1.562rem;
+
+     opacity: 0.9;
+     margin-left: 150px;
+ }
+ .floating-talk {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.7rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.floating-talk img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 3px;
+   border-radius: 50%;
+}
+
+.floating-talk:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 랭킹 탭 영역 전체 글꼴 변경 */
+.ranking-tabs,
+.ranking-tabs *,
+.products-tab-wrapper,
+.products-tab-wrapper * {
+  font-family: 'SangSangShin', sans-serif !important;
+}
+
+/* 특히 tab 버튼은 따로 덮어쓰기 */
+.tab-btn {
+  font-family: 'SangSangShin', sans-serif !important;
+}
+/* 브랜드 소개문단(p)만 바꾸고 싶을 때 */
+.brand-section p {
+  font-family: 'SangSangShin', sans-serif !important;
+}
