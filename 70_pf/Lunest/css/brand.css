@@ -221,7 +221,7 @@ body {
 
 
 @media (max-width: 390px) {
-  /* 여기 안에 아이폰 13 대응 CSS를 작성하세요 */
+  
 
   .hero {
     flex-direction: column;
