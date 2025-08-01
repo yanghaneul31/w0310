@@ -219,3 +219,104 @@ body {
   transform: translateY(0);
 }
 
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    padding: 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .logo img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .logo p {
+    font-size: 48px;
+  }
+
+  .hero-text {
+    margin: 0;
+  }
+
+  .hero-text h1 {
+    margin: 40px 0 20px;
+    font-size: 36px;
+    margin-left: 0;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    margin-left: 0;
+  }
+
+  .emotion h2 {
+    font-size: 36px;
+    margin-top: 200px;
+  }
+
+  .emotion .quote {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .modes {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mode-card {
+    padding: 20px;
+  }
+
+  .mode-card img,
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mode-card p {
+    font-size: 24px;
+  }
+
+  .mode-btn {
+    width: 60px;
+    font-size: 18px;
+  }
+
+  .features h2 {
+    font-size: 36px;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .feature {
+    margin-top: 50px;
+  }
+
+  .feature img {
+    width: 80%;
+    height: auto;
+  }
+
+  .feature h3 {
+    font-size: 32px;
+  }
+
+  .feature p {
+    font-size: 20px;
+  }
+}
