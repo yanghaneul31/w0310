@@ -6,7 +6,7 @@
     autoScrolling: true,
     navigation: true,
     scrollHorizontally: false,
-   
+   paddingTop:"102px"
   });
 
   // 탭 버튼
