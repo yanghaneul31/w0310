@@ -1,0 +1,600 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+@font-face {
+    font-family: 'KyoboHandwriting2021sjy';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-size: 10px;
+    --gray1: #111;
+    --gray2: #333;
+    --gray3: #ccc;
+    --gray4: #aaa;
+    --white: #fff;
+    --gray5: #eee;
+    --brown1: #a08d75;
+}
+
+/* Typography */
+body {
+    font: 2rem/1.6 'KyoboHandwriting2021sjy', sans-serif;
+    background-color: #fff;
+    color: var(--gray1);
+    min-height: 100vh;
+    /* 푸터 밀어내기용 */
+    display: flex;
+    flex-direction: column;
+}
+
+h2,
+h3 {
+    font-family: 'KyoboHandwriting2021sjy';
+}
+
+/* 공통: phone */
+/* 헤더 */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    background: var(--white);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+
+#logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    width: 45px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+#gnb {
+    display: flex;
+    gap: 1.6rem;
+}
+
+#gnb a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--gray1);
+}
+
+#gnb ul {
+    display: flex;
+    /* 가로 정렬 */
+    gap: 1.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#gnb li {
+    display: inline-block;
+}
+
+#gnb a {
+    text-decoration: none;
+    color: var(--gray1);
+    font-size: 1em;
+}
+
+/* ✅ 검색줄 전체: product + 검색창 수평 배치 */
+.search-row {
+    margin-top: 140px;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray3);
+}
+
+/* Product 글자 */
+.search-title {
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: var(--gray1);
+}
+
+/* 오른쪽 검색박스 */
+.search-box {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 180px;
+}
+
+.search-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+
+/* 섹션 1 */
+#sec1 {
+    padding: 2rem 1.6rem 4rem;
+    background: #fff;
+    flex: 1;
+    text-align: center;
+}
+
+#sec1 h2 {
+    font-size: 3rem;
+    margin-bottom: 1.6rem;
+}
+
+#sec1 h2 span {
+    font-size: 1.2rem;
+    color: #888;
+    display: block;
+    margin-top: 0.4rem;
+}
+
+.book-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.book-item {
+    position: relative;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+.book-item:hover {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+.book-item img {
+    width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rank {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 2rem;
+    border-radius: 30%;
+}
+
+/* section2 전체 */
+#sec2 {
+    padding: 3rem 1.6rem;
+    background: #fff;
+    text-align: center;
+}
+
+#sec2 h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* 그리드 중앙 정렬 */
+.book-grid {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 카드 */
+.book-card {
+    width: 200px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.book-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* 이미지 */
+.book-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.book-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* 어두운 반투명 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+/* ✅ 설명 글씨 */
+.book-desc {
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+    z-index: 3;
+}
+
+
+.book-img:hover .book-overlay {
+    opacity: 1;
+}
+
+.book-img:hover img {
+    transform: scale(1.05);
+}
+
+
+.book-title {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.book-author {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+/* 섹션3  */
+#sec3 {
+    padding: 3rem 1.6rem;
+    background: #fff;
+    text-align: center;
+}
+
+#sec3 h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+}
+
+
+.flip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.flip-card {
+    width: 160px;
+    height: auto;
+    perspective: 1000px;
+}
+
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-back {
+    background: #222;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.book-desc {
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+
+
+.book-info {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.book-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.book-author {
+    font-size: 1.3rem;
+    color: #666;
+    margin: 0.2rem 0;
+}
+
+.book-price {
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* 푸터 */
+#footer {
+    text-align: center;
+    background: var(--gray2);
+    color: var(--white);
+    padding: 2rem;
+    margin-top: auto;
+}
+
+#footer span:first-child {
+    display: none;
+}
+
+#footer span:last-child {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+
+    #gnb a {
+        font-size: 1.6rem;
+    }
+
+    .search-row {
+        padding: 2rem 4rem;
+    }
+
+    .search-title {
+        font-size: 3.2rem;
+    }
+
+    .search-box input {
+        font-size: 1.6rem;
+        width: 240px;
+    }
+
+    .search-btn {
+        font-size: 1.6rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    #sec1 h2,
+    #sec2 h2,
+    #sec3 h2 {
+        font-size: 3.6rem;
+    }
+
+    .book-list {
+        gap: 2rem;
+    }
+
+    .book-item img {
+        width: 240px;
+    }
+
+    .rank {
+        font-size: 2.2rem;
+        padding: 6px 10px;
+    }
+
+    .book-grid {
+        gap: 3rem;
+    }
+
+    .book-card {
+        width: 220px;
+    }
+
+    .book-desc {
+        font-size: 1.6rem;
+    }
+
+    .book-title {
+        font-size: 1.8rem;
+    }
+
+    .book-author {
+        font-size: 1.4rem;
+    }
+
+    .book-price {
+        font-size: 1.6rem;
+    }
+
+   .flip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4개 고정 */
+    gap: 1.6rem;
+    justify-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .flip-card {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .flip-inner {
+    height: 260px;
+  }
+
+    #footer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 14px;
+    }
+
+    #gnb a {
+        font-size: 1.8rem;
+    }
+
+    .search-row {
+        padding: 0.5rem 6rem;
+    }
+
+    .search-title {
+        font-size: 3rem;
+    }
+
+    .search-box input {
+        font-size:1.2rem;
+        width: 300px;
+    }
+
+    .search-btn {
+        font-size:1rem;
+        padding: 0.8rem 1.4rem;
+    }
+
+    #sec1 h2,
+    #sec2 h2,
+    #sec3 h2 {
+        font-size: 3rem;
+    }
+
+    .book-list {
+        gap: 2.4rem;
+    }
+
+    .book-item img {
+        width: 260px;
+    }
+
+    .rank {
+        font-size: 2.4rem;
+        padding: 8px 12px;
+    }
+
+    .book-grid {
+        gap: 4rem;
+    }
+
+    .book-card {
+        width: 240px;
+    }
+
+    .book-desc {
+        font-size: 1.8rem;
+    }
+
+    .book-title {
+        font-size: 2rem;
+    }
+
+    .book-author {
+        font-size: 1.6rem;
+    }
+
+    .book-price {
+        font-size: 1.8rem;
+    }
+
+   .flip-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 간격 자동 배분 */
+  gap: 2rem;
+}
+
+.flip-card {
+  flex: 0 0 calc((100% - 6rem) / 4);  /* 2rem gap × 3 = 6rem */
+  max-width: 260px;  /* 카드 최대 너비 제한 */
+  box-sizing: border-box;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+    .flip-inner {
+        height: 400px;
+    }
+
+    .book-info {
+        margin-top: 1.4rem;
+    }
+
+    #footer {
+        font-size: 1.6rem;
+    }
+}
