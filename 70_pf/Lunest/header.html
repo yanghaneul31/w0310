@@ -10,12 +10,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-   <header>
+   <header class="header">
     <h1 class="header_logo"><a href="#"><img src="./images/헤더로고.png" alt="Lunest 로고"></a></h1>
-
-    <!-- ✅ 햄버거 버튼 추가 -->
-  <div class="menu-toggle">&#9776;</div>
-
     <nav class="gnb">
       <ul class="main">
         <li><a href="#">음악</a>
@@ -32,7 +28,7 @@
         </li>
         <li><a href="#">마이페이지</a>
           <ul class="sub">
-            <li><a href="#">즐겨찾기</a></li>
+            <li><a href="#">즐겨찾기</a></li> 
           </ul>
         </li>
         <li><a href="#">브랜드소개</a>
@@ -42,15 +38,52 @@
         </li>
       </ul>
     </nav>
+    <div class="mobile">
+      <div class="mobile_menu"><img src="./images/open.png" alt=""></div>
+      <div class="close"><img src="./images/close.png" alt=""></div>
+    </div>
   </header>
-
   <script>
-  $(function () {
-    $('.menu-toggle').click(function () {
-      $('nav .main').toggleClass('show');
-    });
-  });
-</script>
+    const mobileMenu = document.querySelector(".mobile_menu");
+const closeBtn = document.querySelector(".close");
+const gnb = document.querySelector(".gnb");
+const header = document.querySelector('header');
+
+// 메뉴 열기
+mobileMenu.addEventListener('click', () => {
+  gnb.classList.add("open");
+  header.classList.add("menu_open");
+  mobileMenu.style.display = "none";
+  closeBtn.style.display = "block";
+  document.body.classList.add("menu_open");
+});
+
+// 메뉴 닫기
+closeBtn.addEventListener('click', () => {
+  gnb.classList.remove("open");
+  header.classList.remove("menu_open");
+  closeBtn.style.display = "none";
+  mobileMenu.style.display = "block";
+  document.body.classList.remove("menu_open");
+
+  document.querySelectorAll(".sub.open").forEach(sub => sub.classList.remove("open"));
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    gnb.classList.remove("open");
+    header.classList.remove("menu_open");
+    gnb.style.display = "";
+    header.style.height = "";
+    mobileMenu.style.display = "none";
+    closeBtn.style.display = "none";
+    document.body.classList.remove("menu_open");
+  } else {
+    mobileMenu.style.display = "block";
+    closeBtn.style.display = "none";
+  }
+});
+  </script>
 
 </body>
 </html>
