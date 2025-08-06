@@ -1,0 +1,330 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+@font-face {
+  font-family: 'KyoboHandwriting2021sjy';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KyoboHandwriting2021sjy.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-size: 10px;
+  --gray1: #111;
+  --gray2: #333;
+  --gray3: #ccc;
+  --gray4: #aaa;
+  --white: #fff;
+  --gray5: #eee;
+  --brown1: #a08d75;
+}
+
+body {
+  font: 2rem/1.6 'KyoboHandwriting2021sjy', sans-serif;
+  background-color: #fff;
+  color: var(--gray1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h2, h3 {
+  font-family: 'KyoboHandwriting2021sjy';
+}
+
+/* 헤더 */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.6rem;
+  background: var(--white);
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+#logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111;
+  letter-spacing: 2px;
+}
+
+.logo-img {
+  width: 45px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+#gnb {
+  display: flex;
+  gap: 1.6rem;
+}
+
+#gnb ul {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#gnb li {
+  display: inline-block;
+}
+
+#gnb a {
+  text-decoration: none;
+  color: var(--gray1);
+  font-size: 1em;
+}
+
+/* 상세페이지 */
+.book-detail {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  font-family: sans-serif;
+  padding-top: 300px;
+}
+
+.book-detail-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.book-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.book-image img {
+  width: 280px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.book-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.book-author {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.book-rating {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.book-price {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.book-price .current {
+  color: #c0392b;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.book-price .original {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 0.5rem;
+}
+
+.book-price .discount {
+  color: #27ae60;
+}
+
+.buy-buttons {
+    margin-top: 200px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.buy-buttons button {
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cart {
+  background-color: #eee;
+}
+
+.btn-buy {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-gift {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* 최근 본 상품 */
+.recent-view {
+  position: sticky;
+  top: 190px;
+  width: 180px;
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size:5rem;
+  margin-left: 70px;
+}
+
+.recent-view h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.recent-view ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-view li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.recent-view img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.recent-view span {
+  font-size:2rem;
+  color: #555;
+}
+.book-description {
+  max-width: 1000px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  line-height: 1.8;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.book-description h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--gray1);
+}
+
+.book-description h3 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--gray2);
+}
+
+.book-description p {
+  margin-bottom: 2rem;
+}
+
+.book-description ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.book-meta {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-meta th,
+.book-meta td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.book-meta th {
+  background: #f1f1f1;
+  width: 30%;
+}
+/* footer */
+#footer {
+    text-align: center;
+    background: var(--gray2);
+    color: var(--white)
+}
+
+#footer span:first-child {
+    display: none;
+}
+
+#footer span:last-child {
+    display: block;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .recent-view {
+    display: none;
+  }
+
+  .book-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-info {
+    text-align: center;
+  }
+
+  .buy-buttons {
+    justify-content: center;
+  }
+
+  .book-detail-wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>영풍문고 상세페이지</title>
+  <link rel="stylesheet" href="./css/detailpage.css">
+</head>
+<body>
+
+  <!-- header -->
+  <header id="header">
+    <h1 id="logo">
+      <a href="index.html">
+        <img src="./images/logo.ico" alt="YP Books 로고" class="logo-img">
+        <span class="logo-text">YP Books</span>
+      </a>
+    </h1>
+    <nav id="gnb">
+      <ul>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="./brand.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ book-detail과 recent-view를 함께 감싸는 래퍼 -->
+  <div class="book-detail-wrapper">
+
+    <!-- 왼쪽: 책 상세 -->
+    <section class="book-detail">
+      <div class="book-wrapper">
+        <!-- 책 이미지 -->
+        <div class="book-image">
+          <img src="./images/book1.jpg" alt="혼모노 책 표지">
+        </div>
+
+        <!-- 책 정보 -->
+        <div class="book-info">
+          <h2 class="book-title">혼모노</h2>
+          <p class="book-author">박정민 저 | 창비 | 2025년 03월 28일 출간</p>
+          <div class="book-rating">⭐ 4.4 / 5.0 (리뷰 87)</div>
+          <div class="book-price">
+            <span class="current">16,200원</span>
+            <span class="original">18,000원</span>
+            <span class="discount">(10% 할인)</span>
+          </div>
+
+          <div class="buy-buttons">
+            <button class="btn-cart">장바구니</button>
+            <button class="btn-buy">바로구매</button>
+            <button class="btn-gift">🎁 나우드림</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ 오른쪽: 최근 본 상품 -->
+    <aside class="recent-view">
+      <h3>최근 본 상품</h3>
+      <ul>
+        <li>
+          <img src="./images/book1.jpg" alt="혼모노">
+          <span>혼모노</span>
+        </li>
+        <li>
+          <img src="./images/book2.jpg" alt="다른 책">
+          <span>모순</span>
+        </li>
+        <li>
+          <img src="./images/book3.jpg" alt="또 다른 책">
+          <span>급류</span>
+        </li>
+      </ul>
+    </aside>
+
+  </div>
+  <!-- ✅ book-detail-wrapper 바깥으로 이동 -->
+<section class="book-description">
+  <h2>책 소개</h2>
+  <p>
+   “‘몰입’의 파티다. 영화로 만들고 싶은 작품들로 가득하다.”
+
+―배우 박정민
+
+ 
+
+‘2024 한국문학의 미래가 될 젊은 작가’ 1위 선정!
+
+지금 가장 생생하고 뜨거운 이름,
+
+성해나라는 강렬한 세계
+
+ 
+
+2024·2025 젊은작가상, 2024 이효석문학상 우수작품상 수상작 수록
+
+ 
+
+  </p>
+
+  <h3>목차</h3>
+  <ul>
+    <li>1장: 길티 클럽: 호랑이 만지기</li>
+    <li>2장: 스무드</li>
+    <li>3장: 혼모노</li>
+    <li>4장: 구의 집: 갈월동 98번지</li>
+    <li>5장: 구의 집: 우호적 감정</li>
+    <li>6장: 구의 집: 잉태기</li>
+  </ul>
+
+  <h3>기본 정보</h3>
+  <table class="book-meta">
+    <tr><th>출판사</th><td>창비</td></tr>
+    <tr><th>쪽수</th><td>256쪽</td></tr>
+    <tr><th>ISBN</th><td>9788936471234</td></tr>
+    <tr><th>크기</th><td>140x210mm</td></tr>
+  </table>
+</section>
+<!-- footer -->
+  <footer id="footer">
+    <p><span>COPYRIGHT</span> <span>©</span> YOUNGPOONG BOOKSTORE INC. ALL RIGHTS RESERVED. </p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./script/scroll.js"></script>
+</body>
+</html>
