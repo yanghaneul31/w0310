@@ -276,6 +276,7 @@ h2, h3 {
 .book-meta {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 8rem;
 }
 
 .book-meta th,
