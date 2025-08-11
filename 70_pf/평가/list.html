@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>할 일 목록</title>
+  <style>
+    body {
+  font-family: sans-serif;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+.todo-container {
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.add-btn:hover {
+  background: #f2f2f2;
+}
+.todo-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.todo-list li {
+  margin-bottom:20px;
+}
+
+.delete-btn {
+  margin-left: 5px;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+.delete-btn:hover {
+  background: #5a5a5a;      
+}
+
+.delete-btn:active {
+  transform: translateY(1px); 
+}
+  </style>
+</head>
+<body>
+
+  <div class="todo-container">
+    <h1>📝 할 일 목록</h1>
+    <div class="input-group">
+      <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+      <button class="add-btn"  id="addBtn">추가</button>
+    </div>
+
+    <ul class="todo-list"  id="todoList">
+      <li>HTML 공부하기 <button class="delete-btn">삭제</button></li>
+      <li>CSS 공부하기 <button class="delete-btn">삭제</button></li>
+      <li>운동하기 <button class="delete-btn">삭제</button></li>
+      <li>JS 공부하기 <button class="delete-btn">삭제</button></li>
+      <li>또, 운동하기 <button class="delete-btn">삭제</button></li>
+      <li>리액트 공부하기 <button class="delete-btn">삭제</button></li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const addBtn = document.getElementById("addBtn");
+  const todoInput = document.getElementById("todoInput");
+  const todoList = document.getElementById("todoList");
+
+  // 추가 버튼 클릭
+  addBtn.addEventListener("click", () => {
+    const text = todoInput.value.trim();
+    if (text !== "") {
+      const li = document.createElement("li");
+      li.innerHTML = `${text} <button class="delete-btn">삭제</button>`;
+      todoList.appendChild(li);
+      todoInput.value = "";
+    }
+  });
+
+  // 삭제 버튼 클릭 (이벤트 위임)
+  todoList.addEventListener("click", (e) => {
+    if (e.target.classList.contains("delete-btn")) {
+      e.target.parentElement.remove();
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

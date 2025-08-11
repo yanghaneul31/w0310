@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  text-align: center;     
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  justify-items: center;  
+  padding-left: 200px; 
+}
+
+.movie-card {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;    
+}
+.movie-title {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.movie-card img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.rank-badge {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3px 7px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.like-btn,
+.primary-btn {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.like-btn {
+  background: #333;
+  color: #fff;
+}
+
+.primary-btn {
+  background: #00aaff;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #0090dd;       
+  transform: scale(1.05);    
+  transition: all 0.2s ease;
+}
+
+
+.movie-card img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.3s ease; 
+}
+
+.movie-card img:hover {
+  transform: scale(1.05);   
+}
