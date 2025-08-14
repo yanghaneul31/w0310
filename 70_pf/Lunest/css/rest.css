@@ -15,21 +15,21 @@ body {
     background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
     color: white;
 }
-header {
+.section2 {
     text-align: center;
     padding: 40px 20px 20px;
-    font-size: 60px;
+    font-size: 6rem;
 }
 
-header h1 {
-    font-size: 74px;
+.section2 h1 {
+    font-size: 7.4rem;
     margin-bottom: 5px;
 }
 
 .heart {
     background: none;
     border: none;
-    font-size: 53px;
+    font-size:5.3rem;
     cursor: pointer;
     color: white;
     margin-top: 10px;
@@ -57,7 +57,7 @@ header h1 {
 .sound-card p {
     flex: 1;
     margin: 0 50px;
-    font-size: 48px;
+    font-size: 4.8rem;
 }
 
 .sound-card:hover {
@@ -82,7 +82,7 @@ header h1 {
 .modal-content {
     width: 500px;
     height: 100px;
-    font-size: 40px;
+    font-size: 4rem;
     background: #fff;
     color: #333;
     padding: 20px 30px;
@@ -94,7 +94,7 @@ header h1 {
 .modal-content button {
     width: 100px;
     height: 50px;
-    font-size: 20px;
+    font-size:2rem;
     margin-top: 10px;
     padding: 5px 15px;
     border: none;
@@ -113,7 +113,7 @@ header h1 {
 .accordion-header {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  font-size:40px;
+  font-size:4rem;
   padding: 40px;
   text-align: center;
   border-radius: 15px;
@@ -154,12 +154,122 @@ header h1 {
 
 .sound-info h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 2.8rem;
   color: white;
 }
 
 .sound-info p {
   margin: 5px 0 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #ccc;
+}
+
+
+/* ==============================
+   ✅ Mobile (max-width: 767px)
+   ============================== */
+@media screen and (max-width: 767px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+.section2 {
+    padding: 22px 12px 10px;
+    font-size: 3rem;
+  }
+.section2 h1 {
+    font-size: 3.8rem;
+    margin-bottom: 6px;
+    line-height: 1.1;
+    word-break: keep-all;
+  }
+  .heart {
+    font-size: 3rem;
+    margin-top: 6px;
+  }
+
+  /* 카드: 세로 스택 */
+  .sound-card {
+    width: 94%;
+    height: auto;
+    padding: 14px;
+    margin: 14px auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  .sound-card img {
+    width: 140px;
+    height: 120px;
+    border-radius: 16px;
+    margin: 0;
+  }
+  .sound-card p {
+    flex: none;
+    margin: 6px 0 0;
+    font-size: 2.6rem;
+  }
+
+  /* 모달 */
+  .modal-content {
+    width: 90%;
+    max-width: 420px;
+    font-size: 2.4rem;
+    padding: 18px 16px;
+  }
+  .modal-content button {
+    width: 110px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+
+  /* 아코디언 */
+  .accordion {
+    width: 94%;
+    margin: 26px auto;
+  }
+  .accordion-header {
+    font-size: 2.4rem;
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+  .accordion-content {
+    padding: 0 12px;
+    border-radius: 12px;
+  }
+  .accordion-content.open {
+    max-height: 520px;
+    padding: 14px;
+  }
+
+  .sound-item {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .sound-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 14px;
+  }
+  .sound-info h3 {
+    font-size: 2rem;
+  }
+  .sound-info p {
+    font-size: 1.5rem;
+  }
+  .footer{
+    display: none;
+  }
+}
+
+/* (선택) 사용자 접근성: 모션 최소화 환경에서 scale 효과 제거 */
+@media (prefers-reduced-motion: reduce) {
+  .sound-card:hover {
+    transform: none;
+  }
+  .accordion-content {
+    transition: none;
+  }
 }

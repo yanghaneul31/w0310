@@ -12,11 +12,14 @@
 }
 
 html {
-  font-size:10px;
+  font-size: 10px;
 }
 
 body {
+  background: url(../images/배경사진.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
   overflow-x: hidden;
-  background: url(../images/배경사진.jpg);
+  color: #fff;
 }

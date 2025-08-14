@@ -167,3 +167,123 @@ body {
   border-color: white;
 }
 
+/* =========================
+   ✅ Mobile (max-width: 767px)
+   ========================= */
+@media screen and (max-width: 767px) {
+  .container { padding: 1rem; }
+
+  /* 헤더/시간 영역 */
+  .time-display p {
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    margin-right: 0;         /* 데스크탑에서 주던 오른쪽 여백 제거 */
+  }
+  #clock { font-size: 3.6rem; }
+  .night-text {
+    position: static;        /* 절대배치 해제 → 자연스러운 흐름 */
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* 메인 플레이어 */
+  .main-player {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem auto;
+    border-radius: 20px;
+    height: auto;
+    aspect-ratio: 16 / 9;     /* 컨테이너 비율 고정 */
+    overflow: hidden;
+  }
+  .main-bg { width: 100%; height: 100%; object-fit: cover; }
+
+  .overlay {
+    padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
+  }
+  .recommend-label { font-size: 1.4rem; }
+  #title           { font-size: 1.6rem; }
+  .play-btn {
+    font-size: 1.2rem;
+    padding: .6rem 1.1rem;
+    min-height: 44px;         /* 터치 영역 확보 */
+    border-radius: 10px;
+  }
+
+  /* 추천 섹션 */
+  .recommend-section {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    gap: 1.2rem;
+  }
+
+  .recommend-player {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;   /* 세로 스택 */
+    align-items: stretch;
+  }
+
+  .cover-img {
+    width:300px;
+    height:300px;
+    aspect-ratio: 1 / 1;      /* 정사각형 썸네일 느낌 */
+    border-radius: 16px;
+margin: 0 auto;
+  }
+
+  .audio-info h3 { font-size: 3rem; }
+  .audio-info p  { font-size: 2rem; }
+
+  .controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .8rem;
+  }
+  .controls button {
+    font-size: 1.4rem;
+    padding: .7rem 1rem;
+    min-height: 44px;
+    border-radius: 10px;
+  }
+
+  /* 하단 썸네일들: 가로 스크롤 */
+  .thumbnail-buttons {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    gap: .8rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: .5rem;
+  }
+  .thumb {
+    width: 34vw;
+    height: 34vw;
+    min-width: 34vw;
+    min-height: 34vw;
+    margin-top: 0;
+    border-radius: 14px;
+    margin: 0 auto;
+  }
+  /* 스크롤바 감추기(선택) */
+  .thumbnail-buttons::-webkit-scrollbar { display: none; }
+}
+
+/* 아주 작은 기기 보완 */
+@media screen and (max-width: 360px) {
+  #clock { font-size: 3.2rem; }
+  .thumb { width: 38vw; height: 38vw; min-width: 38vw; min-height: 38vw; }
+}

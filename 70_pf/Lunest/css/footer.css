@@ -86,3 +86,16 @@
         .noto {
             font-family: 'Noto Sans', sans-serif;
         }
+        /* ==============================
+   ✅ Tablet (max-width: 1024px)
+   ============================== */
+@media screen and (max-width: 1024px) {
+  .footer {
+   display: none;
+  }
+
+
+}
+
+
+  

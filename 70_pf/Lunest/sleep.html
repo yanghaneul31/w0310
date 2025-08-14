@@ -5,12 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/sleep.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
-    <header>
+  <header class="header">
+    <h1 class="header_logo"><a href="#"><img src="./images/헤더로고.png" alt="Lunest 로고"></a></h1>
+    <nav class="gnb">
+      <ul class="main">
+        <li><a href="#">음악</a>
+          <ul class="sub">
+            <li><a href="#">수면</a></li>
+            <li><a href="#">휴식과 명상</a></li>
+          </ul>
+        </li>
+        <li><a href="#">오늘을 담다</a>
+          <ul class="sub">
+            <li><a href="#">오늘의 추천</a></li>
+            <li><a href="#">오늘의 기록</a></li>
+          </ul>
+        </li>
+        <li><a href="#">마이페이지</a>
+          <ul class="sub">
+            <li><a href="#">즐겨찾기</a></li> 
+          </ul>
+        </li>
+        <li><a href="#">브랜드소개</a>
+          <ul class="sub">
+            <li><a href="#">브랜드</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="mobile">
+      <div class="mobile_menu"><img src="./images/open.png" alt=""></div>
+      <div class="close"><img src="./images/close.png" alt=""></div>
+    </div>
+  </header>
+  <script>
+    const mobileMenu = document.querySelector(".mobile_menu");
+const closeBtn = document.querySelector(".close");
+const gnb = document.querySelector(".gnb");
+const header = document.querySelector('header');
+
+// 메뉴 열기
+mobileMenu.addEventListener('click', () => {
+  gnb.classList.add("open");
+  header.classList.add("menu_open");
+  mobileMenu.style.display = "none";
+  closeBtn.style.display = "block";
+  document.body.classList.add("menu_open");
+});
+
+// 메뉴 닫기
+closeBtn.addEventListener('click', () => {
+  gnb.classList.remove("open");
+  header.classList.remove("menu_open");
+  closeBtn.style.display = "none";
+  mobileMenu.style.display = "block";
+  document.body.classList.remove("menu_open");
+
+  document.querySelectorAll(".sub.open").forEach(sub => sub.classList.remove("open"));
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    gnb.classList.remove("open");
+    header.classList.remove("menu_open");
+    gnb.style.display = "";
+    header.style.height = "";
+    mobileMenu.style.display = "none";
+    closeBtn.style.display = "none";
+    document.body.classList.remove("menu_open");
+  } else {
+    mobileMenu.style.display = "block";
+    closeBtn.style.display = "none";
+  }
+});
+  </script>
+
+    <div class="section1">
     <h1>수면</h1>
     <p>“이 소리와 함께 잠들어보세요.”</p>
-  </header>
+  </div>
 
   <!-- 카드 리스트 -->
   <div class="sound-card">
@@ -103,6 +182,7 @@
     document.getElementById('alertModal').style.display = 'none';
   }
 </script>
+
 
 
 </body>
