@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Ownglyph_Memo_Okja-Rg';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: url(../images/index/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+@media(max-width: 768px) {
+  body {
+    background: url(../images/index/bg.jpg) no-repeat center center;
+    background-size: cover;
+  }
+}

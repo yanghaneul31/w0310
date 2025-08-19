@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+.section-title {
+    text-align: center;
+    padding: 40px 20px 20px;
+    font-size: 6rem;
+}
+
+.section-title h1 {
+    font-size: 7.4rem;
+    margin-bottom: 5px;
+}
+
+.heart {
+    background: none;
+    border: none;
+    font-size: 5.3rem;
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    margin: 40vh auto;
+    font-size: 4rem;
+    background: #fff;
+    color: #333;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content button {
+    font-size: 2rem;
+    margin: 30px auto 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 카드 리스트 */
+.sound-card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 20px auto;
+    width: 1122px;
+    height: 190px;
+    justify-content: space-between;
+    transition: .3s;
+}
+
+.sound-card img {
+    width: 177px;
+    height: 149px;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.sound-card p {
+    flex: 1;
+    margin: 0 50px;
+    font-size: 4rem;
+}
+
+.sound-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+}
+
+/* 플립 카드 */
+.flip-title {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+}
+
+.flip-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.flip-card {
+    width: 285px;
+    height: 285px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+}
+
+.flip-card-front {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.flip-card-back {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 3rem;
+}
+
+.heart {
+    color: #aaa
+}
+
+.heart.active {
+    color: white;
+}
+
+.player {
+    position: fixed;
+    z-index: 9999;
+    bottom: 2%;
+    left: 50%;
+    width: 60%;
+    height: 20%;
+    transform: translate(-50%);
+}
+.info {
+    padding-left: 50px;
+}
+.progress {
+    width: 80%;
+}
+
+
+#close {
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    border: none;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        padding: 80px 5px ;
+    }
+
+   .section-title h1 {
+        font-size: 6rem;
+    }
+    .section-title p{
+        font-size: 4rem;
+    }
+    .heart {
+        font-size: 3rem;
+    }
+
+    .sound-card {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+
+    .sound-card img {
+        width: 140px;
+        height: 120px;
+    }
+
+    .sound-card p {
+        font-size: 2.5rem;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+
+    .flip-title {
+        font-size: 3.5rem;
+        margin-top: 50px;
+    }
+
+    .flip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;       
+    gap: 16px;
+  }
+
+  .flip-card {
+    width: min(56vw, 220px);
+    height:50px;         
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+     font-size: 2.5rem;
+    padding: 10px;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-card,
+  .flip-card.flipped {
+     width: 250px;   /* ← 원하는 값으로 조절 (130/150 등) */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden; 
+  }
+
+  .player {
+    width: 100%;
+  }
+    .player>img {
+    width: 20%;
+    height: 100%;
+    border-radius: 10px;
+    }
+  #track_title {
+    text-align: center;
+  }
+  .controls>.volume_img {
+    width: 24px;
+  }
+  #close {
+    top: 20px;
+    font-size: 2.4rem;
+  } 
+
+
+}
