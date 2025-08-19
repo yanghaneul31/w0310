@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunest</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/player.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="js/audio.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header_logo">
+        <a href="index.html"
+          ><img src="./images/index/logo.png" alt="Lunest 로고"
+        /></a>
+      </h1>
+      <nav class="gnb">
+        <ul class="main">
+          <li>
+            음악
+            <ul class="sub">
+              <li><a href="sub/sleep.html">수면</a></li>
+              <li><a href="sub/rest.html">휴식과 명상</a></li>
+            </ul>
+          </li>
+          <li>
+            오늘을 담다
+            <ul class="sub">
+              <li><a href="sub/recommend.html">오늘의 추천</a></li>
+              <li><a href="sub/today_record.html">오늘의 기록</a></li>
+            </ul>
+          </li>
+          <li>
+            마이페이지
+            <ul class="sub">
+              <li><a href="sub/favorite.html">즐겨찾기</a></li>
+            </ul>
+          </li>
+          <li>
+            브랜드소개
+            <ul class="sub">
+              <li><a href="sub/brand.html">브랜드</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile">
+        <div class="mobile_menu">
+          <img src="./images/index/mobile_menu.png" alt="" />
+        </div>
+        <div class="close"><img src="./images/index/close.png" alt="" /></div>
+      </div>
+    </header>
+
+    <!-- section1 -->
+    <section id="section1">
+      <!-- section1.html -->
+      <div class="cloud cloud1">
+        <img src="images/index/section1/cloud1.png" alt="cloud1" />
+      </div>
+      <div class="cloud cloud2">
+        <img src="images/index/section1/cloud2.png" alt="cloud2" />
+      </div>
+      <div class="cloud cloud3">
+        <img src="images/index/section1/cloud3.png" alt="cloud3" />
+      </div>
+      <div class="cloud cloud4">
+        <img src="images/index/section1/cloud4.png" alt="cloud4" />
+      </div>
+
+      <div class="hero-text">
+        <p class="floating-text">
+          Lunest는 아무도 방해하지 않는 나만의 밤을 위해 만들어졌어요.
+        </p>
+      </div>
+    </section>
+
+    <!-- section2 -->
+    <section id="section2">
+      <div class="slide">
+        <div class="slide_box">
+          <div class="inner">
+            <img src="images/index/section2/slide3.jpg" alt="0" />
+          </div>
+          <div class="inner">
+            <img src="images/index/section2/slide1.jpg" alt="1" />
+          </div>
+          <div class="inner">
+            <img src="images/index/section2/slide2.jpg" alt="2" />
+          </div>
+          <div class="inner">
+            <img src="images/index/section2/slide3.jpg" alt="3" />
+          </div>
+          <div class="inner">
+            <img src="images/index/section2/slide1.jpg" alt="1" />
+          </div>
+        </div>
+        <div class="left_btn">
+          <button>
+            <img src="images/index/section2/left_btn.png" alt="" />
+          </button>
+        </div>
+        <div class="right_btn">
+          <button>
+            <img src="images/index/section2/right_btn.png" alt="" />
+          </button>
+        </div>
+        <div class="indicator">
+          <div class="ellipse choice"></div>
+          <div class="ellipse"></div>
+          <div class="ellipse"></div>
+        </div>
+      </div>
+    </section>
+    <!-- section3 -->
+    <section class="section3">
+      <div class="text-box">
+        <h2>자연 속 명상 가이드</h2>
+        <p>숲속에 있는 자신을 이미지처럼<br />몸의 감각에 집중해 보세요.</p>
+      </div>
+      <div class="person-box">
+        <img src="images/index/section3/person.png" alt="명상하는 사람" />
+        <button class="start-btn" id="start-btn">5분 명상 시작하기</button>
+        <div id="timer"></div>
+      </div>
+    </section>
+
+    <div id="overlay">
+      <div id="overlay-timer">05:00</div>
+    </div>
+
+    <!-- section4 -->
+    <section id="section4">
+      <div class="qeustion_box">
+        <h2 class="question show">오늘 당신의 기분은 어떤가요?</h2>
+        <h2 class="question">무슨 일이 있었나요?</h2>
+        <h2 class="question">지금 가장 하고 싶은 건 뭐예요?</h2>
+      </div>
+      <div class="select_section">
+        <div class="select_box show">
+          <div class="select_card">
+            <img src="images/index/section4/smile.svg" alt="" />
+            <p>기분좋아요</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/sad.svg" alt="" />
+            <p>슬퍼요</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/angry.svg" alt="" />
+            <p>화나요</p>
+          </div>
+        </div>
+        <!-- box1 -->
+        <div class="select_box">
+          <div class="select_card">
+            <img src="images/index/section4/handshake.svg" alt="" />
+            <p>사람과의 관계 때문에</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/weather.svg" alt="" />
+            <p>환경이나 날씨 때문에</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/question.svg" alt="" />
+            <p>설명하기 힘들어요</p>
+          </div>
+        </div>
+        <!-- box2 -->
+        <div class="select_box">
+          <div class="select_card">
+            <img src="images/index/section4/headphones.svg" alt="" />
+            <p>음악 듣기</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/coffee.svg" alt="" />
+            <p>휴식하기</p>
+          </div>
+          <div class="select_card">
+            <img src="images/index/section4/sleep.svg" alt="" />
+            <p>잠자기</p>
+          </div>
+        </div>
+        <!-- box3 -->
+        <div class="wait_time">
+          <p>잠시 기다려주세요...</p>
+        </div>
+        <div class="recommend"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <img
+          src="./images/index/footer/footer_logo.png"
+          alt="Lunest Logo"
+          class="footer-logo"
+        />
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-desc">Lunest</p>
+        <p class="footer-desc">당신의 고요한 밤을 지켜주는 작은 자연입니다.</p>
+        <hr class="footer-line" />
+        <ul class="footer-nav">
+          <li>[ 홈 ]</li>
+          <li>[ 자연의 소리 ]</li>
+          <li>[ 명상 가이드 ]</li>
+          <li>[ 마이페이지 ]</li>
+          <li>[ 문의하기 ]</li>
+        </ul>
+        <hr class="footer-line" />
+        <p class="footer-policy">
+          <span>이용약관</span> <span>개인정보처리방침</span>
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-copy">
+          <span class="noto">©</span> 2025 Lunest. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

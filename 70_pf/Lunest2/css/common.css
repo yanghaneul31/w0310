@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -16,17 +16,10 @@ html {
 }
 
 body {
-  background: url(../images/index/bg.jpg);
+  background: url(../images/배경사진.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Ownglyph_Memo_Okja-Rg', 'Noto sans kr', sans-serif;
   overflow-x: hidden;
   color: #fff;
-}
-
-@media(max-width: 768px) {
-  body {
-    background: url(../images/index/bg.jpg) no-repeat center center;
-    background-size: cover;
-  }
 }

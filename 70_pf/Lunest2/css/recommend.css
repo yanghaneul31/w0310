@@ -1,45 +1,50 @@
 @charset "utf-8";
-
-
+@import url(./reset.css);
+@import url(./common.css);
+@font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 body {
-
+  margin: 0;
+  font-family:'Ownglyph_Memo_Okja-Rg', sans-serif;
+  background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center center/cover;
+  color: white;
   text-align: center;
 }
 
 .container {
-  margin: 50px auto;
+  padding: 2rem;
 }
-
-.time-display {
-  padding: 0 20%;
-  margin: 0 auto;
+.time-display{
+  position: relative;
+  text-align: center;
 }
-
-#now-time {
-  font-size: 7rem;
-  padding-left: 150px;
-  text-align: left;
+.time-display p {
+  margin: 2rem;
+  font-size: 5rem;
+  margin-right: 500px;
 }
-
-.greeting {
-  font-size: 7rem;
-  text-align: right;
+.night-text{
+  position: absolute;
+  right:2rem;
 }
-
 #clock {
-  font-size: 12rem;
+  font-size:8rem;
   margin: 0.5rem 0;
 }
-
 /* 메인 플레이어 스타일 */
 .main-player {
   position: relative;
   width: 1300px;
   height: 726px;
-  margin: 100px auto;
+  margin: 9rem auto;
   border-radius: 40px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .main-bg {
@@ -56,37 +61,34 @@ body {
   background: rgba(0, 0, 0, 0.45);
   padding: 2rem 3rem;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
 }
-
 .text-area {
   text-align: left;
 }
-
 .recommend-label {
-  font-size: 5rem;
+  font-size: 2rem;
   opacity: 0.9;
   margin-bottom: 0.4rem;
 }
 
 #title {
-  font-size: 3.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .play-btn {
-  font-size: 2.8rem;
-  padding: 6px 15px  8px;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.5rem;
   background: white;
   color: black;
   border: none;
   border-radius: 12px;
   cursor: pointer;
 }
-
 .recommend-section {
   display: flex;
   justify-content: center;
@@ -113,40 +115,22 @@ body {
   width: 412px;
   height: 388px;
   object-fit: cover;
-  border-radius: 100px;
-  overflow: hidden;
-  margin-right: 30px;
+  border-radius: 20px;
+  margin-right: 1rem;
 }
 
-.player {
-  display: flex;
+.audio-info {
+  flex: 1;
 }
 
-.info {
-  width: 300px;
-}
-
-#track_title {
-  font-size: 6rem;
-}
-
-#current_time,
-#total_time {
-  font-size: 2.3rem;
-}
-
-#play_btn {
-  background: #fff;
-  transition: 0.3s;
+.audio-info h3 {
   font-size: 2rem;
-  text-align: center;
-  line-height: 1;
-  padding-bottom: 5px;
-  border-radius: 15px;
+  margin-bottom: 0.3rem;
 }
 
-#play_btn:hover {
-  background: #999;
+.audio-info p {
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 .controls {
@@ -154,7 +138,7 @@ body {
 }
 
 .controls button {
-  font-size: 3.6rem;
+  font-size: 1.8rem;
   padding: 0.6rem 1.2rem;
   margin: 0 0.5rem;
   border: none;
@@ -169,10 +153,10 @@ body {
 }
 
 .thumb {
-  width: 170px;
-  height: 170px;
-  margin: 10px 0;
-  border-radius: 40px;
+  width: 278px;
+  height: 266px;
+  margin-top: 20px;
+  border-radius: 20px;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
@@ -183,29 +167,19 @@ body {
   border-color: white;
 }
 
-
 /* =========================
    ✅ Mobile (max-width: 767px)
    ========================= */
-@media (max-width: 767px) {
-  .container { 
-    padding: 10px; 
-    margin: 50px 0;
-  }
+@media screen and (max-width: 767px) {
+  .container { padding: 1rem; }
 
   /* 헤더/시간 영역 */
-  .time-display{
-    margin-bottom: 40px;
-  }
-
-  #now-time {
-    padding-left: 50px;
-    font-size: 5rem;
-  }
   .time-display p {
-    font-size: 3rem;
+    margin: 1rem 0;
+    font-size: 2.2rem;
+    margin-right: 0;         /* 데스크탑에서 주던 오른쪽 여백 제거 */
   }
-  #clock { font-size: 6rem; }
+  #clock { font-size: 3.6rem; }
   .night-text {
     position: static;        /* 절대배치 해제 → 자연스러운 흐름 */
     display: block;
@@ -218,7 +192,7 @@ body {
   .main-player {
     width: 100%;
     max-width: 100%;
-    margin: 20px auto;
+    margin: 2rem auto;
     border-radius: 20px;
     height: auto;
     aspect-ratio: 16 / 9;     /* 컨테이너 비율 고정 */
@@ -227,48 +201,47 @@ body {
   .main-bg { width: 100%; height: 100%; object-fit: cover; }
 
   .overlay {
-    display: flex;
     padding: 1rem 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
   }
-  .recommend-label { 
-    font-size: 2rem; 
-  }
-
-  #play_btn {
-    font-size: 2rem;
-    min-height: 44px;        
+  .recommend-label { font-size: 1.4rem; }
+  #title           { font-size: 1.6rem; }
+  .play-btn {
+    font-size: 1.2rem;
+    padding: .6rem 1.1rem;
+    min-height: 44px;         /* 터치 영역 확보 */
     border-radius: 10px;
   }
 
   /* 추천 섹션 */
   .recommend-section {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-  
-    margin: 50px 0
+    align-items: stretch;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    gap: 1.2rem;
   }
 
   .recommend-player {
     width: 100%;
     height: auto;
     border-radius: 20px;
-    margin-bottom: 50px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;   /* 세로 스택 */
+    align-items: stretch;
   }
 
   .cover-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 40px;
-    margin: 0 auto;
+    width:300px;
+    height:300px;
+    aspect-ratio: 1 / 1;      /* 정사각형 썸네일 느낌 */
+    border-radius: 16px;
+margin: 0 auto;
   }
-  .info {
-    width: 100%;
-  }
-  #track_title {
-    font-size: 4rem;
-    margin: 30px 0;
-  }
+
   .audio-info h3 { font-size: 3rem; }
   .audio-info p  { font-size: 2rem; }
 
@@ -286,28 +259,31 @@ body {
     border-radius: 10px;
   }
 
+  /* 하단 썸네일들: 가로 스크롤 */
   .thumbnail-buttons {
+    order: 3;
     display: flex;
     flex-direction: row;
+    gap: .8rem;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: .5rem;
   }
   .thumb {
-    width: 34%;
-    height: 34%;
+    width: 34vw;
+    height: 34vw;
+    min-width: 34vw;
+    min-height: 34vw;
     margin-top: 0;
-    border-radius: 48px;
+    border-radius: 14px;
     margin: 0 auto;
   }
-  
-  .player img {
-    width: 140px;
-    height: 140px;
-    border-radius: 32px;
-  }
-    .controls>.volume_img {
-    width: 24px;
-  }
+  /* 스크롤바 감추기(선택) */
+  .thumbnail-buttons::-webkit-scrollbar { display: none; }
 }
 
+/* 아주 작은 기기 보완 */
+@media screen and (max-width: 360px) {
+  #clock { font-size: 3.2rem; }
+  .thumb { width: 38vw; height: 38vw; min-width: 38vw; min-height: 38vw; }
+}

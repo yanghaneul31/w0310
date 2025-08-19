@@ -1,41 +1,54 @@
 @charset "utf-8";
 
+@font-face {
+            font-family: 'Ownglyph_Memo_Okja-Rg';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Ownglyph_Memo_Okja-Rg', cursive;
+  background: url(../images/KakaoTalk_20250715_164802197.png)no-repeat center/cover;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+
 .hero {
-  display: flex;
+    display: flex;
   text-align: center;
   padding: 50px 50px;
 }
-
-.section_logo {
-  margin-top: 300px;
-  margin-left: 200px;
+.logo{
+    margin-top: 300px;
+    margin-left: 200px;
 }
-
-.section_logo img {
-  width: 270px;
-  height: 270px;
-  animation: glowLoop 2.5s ease-in-out infinite;
+.logo img{
+    width: 270px;
+    height: 270px;
+      animation: glowLoop 2.5s ease-in-out infinite;
 }
-
 @keyframes glowLoop {
   0% {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
   }
-
   50% {
     filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
   }
-
   100% {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4));
   }
 }
-
-.section_logo p {
-  /* margin-top: 0px; */
-  font-size: 6rem;
+.logo p{
+    margin-top: 0px;
+    font-size:128px;
 }
-
 .bg-img {
   position: absolute;
   top: 0;
@@ -46,31 +59,27 @@
   opacity: 0.3;
 }
 
-.hero-text {
-  margin-top: 190px;
-  margin-left: 200px;
-}
-
 .hero-text h1 {
-  font-size: 12rem;
-  margin-bottom: 10px;
-  transition: .3s;
+    margin-top: 300px;
+  font-size: 128px;
+  margin-left: 300px;
 }
-
-.hero-text p{
+.glow-text {
   color: white;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.4),
-    0 0 15px rgba(255, 255, 255, 0.2);
+               0 0 15px rgba(255, 255, 255, 0.2);
   transition: text-shadow 0.3s ease;
-  letter-spacing: 3px;
-  font-size: 4.6rem;
 }
 
 .glow-text:hover {
   text-shadow: 0 0 12px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.5);
+               0 0 20px rgba(255, 255, 255, 0.5);
 }
 
+.hero-text p {
+  font-size: 3rem;
+  margin-left: 300px;
+}
 
 .emotion {
   text-align: center;
@@ -82,19 +91,10 @@
   margin-bottom: 20px;
   margin-top: 400px;
 }
-
 @keyframes sway {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(5px);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
 }
 
 .sway-text {
@@ -103,7 +103,7 @@
 }
 
 .emotion .quote {
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.8;
   margin-bottom: 50px;
 }
@@ -126,17 +126,16 @@
 }
 
 .mode-card img {
-  width: 319px;
-  height: 459px;
+ width: 319px;
+ height: 459px;
   border-radius: 20px;
 }
 
 .mode-card p {
   margin-top: 10px;
-  font-size: 64px;
-  text-align: center;
+  font-size: 5rem;
+ text-align: center;
 }
-
 .image-wrapper {
   position: relative;
   display: inline-block;
@@ -151,15 +150,15 @@
 
 /* 재생 버튼 */
 .mode-btn {
-  width: 80px;
+    width: 80px;
   position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1); 
   border: 2px solid white;
   color: white;
-  font-size: 24px;
+  font-size:2.4rem;
   border-radius: 10px;
   padding: 6px 12px;
   cursor: pointer;
@@ -178,7 +177,7 @@
 }
 
 .features h2 {
-  font-size: 9rem;
+  font-size: 8rem;
   margin-bottom: 50px;
 }
 
@@ -195,91 +194,81 @@
 }
 
 .feature img {
-  width: 320px;
-  height: 320px;
+  width:373px;
+  height: 373px;
   margin-bottom: 20px;
 }
 
 .feature h3 {
-  font-size: 6rem;
-  padding: 30px 0;
+  font-size:5rem;
+  margin-bottom: 10px;
 }
 
 .feature p {
-  font-size: 4rem;
+  font-size:3rem;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 1.6s ease-out;
-}
+/* =========================
+   ✅ Mobile (max-width: 767px)
+   ========================= */
+@media screen and (max-width: 767px) {
 
-/* 스크롤 도달 시 활성화 */
-.reveal.active {
-  position: relative;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 767px) {
-
+  /* 기본 여백/정렬 */
   body { text-align: center; }
   
+  /* 히어로 */
   .hero {
-    display: flex;
     flex-direction: column;
-    margin: 0 auto;
-  }
-  .section_logo {
-    margin: 0 auto;
-  }
-  .section_logo img {
-    width: 140px;
-    height: 140px;
+    align-items: center;
+    padding: 24px 16px;
+    gap: 16px;
   }
 
   .bg-img {
     width: 100%;
     height: auto;
-    opacity: 0.25; 
+    opacity: 0.25; /* 배경 조금 부드럽게 */
   }
 
+  .logo {
+    margin: 24px 0 0 0; /* 큰 좌우/상단 마진 제거 */
+  }
+  .logo img {
+    width: 140px;
+    height: 140px;
+  }
   .logo p {
     margin-top: 8px;
-    font-size: 48px; 
+    font-size: 48px; /* 128 → 48 */
     line-height: 1.1;
     word-break: keep-all;
   }
 
-  .hero-text {
-    margin: 100px 0 0;
-  }
   .hero-text h1 {
-    font-size: 5.5rem;        
-    line-height: 2;
-  }
-
-  .hero-text p {
-    font-size: 2.3rem;
-    line-height: 1.5;
+    margin: 12px 0 0 0;     /* margin-left 제거 */
+    font-size: 44px;        /* 128 → 44 */
+    line-height: 1.15;
     word-break: keep-all;
   }
+  .hero-text p {
+    font-size: 1.6rem;
+    margin: 10px 0 0 0;     /* margin-left 제거 */
+  }
 
-  /* (Emotion) 섹션 */
+  /* 감정(Emotion) 섹션 */
   .emotion {
-    padding: 20px 16px 32px;
+    padding: 48px 16px 32px;
   }
   .emotion h2 {
-    font-size: 6rem;       
-    margin: 80px 0 12px;    
+    font-size: 40px;        /* 96 → 40 */
+    margin: 80px 0 12px;    /* 상단 마진 축소 */
     line-height: 1.15;
   }
   .emotion .quote {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     line-height: 1.7;
     margin-bottom: 28px;
-    word-break: keep-all;
+    padding: 0 6px;
   }
 
 .modes { 
@@ -295,36 +284,33 @@
     overflow: visible; 
   }
 
-  .mode-card p {
-    font-size: 4rem;
-    margin-top: 20px;
-  }
- 
+  /* 핵심: 비율은 래퍼에서 보장 (+ padding-top 해킹, 브라우저 호환 ↑) */
   .image-wrapper {
     position: relative;
     display: block;
     width: 100%;
     border-radius: 16px;
-    overflow: visible;           
+    overflow: visible;           /* 버튼/광선 같은 요소 안 잘리게 */
   }
- 
+  /* 3:4 비율 확보 (aspect-ratio 대신 padding-top로 높이 생성) */
   .image-wrapper::before {       
     content: "";
     display: block;
-    padding-top: 133.333%;       
+    padding-top: 133.333%;       /* 3 / 4 × 100 */
   }
 
-  
+  /* 이미지는 래퍼를 100% 채우되 '잘리지 않게' */
   .image-wrapper img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;         
+    object-fit: contain;         /* 👈 잘림 방지(여백 생길 수 있음) */
     border-radius: inherit;
     display: block;
   }
 
+  /* 재생 버튼은 래퍼 안에서 항상 보이게 */
   .mode-btn {
     position: absolute;
     bottom: 12px;
@@ -338,14 +324,20 @@
     z-index: 1;
   }
 
+  /* 캡션 크기/줄간격 조정 */
+  .mode-card p {
+    margin-top: 10px;
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
 
- 
+  /* 기능(Features) 섹션 */
   .features {
     padding: 48px 16px;
   }
   .features h2 {
-    font-size: 5rem;     
-    margin: 0;
+    font-size: 3.2rem;      /* 8rem → 3.2rem */
+    margin-bottom: 20px;
   }
   .feature-cards {
     flex-direction: column;
@@ -353,25 +345,26 @@
     align-items: center;
   }
   .feature {
-    margin-bottom: 32px;
+    margin-top: 12px;
     width: 100%;
     padding: 0 8px;
   }
   .feature img {
-    width: 70vw;            
+    width: 70vw;            /* 가로폭 기준 유동 */
     max-width: 360px;
     height: auto;
     border-radius: 16px;
   }
   .feature h3 {
-    font-size: 5rem;      
+    font-size: 2.4rem;      /* 5rem → 2.4rem */
     margin: 10px 0 6px;
   }
   .feature p {
-    font-size: 3rem;      
-    line-height: 1.5;
+    font-size: 1.6rem;      /* 3rem → 1.6rem */
+    line-height: 1.7;
   }
 
+  /* 접근성: 터치 타겟 */
   .mode-btn { min-height: 44px; }
 }
 

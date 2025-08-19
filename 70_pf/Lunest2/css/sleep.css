@@ -1,12 +1,31 @@
 @charset "utf-8";
 
-.section-title {
+@font-face {
+    font-family: 'Ownglyph_Memo_Okja-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403@1.0/Ownglyph_Memo_Okja-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body {
+    font-family: 'Ownglyph_Memo_Okja-Rg', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Ownglyph_Memo_Okja-Rg', serif;
+    background: url('../images/KakaoTalk_20250715_164802197.png') no-repeat center/cover;
+    color: white;
+}
+
+.section1 {
     text-align: center;
     padding: 40px 20px 20px;
     font-size: 6rem;
 }
 
-.section-title h1 {
+.section1 h1 {
     font-size: 7.4rem;
     margin-bottom: 5px;
 }
@@ -14,7 +33,7 @@
 .heart {
     background: none;
     border: none;
-    font-size: 5.3rem;
+    font-size:5.3rem;
     cursor: pointer;
     color: white;
     margin-top: 10px;
@@ -25,32 +44,36 @@
     display: none;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    margin: 40vh auto;
+    width: 500px;
+    height: 100px;
     font-size: 4rem;
     background: #fff;
     color: #333;
-    padding: 40px;
+    padding: 20px 30px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .modal-content button {
+    width: 100px;
+    height: 50px;
     font-size: 2rem;
-    margin: 30px auto 0;
-    padding: 10px 30px;
+    margin-top: 10px;
+    padding: 5px 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #333;
     color: #fff;
     cursor: pointer;
@@ -80,7 +103,7 @@
 .sound-card p {
     flex: 1;
     margin: 0 50px;
-    font-size: 4rem;
+    font-size:4.8rem;
 }
 
 .sound-card:hover {
@@ -91,9 +114,9 @@
 /* 플립 카드 */
 .flip-title {
     text-align: center;
-    font-size: 60px;
+    font-size:6rem;
     margin-top: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     color: white;
     font-family: 'Ownglyph_Memo_Okja-Rg', serif;
 }
@@ -148,7 +171,6 @@
     background: rgba(0, 0, 0, 0.6);
     color: white;
     transform: rotateY(180deg);
-    font-size: 3rem;
 }
 
 .heart {
@@ -159,44 +181,21 @@
     color: white;
 }
 
-.player {
-    position: fixed;
-    z-index: 9999;
-    bottom: 2%;
-    left: 50%;
-    width: 60%;
-    height: 20%;
-    transform: translate(-50%);
-}
-.info {
-    padding-left: 50px;
-}
-.progress {
-    width: 80%;
+.noto {
+    font-family: 'Noto Sans', sans-serif;
 }
 
-
-#close {
-    position: absolute;
-    background: transparent;
-    color: #fff;
-    border: none;
-    top: 30px;
-    right: 30px;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-@media (max-width: 767px) {
-    .section-title {
-        padding: 80px 5px ;
+/* ✅ 모바일 (최대 767px) */
+@media screen and (max-width: 767px) {
+    .section1 {
+        padding: 20px 5px 10px;
     }
 
-   .section-title h1 {
-        font-size: 6rem;
-    }
-    .section-title p{
+   .section1 h1 {
         font-size: 4rem;
+    }
+    .section1 p{
+        font-size:3rem;
     }
     .heart {
         font-size: 3rem;
@@ -205,7 +204,7 @@
     .sound-card {
         width: 95%;
         padding: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         gap: 10px;
     }
 
@@ -217,7 +216,6 @@
     .sound-card p {
         font-size: 2.5rem;
         margin: 5px 0;
-        padding: 0 10px;
     }
 
     .flip-title {
@@ -226,9 +224,6 @@
     }
 
     .flip-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     padding: 0 16px;       
     gap: 16px;
@@ -236,12 +231,13 @@
 
   .flip-card {
     width: min(56vw, 220px);
+    aspect-ratio: 1 / 1;   
     height:50px;         
   }
 
   .flip-card-front,
   .flip-card-back {
-     font-size: 2.5rem;
+     font-size: 1.6rem;
     padding: 10px;
     text-align: center;
     backface-visibility: hidden;
@@ -249,30 +245,14 @@
   }
   .flip-card,
   .flip-card.flipped {
-     width: 250px;   /* ← 원하는 값으로 조절 (130/150 등) */
-    height: 250px;
+     width: 140px;   /* ← 원하는 값으로 조절 (130/150 등) */
+    height: 140px;
     border-radius: 50%;
     overflow: hidden; 
   }
-
-  .player {
-    width: 100%;
-  }
-    .player>img {
-    width: 20%;
-    height: 100%;
-    border-radius: 10px;
+.footer {
+        display: none;
     }
-  #track_title {
-    text-align: center;
-  }
-  .controls>.volume_img {
-    width: 24px;
-  }
-  #close {
-    top: 20px;
-    font-size: 2.4rem;
-  } 
 
-
+   
 }

@@ -1,0 +1,519 @@
+@charset "UTF-8";
+
+body {
+  background-image: url(../images/index/bg.jpg);
+  height: 100%;
+}
+
+/* section1 */
+#section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* 구름 스타일 */
+.cloud {
+  position: absolute;
+  opacity: 0.6;
+  animation: cloudFloat 5s ease-in-out infinite;
+}
+
+.cloud1 img {
+  width: 600px;
+}
+
+.cloud2 img {
+  width: 900px;
+}
+
+.cloud3 img {
+  width: 700px;
+}
+
+.cloud4 img {
+  width: 650px;
+}
+
+/* 구름 각각의 위치 + 딜레이로 자연스러운 효과 */
+.cloud1 {
+  top: 0%;
+  left: 0%;
+  animation-delay: 0s;
+}
+
+.cloud2 {
+  top: 0%;
+  right: 0%;
+  animation-delay: 2s;
+}
+
+.cloud3 {
+  top: 50%;
+  left: 0%;
+  animation-delay: 4s;
+}
+
+.cloud4 {
+  top: 50%;
+  right: 0%;
+  animation-delay: 6s;
+}
+
+/* 구름이 좌우로 부드럽게 흔들리는 애니메이션 */
+@keyframes cloudFloat {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(25px);
+  }
+}
+
+/* 텍스트 영역 */
+.hero-text {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* 텍스트 애니메이션 효과 */
+.floating-text {
+  width: 100%;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+  font-size: 10rem;
+  color: white;
+  animation: textFloat 4s ease-in-out infinite;
+  white-space: pre-line;
+  margin-left: 110px;
+  margin-bottom: 50px;
+}
+
+@keyframes textFloat {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(25px);
+  }
+}
+
+/* section2 */
+#section2 {
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.slide_box {
+  width: 500vw;
+  display: flex;
+}
+
+.left_btn,
+.right_btn {
+  position: absolute;
+}
+
+.left_btn {
+  top: 35vh;
+  left: 5vw;
+}
+
+.right_btn {
+  top: 35vh;
+  right: 5vw;
+}
+
+.right_btn button,
+.left_btn button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right_btn button:hover,
+.left_btn button:hover {
+  opacity: 0.4;
+}
+
+.indicator {
+  position: absolute;
+  top: 70vh;
+  left: 48vw;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  justify-content: space-around;
+}
+
+.ellipse {
+  width: 18px;
+  height: 18px;
+  border-radius: 10px;
+  background: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.choice {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background: #999;
+}
+
+/* scrtion3 */
+
+.section3 {
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+}
+
+.text-box h2 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+}
+
+.text-box p {
+  font-size: 40px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.person-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-box img {
+  width: 407px;
+  height: auto;
+  animation: tilt 4s ease-in-out infinite;
+}
+
+.start-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #2a3f4f;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+}
+
+.start-btn:hover {
+  background-color: #3e566b;
+}
+
+/* 기울어짐 애니메이션 */
+@keyframes tilt {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+#timer {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 오버레이 전체 화면 */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* 어둡게 */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 오버레이 타이머 중앙 텍스트 */
+#overlay-timer {
+  color: white;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: "Ownglyph_Memo_Okja-Rg", sans-serif;
+}
+
+/* section4 */
+#section4 {
+  width: 100%;
+  height: 800px;
+  /* background: rgba(0, 0, 0, 0.2); */
+  border-top: 1px solid transparent;
+}
+
+.question_box {
+  position: relative;
+}
+
+.question {
+  position: absolute;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.15);
+  width: 600px;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  color: #fff;
+  letter-spacing: 5px;
+  margin: 80px 0 0 117px;
+  font-size: 34px;
+  color: #eee;
+  transition: opacity 0.5s;
+}
+
+.select_section {
+  position: relative;
+}
+
+.select_box {
+  opacity: 0;
+  position: absolute;
+  left: 13.3%;
+  display: flex;
+  width: 1400px;
+  justify-content: space-between;
+  height: 600px;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+
+.select_card {
+  width: 350px;
+  height: 300px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(217, 217, 217, 0.02);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  font-size: 36px;
+  line-height: 2;
+  padding-top: 60px;
+  cursor: pointer;
+}
+
+.wait_time {
+  position: absolute;
+  z-index: -1;
+  left: 39.5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(217, 217, 217, 0.02);
+  backdrop-filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  line-height: 400px;
+  color: #fff;
+  font-size: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.recommend {
+  opacity: 0;
+  width: 1200px;
+  height: 400px;
+  background: rgba(217, 217, 217, 0.02);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-align: center;
+  font-size: 4rem;
+  margin: 10% auto;
+  transition: opacity 1s;
+}
+
+.select_box.show,
+.question.show,
+.wait_time.show,
+.recommend.show {
+  opacity: 1;
+  z-index: 2;
+}
+
+.select_card img {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+}
+
+/* 스크립트로 생성 된 오디오 재생 바 */
+#track_title {
+  font-size: 6rem;
+}
+
+#current_time,
+#total_time {
+  font-size: 2.3rem;
+  padding: 0 20px;
+}
+
+#play_btn {
+  background: #fff;
+  transition: 0.3s;
+  font-size: 2rem;
+}
+
+#play_btn:hover {
+  background: #999;
+}
+
+
+@media (max-width: 768px) {
+  .hero-text p {
+    width: 350px;
+    margin-left: 70px;
+    font-size: 4rem;
+  }
+
+  #section1 {
+    height: 600px
+  }
+
+  .cloud img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #section2 {
+    display: none;
+  }
+
+  .section3 {
+    height: 700px;
+  }
+
+  .text-box h2 {
+    font-size: 5rem;
+  }
+
+  .text-box p {
+    font-size: 2.5rem;
+  }
+
+  .person-box img {
+    width: 200px;
+  }
+
+  #section4 {
+    width: 100%;
+    height: 500px;
+  }
+
+  .question {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.15);
+    width: 70%;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 5px;
+    margin: 0;
+    font-size: 2.7rem;
+  }
+
+  .select_box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 90%;
+    height: 60%;
+    transition: opacity 0.5s;
+  }
+
+  .select_card {
+    width: 160px;
+    height: 140px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: rgba(217, 217, 217, 0.02);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  /* 셀렉트박스 셀렉트카드 퀘스천 수치조절 */
+
+  .select_card img {
+    width: 40%;
+  }
+  .select_card p {
+    font-size: 2.1rem;
+  }
+
+  .wait_time {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+  .recommend {
+    width: 100%;
+    margin: 0;
+  }
+  .player {
+    padding: 10px;
+  }
+  .player>.thumb {
+    width: 130px;
+    height: 130px;
+  }
+  .progress {
+    margin: 20px 0 30px;
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+  }
+  .controls>.volume_img {
+    width: 24px;
+  }
+}
