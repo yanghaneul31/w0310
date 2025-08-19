@@ -22,7 +22,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   display: flex;
-  align-items: center;
+  align-items: self-end
 }
 
 /* 네비게이션 */
